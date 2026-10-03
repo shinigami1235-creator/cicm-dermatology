@@ -1,0 +1,127 @@
+{
+  "updated": "2026-10-03",
+  "programs": [
+    {
+      "id": "clinical",
+      "code": "M.Sc.",
+      "name": {"en": "Clinical Dermatology", "th": "ตจวิทยาคลินิก"},
+      "degree": {"en": "Master of Science in Dermatology, Clinical track", "th": "วิทยาศาสตรมหาบัณฑิต สาขาตจวิทยา แขนงตจวิทยาคลินิก"},
+      "focus": {"en": "Medical dermatology and dermatological procedures, with clinic rotations from the first semester and a thesis across both years.", "th": "ตจวิทยาทางการแพทย์และหัตถการทางผิวหนัง ฝึกในคลินิกตั้งแต่ภาคการศึกษาแรก และทำวิทยานิพนธ์ตลอดสองปี"},
+      "length": {"en": "2 years, 42 credits", "th": "2 ปี 42 หน่วยกิต"},
+      "fee": {"thai": 165000, "foreign": 185000}
+    },
+    {
+      "id": "cosmetic",
+      "code": "M.Sc.",
+      "name": {"en": "Cosmetic Dermatology", "th": "ตจวิทยาความงาม"},
+      "degree": {"en": "Master of Science in Dermatology, Cosmetic track", "th": "วิทยาศาสตรมหาบัณฑิต สาขาตจวิทยา แขนงตจวิทยาความงาม"},
+      "focus": {"en": "Aesthetic skin care and cosmetic procedures, including facial design and injection, cosmetic clinics and dermatosurgery.", "th": "การดูแลผิวเพื่อความงามและหัตถการความงาม รวมถึงการออกแบบใบหน้าและการฉีด คลินิกความงาม และศัลยกรรมผิวหนัง"},
+      "length": {"en": "2 years, 38 credits", "th": "2 ปี 38 หน่วยกิต"},
+      "fee": {"thai": 165000, "foreign": 185000}
+    },
+    {
+      "id": "phd",
+      "code": "Ph.D.",
+      "name": {"en": "Dermatology", "th": "ตจวิทยา"},
+      "degree": {"en": "Doctor of Philosophy in Dermatology", "th": "ปรัชญาดุษฎีบัณฑิต สาขาตจวิทยา"},
+      "focus": {"en": "Research, innovation and new knowledge in dermatology, by thesis alone or by coursework and thesis.", "th": "งานวิจัย นวัตกรรม และองค์ความรู้ใหม่ทางตจวิทยา เรียนแบบวิทยานิพนธ์อย่างเดียว หรือรายวิชาร่วมกับวิทยานิพนธ์"},
+      "length": {"en": "2 to 4 years, 48 to 75 credits by plan", "th": "2 ถึง 4 ปี 48 ถึง 75 หน่วยกิต ตามแผนการเรียน"},
+      "fee": {"thai": 90000, "foreign": 110000}
+    }
+  ],
+  "curriculum": {
+    "clinical": [
+      {"term": "Year 1, semester 1", "total": 11, "courses": [["CMB 600", "Responsible Research and Ethics in Bioclinical Sciences", 2], ["CMB 601", "Statistical Methods in Bioclinical Sciences", 2], ["CMD 601", "Clinical Dermatology 1", 2], ["CMD 603", "Dermatology Journal Club", 1], ["CMD 611", "Dermatology Clinic 1", 2], ["CMD 612", "Basic Dermatology", 2]]},
+      {"term": "Year 1, semester 2", "total": 11, "courses": [["CMD 602", "Dermatology Seminar", 1], ["CMD 614", "Dermatopathology", 2], ["CMD 616", "Clinical Dermatology 2", 2], ["CMD 617", "Dermatology Clinic 2", 2], ["CMD 711", "Dermatosurgery", 2], ["CMD 800", "Thesis", 2]]},
+      {"term": "Year 2, semester 3", "total": 10, "courses": [["CMD 613", "Advanced Dermatology", 2], ["CMD 615", "Investigations in Dermatology", 2], ["CMD 712", "Hands-on Experiences in Dermatology", 2], ["CMD 800", "Thesis", 4]]},
+      {"term": "Year 2, semester 4", "total": 10, "courses": [["", "Elective course", 2], ["", "Elective course", 2], ["CMD 800", "Thesis", 6]]}
+    ],
+    "cosmetic": [
+      {"term": "Year 1, semester 1", "total": 11, "courses": [["CMB 600", "Responsible Research and Ethics in Bioclinical Sciences", 2], ["CMB 601", "Statistical Methods in Bioclinical Sciences", 2], ["CMD 601", "Clinical Dermatology 1", 2], ["CMD 603", "Dermatology Journal Club", 1], ["CMD 611", "Dermatology Clinic 1", 2], ["CMD 612", "Basic Dermatology", 2]]},
+      {"term": "Year 1, semester 2", "total": 9, "courses": [["CMD 602", "Dermatology Seminar", 1], ["CMD 618", "Cosmetic Dermatology Clinical I", 2], ["CMD 711", "Dermatosurgery", 2], ["CMD 751", "Cosmetic Dermatology I", 2], ["CMD 800", "Thesis", 2]]},
+      {"term": "Year 2, semester 3", "total": 10, "courses": [["CMD 752", "Facial Design and Injection", 2], ["CMD 619", "Cosmetic Dermatology Clinical II", 2], ["CMD 712", "Hands-on Experiences in Dermatology", 2], ["CMD 800", "Thesis", 4]]},
+      {"term": "Year 2, semester 4", "total": 8, "courses": [["", "Elective course", 2], ["CMD 800", "Thesis", 6]]}
+    ],
+    "phd": [
+      {"plan": "Plan 1.1", "entry": {"en": "With a master's degree", "th": "สำเร็จปริญญาโท"}, "detail": {"en": "Thesis 48 credits. At least 2 years (4 regular semesters).", "th": "วิทยานิพนธ์ 48 หน่วยกิต อย่างน้อย 2 ปี (4 ภาคการศึกษาปกติ)"}},
+      {"plan": "Plan 1.2", "entry": {"en": "With a bachelor's degree (M.D.)", "th": "สำเร็จปริญญาตรี (แพทยศาสตรบัณฑิต)"}, "detail": {"en": "Thesis 72 credits. At least 4 years (8 regular semesters).", "th": "วิทยานิพนธ์ 72 หน่วยกิต อย่างน้อย 4 ปี (8 ภาคการศึกษาปกติ)"}},
+      {"plan": "Plan 2.1", "entry": {"en": "With a master's degree", "th": "สำเร็จปริญญาโท"}, "detail": {"en": "Coursework 21 credits, electives 4 credits, thesis 36 credits. At least 3 years (6 regular semesters).", "th": "รายวิชา 21 หน่วยกิต วิชาเลือก 4 หน่วยกิต วิทยานิพนธ์ 36 หน่วยกิต อย่างน้อย 3 ปี (6 ภาคการศึกษาปกติ)"}},
+      {"plan": "Plan 2.2", "entry": {"en": "With a bachelor's degree (M.D.)", "th": "สำเร็จปริญญาตรี (แพทยศาสตรบัณฑิต)"}, "detail": {"en": "Coursework 23 credits, electives 4 credits, thesis 48 credits. At least 4 years (8 regular semesters).", "th": "รายวิชา 23 หน่วยกิต วิชาเลือก 4 หน่วยกิต วิทยานิพนธ์ 48 หน่วยกิต อย่างน้อย 4 ปี (8 ภาคการศึกษาปกติ)"}}
+    ]
+  },
+  "announcements": [
+    {"date": "2026", "tag": {"en": "Admissions 2026", "th": "รับสมัคร 2569"}, "title": {"en": "List of successful candidates for the M.Sc. and Ph.D. programs, academic year 2026", "th": "ประกาศรายชื่อผู้ผ่านการคัดเลือกเข้าศึกษาหลักสูตร ป.โท และ ป.เอก ปีการศึกษา 2569"}, "link": "https://www.cicm.tu.ac.th/intra/imgCourse/8/Vpg96i6e-A.pdf", "pinned": true},
+    {"date": "2026", "tag": {"en": "Admissions 2026", "th": "รับสมัคร 2569"}, "title": {"en": "List of eligible candidates for the written examination and interview, academic year 2026", "th": "ประกาศรายชื่อผู้มีสิทธิ์สอบข้อเขียนและสัมภาษณ์ ปีการศึกษา 2569"}, "link": "https://www.cicm.tu.ac.th/intra/imgCourse/8/Vpg96i6e.pdf", "pinned": false},
+    {"date": "2026", "tag": {"en": "Admissions 2027", "th": "รับสมัคร 2570"}, "title": {"en": "Dates for the 2027 intake will be posted here and on Facebook", "th": "กำหนดการรับสมัครปีการศึกษา 2570 จะประกาศที่นี่และทาง Facebook"}, "link": "https://www.facebook.com/profile.php?id=100064737292426", "pinned": false}
+  ],
+  "downloads": [
+    {"group": "announcements", "title": {"en": "List of successful candidates, M.Sc. and Ph.D., academic year 2026", "th": "รายชื่อผู้ผ่านการคัดเลือก ป.โท และ ป.เอก ปีการศึกษา 2569"}, "url": "https://www.cicm.tu.ac.th/intra/imgCourse/8/Vpg96i6e-A.pdf"},
+    {"group": "announcements", "title": {"en": "List of eligible candidates for the written examination and interview, 2026", "th": "รายชื่อผู้มีสิทธิ์สอบข้อเขียนและสัมภาษณ์ 2569"}, "url": "https://www.cicm.tu.ac.th/intra/imgCourse/8/Vpg96i6e.pdf"},
+    {"group": "announcements", "title": {"en": "Extension of the application period, academic year 2026", "th": "ขยายเวลารับสมัคร ปีการศึกษา 2569"}, "url": "https://www.cicm.tu.ac.th/intra/imgCourse/8/H3H37xMP.pdf"},
+    {"group": "announcements", "title": {"en": "Admission announcement, M.Sc. and Ph.D. in Dermatology, academic year 2026", "th": "ประกาศรับสมัคร ป.โท และ ป.เอก สาขาตจวิทยา ปีการศึกษา 2569"}, "url": "https://www.cicm.tu.ac.th/intra/imgCourse/8/w26Gt1EZ.pdf"},
+    {"group": "forms", "title": {"en": "Application form, Dermatology 2026 (M.Sc. and Ph.D.)", "th": "ใบสมัคร สาขาตจวิทยา 2569 (ป.โท และ ป.เอก)"}, "url": "https://www.cicm.tu.ac.th/intra/imgCourse/8/ptq49O4w.pdf"},
+    {"group": "forms", "title": {"en": "Enrollment intention form 2026 (M.Sc. and Ph.D.)", "th": "แบบแสดงความจำนงเข้าศึกษา 2569 (ป.โท และ ป.เอก)"}, "url": "https://www.cicm.tu.ac.th/intra/imgCourse/8/dbW32W7F.pdf"},
+    {"group": "forms", "title": {"en": "GR002 General request form", "th": "แบบคำร้องทั่วไป GR002"}, "url": "https://www.cicm.tu.ac.th/intra/imgCourse/8/x7tG1xgg.pdf"},
+    {"group": "programs", "title": {"en": "Master's program information", "th": "ข้อมูลหลักสูตรปริญญาโท"}, "url": "https://www.cicm.tu.ac.th/intra/course/DM-MSc-ProgramInformation.pdf"},
+    {"group": "programs", "title": {"en": "Doctoral program information", "th": "ข้อมูลหลักสูตรปริญญาเอก"}, "url": "https://www.cicm.tu.ac.th/intra/course/DM-PhD-ProgramInformation.pdf"},
+    {"group": "folders", "title": {"en": "CICM public documents (Google Drive)", "th": "เอกสารสาธารณะ CICM (Google Drive)"}, "url": "https://drive.google.com/drive/folders/1Ho5H765rZ4t60YP18XBdR3jx0Nkm_6i9"},
+    {"group": "folders", "title": {"en": "CICM new students (Google Drive)", "th": "เอกสารนักศึกษาใหม่ CICM (Google Drive)"}, "url": "https://drive.google.com/drive/folders/1umEUEYc2bG5BXsKcotrZ5OSCrimgJPC-"},
+    {"group": "folders", "title": {"en": "CICM current students (Google Drive)", "th": "เอกสารนักศึกษาปัจจุบัน CICM (Google Drive)"}, "url": "https://drive.google.com/drive/folders/1Kr7eLT8KMnej8-5T2Wd2KONuJlZHWVij"},
+    {"group": "folders", "title": {"en": "CICM general documents (Google Drive)", "th": "เอกสารทั่วไป CICM (Google Drive)"}, "url": "https://drive.google.com/drive/folders/10XJ7iU4z7uqVCO0rqmHrzkWVzPMLrhu_"}
+  ],
+  "faculty": [
+    {
+      "id": "jitlada", "pubmed": "Meephansan J", "photo": "people/jitlada.webp",
+      "name": "Jitlada Meephansan", "title": "Assoc. Prof.", "post": "M.D., Ph.D.",
+      "education": ["M.D. (First-Class Honors), Chulalongkorn University", "M.Sc. in Dermatology, Chulalongkorn University", "Ph.D. in Dermatology, Jichi Medical University, Japan"],
+      "expertise": ["Skin immune system", "Skin biology", "Keratinocytes", "Hair"]
+    },
+    {
+      "id": "premjit", "pubmed": "Juntongjin P", "photo": "people/premjit.webp",
+      "name": "Premjit Juntongjin", "title": "Assoc. Prof.", "post": "M.D.",
+      "education": ["M.D. (Second-Class Honors), Chulalongkorn University", "Diploma of the Thai Board of Dermatology, Ramathibodi Hospital", "Visiting Scholar, Department of Dermatology, University of Pennsylvania, USA", "Visiting Scholar, Psoriasis, Phototherapy and Skin Treatment Center, University of California San Francisco, USA"],
+      "expertise": ["Psoriasis", "Vitiligo", "Photodermatoses and phototherapy", "Atopic dermatitis", "Hand eczema", "Geriatric dermatology and skin aging", "Psychodermatology"]
+    },
+    {
+      "id": "punyaphat", "pubmed": "Sirithanabadeekul P", "photo": "people/punyaphat.webp",
+      "name": "Punyaphat Sirithanabadeekul", "title": "Assoc. Prof.", "post": "M.D.",
+      "education": ["M.D. (First-Class Honours), Siriraj Hospital, Mahidol University", "Diplomate in Clinical Pathology, Mahidol University", "Diplomate in Dermatology, Ramathibodi Hospital", "Diplomate of the Thai Board in Dermatology, Ramathibodi Hospital", "Certificate, Visiting Resident, University of Pennsylvania School of Medicine, USA", "Certificate in Fellowship of Cutaneous Laser and Dermatosurgery, Ramathibodi Hospital"],
+      "expertise": ["Acne", "Melasma", "Laser", "Botulinum toxin", "Filler", "Hair", "Nail", "Fat", "Dermatosurgery", "Skin cancer"]
+    },
+    {
+      "id": "sunatra", "pubmed": "Nitayavardhana S", "photo": "people/sunatra.webp",
+      "name": "Sunatra Nitayavardhana", "title": "Asst. Prof.", "post": "M.D.",
+      "education": ["M.D., Rangsit University", "Research Fellow, Siriraj Hospital", "Research Fellow, Ramathibodi Hospital", "Diploma of the Thai Board of Dermatology, Siriraj Hospital", "Certificate in Fellowship of Cutaneous Laser and Dermatosurgery, Siriraj Hospital", "Visiting Scholar in Nail Surgery, Inselspital, Switzerland"],
+      "expertise": ["Nail surgery", "Laser and injectables"]
+    },
+    {
+      "id": "pawit", "pubmed": "Phadungsaksawasdi P", "photo": "people/pawit.webp",
+      "name": "Pawit Phadungsaksawasdi", "title": "", "post": "M.D., Ph.D.",
+      "education": ["Doctor of Medicine, Thammasat University (2013)", "M.Sc. in Clinical Dermatology, Thammasat University (2017)", "Visiting Fellowship in Photobiology and Phototherapy, Nagoya City University, Japan (2017)", "Ph.D. in Medicine (Dermatology), Hamamatsu University School of Medicine, Japan (2021)", "Clinical Fellowship in Contact Dermatitis and Occupational Dermatology, Institute of Dermatology, Thailand (2023)"],
+      "expertise": ["AI in dermatology", "Laser and energy-based devices", "Skin and translational immunology", "Contact dermatitis"]
+    },
+    {
+      "id": "sittha", "pubmed": "", "photo": "people/sittha.webp",
+      "name": "Sittha Sriprachya-Anunt", "title": "", "post": "M.D.",
+      "education": ["MBChB, University of Edinburgh", "B.Sc. (Hons) First Class in Medicine, University of St Andrews"],
+      "expertise": []
+    }
+  ],
+  "staff": [
+    {"id": "phagamas", "photo": "people/phagamas.webp", "name": "Phagamas Wanta", "role": {"en": "Academic Officer", "th": "นักวิชาการศึกษา"}, "education": ["B.B.A. (Marketing), Rangsit University", "B.Acc. (Accountancy), Valaya Alongkorn Rajabhat University"]},
+    {"id": "jutaporn", "photo": "people/jutaporn.webp", "name": "Jutaporn Wannaphum", "role": {"en": "Academic Officer", "th": "นักวิชาการศึกษา"}, "education": ["B.Sc. (Physics), Thammasat University", "M.Sc. (Physics), Thammasat University"]}
+  ],
+  "achievements": [],
+  "partners": [
+    {"name": "Erasmus MC", "place": "Rotterdam, Netherlands", "lon": 4.47, "lat": 51.91, "photo": "photos/erasmus-mc-1"},
+    {"name": "Hamamatsu University School of Medicine", "place": "Hamamatsu, Japan", "lon": 137.73, "lat": 34.71, "photo": "photos/hamamatsu"},
+    {"name": "Hokkaido University", "place": "Sapporo, Japan", "lon": 141.34, "lat": 43.07, "photo": "photos/hokkaido-university-1"},
+    {"name": "Niigata University Hospital", "place": "Niigata, Japan", "lon": 139.02, "lat": 37.92, "photo": "photos/niigata-university-hospital-2"},
+    {"name": "Central Japan International Medical Center", "place": "Gifu, Japan", "lon": 137.02, "lat": 35.44, "photo": "photos/cjimc-1"},
+    {"name": "Shonan Beauty Clinic", "place": "Tokyo, Japan", "lon": 139.69, "lat": 35.69, "photo": "photos/sbc-tokyo-2"},
+    {"name": "Mirabel Clinic", "place": "South Korea", "lon": 127.0, "lat": 37.55, "photo": "photos/mirabel-clinic-south-korea"},
+    {"name": "Greater Miami Skin and Laser Center", "place": "Miami, USA", "lon": -80.19, "lat": 25.76, "photo": "photos/miami-skin-laser"},
+    {"name": "Wells Dermatology Clinic and Medical Spa", "place": "", "photo": "photos/mou-wells-cutisbio"},
+    {"name": "CutisBio", "place": "", "photo": "photos/mou-wells-cutisbio"}
+  ]
+}

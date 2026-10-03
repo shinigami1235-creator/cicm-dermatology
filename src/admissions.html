@@ -1,0 +1,112 @@
+<body data-page="admissions">
+{{header}}
+<main id="main">
+  <section class="page-head layer" data-layer="epi" data-depth="60" data-depth-name="epidermis" style="padding-bottom:clamp(32px,4vw,48px)">
+    <div class="wrap">
+      <h1 data-i18n="adm.title">Admissions</h1>
+      <p data-i18n="adm.lede">How to apply for the M.Sc. and Ph.D. in Dermatology (International Program), what it costs and which documents to send.</p>
+      <div class="hero-actions" style="margin-top:28px">
+        <a class="btn btn-primary" href="https://eptumed.com/applyCICM/index.php" target="_blank" rel="noopener"><span data-i18n="ui.apply">Apply now</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line" href="#downloads" data-i18n="nav.downloads">Downloads</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="layer" data-layer="epi" data-depth="80" data-depth-name="epidermis" style="padding-top:clamp(40px,6vw,72px)">
+    <div class="wrap">
+      <div class="block" id="courses">
+        <h2 data-i18n="adm.courses">Courses</h2>
+        <p class="prose" data-i18n="adm.coursesLede">The study plan for each program, taken from the CICM program documents.</p>
+        <div class="tabs" role="tablist" aria-label="Programs">
+          <button role="tab" type="button" id="tab-clinical" aria-controls="panel" aria-selected="true" data-p="clinical"><span>M.Sc. Clinical</span></button>
+          <button role="tab" type="button" id="tab-cosmetic" aria-controls="panel" aria-selected="false" data-p="cosmetic"><span>M.Sc. Cosmetic</span></button>
+          <button role="tab" type="button" id="tab-phd" aria-controls="panel" aria-selected="false" data-p="phd"><span>Ph.D.</span></button>
+        </div>
+        <div id="panel" role="tabpanel" aria-labelledby="tab-clinical" class="cols-2"></div>
+      </div>
+
+      <div class="block cols-2 req">
+        <div>
+          <h2 data-i18n="adm.req">Entry requirements</h2>
+          <h3 data-i18n="adm.reqMsc">Master's</h3>
+          <ol>
+            <li data-i18n="adm.msc1">A Doctor of Medicine degree from a university in Thailand or abroad that the University Council approves.</li>
+            <li data-i18n="adm.msc2">A cumulative GPA of at least 2.50.</li>
+            <li data-i18n="adm.msc3">Thai applicants need a medical license, two years of experience and at least one year of internship before the application date.</li>
+            <li data-i18n="adm.msc4">General qualifications approved by the program committee.</li>
+            <li data-i18n="adm.msc5">Foreign applicants meet items 1, 2 and 4.</li>
+          </ol>
+          <h3 data-i18n="adm.reqPhd">Ph.D.</h3>
+          <ol>
+            <li data-i18n="adm.phd1">Plans 1.1 and 2.1 (with a master's): a master's in dermatology or an equivalent science degree with a GPA of at least 3.00.</li>
+            <li data-i18n="adm.phd2">Plans 1.2 and 2.2 (with an M.D.): a GPA of at least 3.50.</li>
+            <li data-i18n="adm.phd3">Thai applicants need a medical license and at least one year of internship.</li>
+            <li data-i18n="adm.phd4">An English score from TU-GET, TOEFL or IELTS, no older than two years on the application date.</li>
+            <li data-i18n="adm.phd5">CICM students in M.Sc. Clinical Dermatology (Plan A2) with at least 24 registered credits and an M.D. GPA of at least 3.50 can apply for Plan 2.2.</li>
+            <li data-i18n="adm.phd6">Foreign applicants follow the admission committee's criteria.</li>
+          </ol>
+        </div>
+        <div>
+          <h2 data-i18n="adm.eng">English score minimums</h2>
+          <p data-i18n="adm.engLede">Scores must be no older than two years on the application date, and a higher score is due before the thesis defense.</p>
+          <div class="table-scroll">
+            <table class="scores">
+              <thead><tr><th data-i18n="adm.test">Test</th><th data-i18n="adm.toApply">To apply</th><th data-i18n="adm.toDefend">Before defense</th></tr></thead>
+              <tbody>
+                <tr><td>TOEFL (paper)</td><td>500</td><td>550</td></tr>
+                <tr><td>TOEFL iBT</td><td>61</td><td>79</td></tr>
+                <tr><td>TU-GET (paper)</td><td>500</td><td>550</td></tr>
+                <tr><td>TU-GET (computer)</td><td>61</td><td>79</td></tr>
+                <tr><td>IELTS</td><td>6.0</td><td>6.5</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 data-i18n="adm.select">Selection</h3>
+          <p data-i18n="adm.selectT">A written exam on basic dermatology and an interview.</p>
+        </div>
+      </div>
+
+      <div class="block cols-2">
+        <div>
+          <h2 data-i18n="adm.docs">Documents to send</h2>
+          <ol class="ruled" style="padding:0;list-style:none">
+            <li data-i18n="adm.doc1">Application form</li>
+            <li data-i18n="adm.doc2">Copy of ID card or passport</li>
+            <li data-i18n="adm.doc3">Copies of degree certificates</li>
+            <li data-i18n="adm.doc4">Official transcript</li>
+            <li data-i18n="adm.doc5">Medical license</li>
+            <li data-i18n="adm.doc6">Internship certificate</li>
+            <li data-i18n="adm.doc7">Official English score report (TOEFL, TU-GET or IELTS)</li>
+            <li data-i18n="adm.doc8">Updated CV</li>
+            <li data-i18n="adm.doc9">Three recommendation letters, one from your current supervisor</li>
+          </ol>
+        </div>
+        <div>
+          <h2 data-i18n="adm.fees">Tuition</h2>
+          <p data-i18n="adm.feesLede">Per semester. Accident insurance is 110 THB a year.</p>
+          <div class="fees" id="fees"></div>
+        </div>
+      </div>
+    </div>
+    <div class="junction" data-to="var(--fat-pale)"></div>
+  </section>
+
+  <section class="layer" id="downloads" data-layer="fat-pale" data-depth="3500" data-depth-name="subcutis">
+    <div class="wrap cols-2">
+      <div>
+        <h2 style="font-size:clamp(2rem,4vw,3.4rem);line-height:1.04;margin-bottom:16px" data-i18n="adm.dl">Downloads</h2>
+        <p class="prose" data-i18n="adm.dlLede">Announcements, forms and program information. Files open from the CICM website.</p>
+        <div class="contact" style="grid-template-columns:1fr;margin-top:32px">
+          <div><span data-i18n="adm.contact">Admissions office</span><a href="mailto:derm.admission@gmail.com">derm.admission@gmail.com</a></div>
+          <div><span data-i18n="c.phone">Phone</span><a href="tel:+6625644440">02-564-4440 ext. 4232</a></div>
+          <div><span>Line</span><a href="https://line.me/R/ti/p/@565wfxef" target="_blank" rel="noopener">@565wfxef</a></div>
+        </div>
+      </div>
+      <div id="dlList"></div>
+    </div>
+  </section>
+</main>
+{{footer}}
+<script src="js/pages.js" defer></script>
+</body>
+</html>

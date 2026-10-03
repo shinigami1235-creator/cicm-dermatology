@@ -1,0 +1,193 @@
+<body data-page="home">
+{{header}}
+<main id="main">
+
+  <section class="hero" data-layer="surface" data-depth="0" data-depth-name="surface" aria-labelledby="hero-title">
+    <div class="hero-film">
+      <video id="heroVideo" muted loop playsinline preload="metadata" poster="media/hero-poster.jpg" aria-hidden="true">
+        <source src="media/hero-loop.webm" type="video/webm">
+        <source src="media/hero-loop.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="wrap hero-in">
+      <div>
+        <h1 id="hero-title" data-i18n="hero.title">Thailand's first international graduate program in dermatology</h1>
+        <p class="hero-lede" data-i18n="hero.lede">Study for a master's or a Ph.D. at Chulabhorn International College of Medicine, Thammasat University, with clinical training on real patients and research published in international journals.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://eptumed.com/applyCICM/index.php" target="_blank" rel="noopener"><span data-i18n="ui.apply">Apply now</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <button class="btn btn-line" type="button" data-film><svg aria-hidden="true"><use href="#i-play"/></svg><span data-i18n="hero.film">Watch the film (3:42)</span></button>
+        </div>
+        <div class="hero-lock">
+          <img src="assets/tu-emblem.svg" alt="" width="40" height="40">
+          <span data-i18n="hero.lock">Thammasat University<br>Chulabhorn International College of Medicine</span>
+        </div>
+      </div>
+      <div class="stage" id="stage">
+        <div class="ring" aria-hidden="true"></div>
+        <img class="still" src="assets/cicm-mark.svg" alt="The CICM emblem" width="220" height="210">
+      </div>
+    </div>
+    <a class="scroll-hint" href="#programs" data-i18n="hero.scroll">Go deeper</a>
+  </section>
+
+  <section class="layer" id="programs" data-layer="epi" data-depth="60" data-depth-name="epidermis" aria-labelledby="programs-title">
+    <div class="wrap">
+      <div class="notices-head rise">
+        <h2 data-i18n="notices.title">Announcements</h2>
+        <a class="link-arrow" href="admissions.html#downloads"><span data-i18n="notices.all">All downloads</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="notices rise" id="notices" aria-live="polite"></div>
+
+      <div class="sec-head rise">
+        <h2 id="programs-title" data-i18n="programs.title">Three programs</h2>
+        <p data-i18n="programs.lede">Two master's tracks and a Ph.D., all taught in English. The master's programs take two years while the Ph.D. runs two to four years depending on how you enter.</p>
+      </div>
+      <div class="programs" id="programList"></div>
+      <p style="margin-top:28px" class="rise"><a class="link-arrow" href="admissions.html#courses"><span data-i18n="programs.more">See the courses, requirements and fees</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+
+      <div class="for-who">
+        <div class="rise">
+          <h3 data-i18n="who.title">Who it is for</h3>
+          <p data-i18n="who.body">Doctors who want to build specialized skills, move ahead in clinical practice, do academic research or develop new treatments in dermatology. The program also prepares graduates to set up and run a dermatology practice of their own.</p>
+        </div>
+        <div class="rise" style="--d:80ms">
+          <h3 data-i18n="need.title">What you need to apply</h3>
+          <p data-i18n="need.body">A Doctor of Medicine degree with a GPA of at least 2.50 for the master's, and an English score such as IELTS 6.0 or TOEFL iBT 61. Thai applicants also need a medical license with two years of experience, including at least one year of internship.</p>
+        </div>
+      </div>
+    </div>
+    <div class="junction" data-to="var(--dermis)"></div>
+  </section>
+
+  <section class="layer" id="training" data-layer="dermis" data-depth="400" data-depth-name="papillary" aria-labelledby="training-title">
+    <div class="wrap">
+      <div class="sec-head rise">
+        <h2 id="training-title" data-i18n="training.title">Hands-on from the first semester</h2>
+        <p data-i18n="training.lede">Lectures run alongside clinical training with real patients. Students use modern equipment under the close supervision of experienced instructors, and train with partner hospitals across Thailand.</p>
+      </div>
+      <div class="plates">
+        <figure class="plate a pre"><div class="ph"><img src="photos/fruit-lab-my-batch-2.webp" srcset="photos/fruit-lab-my-batch-2-sm.webp 720w, photos/fruit-lab-my-batch-2.webp 1600w" sizes="(min-width:760px) 58vw, 100vw" alt="A student in gloves practising injections on an orange" loading="lazy" style="object-position:50% 35%"></div>
+          <figcaption class="legend"><b data-i18n="fig.1">Fig. 1</b><span data-i18n="fig.1t">Injection practice on fruit.</span></figcaption></figure>
+        <figure class="plate b pre"><div class="ph"><img src="photos/workshop-5-sm.webp" alt="Students watching a supervised procedure on a patient whose face is covered" loading="lazy"></div>
+          <figcaption class="legend"><b data-i18n="fig.2">Fig. 2</b><span data-i18n="fig.2t">A procedure workshop with a supervising doctor.</span></figcaption></figure>
+        <figure class="plate c pre"><div class="ph"><img src="photos/lab-work-sm.webp" alt="Students in gowns, caps and masks during a lab session" loading="lazy"></div>
+          <figcaption class="legend"><b data-i18n="fig.3">Fig. 3</b><span data-i18n="fig.3t">Lab session in full protective gear.</span></figcaption></figure>
+        <figure class="plate d pre"><div class="ph"><img src="photos/lecture-1.webp" srcset="photos/lecture-1-sm.webp 720w, photos/lecture-1.webp 1600w" sizes="(min-width:760px) 50vw, 100vw" alt="Students in a lecture room with a laser device presentation on screen" loading="lazy"></div>
+          <figcaption class="legend"><b data-i18n="fig.4">Fig. 4</b><span data-i18n="fig.4t">Lecture on laser devices.</span></figcaption></figure>
+      </div>
+      <ul class="points">
+        <li class="rise"><h3 data-i18n="pt.1">Clinic from semester one</h3><p data-i18n="pt.1t">Dermatology Clinic 1 starts in the first semester, and Hands-on Experiences in Dermatology runs in the second year.</p></li>
+        <li class="rise" style="--d:80ms"><h3 data-i18n="pt.2">A thesis in both years</h3><p data-i18n="pt.2t">Every master's student writes a thesis, and graduates have published their work in international journals.</p></li>
+        <li class="rise" style="--d:160ms"><h3 data-i18n="pt.3">Research methods early</h3><p data-i18n="pt.3t">Research ethics, statistics and journal club are taught in the first semester.</p></li>
+      </ul>
+    </div>
+    <div class="junction" data-to="var(--deep)"></div>
+  </section>
+
+  <section class="layer" id="faculty" data-layer="deep" data-depth="1600" data-depth-name="reticular" aria-labelledby="faculty-title">
+    <div class="wrap">
+      <div class="sec-head rise">
+        <h2 id="faculty-title" data-i18n="faculty.title">The faculty</h2>
+        <p data-i18n="faculty.lede">Six lecturers who trained in Thailand, Japan, the United States, the United Kingdom and Switzerland.</p>
+      </div>
+      <div class="reel" id="reel" aria-roledescription="carousel" aria-label="Faculty"></div>
+      <div class="staff" id="staffBand">
+        <div>
+          <h3 data-i18n="staff.title">Academic officers</h3>
+          <p data-i18n="staff.body">Thanks to the academic officers who support the program and its students.</p>
+        </div>
+      </div>
+      <p style="margin-top:32px"><a class="link-arrow" href="faculty.html"><span data-i18n="faculty.more">Full profiles and publications</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+    </div>
+    <div class="junction" data-to="var(--vessel)"></div>
+  </section>
+
+  <section class="layer" id="world" data-layer="vessel" data-depth="2400" data-depth-name="plexus" aria-labelledby="world-title">
+    <div class="wrap">
+      <div class="sec-head rise">
+        <h2 id="world-title" data-i18n="world.title">Training abroad</h2>
+        <p data-i18n="world.lede">All students can join international elective studies, with past electives in Japan, the Netherlands and Switzerland. The program also works with partner universities and clinics in Japan, South Korea, the Netherlands and the United States.</p>
+      </div>
+      <div class="world">
+        <div class="map" id="map" role="img" aria-label="Map of partner institutions linked to Bangkok"></div>
+        <ul class="partners" id="partners"></ul>
+      </div>
+    </div>
+    <div class="junction" data-to="var(--cell)"></div>
+  </section>
+
+  <section class="layer journal" id="research" data-layer="cell" data-depth="cell" data-depth-name="cell" aria-labelledby="research-title">
+    <div class="wrap">
+      <div class="volume rise"><span><b>CICM Dermatology</b></span><span data-i18n="research.vol">Research record</span><span id="volRange">PubMed, 2011 to 2026</span></div>
+      <div class="journal-top">
+        <div class="sec-head rise" style="margin-bottom:0">
+          <h2 id="research-title" data-i18n="research.title">Research that gets published</h2>
+          <p id="researchLede">Faculty and program members have 112 papers indexed in PubMed across 53 journals, including 22 randomized controlled trials.</p>
+          <p data-i18n="research.lede2" style="margin:0">Graduates have published clinical, basic science and translational studies.</p>
+        </div>
+        <figure class="fig rise" id="yearFig"></figure>
+      </div>
+      <div class="cols-2" style="margin-top:clamp(48px,7vw,88px)">
+        <div class="rise"><table class="table1" id="journalTable"></table></div>
+        <div class="rise">
+          <h3 style="font-family:var(--font-paper);font-size:1.4rem;margin-bottom:6px" data-i18n="research.latest">Latest papers</h3>
+          <ol class="refs" id="latestRefs"></ol>
+          <p style="margin-top:22px"><a class="link-arrow" href="research.html"><span id="allPapersLink">All 112 papers</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+    <div class="junction" data-to="var(--fat-pale)"></div>
+  </section>
+
+  <section class="layer" id="life" data-layer="fat-pale" data-depth="3500" data-depth-name="subcutis" aria-labelledby="life-title">
+    <div class="wrap">
+      <div class="sec-head rise">
+        <h2 id="life-title" data-i18n="life.title">Life at CICM</h2>
+        <p data-i18n="life.lede">Follow CICM Dermatology on Facebook for graduations, ceremonies, conferences and admission news.</p>
+      </div>
+      <div class="updates">
+        <div class="life">
+          <figure class="l1 rise"><img src="photos/graduates-2.webp" srcset="photos/graduates-2-sm.webp 720w, photos/graduates-2.webp 1600w" sizes="(min-width:1000px) 55vw, 100vw" alt="Graduates in academic dress outside the hall" loading="lazy"><figcaption class="legend" data-i18n="life.f1">Graduates in academic dress.</figcaption></figure>
+          <figure class="l2 rise"><img src="photos/white-coat-1-sm.webp" alt="Two people holding a certificate at the Wai Kru and Long White Coat ceremony backdrop" loading="lazy" style="object-position:50% 40%"><figcaption class="legend" data-i18n="life.f2">Wai Kru and Long White Coat, 2026.</figcaption></figure>
+          <figure class="l3 rise" style="--d:80ms"><img src="photos/conference-6-sm.webp" alt="A large group photo at the CICM 2024 conference" loading="lazy"><figcaption class="legend" data-i18n="life.f3">CICM 2024 conference.</figcaption></figure>
+        </div>
+        <div class="rise">
+          <div class="fb-head"><h3 data-i18n="life.fb">On Facebook</h3><a class="link-arrow" href="https://www.facebook.com/profile.php?id=100064737292426" target="_blank" rel="noopener"><span data-i18n="life.open">Open page</span><svg aria-hidden="true"><use href="#i-out"/></svg></a></div>
+          <div class="fb" id="fb"><p class="fb-fallback" data-i18n="life.fbload">Loading the Facebook feed.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="junction" data-to="var(--fat)"></div>
+  </section>
+
+  <section class="layer apply" id="apply" data-layer="fat" data-depth="4000" data-depth-name="subcutis" aria-labelledby="apply-title">
+    <div class="wrap">
+      <h2 id="apply-title" class="rise" data-i18n="apply.title">Apply to CICM Dermatology</h2>
+      <ol class="steps">
+        <li class="rise"><h3 data-i18n="step.1">Check the requirements</h3><p data-i18n="step.1t">Read the entry requirements and English score minimums for your program.</p></li>
+        <li class="rise" style="--d:60ms"><h3 data-i18n="step.2">Prepare your documents</h3><p data-i18n="step.2t">Application form, ID or passport, degree certificates, transcript, medical license, internship certificate, English score, CV and three recommendation letters.</p></li>
+        <li class="rise" style="--d:120ms"><h3 data-i18n="step.3">Apply online</h3><p data-i18n="step.3t">Submit your application through the CICM online form.</p></li>
+        <li class="rise" style="--d:180ms"><h3 data-i18n="step.4">Written exam and interview</h3><p data-i18n="step.4t">Shortlisted applicants sit a written exam on basic dermatology and an interview.</p></li>
+      </ol>
+      <div class="apply-row rise">
+        <a class="btn btn-dark" href="https://eptumed.com/applyCICM/index.php" target="_blank" rel="noopener"><span data-i18n="ui.apply">Apply now</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line" href="admissions.html"><span data-i18n="apply.req">Requirements and fees</span></a>
+        <a class="btn btn-line" href="admissions.html#downloads"><span data-i18n="nav.downloads">Downloads</span></a>
+      </div>
+      <div class="contact rise">
+        <div><span data-i18n="c.email">Email</span><a href="mailto:derm.admission@gmail.com">derm.admission@gmail.com</a></div>
+        <div><span data-i18n="c.phone">Phone</span><a href="tel:+6625644440">02-564-4440 ext. 4232</a></div>
+        <div><span>Line</span><a href="https://line.me/R/ti/p/@565wfxef" target="_blank" rel="noopener">@565wfxef</a></div>
+        <div><span data-i18n="c.hours">Office hours</span><b data-i18n="c.hourst">Mon to Fri, 8:30 to 16:30</b></div>
+      </div>
+    </div>
+  </section>
+</main>
+{{footer}}
+<dialog class="film" id="film" aria-label="CICM Dermatology film">
+  <button class="btn btn-primary film-close" type="button" data-close-film><svg aria-hidden="true"><use href="#i-close"/></svg><span data-i18n="ui.close">Close</span></button>
+  <video controls playsinline preload="none" poster="media/hero-poster.jpg"><source data-src="media/film.mp4" type="video/mp4"></video>
+</dialog>
+</body>
+</html>

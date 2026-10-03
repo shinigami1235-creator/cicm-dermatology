@@ -1,0 +1,35 @@
+<body data-page="research">
+{{header}}
+<main id="main">
+  <section class="page-head layer journal" data-layer="cell" data-depth="cell" data-depth-name="cell" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="volume"><span><b>CICM Dermatology</b></span><span data-i18n="research.vol">Research record</span><span id="volRange">PubMed</span></div>
+      <h1 data-i18n="research.page.title">Published research</h1>
+      <p data-i18n="research.page.lede">Every paper here is indexed in PubMed and lists a CICM Dermatology lecturer or program member as an author. Search by title or author, or filter by topic, lecturer, year or study design.</p>
+      <div class="journal-top" style="margin-top:clamp(40px,6vw,72px)">
+        <div><p id="researchLede" style="font-size:1.15rem;max-width:44ch"></p><table class="table1" id="journalTable" style="margin-top:20px"></table></div>
+        <figure class="fig" id="yearFig"></figure>
+      </div>
+    </div>
+  </section>
+  <section class="layer journal" data-layer="cell" data-depth="cell" data-depth-name="cell" style="padding-top:clamp(48px,7vw,88px)">
+    <div class="wrap">
+      <div class="tools" role="search">
+        <label class="field"><span data-i18n="research.search">Search titles and authors</span><input id="q" type="search" autocomplete="off" placeholder="For example: melasma, laser, psoriasis" data-i18n-ph="research.searchph"></label>
+        <label class="field"><span data-i18n="research.lecturer">Lecturer</span><select id="fLect"><option value="" data-i18n="research.allLecturers">All lecturers</option></select></label>
+        <label class="field"><span data-i18n="research.year">Year</span><select id="fYear"><option value="" data-i18n="research.allYears">All years</option></select></label>
+        <label class="field"><span data-i18n="research.design">Study design</span><select id="fDesign"><option value="" data-i18n="research.allDesigns">All designs</option></select></label>
+      </div>
+      <p class="field" style="margin:18px 0 8px"><span data-i18n="research.topics">Topics</span></p>
+      <ul class="topics" id="topics"></ul>
+      <p class="count" id="count" aria-live="polite"></p>
+      <ol class="refs" id="results"></ol>
+      <div class="empty" id="empty" hidden><p data-i18n="research.empty">No papers match these filters.</p><button class="btn btn-line" type="button" id="clear" data-i18n="research.clear">Clear filters</button></div>
+      <p class="legend" style="margin-top:40px;color:var(--cell-soft);max-width:70ch" data-i18n="research.source">Source: PubMed (NCBI). This list was built on 3 October 2026 from author searches for each lecturer and an affiliation search for Chulabhorn International College of Medicine. Write to derm.admission@gmail.com to add a missing paper.</p>
+    </div>
+  </section>
+</main>
+{{footer}}
+<script src="js/research.js" defer></script>
+</body>
+</html>

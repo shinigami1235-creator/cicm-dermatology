@@ -1,0 +1,2250 @@
+{
+"generated": "2026-10-03",
+"source": "PubMed (NCBI E-utilities)",
+"papers": [
+{
+"pmid": "42345215",
+"title": "From Solubilization to Structural Perturbation: The Mechanism of Polyquaternium-51-Driven Enhanced Transdermal Delivery of Glabridin",
+"authors": [
+"Hu Z",
+"Dong S",
+"Huang J",
+"Zhang L",
+"Hu Z",
+"Wang H",
+"Qin L",
+"Tangthianchaichana J",
+"Lu Y"
+],
+"journal": "Langmuir",
+"iso": "Langmuir",
+"year": 2026,
+"doi": "10.1021/acs.langmuir.6c01695",
+"faculty": [],
+"topic": "Clinical dermatology",
+"design": ""
+},
+{
+"pmid": "42731113",
+"title": "Photothermal-Activated Platelet-Rich Plasma Versus Conventional Platelet-Rich Plasma for Melasma: A Split-Face, Double-Blind Randomized Controlled Trial",
+"authors": [
+"Siriphanit R",
+"Ranoppawan N",
+"Charoensuksira S",
+"Thanasarnaksorn W",
+"Suwanchinda A",
+"Meephansan J"
+],
+"journal": "Photodermatology, Photoimmunology & Photomedicine",
+"iso": "Photodermatol Photoimmunol Photomed",
+"year": 2026,
+"doi": "10.1111/phpp.70122",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Injectables & aesthetics",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "40124024",
+"title": "Application of Gelatin/Vanillin/Fe3+/AGP-AgNPs Hydrogels Promotes Wound Contraction, Enhances Dermal Growth Factor Expression, and Minimizes Skin Irritation",
+"authors": [
+"Lapmanee S",
+"Bhubhanil S",
+"Khongkow M",
+"Namdee K",
+"Yingmema W",
+"Bhummaphan N",
+"Wongchitrat P",
+"Charoenphon N",
+"Hutchison JA",
+"Talodthaisong C",
+"Kulchat S"
+],
+"journal": "ACS Omega",
+"iso": "ACS Omega",
+"year": 2025,
+"doi": "10.1021/acsomega.4c10648",
+"faculty": [],
+"topic": "Wound healing",
+"design": ""
+},
+{
+"pmid": "41064808",
+"title": "Co-expression of CD30 and SLFN11 serves as a dual biomarker for the treatment of cutaneous T-cell lymphoma",
+"authors": [
+"Shimauchi T",
+"Murai J",
+"Iwasaki M",
+"Phadungsaksawasdi P",
+"Ojima T",
+"Fujii K",
+"Honda T"
+],
+"journal": "NAR Cancer",
+"iso": "NAR Cancer",
+"year": 2025,
+"doi": "10.1093/narcan/zcaf037",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Skin biology & immunology",
+"design": ""
+},
+{
+"pmid": "41217063",
+"title": "Exosome-Based Therapy: A Comparative Study of Adipose- and Umbilical Cord-Derived Mesenchymal Stem Cells-Derived Exosomes in Psoriatic Mouse Model",
+"authors": [
+"Siriphanit R",
+"Thanasarnaksorn W",
+"Boonpethkaew S",
+"Ponnikorn S",
+"Charoensuksira S",
+"Deenonpoe R",
+"Sirithanabadeekul P",
+"Suwanchinda A",
+"Hongeng S",
+"Meephansan J"
+],
+"journal": "Experimental Dermatology",
+"iso": "Exp Dermatol",
+"year": 2025,
+"doi": "10.1111/exd.70176",
+"faculty": [
+"Meephansan J",
+"Sirithanabadeekul P"
+],
+"topic": "Injectables & aesthetics",
+"design": ""
+},
+{
+"pmid": "40370762",
+"title": "Exploring the link between GLP-1 receptor agonists and dementia: A comprehensive review",
+"authors": [
+"Chuansangeam M",
+"Phadungsaksawasdi P",
+"Park HJ",
+"Yang YH"
+],
+"journal": "Journal of Alzheimer's Disease Reports",
+"iso": "J Alzheimers Dis Rep",
+"year": 2025,
+"doi": "10.1177/25424823251342182",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Other medicine",
+"design": "Review"
+},
+{
+"pmid": "40230515",
+"title": "Fixed drug eruption induced by Etoricoxib in Thailand: A case report",
+"authors": [
+"Siriwattanasatorn M",
+"Kamudhamas A",
+"Sivapornpan N",
+"Noonpugdee M",
+"Kamalashiran C",
+"Phetkate P"
+],
+"journal": "Toxicology Reports",
+"iso": "Toxicol Rep",
+"year": 2025,
+"doi": "10.1016/j.toxrep.2025.102010",
+"faculty": [],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": "Case Reports"
+},
+{
+"pmid": "40488775",
+"title": "Localized corticosteroid delivery in alopecia areata using microneedle patch technology",
+"authors": [
+"Ariya-Atthaya P",
+"Pureesrisak P",
+"Meephansan J",
+"Charoensuksira S",
+"Sirithanabadeekul P",
+"Thanasarnaksorn W",
+"Tantisantisom K",
+"Thongma S",
+"Rayanasukha Y",
+"Khanchaitit P",
+"Suchonwanit P"
+],
+"journal": "Archives of Dermatological Research",
+"iso": "Arch Dermatol Res",
+"year": 2025,
+"doi": "10.1007/s00403-025-04307-7",
+"faculty": [
+"Meephansan J",
+"Sirithanabadeekul P"
+],
+"topic": "Hair & nails",
+"design": ""
+},
+{
+"pmid": "39951159",
+"title": "Polynucleotides as a novel therapeutic approach in androgenetic alopecia: an analysis of effectiveness and safety",
+"authors": [
+"Thanasarnaksorn W",
+"Limsuchaiwat N",
+"Sirithanabadeekul P",
+"Charoensuksira S",
+"Suwanchinda A",
+"Meephansan J"
+],
+"journal": "Archives of Dermatological Research",
+"iso": "Arch Dermatol Res",
+"year": 2025,
+"doi": "10.1007/s00403-025-03908-6",
+"faculty": [
+"Meephansan J",
+"Sirithanabadeekul P"
+],
+"topic": "Injectables & aesthetics",
+"design": ""
+},
+{
+"pmid": "40362555",
+"title": "Potential Cutaneous Applications of Boesenbergia rotunda Extract Based on Its In Vitro Anti-Melanogenic and Anti-Fibroproliferative Properties",
+"authors": [
+"Salakshna N",
+"Thanasarnaksorn W",
+"Kanjanasirirat P",
+"Jearawuttanakul K",
+"Chabang N",
+"Rangkansenee N",
+"Panich U",
+"Thanachaiphiwat S",
+"Borwornpinyo S",
+"Hongeng S"
+],
+"journal": "International Journal of Molecular Sciences",
+"iso": "Int J Mol Sci",
+"year": 2025,
+"doi": "10.3390/ijms26094319",
+"faculty": [],
+"topic": "Pigment & melasma",
+"design": ""
+},
+{
+"pmid": "40565255",
+"title": "Progenitor Cell Dynamics in Androgenetic Alopecia: Insights from Spatially Resolved Transcriptomics",
+"authors": [
+"Charoensuksira S",
+"Surinlert P",
+"Krajarng A",
+"Nualsanit T",
+"Payuhakrit W",
+"Panpinyaporn P",
+"Khumsri W",
+"Thanasarnaksorn W",
+"Suwanchinda A",
+"Hongeng S",
+"Ponnikorn S"
+],
+"journal": "International Journal of Molecular Sciences",
+"iso": "Int J Mol Sci",
+"year": 2025,
+"doi": "10.3390/ijms26125792",
+"faculty": [],
+"topic": "Hair & nails",
+"design": ""
+},
+{
+"pmid": "40167830",
+"title": "The comparative study of letibotulinum toxin A and onabotulinum toxin A in treatment of primary axillary hyperhidrosis",
+"authors": [
+"Nitayavardhana S",
+"Leaovitavat R"
+],
+"journal": "Archives of Dermatological Research",
+"iso": "Arch Dermatol Res",
+"year": 2025,
+"doi": "10.1007/s00403-025-04069-2",
+"faculty": [
+"Nitayavardhana S"
+],
+"topic": "Injectables & aesthetics",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "41025315",
+"title": "Transfersomal delivery of Centella asiatica promotes efficient excision wound healing in rats",
+"authors": [
+"Lapmanee S",
+"Bunwatcharaphansakun P",
+"Phongsupa W",
+"Namdee K",
+"Suttisintong K",
+"Asawapirom U",
+"Ruktanonchai U",
+"Wongchitrat P",
+"Bhubhanil S",
+"Maitarad P",
+"Khongkow M"
+],
+"journal": "Drug Delivery",
+"iso": "Drug Deliv",
+"year": 2025,
+"doi": "10.1080/10717544.2025.2563649",
+"faculty": [],
+"topic": "Wound healing",
+"design": ""
+},
+{
+"pmid": "38873171",
+"title": "Botulinum toxin injection shows promise in nail psoriasis: A comparative randomized controlled trial",
+"authors": [
+"Juntongjin P",
+"Srisinlapakig S",
+"Nitayavardhana S"
+],
+"journal": "JAAD International",
+"iso": "JAAD Int",
+"year": 2024,
+"doi": "10.1016/j.jdin.2024.03.021",
+"faculty": [
+"Juntongjin P",
+"Nitayavardhana S"
+],
+"topic": "Injectables & aesthetics",
+"design": ""
+},
+{
+"pmid": "39727600",
+"title": "Cannabidiol-Loaded Lipid Nanoparticles Incorporated in Polyvinyl Alcohol and Sodium Alginate Hydrogel Scaffold for Enhancing Cell Migration and Accelerating Wound Healing",
+"authors": [
+"Lapmanee S",
+"Bhubhanil S",
+"Charoenphon N",
+"Inchan A",
+"Bunwatcharaphansakun P",
+"Khongkow M",
+"Namdee K"
+],
+"journal": "Gels",
+"iso": "Gels",
+"year": 2024,
+"doi": "10.3390/gels10120843",
+"faculty": [],
+"topic": "Wound healing",
+"design": ""
+},
+{
+"pmid": "39328960",
+"title": "Cannabis-Containing Cream for CKD-Associated Pruritus: A Double-Blind, Placebo Controlled Trial",
+"authors": [
+"Anumas S",
+"Kuropakornpong P",
+"Chakkavittumrong P",
+"Tasanarong A",
+"Pattharanitima P"
+],
+"journal": "Kidney Medicine",
+"iso": "Kidney Med",
+"year": 2024,
+"doi": "10.1016/j.xkme.2024.100894",
+"faculty": [],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+},
+{
+"pmid": "39460779",
+"title": "Comparative proteomic analysis of male and female androgenetic alopecia: elucidating gender-specific molecular patterns",
+"authors": [
+"Charoensuksira S",
+"Meephansan J",
+"Vanichvongvan R",
+"Somparn P",
+"Tangtanatakul P",
+"Wongpiyabovorn J",
+"Suchonwanit P"
+],
+"journal": "Archives of Dermatological Research",
+"iso": "Arch Dermatol Res",
+"year": 2024,
+"doi": "10.1007/s00403-024-03453-8",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Hair & nails",
+"design": ""
+},
+{
+"pmid": "39201715",
+"title": "Disturbance of Immune Microenvironment in Androgenetic Alopecia through Spatial Transcriptomics",
+"authors": [
+"Charoensuksira S",
+"Tantiwong S",
+"Pongklaokam J",
+"Hanvivattanakul S",
+"Surinlert P",
+"Krajarng A",
+"Thanasarnaksorn W",
+"Hongeng S",
+"Ponnikorn S"
+],
+"journal": "International Journal of Molecular Sciences",
+"iso": "Int J Mol Sci",
+"year": 2024,
+"doi": "10.3390/ijms25169031",
+"faculty": [],
+"topic": "Hair & nails",
+"design": ""
+},
+{
+"pmid": "39336125",
+"title": "Melatonin Augments the Expression of Core Transcription Factors in Aged and Alzheimer's Patient Skin Fibroblasts",
+"authors": [
+"Shukla M",
+"Duangrat R",
+"Nopparat C",
+"Sotthibundhu A",
+"Govitrapong P"
+],
+"journal": "Biology",
+"iso": "Biology (Basel)",
+"year": 2024,
+"doi": "10.3390/biology13090698",
+"faculty": [],
+"topic": "Skin biology & immunology",
+"design": ""
+},
+{
+"pmid": "39368074",
+"title": "Red and Green LED Light Therapy: A Comparative Study in Androgenetic Alopecia",
+"authors": [
+"Tantiyavarong J",
+"Charoensuksira S",
+"Meephansan J",
+"Hanvivattanakul S",
+"Rayanasukha Y",
+"Boonkoom T",
+"Tantisantisom K"
+],
+"journal": "Photodermatology, Photoimmunology & Photomedicine",
+"iso": "Photodermatol Photoimmunol Photomed",
+"year": 2024,
+"doi": "10.1111/phpp.13004",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Lasers & light",
+"design": "Clinical Trial"
+},
+{
+"pmid": "38957412",
+"title": "Role of vitamin D supplement adjunct to topical benzoyl peroxide in acne: a randomized double-blinded controlled study",
+"authors": [
+"Ruikchuchit T",
+"Juntongjin P"
+],
+"journal": "International Journal of Women's Dermatology",
+"iso": "Int J Womens Dermatol",
+"year": 2024,
+"doi": "10.1097/JW9.0000000000000163",
+"faculty": [
+"Juntongjin P"
+],
+"topic": "Acne",
+"design": ""
+},
+{
+"pmid": "39325239",
+"title": "The efficacy of light-guiding microneedle patch for stimulating hair growth in androgenetic alopecia",
+"authors": [
+"Charoensuksira S",
+"Rattanapirat S",
+"Meephansan J",
+"Sirithanabadeekul P",
+"Adulyaritthikul P",
+"Thongma S",
+"Rayanasukha Y",
+"Tantisantisom K"
+],
+"journal": "Archives of Dermatological Research",
+"iso": "Arch Dermatol Res",
+"year": 2024,
+"doi": "10.1007/s00403-024-03396-0",
+"faculty": [
+"Meephansan J",
+"Sirithanabadeekul P"
+],
+"topic": "Lasers & light",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "39460761",
+"title": "The influence of air pollution on skin microbiome: a link to skin barrier dysfunction",
+"authors": [
+"Boonpethkaew S",
+"Charoensuksira S",
+"Meephansan J",
+"Sirithanabadeekul P",
+"Chueachavalit C",
+"Ingkaninanda P",
+"Visedthorn S",
+"Chanchaem P",
+"Sivapornnukul P",
+"Payungporn S"
+],
+"journal": "Archives of Dermatological Research",
+"iso": "Arch Dermatol Res",
+"year": 2024,
+"doi": "10.1007/s00403-024-03448-5",
+"faculty": [
+"Meephansan J",
+"Sirithanabadeekul P"
+],
+"topic": "Skin biology & immunology",
+"design": ""
+},
+{
+"pmid": "37553989",
+"title": "Antiproliferative and Anti-Inflammatory Activities of Deprungsith Formulation and Its Bioactive Compounds Against Mild Psoriasis and Potential of Metabolic Herb-Drug Interactions",
+"authors": [
+"Na-Bangchang K",
+"Teerachaisakul M",
+"Muhamad P",
+"Kasemnitichok Y",
+"Sangnarong N",
+"Boonprasert K",
+"Tarasuk M",
+"Plengsuriyakarn T"
+],
+"journal": "Journal of Evidence-based Integrative Medicine",
+"iso": "J Evid Based Integr Med",
+"year": 2023,
+"doi": "10.1177/2515690X231191101",
+"faculty": [],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+},
+{
+"pmid": "36928592",
+"title": "Elucidating the NB-UVB mechanism by comparing transcriptome alteration on the edge and center of psoriatic plaques",
+"authors": [
+"Boonpethkaew S",
+"Meephansan J",
+"Charoensuksira S",
+"Jumlongpim O",
+"Tangtanatakul P",
+"Wongpiyabovorn J",
+"Komine M",
+"Morita A"
+],
+"journal": "Scientific Reports",
+"iso": "Sci Rep",
+"year": 2023,
+"doi": "10.1038/s41598-023-31610-y",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Lasers & light",
+"design": ""
+},
+{
+"pmid": "37665186",
+"title": "Exploring the role of growth factors as potential regulators in psoriatic plaque formation",
+"authors": [
+"Boonpethkaew S",
+"Meephansan J",
+"Ponnikorn S",
+"Jumlongpim O",
+"Juntongjin P",
+"Chakkavittumrong P",
+"Wongpiyabovorn J",
+"Morita A",
+"Komine M"
+],
+"journal": "Experimental Dermatology",
+"iso": "Exp Dermatol",
+"year": 2023,
+"doi": "10.1111/exd.14918",
+"faculty": [
+"Meephansan J",
+"Juntongjin P"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+},
+{
+"pmid": "37999199",
+"title": "Risk Factors and Predictive Model for Mortality of Hospitalized COVID-19 Elderly Patients from a Tertiary Care Hospital in Thailand",
+"authors": [
+"Chuansangeam M",
+"Srithan B",
+"Pattharanitima P",
+"Phadungsaksawasdi P"
+],
+"journal": "Medicines",
+"iso": "Medicines (Basel)",
+"year": 2023,
+"doi": "10.3390/medicines10110059",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Other medicine",
+"design": ""
+},
+{
+"pmid": "36416978",
+"title": "The efficacy of LED microneedle patch on hair growth in mice",
+"authors": [
+"Kittigul L",
+"Meephansan J",
+"Sirithanabadeekul P",
+"Hanvivattanakul S",
+"Deenonpoe R",
+"Yingmema W",
+"Tantisantisom K",
+"Thongma S",
+"Rayanasukha Y",
+"Boonkoom T",
+"Adulyaritthikul P",
+"Khanchaitit P"
+],
+"journal": "Archives of Dermatological Research",
+"iso": "Arch Dermatol Res",
+"year": 2023,
+"doi": "10.1007/s00403-022-02476-3",
+"faculty": [
+"Meephansan J",
+"Sirithanabadeekul P"
+],
+"topic": "Lasers & light",
+"design": ""
+},
+{
+"pmid": "35642576",
+"title": "A novel technique in reducing sebum production and improving atrophic acne scars",
+"authors": [
+"Sirithanabadeekul P",
+"Leetrakulwanna V",
+"Suwanchinda A"
+],
+"journal": "Journal of Cosmetic Dermatology",
+"iso": "J Cosmet Dermatol",
+"year": 2022,
+"doi": "10.1111/jocd.15137",
+"faculty": [
+"Sirithanabadeekul P"
+],
+"topic": "Acne",
+"design": ""
+},
+{
+"pmid": "35737868",
+"title": "Alteration of gut microbiota during narrowband ultraviolet B therapy in psoriasis: A preliminary study",
+"authors": [
+"Rungjang A",
+"Meephansan J",
+"Payungporn S",
+"Sawaswong V",
+"Chanchaem P",
+"Pureesrisak P",
+"Wongpiyabovorn J",
+"Thio HB"
+],
+"journal": "Experimental Dermatology",
+"iso": "Exp Dermatol",
+"year": 2022,
+"doi": "10.1111/exd.14631",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Lasers & light",
+"design": ""
+},
+{
+"pmid": "34129740",
+"title": "Alterations of collagen type 1, skin fibroblasts, and macrophages in the scalp following the treatment of 1550-nm erbium glass fractional laser for androgenetic alopecia",
+"authors": [
+"Heng K",
+"Meephansan J",
+"Suchonwanit P"
+],
+"journal": "Journal of Cosmetic Dermatology",
+"iso": "J Cosmet Dermatol",
+"year": 2022,
+"doi": "10.1111/jocd.14287",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Lasers & light",
+"design": ""
+},
+{
+"pmid": "34348293",
+"title": "Association between Vitamin D Level and Acne, and Correlation with Disease Severity: A Meta-Analysis",
+"authors": [
+"Hasamoh Y",
+"Thadanipon K",
+"Juntongjin P"
+],
+"journal": "Dermatology",
+"iso": "Dermatology",
+"year": 2022,
+"doi": "10.1159/000517514",
+"faculty": [
+"Juntongjin P"
+],
+"topic": "Acne",
+"design": "Meta-Analysis"
+},
+{
+"pmid": "35785468",
+"title": "Awareness of vitiligo among multi-ethnic populations",
+"authors": [
+"Juntongjin P",
+"Abouelsaad S",
+"Sugkraroek S",
+"Taechakraichana N",
+"Lungchukiet P",
+"Nuallaong W"
+],
+"journal": "Journal of Cosmetic Dermatology",
+"iso": "J Cosmet Dermatol",
+"year": 2022,
+"doi": "10.1111/jocd.15211",
+"faculty": [
+"Juntongjin P"
+],
+"topic": "Pigment & melasma",
+"design": ""
+},
+{
+"pmid": "35665543",
+"title": "Comparison of Malassezia spp. colonization between human skin exposed to high- and low-ambient air pollution",
+"authors": [
+"Chueachavalit C",
+"Meephansan J",
+"Payungporn S",
+"Sawaswong V",
+"Chanchaem P",
+"Wongpiyabovorn J",
+"Thio HB"
+],
+"journal": "Experimental Dermatology",
+"iso": "Exp Dermatol",
+"year": 2022,
+"doi": "10.1111/exd.14622",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Skin biology & immunology",
+"design": ""
+},
+{
+"pmid": "36307341",
+"title": "Comparison of transcriptomic profiles in edge to center of plaque reveals chronological molecular events in psoriatic plaque formation",
+"authors": [
+"Boonpethkaew S",
+"Meephansan J",
+"Jumlongpim O",
+"Charoensuksira S",
+"Tangtanatakul P",
+"Wongpiyabovorn J",
+"Komine M"
+],
+"journal": "Journal of Dermatological Science",
+"iso": "J Dermatol Sci",
+"year": 2022,
+"doi": "10.1016/j.jdermsci.2022.10.003",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+},
+{
+"pmid": "35974467",
+"title": "Efficacy of a novel microneedle patch for rejuvenation of the nasolabial fold",
+"authors": [
+"Pruettijarai U",
+"Meephansan J",
+"Prapapan O",
+"Pureesrisak P",
+"Sirithanabadeekul P",
+"Tantisantisom K",
+"Thongma S",
+"Rayanasukha Y",
+"Adulyaritthikul P",
+"Khanchaitit P"
+],
+"journal": "Skin Research and Technology",
+"iso": "Skin Res Technol",
+"year": 2022,
+"doi": "10.1111/srt.13199",
+"faculty": [
+"Meephansan J",
+"Sirithanabadeekul P"
+],
+"topic": "Injectables & aesthetics",
+"design": "Clinical Trial"
+},
+{
+"pmid": "35221151",
+"title": "Epidermal CD8+CD103+ skin resident memory T cells in psoriasis plaques are reduced in number but remain in the basement membrane zone after topical application of corticosteroid and vitamin D3",
+"authors": [
+"Kurihara K",
+"Fujiyama T",
+"Phadungsaksawasdi P",
+"Ito T",
+"Honda T",
+"Tokura Y"
+],
+"journal": "Journal of Dermatological Science",
+"iso": "J Dermatol Sci",
+"year": 2022,
+"doi": "10.1016/j.jdermsci.2022.02.008",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+},
+{
+"pmid": "35488471",
+"title": "Outcomes of 1064-nm picosecond laser alone and in combination with fractional 1064-nm picosecond laser in tattoo removal",
+"authors": [
+"Sirithanabadeekul P",
+"Vongchansathapat P",
+"Sutthipisal N",
+"Thanasarnaksorn W",
+"Suwanchinda A"
+],
+"journal": "Journal of Cosmetic Dermatology",
+"iso": "J Cosmet Dermatol",
+"year": 2022,
+"doi": "10.1111/jocd.15031",
+"faculty": [
+"Sirithanabadeekul P"
+],
+"topic": "Lasers & light",
+"design": ""
+},
+{
+"pmid": "36015117",
+"title": "Skin Anti-Aging Potential of Ipomoea pes-caprae Ethanolic Extracts on Promoting Cell Proliferation and Collagen Production in Human Fibroblasts (CCD-986sk Cells)",
+"authors": [
+"Panichakul T",
+"Ponnikorn S",
+"Tupchiangmai W",
+"Haritakun W",
+"Srisanga K"
+],
+"journal": "Pharmaceuticals",
+"iso": "Pharmaceuticals (Basel)",
+"year": 2022,
+"doi": "10.3390/ph15080969",
+"faculty": [],
+"topic": "Skin aging",
+"design": ""
+},
+{
+"pmid": "36065340",
+"title": "Skin Microbiota Profiles from Tape Stripping and Skin Biopsy Samples of Patients with Psoriasis Treated with Narrowband Ultraviolet B",
+"authors": [
+"Rungjang A",
+"Meephansan J",
+"Payungporn S",
+"Sawaswong V",
+"Chanchaem P",
+"Pureesrisak P",
+"Wongpiyabovorn J",
+"Thio HB"
+],
+"journal": "Clinical, Cosmetic and Investigational Dermatology",
+"iso": "Clin Cosmet Investig Dermatol",
+"year": 2022,
+"doi": "10.2147/CCID.S374871",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+},
+{
+"pmid": "35942017",
+"title": "The Efficacy and Safety of Epidermal Growth Factor Combined with Fractional Carbon Dioxide Laser for Acne Scar Treatment: A Split-Face Trial",
+"authors": [
+"Ratanapokasatit Y",
+"Sirithanabadeekul P"
+],
+"journal": "The Journal of Clinical and Aesthetic Dermatology",
+"iso": "J Clin Aesthet Dermatol",
+"year": 2022,
+"doi": "",
+"faculty": [
+"Sirithanabadeekul P"
+],
+"topic": "Acne",
+"design": ""
+},
+{
+"pmid": "35995712",
+"title": "Transcriptome profiling in psoriasis: NB-UVB treatment-associated transcriptional changes and modulation of autoinflammation in perilesional skin in early-phase disease",
+"authors": [
+"Vacharanukrauh P",
+"Meephansan J",
+"Ponnikorn S",
+"Tangtanatakul P",
+"Soonthornchai W",
+"Wongpiyabovorn J",
+"Ingkaninanda P",
+"Morita A"
+],
+"journal": "Journal of Dermatological Science",
+"iso": "J Dermatol Sci",
+"year": 2022,
+"doi": "10.1016/j.jdermsci.2022.08.004",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Lasers & light",
+"design": ""
+},
+{
+"pmid": "35563374",
+"title": "Transcriptomic Profiling of Peripheral Edge of Lesions to Elucidate the Pathogenesis of Psoriasis Vulgaris",
+"authors": [
+"Boonpethkaew S",
+"Meephansan J",
+"Jumlongpim O",
+"Tangtanatakul P",
+"Soonthornchai W",
+"Wongpiyabovorn J",
+"Vipanurat R",
+"Komine M"
+],
+"journal": "International Journal of Molecular Sciences",
+"iso": "Int J Mol Sci",
+"year": 2022,
+"doi": "10.3390/ijms23094983",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+},
+{
+"pmid": "33538345",
+"title": "A Comparative Study Between Once-Weekly and Alternating Twice-Weekly Regimen Using Blue (470 nm) and Red (640 nm) Light Combination LED Phototherapy for Moderate-to-Severe Acne Vulgaris",
+"authors": [
+"Nitayavardhana S",
+"Manuskiatti W",
+"Cembrano KAG",
+"Wanitphadeedecha R"
+],
+"journal": "Lasers in Surgery and Medicine",
+"iso": "Lasers Surg Med",
+"year": 2021,
+"doi": "10.1002/lsm.23388",
+"faculty": [
+"Nitayavardhana S"
+],
+"topic": "Lasers & light",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "34980962",
+"title": "A Systematic Review and Meta-analysis of Randomized Controlled Trials of United States Food and Drug Administration-Approved, Home-use, Low-Level Light/Laser Therapy Devices for Pattern Hair Loss: Device Design and Technology",
+"authors": [
+"Lueangarun S",
+"Visutjindaporn P",
+"Parcharoen Y",
+"Jamparuang P",
+"Tempark T"
+],
+"journal": "The Journal of Clinical and Aesthetic Dermatology",
+"iso": "J Clin Aesthet Dermatol",
+"year": 2021,
+"doi": "",
+"faculty": [],
+"topic": "Hair & nails",
+"design": ""
+},
+{
+"pmid": "34804354",
+"title": "Clinical Comparison of Topical 2.5% Benzoyl Peroxide plus 5% Niacinamide to 2.5% Benzoyl Peroxide Alone in the Treatment of Mild to Moderate Facial Acne Vulgaris",
+"authors": [
+"Kaewsanit T",
+"Chakkavittumrong P",
+"Waranuch N"
+],
+"journal": "The Journal of Clinical and Aesthetic Dermatology",
+"iso": "J Clin Aesthet Dermatol",
+"year": 2021,
+"doi": "",
+"faculty": [],
+"topic": "Acne",
+"design": ""
+},
+{
+"pmid": "32910030",
+"title": "Comparison of Fractional Picosecond 1064-nm Laser and Fractional Carbon Dioxide Laser for Treating Atrophic Acne Scars: A Randomized Split-Face Trial",
+"authors": [
+"Sirithanabadeekul P",
+"Tantrapornpong P",
+"Rattakul B",
+"Sutthipisal N",
+"Thanasarnaksorn W"
+],
+"journal": "Dermatologic Surgery",
+"iso": "Dermatol Surg",
+"year": 2021,
+"doi": "10.1097/DSS.0000000000002572",
+"faculty": [
+"Sirithanabadeekul P"
+],
+"topic": "Acne",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "30904000",
+"title": "Down-regulation of miR-155 after treatment with narrow-band UVB and methotrexate associates with apoptosis of keratinocytes in psoriasis",
+"authors": [
+"Soonthornchai W",
+"Tangtanatakul P",
+"Meephansan J",
+"Ruchusatsawat K",
+"Reantragoon R",
+"Hirankarn N",
+"Wongpiyabovorn J"
+],
+"journal": "Asian Pacific Journal of Allergy and Immunology",
+"iso": "Asian Pac J Allergy Immunol",
+"year": 2021,
+"doi": "10.12932/AP-031218-0451",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+},
+{
+"pmid": "33595885",
+"title": "Efficacy of the combined excimer light and topical calcipotriol for acral vitiligo: A randomized double-blind comparative study",
+"authors": [
+"Juntongjin P",
+"Sangganjanavanich P"
+],
+"journal": "Dermatologic Therapy",
+"iso": "Dermatol Ther",
+"year": 2021,
+"doi": "10.1111/dth.14886",
+"faculty": [
+"Juntongjin P"
+],
+"topic": "Lasers & light",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "34858799",
+"title": "High-Throughput RNA Sequencing Reveals the Effect of NB-UVB Phototherapy on Major Inflammatory Molecules of Lesional Psoriasis",
+"authors": [
+"Vacharanukrauh P",
+"Meephansan J",
+"Tangtanatakul P",
+"Soonthornchai W",
+"Wongpiyabovorn J",
+"Serirat O",
+"Komine M"
+],
+"journal": "Psoriasis",
+"iso": "Psoriasis (Auckl)",
+"year": 2021,
+"doi": "10.2147/PTT.S335913",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Lasers & light",
+"design": ""
+},
+{
+"pmid": "33845077",
+"title": "PD-1 Expression Defines Epidermal CD8+CD103+ T Cells Preferentially Producing IL-17A and Using Skewed TCR Repertoire in Psoriasis",
+"authors": [
+"Phadungsaksawasdi P",
+"Fujiyama T",
+"Kurihara K",
+"Ito T",
+"Honda T",
+"Tokura Y"
+],
+"journal": "The Journal of Investigative Dermatology",
+"iso": "J Invest Dermatol",
+"year": 2021,
+"doi": "10.1016/j.jid.2021.03.011",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+},
+{
+"pmid": "33002283",
+"title": "Postinflammatory and rebound hyperpigmentation as a complication after treatment efficacy of telangiectatic melasma with 585 nanometers Q-switched Nd: YAG laser and 4% hydroquinone cream in skin phototypes III-V",
+"authors": [
+"Lueangarun S",
+"Namboonlue C",
+"Tempark T"
+],
+"journal": "Journal of Cosmetic Dermatology",
+"iso": "J Cosmet Dermatol",
+"year": 2021,
+"doi": "10.1111/jocd.13756",
+"faculty": [],
+"topic": "Lasers & light",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "34410946",
+"title": "Scoparone Induces Expression of Pluripotency Transcription Factors SOX2 and NANOG in Dermal Papilla Cells",
+"authors": [
+"Suwanprakorn N",
+"Chanvorachote P",
+"Tongyen T",
+"Sritularak B",
+"Suvanprakorn P"
+],
+"journal": "In Vivo",
+"iso": "In Vivo",
+"year": 2021,
+"doi": "10.21873/invivo.12541",
+"faculty": [],
+"topic": "Hair & nails",
+"design": ""
+},
+{
+"pmid": "31982887",
+"title": "Synergistic Effects of the 308-nm Excimer Light and Topical Calcipotriol for the Treatment of Chronic Hand Eczema: A Randomized Controlled Study",
+"authors": [
+"Juntongjin P",
+"Chunhakham P"
+],
+"journal": "Dermatology",
+"iso": "Dermatology",
+"year": 2021,
+"doi": "10.1159/000505539",
+"faculty": [
+"Juntongjin P"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "33908083",
+"title": "Three-dimensional histological explanation of the dermoscopy patterns in acral melanocytic lesions",
+"authors": [
+"Phadungsaksawasdi P",
+"Kasuya A",
+"Fukuchi K",
+"Aoshima M",
+"Nakazawa S",
+"Suzuki T",
+"Fujiyama T",
+"Tokura Y",
+"Honda T"
+],
+"journal": "The Journal of Dermatology",
+"iso": "J Dermatol",
+"year": 2021,
+"doi": "10.1111/1346-8138.15907",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Clinical dermatology",
+"design": ""
+},
+{
+"pmid": "31874722",
+"title": "A steric structure of tufted hair folliculitis",
+"authors": [
+"Kasuya A",
+"Ito T",
+"Hanai S",
+"Phadungsaksawasdi P",
+"Tokura Y"
+],
+"journal": "Journal of Dermatological Science",
+"iso": "J Dermatol Sci",
+"year": 2020,
+"doi": "10.1016/j.jdermsci.2019.12.003",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Hair & nails",
+"design": "Case Reports"
+},
+{
+"pmid": "33584955",
+"title": "An Herbal Extract Combination (Biochanin A, Acetyl tetrapeptide-3, and Ginseng Extracts) versus 3% Minoxidil Solution for the Treatment of Androgenetic Alopecia: A 24-week, Prospective, Randomized, Triple-blind, Controlled Trial",
+"authors": [
+"Lueangarun S",
+"Panchaprateep R"
+],
+"journal": "The Journal of Clinical and Aesthetic Dermatology",
+"iso": "J Clin Aesthet Dermatol",
+"year": 2020,
+"doi": "10.1007/s13555-020-00448-x",
+"faculty": [],
+"topic": "Hair & nails",
+"design": ""
+},
+{
+"pmid": "31429496",
+"title": "Capsule-like naevus: digital 3D reconstruction of its steric structure",
+"authors": [
+"Kasuya A",
+"Phadungsaksawasdi P",
+"Imura K",
+"Miyazawa H",
+"Tokura Y"
+],
+"journal": "Journal of the European Academy of Dermatology and Venereology",
+"iso": "J Eur Acad Dermatol Venereol",
+"year": 2020,
+"doi": "10.1111/jdv.15895",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Clinical dermatology",
+"design": "Case Reports"
+},
+{
+"pmid": "32458080",
+"title": "Effectiveness of a combined 308-nm excimer lamp and topical mid-potent steroid treatment for facial vitiligo: a preliminary, randomized double-blinded controlled study",
+"authors": [
+"Juntongjin P",
+"Toncharoenphong N"
+],
+"journal": "Lasers in Medical Science",
+"iso": "Lasers Med Sci",
+"year": 2020,
+"doi": "10.1007/s10103-020-03048-5",
+"faculty": [
+"Juntongjin P"
+],
+"topic": "Lasers & light",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "32970299",
+"title": "Efficacy and Safety of Oral Minoxidil 5 mg Once Daily in the Treatment of Male Patients with Androgenetic Alopecia: An Open-Label and Global Photographic Assessment",
+"authors": [
+"Panchaprateep R",
+"Lueangarun S"
+],
+"journal": "Dermatology and Therapy",
+"iso": "Dermatol Ther (Heidelb)",
+"year": 2020,
+"doi": "10.1007/s13555-020-00448-x",
+"faculty": [],
+"topic": "Hair & nails",
+"design": ""
+},
+{
+"pmid": "31609077",
+"title": "Efficacy of anti-inflammatory moisturizer vs hydrophilic cream in elderly patients with moderate to severe xerosis: A split site, triple-blinded, randomized, controlled trial",
+"authors": [
+"Lueangarun S",
+"Soktepy B",
+"Tempark T"
+],
+"journal": "Journal of Cosmetic Dermatology",
+"iso": "J Cosmet Dermatol",
+"year": 2020,
+"doi": "10.1111/jocd.13183",
+"faculty": [],
+"topic": "Skin biology & immunology",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "33178380",
+"title": "Intradermal Tranexamic Acid Injection for the Treatment of Melasma: A Pilot Study with 48-week Follow-up",
+"authors": [
+"Lueangarun S",
+"Sirithanabadeekul P",
+"Wongwicharn P",
+"Namboonlue C",
+"Pacharapakornpong S",
+"Juntongjin P",
+"Tempark T"
+],
+"journal": "The Journal of Clinical and Aesthetic Dermatology",
+"iso": "J Clin Aesthet Dermatol",
+"year": 2020,
+"doi": "",
+"faculty": [
+"Juntongjin P",
+"Sirithanabadeekul P"
+],
+"topic": "Pigment & melasma",
+"design": ""
+},
+{
+"pmid": "33633737",
+"title": "Pathophysiology of Skin Resident Memory T Cells",
+"authors": [
+"Tokura Y",
+"Phadungsaksawasdi P",
+"Kurihara K",
+"Fujiyama T",
+"Honda T"
+],
+"journal": "Frontiers in Immunology",
+"iso": "Front Immunol",
+"year": 2020,
+"doi": "10.3389/fimmu.2020.618897",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Skin biology & immunology",
+"design": "Review"
+},
+{
+"pmid": "31568636",
+"title": "Platelet-rich plasma treatment for melasma: A pilot study",
+"authors": [
+"Sirithanabadeekul P",
+"Dannarongchai A",
+"Suwanchinda A"
+],
+"journal": "Journal of Cosmetic Dermatology",
+"iso": "J Cosmet Dermatol",
+"year": 2020,
+"doi": "10.1111/jocd.13157",
+"faculty": [
+"Sirithanabadeekul P"
+],
+"topic": "Injectables & aesthetics",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "32474952",
+"title": "Protective role of Galectin-7 for skin barrier impairment in atopic dermatitis",
+"authors": [
+"Umayahara T",
+"Shimauchi T",
+"Iwasaki M",
+"Sakabe JI",
+"Aoshima M",
+"Nakazawa S",
+"Yatagai T",
+"Yamaguchi H",
+"Phadungsaksawasdi P",
+"Kurihara K",
+"Tokura Y"
+],
+"journal": "Clinical and Experimental Allergy",
+"iso": "Clin Exp Allergy",
+"year": 2020,
+"doi": "10.1111/cea.13672",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+},
+{
+"pmid": "32884021",
+"title": "Suprabasin-null mice retain skin barrier function and show high contact hypersensitivity to nickel upon oral nickel loading",
+"authors": [
+"Nakazawa S",
+"Shimauchi T",
+"Funakoshi A",
+"Aoshima M",
+"Phadungsaksawasdi P",
+"Sakabe JI",
+"Asakawa S",
+"Hirasawa N",
+"Ito T",
+"Tokura Y"
+],
+"journal": "Scientific Reports",
+"iso": "Sci Rep",
+"year": 2020,
+"doi": "10.1038/s41598-020-71536-3",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Skin biology & immunology",
+"design": ""
+},
+{
+"pmid": "32416635",
+"title": "The efficacy and safety of fractional radiofrequency nanoneedle system in the treatment of atrophic acne scars in Asians",
+"authors": [
+"Nitayavardhana S",
+"Wanitphakdeedecha R",
+"Ng JNC",
+"Eimpunth S",
+"Manuskiatti W"
+],
+"journal": "Journal of Cosmetic Dermatology",
+"iso": "J Cosmet Dermatol",
+"year": 2020,
+"doi": "10.1111/jocd.13484",
+"faculty": [
+"Nitayavardhana S"
+],
+"topic": "Lasers & light",
+"design": ""
+},
+{
+"pmid": "33223739",
+"title": "Transient Treatment Response of Platelet-rich Plasma Injection for Temporal Triangular Alopecia: A Case Report with Dermoscopic Examination Follow-up",
+"authors": [
+"Lueangarun S",
+"Pacharapakornpong S",
+"Tempark T"
+],
+"journal": "International Journal of Trichology",
+"iso": "Int J Trichology",
+"year": 2020,
+"doi": "10.4103/ijt.ijt_52_20",
+"faculty": [],
+"topic": "Injectables & aesthetics",
+"design": "Case Reports"
+},
+{
+"pmid": "32415885",
+"title": "UV308 excimer lamp phototherapy for the treatment of alopecia areata: A randomized, self-controlled study",
+"authors": [
+"Sirichotiyakul P",
+"Meephansan J",
+"Suchonwanit P"
+],
+"journal": "Photodermatology, Photoimmunology & Photomedicine",
+"iso": "Photodermatol Photoimmunol Photomed",
+"year": 2020,
+"doi": "10.1111/phpp.12570",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Lasers & light",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "32323359",
+"title": "Ultraviolet filters in sunscreen products labeled for use in children and for sensitive skin",
+"authors": [
+"Phadungsaksawasdi P",
+"Sirithanabadeekul P"
+],
+"journal": "Pediatric Dermatology",
+"iso": "Pediatr Dermatol",
+"year": 2020,
+"doi": "10.1111/pde.14170",
+"faculty": [
+"Sirithanabadeekul P",
+"Phadungsaksawasdi P"
+],
+"topic": "Clinical dermatology",
+"design": ""
+},
+{
+"pmid": "31291937",
+"title": "Anti-inflammatory effect of naringin and sericin combination on human peripheral blood mononuclear cells (hPBMCs) from patient with psoriasis",
+"authors": [
+"Deenonpoe R",
+"Prayong P",
+"Thippamom N",
+"Meephansan J",
+"Na-Bangchang K"
+],
+"journal": "BMC Complementary and Alternative Medicine",
+"iso": "BMC Complement Altern Med",
+"year": 2019,
+"doi": "10.1186/s12906-019-2535-3",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+},
+{
+"pmid": "31070845",
+"title": "Calcipotriol ointment shows comparable efficacy to topical steroids in chronic hand eczema",
+"authors": [
+"Juntongjin P",
+"Pongprasert R"
+],
+"journal": "Dermatologic Therapy",
+"iso": "Dermatol Ther",
+"year": 2019,
+"doi": "10.1111/dth.12956",
+"faculty": [
+"Juntongjin P"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "30688020",
+"title": "Clinical efficacy of 0.5% topical mangosteen extract in nanoparticle loaded gel in treatment of mild-to-moderate acne vulgaris: A 12-week, split-face, double-blinded, randomized, controlled trial",
+"authors": [
+"Lueangarun S",
+"Sriviriyakul K",
+"Tempark T",
+"Managit C",
+"Sithisarn P"
+],
+"journal": "Journal of Cosmetic Dermatology",
+"iso": "J Cosmet Dermatol",
+"year": 2019,
+"doi": "10.1111/jocd.12856",
+"faculty": [],
+"topic": "Acne",
+"design": ""
+},
+{
+"pmid": "31807046",
+"title": "Comparative Study Of Photodynamic Therapy With Riboflavin-Tryptophan Gel And 13% 5-Aminolevulinic Acid In The Treatment Of Mild To Moderate Acne Vulgaris",
+"authors": [
+"Wangsuwan S",
+"Meephansan J"
+],
+"journal": "Clinical, Cosmetic and Investigational Dermatology",
+"iso": "Clin Cosmet Investig Dermatol",
+"year": 2019,
+"doi": "10.2147/CCID.S227737",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Acne",
+"design": ""
+},
+{
+"pmid": "31399284",
+"title": "Decreased expression of suprabasin induces aberrant differentiation and apoptosis of epidermal keratinocytes: Possible role for atopic dermatitis",
+"authors": [
+"Aoshima M",
+"Phadungsaksawasdi P",
+"Nakazawa S",
+"Iwasaki M",
+"Sakabe JI",
+"Umayahara T",
+"Yatagai T",
+"Ikeya S",
+"Shimauchi T",
+"Tokura Y"
+],
+"journal": "Journal of Dermatological Science",
+"iso": "J Dermatol Sci",
+"year": 2019,
+"doi": "10.1016/j.jdermsci.2019.07.009",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+},
+{
+"pmid": "31253172",
+"title": "Development of a Global Subjective Skin Aging Assessment score from the perspective of dermatologists",
+"authors": [
+"Buranasirin P",
+"Pongpirul K",
+"Meephansan J"
+],
+"journal": "BMC Research Notes",
+"iso": "BMC Res Notes",
+"year": 2019,
+"doi": "10.1186/s13104-019-4404-z",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Skin aging",
+"design": ""
+},
+{
+"pmid": "31692558",
+"title": "Effect of narrowband ultraviolet B therapy on serum levels of CD26/dipeptidyl-peptidase IV and truncated forms of substance P in psoriasis patients with pruritus",
+"authors": [
+"Kongthong S",
+"Phumyen A",
+"Meephansan J"
+],
+"journal": "Clinical, Cosmetic and Investigational Dermatology",
+"iso": "Clin Cosmet Investig Dermatol",
+"year": 2019,
+"doi": "10.2147/CCID.S216422",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Lasers & light",
+"design": ""
+},
+{
+"pmid": "30945430",
+"title": "Efficacy and safety of moisturizer containing 5% panthenol, madecassoside, and copper-zinc-manganese versus 0.02% triamcinolone acetonide cream in decreasing adverse reaction and downtime after ablative fractional carbon dioxide laser resurfacing: A split-face, double-blinded, randomized, controlled trial",
+"authors": [
+"Lueangarun S",
+"Srituravanit A",
+"Tempark T"
+],
+"journal": "Journal of Cosmetic Dermatology",
+"iso": "J Cosmet Dermatol",
+"year": 2019,
+"doi": "10.1111/jocd.12951",
+"faculty": [],
+"topic": "Lasers & light",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "31680312",
+"title": "Intractable disseminated maculopapular eruption in a patient with granulocyte macrophage colony-stimulating factor-producing anaplastic thyroid carcinoma",
+"authors": [
+"Kasuya A",
+"Shinkai S",
+"Sakamoto S",
+"Phadungsaksawasdi P",
+"Shimauchi T",
+"Hosokawa S",
+"Imai A",
+"Sasaki S",
+"Oki Y",
+"Tokura Y"
+],
+"journal": "The Journal of Dermatology",
+"iso": "J Dermatol",
+"year": 2019,
+"doi": "10.1111/1346-8138.14950",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Clinical dermatology",
+"design": "Case Reports"
+},
+{
+"pmid": "31300254",
+"title": "Significance of IL-17A-producing CD8+CD103+ skin resident memory T cells in psoriasis lesion and their possible relationship to clinical course",
+"authors": [
+"Kurihara K",
+"Fujiyama T",
+"Phadungsaksawasdi P",
+"Ito T",
+"Tokura Y"
+],
+"journal": "Journal of Dermatological Science",
+"iso": "J Dermatol Sci",
+"year": 2019,
+"doi": "10.1016/j.jdermsci.2019.06.002",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+},
+{
+"pmid": "31749955",
+"title": "Successful Treatment of Digital Ischemia Following a Carbon Dioxide Laser and Tourniquet for a Digital Procedure With Adjuvant Low-Level Laser Therapy",
+"authors": [
+"Lueangarun S",
+"Tempark T"
+],
+"journal": "Journal of Lasers in Medical Sciences",
+"iso": "J Lasers Med Sci",
+"year": 2019,
+"doi": "10.15171/jlms.2019.41",
+"faculty": [],
+"topic": "Clinical dermatology",
+"design": "Case Reports"
+},
+{
+"pmid": "31585489",
+"title": "The 24-hr, 28-day, and 7-day post-moisturizing efficacy of ceramides 1, 3, 6-II containing moisturizing cream compared with hydrophilic cream on skin dryness and barrier disruption in senile xerosis treatment",
+"authors": [
+"Lueangarun S",
+"Tragulplaingam P",
+"Sugkraroek S",
+"Tempark T"
+],
+"journal": "Dermatologic Therapy",
+"iso": "Dermatol Ther",
+"year": 2019,
+"doi": "10.1111/dth.13090",
+"faculty": [],
+"topic": "Skin biology & immunology",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "31903956",
+"title": "The effect of astaxanthin on allergic contact dermatitis in response to hair dye containing p-phenylenediamine",
+"authors": [
+"Trakanwittayarak S",
+"Meephansan J"
+],
+"journal": "European Journal of Dermatology",
+"iso": "Eur J Dermatol",
+"year": 2019,
+"doi": "10.1684/ejd.2019.3654",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Hair & nails",
+"design": "Clinical Trial"
+},
+{
+"pmid": "30291412",
+"title": "Effect of tofacitinib on the expression of noggin/BMP-4 and hair growth stimulation in mice",
+"authors": [
+"Meephansan J",
+"Pongcharoensuk T",
+"Thummakriengkrai J",
+"Ponnikorn S",
+"Yingmema W",
+"Deenonpoe R"
+],
+"journal": "Archives of Dermatological Research",
+"iso": "Arch Dermatol Res",
+"year": 2018,
+"doi": "10.1007/s00403-018-1868-y",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Hair & nails",
+"design": ""
+},
+{
+"pmid": "30096107",
+"title": "Efficacy of 1,550-nm Erbium-Glass Fractional Laser Treatment and Its Effect on the Expression of Insulin-Like Growth Factor 1 and Wnt/β-Catenin in Androgenetic Alopecia",
+"authors": [
+"Meephansan J",
+"Ungpraphakorn N",
+"Ponnikorn S",
+"Suchonwanit P",
+"Poovorawan Y"
+],
+"journal": "Dermatologic Surgery",
+"iso": "Dermatol Surg",
+"year": 2018,
+"doi": "10.1097/DSS.0000000000001619",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Hair & nails",
+"design": ""
+},
+{
+"pmid": "29431228",
+"title": "Efficacy of MAS063DP lotion vs 0.02% triamcinolone acetonide lotion in improving post-ablative fractional CO2 laser resurfacing wound healing: a split-face, triple-blinded, randomized, controlled trial",
+"authors": [
+"Lueangarun S",
+"Tempark T"
+],
+"journal": "International Journal of Dermatology",
+"iso": "Int J Dermatol",
+"year": 2018,
+"doi": "10.1111/ijd.13922",
+"faculty": [],
+"topic": "Lasers & light",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "29505310",
+"title": "Intradermal tranexamic acid injections to prevent post-inflammatory hyperpigmentation after solar lentigo removal with a Q-switched 532-nm Nd:YAG laser",
+"authors": [
+"Sirithanabadeekul P",
+"Srieakpanit R"
+],
+"journal": "Journal of Cosmetic and Laser Therapy",
+"iso": "J Cosmet Laser Ther",
+"year": 2018,
+"doi": "10.1080/14764172.2018.1444770",
+"faculty": [
+"Sirithanabadeekul P"
+],
+"topic": "Lasers & light",
+"design": ""
+},
+{
+"pmid": "28836690",
+"title": "Methotrexate, but not narrowband ultraviolet B radiation, suppresses interleukin-33 mRNA levels in psoriatic plaques and protein levels in serum of patients with psoriasis",
+"authors": [
+"Meephansan J",
+"Subpayasarn U",
+"Ponnikorn S",
+"Chakkavittumrong P",
+"Juntongjin P",
+"Komine M",
+"Ohtsuki M",
+"Poovorawan Y"
+],
+"journal": "The Journal of Dermatology",
+"iso": "J Dermatol",
+"year": 2018,
+"doi": "10.1111/1346-8138.14009",
+"faculty": [
+"Meephansan J",
+"Juntongjin P"
+],
+"topic": "Lasers & light",
+"design": ""
+},
+{
+"pmid": "29878718",
+"title": "Split face comparison between common concentration vs double dilution of intradermal abobotulinum toxin type A (Dysport) injection for facial lifting in Asians",
+"authors": [
+"Sirithanabadeekul P",
+"Lapsomboonsiri S",
+"Rungjang A",
+"Thanasarnaksorn W"
+],
+"journal": "Journal of Cosmetic Dermatology",
+"iso": "J Cosmet Dermatol",
+"year": 2018,
+"doi": "10.1111/jocd.12667",
+"faculty": [
+"Sirithanabadeekul P"
+],
+"topic": "Injectables & aesthetics",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "29883000",
+"title": "Sun protection behavior and knowledge of patients attending laser clinic to prevent adverse events of laser: A cross-sectional, single-center, tertiary care study",
+"authors": [
+"Tempark T",
+"Lueangarun S",
+"Chatproedprai S",
+"Panchaprateep R",
+"Pongprutthipan M",
+"Wananukul S"
+],
+"journal": "Photodermatology, Photoimmunology & Photomedicine",
+"iso": "Photodermatol Photoimmunol Photomed",
+"year": 2018,
+"doi": "10.1111/phpp.12400",
+"faculty": [],
+"topic": "Lasers & light",
+"design": "Clinical Trial"
+},
+{
+"pmid": "29461121",
+"title": "Topical 3% tranexamic acid enhances the efficacy of 1064-nm Q-switched neodymium-doped yttrium aluminum garnet laser in the treatment of melasma",
+"authors": [
+"Laothaworn V",
+"Juntongjin P"
+],
+"journal": "Journal of Cosmetic and Laser Therapy",
+"iso": "J Cosmet Laser Ther",
+"year": 2018,
+"doi": "10.1080/14764172.2018.1427869",
+"faculty": [
+"Juntongjin P"
+],
+"topic": "Lasers & light",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "29659406",
+"title": "Topical Botulinum Toxin Type A Liposomal Cream for Primary Axillary Hyperhidrosis: A Double-Blind, Randomized, Split-Site, Vehicle-Controlled Study",
+"authors": [
+"Lueangarun S",
+"Sermsilp C",
+"Tempark T"
+],
+"journal": "Dermatologic Surgery",
+"iso": "Dermatol Surg",
+"year": 2018,
+"doi": "10.1097/DSS.0000000000001532",
+"faculty": [],
+"topic": "Injectables & aesthetics",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "28761364",
+"title": "Effect of astaxanthin on cutaneous wound healing",
+"authors": [
+"Meephansan J",
+"Rungjang A",
+"Yingmema W",
+"Deenonpoe R",
+"Ponnikorn S"
+],
+"journal": "Clinical, Cosmetic and Investigational Dermatology",
+"iso": "Clin Cosmet Investig Dermatol",
+"year": 2017,
+"doi": "10.2147/CCID.S142795",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Wound healing",
+"design": ""
+},
+{
+"pmid": "27494272",
+"title": "Efficacy of tip cryotherapy in the treatment of idiopathic guttate hypomelanosis (IGH): a randomized, controlled, evaluator-blinded study",
+"authors": [
+"Laosakul K",
+"Juntongjin P"
+],
+"journal": "The Journal of Dermatological Treatment",
+"iso": "J Dermatolog Treat",
+"year": 2017,
+"doi": "10.1080/09546634.2016.1221498",
+"faculty": [
+"Juntongjin P"
+],
+"topic": "Pigment & melasma",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "28884378",
+"title": "Efficacy of topical tofacitinib in promoting hair growth in non-scarring alopecia: possible mechanism via VEGF induction",
+"authors": [
+"Meephansan J",
+"Thummakriengkrai J",
+"Ponnikorn S",
+"Yingmema W",
+"Deenonpoe R",
+"Suchonwanit P"
+],
+"journal": "Archives of Dermatological Research",
+"iso": "Arch Dermatol Res",
+"year": 2017,
+"doi": "10.1007/s00403-017-1777-5",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Hair & nails",
+"design": ""
+},
+{
+"pmid": "27047633",
+"title": "A Novel Technique of Supra Superficial Musculoaponeurotic System Hyaluronic Acid Injection for Lower Face Lifting",
+"authors": [
+"Sahawatwong S",
+"Sirithanabadeekul P",
+"Patanajareet V",
+"Wattanakrai P",
+"Thanasarnaksorn W"
+],
+"journal": "The Journal of Clinical and Aesthetic Dermatology",
+"iso": "J Clin Aesthet Dermatol",
+"year": 2016,
+"doi": "",
+"faculty": [
+"Sirithanabadeekul P"
+],
+"topic": "Injectables & aesthetics",
+"design": ""
+},
+{
+"pmid": "27206417",
+"title": "Idiopathic Guttate Hypomelanosis: A Review of its Etiology, Pathogenesis, Findings, and Treatments",
+"authors": [
+"Juntongjin P",
+"Laosakul K"
+],
+"journal": "American Journal of Clinical Dermatology",
+"iso": "Am J Clin Dermatol",
+"year": 2016,
+"doi": "10.1007/s40257-016-0195-3",
+"faculty": [
+"Juntongjin P"
+],
+"topic": "Pigment & melasma",
+"design": "Review"
+},
+{
+"pmid": "27437152",
+"title": "Idiopathic Sporadic Onychomadesis of Toenails",
+"authors": [
+"Suchonwanit P",
+"Nitayavardhana S"
+],
+"journal": "Case Reports in Dermatological Medicine",
+"iso": "Case Rep Dermatol Med",
+"year": 2016,
+"doi": "10.1155/2016/6451327",
+"faculty": [
+"Nitayavardhana S"
+],
+"topic": "Hair & nails",
+"design": ""
+},
+{
+"pmid": "27271600",
+"title": "Role of Matrix Metalloproteinases in Photoaging and Photocarcinogenesis",
+"authors": [
+"Pittayapruek P",
+"Meephansan J",
+"Prapapan O",
+"Komine M",
+"Ohtsuki M"
+],
+"journal": "International Journal of Molecular Sciences",
+"iso": "Int J Mol Sci",
+"year": 2016,
+"doi": "10.3390/ijms17060868",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Skin aging",
+"design": "Review"
+},
+{
+"pmid": "25622688",
+"title": "Rosai-Dorfman disease presenting as panniculitis-like",
+"authors": [
+"Ruenngam P",
+"Juntongjin P"
+],
+"journal": "Journal of the European Academy of Dermatology and Venereology",
+"iso": "J Eur Acad Dermatol Venereol",
+"year": 2016,
+"doi": "10.1111/jdv.12967",
+"faculty": [
+"Juntongjin P"
+],
+"topic": "Clinical dermatology",
+"design": "Case Reports"
+},
+{
+"pmid": "25413592",
+"title": "Low-fluence Q-switched Nd: YAG 1064-nm laser and intense pulsed light for the treatment of melasma",
+"authors": [
+"Vachiramon V",
+"Sirithanabadeekul P",
+"Sahawatwong S"
+],
+"journal": "Journal of the European Academy of Dermatology and Venereology",
+"iso": "J Eur Acad Dermatol Venereol",
+"year": 2015,
+"doi": "10.1111/jdv.12854",
+"faculty": [
+"Sirithanabadeekul P"
+],
+"topic": "Lasers & light",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "25760554",
+"title": "Treatment of melasma in men with low-fluence Q-switched neodymium-doped yttrium-aluminum-garnet laser versus combined laser and glycolic acid peeling",
+"authors": [
+"Vachiramon V",
+"Sahawatwong S",
+"Sirithanabadeekul P"
+],
+"journal": "Dermatologic Surgery",
+"iso": "Dermatol Surg",
+"year": 2015,
+"doi": "10.1097/DSS.0000000000000304",
+"faculty": [
+"Sirithanabadeekul P"
+],
+"topic": "Lasers & light",
+"design": "Randomized Controlled Trial"
+},
+{
+"pmid": "25193784",
+"title": "Cutaneous adverse drug reactions in the elderly: a retrospective analysis in Thailand",
+"authors": [
+"Tuchinda P",
+"Chularojanamontri L",
+"Sukakul T",
+"Thanomkitti K",
+"Nitayavardhana S",
+"Jongjarearnprasert K",
+"Uthaitas P",
+"Kulthanan K"
+],
+"journal": "Drugs & Aging",
+"iso": "Drugs Aging",
+"year": 2014,
+"doi": "10.1007/s40266-014-0209-x",
+"faculty": [
+"Nitayavardhana S"
+],
+"topic": "Clinical dermatology",
+"design": ""
+},
+{
+"pmid": "25566052",
+"title": "The 'pantie' tumour",
+"authors": [
+"Kanokrungsee S",
+"Vachiramon V",
+"Sirithanabadeekul P"
+],
+"journal": "Case Reports in Dermatology",
+"iso": "Case Rep Dermatol",
+"year": 2014,
+"doi": "10.1159/000369992",
+"faculty": [
+"Sirithanabadeekul P"
+],
+"topic": "Clinical dermatology",
+"design": "Case Reports"
+},
+{
+"pmid": "23764374",
+"title": "Expression of IL-33 in the epidermis: The mechanism of induction by IL-17",
+"authors": [
+"Meephansan J",
+"Komine M",
+"Tsuda H",
+"Karakawa M",
+"Tominaga S",
+"Ohtsuki M"
+],
+"journal": "Journal of Dermatological Science",
+"iso": "J Dermatol Sci",
+"year": 2013,
+"doi": "10.1016/j.jdermsci.2013.04.014",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Skin biology & immunology",
+"design": ""
+},
+{
+"pmid": "23859407",
+"title": "Moisturizers for patients with atopic dermatitis",
+"authors": [
+"Varothai S",
+"Nitayavardhana S",
+"Kulthanan K"
+],
+"journal": "Asian Pacific Journal of Allergy and Immunology",
+"iso": "Asian Pac J Allergy Immunol",
+"year": 2013,
+"doi": "",
+"faculty": [
+"Nitayavardhana S"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": "Review"
+},
+{
+"pmid": "22951280",
+"title": "Possible involvement of SDF-1/CXCL12 in the pathogenesis of Degos disease",
+"authors": [
+"Meephansan J",
+"Komine M",
+"Hosoda S",
+"Tsuda H",
+"Karakawa M",
+"Murata S",
+"Demitsu T",
+"Ohtsuki M"
+],
+"journal": "Journal of the American Academy of Dermatology",
+"iso": "J Am Acad Dermatol",
+"year": 2013,
+"doi": "10.1016/j.jaad.2012.06.031",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Skin biology & immunology",
+"design": "Case Reports"
+},
+{
+"pmid": "22673732",
+"title": "Regulation of IL-33 expression by IFN-γ and tumor necrosis factor-α in normal human epidermal keratinocytes",
+"authors": [
+"Meephansan J",
+"Tsuda H",
+"Komine M",
+"Tominaga S",
+"Ohtsuki M"
+],
+"journal": "The Journal of Investigative Dermatology",
+"iso": "J Invest Dermatol",
+"year": 2012,
+"doi": "10.1038/jid.2012.185",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Skin biology & immunology",
+"design": ""
+},
+{
+"pmid": "22924547",
+"title": "Suppressive effect of calcipotriol on the induction of matrix metalloproteinase (MMP)-9 and MMP-13 in a human squamous cell carcinoma cell line",
+"authors": [
+"Meephansan J",
+"Komine M",
+"Tsuda H",
+"Ohtsuki M"
+],
+"journal": "Clinical and Experimental Dermatology",
+"iso": "Clin Exp Dermatol",
+"year": 2012,
+"doi": "10.1111/j.1365-2230.2012.04381.x",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Clinical dermatology",
+"design": ""
+},
+{
+"pmid": "22494834",
+"title": "The levels of soluble ST2 in sera and bullous fluid from patients with bullous pemphigoid",
+"authors": [
+"Wakatabi K",
+"Komine M",
+"Meephansan J",
+"Matsuyama Y",
+"Tsuda H",
+"Tominaga S",
+"Ohtsuki M"
+],
+"journal": "European Journal of Dermatology",
+"iso": "Eur J Dermatol",
+"year": 2012,
+"doi": "10.1684/ejd.2012.1706",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+},
+{
+"pmid": "22100205",
+"title": "Ultraviolet B irradiation induces the expression of IL-33 mRNA and protein in normal human epidermal keratinocytes",
+"authors": [
+"Meephansan J",
+"Komine M",
+"Tsuda H",
+"Tominaga S",
+"Ohtsuki M"
+],
+"journal": "Journal of Dermatological Science",
+"iso": "J Dermatol Sci",
+"year": 2012,
+"doi": "10.1016/j.jdermsci.2011.10.004",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Skin biology & immunology",
+"design": ""
+},
+{
+"pmid": "21659065",
+"title": "Effect of methotrexate on serum levels of IL-22 in patients with psoriasis",
+"authors": [
+"Meephansan J",
+"Ruchusatsawat K",
+"Sindhupak W",
+"Thorner PS",
+"Wongpiyabovorn J"
+],
+"journal": "European Journal of Dermatology",
+"iso": "Eur J Dermatol",
+"year": 2011,
+"doi": "10.1684/ejd.2011.1335",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": ""
+}
+]
+}
