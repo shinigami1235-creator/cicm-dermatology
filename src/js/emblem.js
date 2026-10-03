@@ -27,7 +27,7 @@ function start() {
   scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
 
   const camera = new THREE.PerspectiveCamera(28, 1, 0.1, 50);
-  camera.position.set(0, 0, 5.4);
+  camera.position.set(0, 0, 4.6);
 
   const key = new THREE.DirectionalLight(0xfff1e6, 2.2); key.position.set(2.5, 3, 4); scene.add(key);
   const rim = new THREE.DirectionalLight(0xff9db8, 1.6); rim.position.set(-3.5, 1.5, -2); scene.add(rim);
@@ -81,7 +81,8 @@ function start() {
     const t = now / 1000;
     const scroll = Math.min(1, window.scrollY / Math.max(1, window.innerHeight));
     const sway = Math.sin(t * 0.45) * 0.16;
-    const ty = target.y + sway + scroll * 1.1, tx = target.x + Math.sin(t * 0.31) * 0.05 - scroll * 0.25;
+    const lv = window.__lensV || { x: 0, y: 0 };
+    const ty = target.y + sway + scroll * 1.1 + Math.max(-0.6, Math.min(0.6, lv.x * 0.0016)), tx = target.x + Math.sin(t * 0.31) * 0.05 - scroll * 0.25 + Math.max(-0.4, Math.min(0.4, lv.y * 0.0016));
     // critically damped-ish spring
     const k = 26, d = 9;
     vel.x += ((tx - cur.x) * k - vel.x * d) * dt; cur.x += vel.x * dt;

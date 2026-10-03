@@ -23,6 +23,7 @@
         if (v.indexOf("<br>") > -1) el.innerHTML = v; else el.textContent = v;
       });
       $$("[data-i18n-ph]").forEach(function (el) { var v = window.I18N.th[el.dataset.i18nPh]; if (v) el.placeholder = v; });
+      $$("[data-i18n-label]").forEach(function (el) { var v = window.I18N.th[el.dataset.i18nLabel]; if (v) el.setAttribute("aria-label", v); });
     }
     $$(".lang button").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
