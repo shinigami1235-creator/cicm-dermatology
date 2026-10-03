@@ -4,7 +4,10 @@ SRC = pathlib.Path(__file__).parent / 'src'; OUT = pathlib.Path(__file__).parent
 head = (SRC/'head.html').read_text(); header = (SRC/'header.html').read_text(); footer = (SRC/'footer.html').read_text()
 IMPORTMAP = '''<script type="module" src="js/emblem.js"></script>
 <script type="module" src="js/map.js"></script>
-<script src="js/scope.js" defer></script>'''
+<script src="js/scope.js" defer></script>
+<script src="js/heroes.js" defer></script>
+<script src="js/staff.js" defer></script>
+<script src="js/pick.js" defer></script>'''
 PAGES = {
   'index.html': ('CICM Dermatology | Thammasat University', "Master's and Ph.D. programs in dermatology at Chulabhorn International College of Medicine, Thammasat University.", IMPORTMAP),
   'research.html': ('Research | CICM Dermatology', 'Papers by the CICM Dermatology faculty and program members, indexed in PubMed.', ''),

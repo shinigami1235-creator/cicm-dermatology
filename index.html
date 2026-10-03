@@ -14,13 +14,16 @@
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="preload" href="fonts/bai-jamjuree-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/site.css">
-<script>document.documentElement.classList.replace('no-js','js')</script>
+<script>document.documentElement.classList.replace('no-js','js');(function(){var q=new URLSearchParams(location.search),h=q.get('hero'),s=q.get('staff');try{if(h)localStorage.setItem('cicm-hero',h);else h=localStorage.getItem('cicm-hero');if(s)localStorage.setItem('cicm-staff',s);else s=localStorage.getItem('cicm-staff')}catch(e){}var d=document.documentElement.dataset;d.hero=['slide','type','lens'].indexOf(h)>-1?h:'slide';d.staff=['spotlight','masthead','deck'].indexOf(s)>-1?s:'spotlight'})()</script>
 <script src="js/config.js" defer></script>
 <script src="js/i18n.js" defer></script>
 <script src="js/site.js" defer></script>
 <script type="module" src="js/emblem.js"></script>
 <script type="module" src="js/map.js"></script>
 <script src="js/scope.js" defer></script>
+<script src="js/heroes.js" defer></script>
+<script src="js/staff.js" defer></script>
+<script src="js/pick.js" defer></script>
 </head>
 <body data-page="home">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -82,9 +85,95 @@
 
 <main id="main">
 
+  <section class="sl" id="slideHero" data-layer="surface" data-depth="0" data-depth-name="surface" aria-labelledby="sl-title">
+    <div class="sl-stage">
+      <div class="sl-text">
+        <div class="sl-panel is-on" data-step="0">
+          <h1 id="sl-title" data-i18n="sl.title">Thailand's first international graduate program in dermatology</h1>
+          <p class="sl-lede" data-i18n="hero.lede">Study for a master's or a Ph.D. at Chulabhorn International College of Medicine, Thammasat University, with clinical training on real patients and research published in international journals.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://eptumed.com/applyCICM/index.php" target="_blank" rel="noopener"><span data-i18n="ui.apply">Apply now</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <button class="btn btn-line" type="button" data-film><svg aria-hidden="true"><use href="#i-play"/></svg><span data-i18n="hero.film">Watch the film (3:42)</span></button>
+          </div>
+        </div>
+        <div class="sl-panel" data-step="1">
+          <h2 data-i18n="sl.p1">Three programs, taught in English</h2>
+          <ul class="sl-progs">
+            <li><a href="admissions.html#courses"><b data-i18n="hero.p1">M.Sc. Clinical Dermatology</b><span data-i18n="sl.p1a">Medical dermatology and procedures. 2 years.</span></a></li>
+            <li><a href="admissions.html#courses"><b data-i18n="hero.p2">M.Sc. Cosmetic Dermatology</b><span data-i18n="sl.p1b">Aesthetic skin care and cosmetic procedures. 2 years.</span></a></li>
+            <li><a href="admissions.html#courses"><b data-i18n="hero.p3">Ph.D. Dermatology</b><span data-i18n="sl.p1c">Research and new treatments. 2 to 4 years.</span></a></li>
+          </ul>
+        </div>
+        <div class="sl-panel" data-step="2">
+          <h2 data-i18n="sl.p2">Training on real patients from the first semester</h2>
+          <p data-i18n="sl.p2t">Students work in the clinic under experienced instructors, practise procedures in hands-on workshops and train with partner hospitals across Thailand.</p>
+          <a class="link-arrow" href="#training"><span data-i18n="sl.p2l">See the training</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="sl-panel" data-step="3">
+          <h2 class="sl-big"><span class="tnum" data-count="papers">112</span> <span data-i18n="sl.p3">papers in PubMed</span></h2>
+          <p class="sl-research" id="slResearch">Published in 53 journals, including 22 randomized controlled trials.</p>
+          <a class="link-arrow" href="research.html"><span data-i18n="sl.p3l">Browse the research</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+
+      <div class="sl-view" aria-hidden="true">
+        <div class="sl-world">
+          <div class="sl-slide">
+            <div class="sl-label"><span>CICM Derm.</span><span>M.Sc. / Ph.D.</span><span>Thammasat U.</span><span>H&amp;E · 2026</span></div>
+            <img class="sl-tissue" src="assets/he-section.webp" alt="" width="2000" height="750" decoding="async">
+          </div>
+        </div>
+        <div class="sl-field">
+          <img class="sl-photo" data-for="2" src="photos/fruit-lab-my-batch-2.webp" alt="" loading="lazy">
+          <div class="sl-chart" data-for="3"></div>
+        </div>
+        <svg class="sl-reticle" viewBox="-50 -50 100 100"><circle r="49.4" fill="none" stroke="currentColor" stroke-width="0.4"/><path d="M0 -49v5M0 49v-5M-49 0h5M49 0h-5M-2 0h4M0 -2v4" stroke="currentColor" stroke-width="0.35"/></svg>
+      </div>
+
+      <nav class="sl-turret" aria-label="Magnification">
+        <button type="button" data-go="0" aria-current="true"><b>4×</b><span data-i18n="sl.t0">Slide</span></button>
+        <button type="button" data-go="1"><b>10×</b><span data-i18n="sl.t1">Programs</span></button>
+        <button type="button" data-go="2"><b>40×</b><span data-i18n="sl.t2">Training</span></button>
+        <button type="button" data-go="3"><b>100×</b><span data-i18n="sl.t3">Research</span></button>
+      </nav>
+    </div>
+  </section>
+
+  <section class="ty" id="typeHero" data-layer="surface" data-depth="0" data-depth-name="surface" aria-labelledby="ty-title">
+    <div class="ty-stage">
+      <div class="ty-film"><video muted loop playsinline preload="none" poster="media/hero-poster.jpg" aria-hidden="true" data-src-webm="media/hero-loop.webm" data-src-mp4="media/hero-loop.mp4"></video></div>
+      <div class="ty-gap">
+        <div class="ty-panel" data-from="0.16" data-to="0.42">
+          <h2 data-i18n="sl.p1">Three programs, taught in English</h2>
+          <ul class="ty-list"><li data-i18n="hero.p1">M.Sc. Clinical Dermatology</li><li data-i18n="hero.p2">M.Sc. Cosmetic Dermatology</li><li data-i18n="hero.p3">Ph.D. Dermatology</li></ul>
+        </div>
+        <div class="ty-panel" data-from="0.42" data-to="0.66">
+          <h2 data-i18n="sl.p2">Training on real patients from the first semester</h2>
+          <div class="ty-strip"><img src="photos/fruit-lab-my-batch-2-sm.webp" alt="" loading="lazy"><img src="photos/workshop-5-sm.webp" alt="" loading="lazy"><img src="photos/lab-work-sm.webp" alt="" loading="lazy"></div>
+        </div>
+        <div class="ty-panel" data-from="0.66" data-to="0.92">
+          <h2 class="sl-big"><span class="tnum" data-count="papers">112</span> <span data-i18n="sl.p3">papers in PubMed</span></h2>
+          <p class="sl-research">Published in 53 journals, including 22 randomized controlled trials.</p>
+        </div>
+      </div>
+      <div class="ty-word" aria-hidden="true">
+        <div class="ty-line ty-top"><span data-i18n="ty.a">DERMA</span></div>
+        <div class="ty-line ty-bot"><span data-i18n="ty.b">TOLOGY</span></div>
+      </div>
+      <div class="ty-meta wrap">
+        <h1 id="ty-title" data-i18n="sl.title">Thailand's first international graduate program in dermatology</h1>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://eptumed.com/applyCICM/index.php" target="_blank" rel="noopener"><span data-i18n="ui.apply">Apply now</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <button class="btn btn-line" type="button" data-film><svg aria-hidden="true"><use href="#i-play"/></svg><span data-i18n="hero.film">Watch the film (3:42)</span></button>
+        </div>
+      </div>
+      <p class="ty-hint" data-i18n="ty.hint">Scroll to open</p>
+    </div>
+  </section>
+
   <section class="scope" id="scope" data-layer="surface" data-depth="0" data-depth-name="surface" aria-labelledby="hero-title">
     <div class="scope-field">
-      <video id="heroVideo" muted loop playsinline preload="auto" poster="media/hero-poster.jpg" aria-hidden="true">
+      <video id="heroVideo" muted loop playsinline preload="none" poster="media/hero-poster.jpg" aria-hidden="true">
         <source src="media/hero-loop.webm" type="video/webm">
         <source src="media/hero-loop.mp4" type="video/mp4">
       </video>
@@ -206,9 +295,9 @@
         <h2 id="faculty-title" data-i18n="faculty.title">The faculty</h2>
         <p data-i18n="faculty.lede">Six lecturers who trained in Thailand, Japan, the United States, the United Kingdom and Switzerland.</p>
       </div>
-      <div class="reel" id="reel" aria-roledescription="carousel" aria-label="Faculty"></div>
-      <div class="staff" id="staffBand">
-        <div>
+      <div class="staff-stage" id="staffStage"></div>
+      <div class="officers" id="officers">
+        <div class="officers-head">
           <h3 data-i18n="staff.title">Academic officers</h3>
           <p data-i18n="staff.body">Thanks to the academic officers who support the program and its students.</p>
         </div>

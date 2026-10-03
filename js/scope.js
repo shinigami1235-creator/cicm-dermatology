@@ -5,13 +5,14 @@
 (function () {
   "use strict";
   var hero = document.getElementById("scope");
-  if (!hero) return;
+  if (!hero || document.documentElement.dataset.hero !== "lens") return;
   var lens = document.getElementById("lens"), canvas = document.getElementById("lensCanvas"),
       clone = document.getElementById("lensClone"), head = document.getElementById("lensHead"),
       copy = document.getElementById("scopeCopy"), video = document.getElementById("heroVideo"),
       hint = document.getElementById("lensHint"), magLabel = document.getElementById("lensMag");
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var ctx = canvas.getContext("2d");
+  video.preload = "auto"; video.load();
   var poster = new Image(); poster.src = video.getAttribute("poster");
 
   // magnified copy of the headline block, inert

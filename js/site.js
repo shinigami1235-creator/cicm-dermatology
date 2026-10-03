@@ -285,14 +285,14 @@
         vio.observe(v);
       }
     }
-    var dlg = $("#film"), btn = $("[data-film]");
-    if (dlg && btn) {
+    var dlg = $("#film"), btns = $$("[data-film]");
+    if (dlg && btns.length) {
       var fv = $("video", dlg), src = $("source", fv);
-      btn.addEventListener("click", function () {
+      btns.forEach(function (btn) { btn.addEventListener("click", function () {
         if (!src.src) { src.src = src.dataset.src; fv.load(); }
         if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
         var pr = fv.play(); if (pr && pr.catch) pr.catch(function () {});
-      });
+      }); });
       $("[data-close-film]", dlg).addEventListener("click", function () { dlg.close(); });
       dlg.addEventListener("close", function () { fv.pause(); });
       dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
