@@ -147,7 +147,7 @@
     return "Faculty and program members have " + s.n + " papers indexed in PubMed across " + s.j + " journals, including " + s.rct + " randomized controlled trials.";
   }
 
-  window.CICM = { loadContent: loadContent, loadPapers: loadPapers, refHTML: refHTML, yearFigure: yearFigure, journalTable: journalTable, stats: stats, researchLede: researchLede, esc: esc, icon: icon, FAC_KEYS: FAC_KEYS, reveal: function (el) { observe(el); } };
+  window.CICM = { openZoom: function (g, i) { openZoom(g, i); }, loadContent: loadContent, loadPapers: loadPapers, refHTML: refHTML, yearFigure: yearFigure, journalTable: journalTable, stats: stats, researchLede: researchLede, esc: esc, icon: icon, FAC_KEYS: FAC_KEYS, reveal: function (el) { observe(el); } };
 
   /* ---------- reveals ----------
      A scroll check rather than an observer, so fast flicks and slow devices never leave content hidden. */
@@ -389,6 +389,10 @@
     var s = stats(papers);
     $("#yearFig").innerHTML = yearFigure(papers);
     $("#journalTable").innerHTML = journalTable(papers, 7);
+    var tc = {}; papers.forEach(function (p) { if (p.topic !== "Other medicine") tc[p.topic] = (tc[p.topic] || 0) + 1; });
+    var topics = Object.keys(tc).sort(function (a, b) { return tc[b] - tc[a]; });
+    $("#topicTable").innerHTML = "<caption><b>" + T("research.table2", "Table 2") + "</b> " + T("research.table2t", "Papers by topic") + "</caption><thead><tr><th>" + T("research.topic", "Topic") + "</th><th>" + T("research.papers", "Papers") + "</th></tr></thead><tbody>" +
+      topics.map(function (t) { return '<tr><td><a href="research.html?topic=' + encodeURIComponent(t) + '">' + esc(t) + '</a></td><td><span class="tbar" style="--w:' + (tc[t] / tc[topics[0]] * 100).toFixed(0) + '%"></span>' + tc[t] + "</td></tr>"; }).join("") + "</tbody>";
     $("#researchLede").textContent = researchLede(s);
     $("#volRange").textContent = "PubMed, " + s.y0 + (lang === "th" ? " ถึง " : " to ") + s.y1;
     $("#allPapersLink").textContent = lang === "th" ? "ดูบทความทั้งหมด " + s.n + " เรื่อง" : "All " + s.n + " papers";
@@ -409,6 +413,63 @@
     if ("IntersectionObserver" in window) { var o = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { o.disconnect(); mount(); } }, { rootMargin: "400px" }); o.observe(box); } else mount();
   }
 
+
+  /* ---------- photo viewer ---------- */
+  var zoomEl = null, zoomItems = [], zoomI = 0;
+  function zoomBuild() {
+    if (zoomEl) return;
+    zoomEl = document.createElement("dialog");
+    zoomEl.className = "zoom";
+    zoomEl.setAttribute("aria-label", T("ui.viewer", "Photo viewer"));
+    zoomEl.innerHTML = '<figure><img alt=""><figcaption><span class="zc"></span><span class="zn tnum"></span></figcaption></figure>' +
+      '<button class="round z-close" type="button" aria-label="' + T("ui.close", "Close") + '">' + icon("close") + "</button>" +
+      '<button class="round z-prev" type="button" aria-label="' + T("ui.prev", "Previous") + '">' + icon("prev") + "</button>" +
+      '<button class="round z-next" type="button" aria-label="' + T("ui.next", "Next") + '">' + icon("next") + "</button>";
+    document.body.appendChild(zoomEl);
+    $(".z-close", zoomEl).addEventListener("click", function () { zoomEl.close(); });
+    $(".z-prev", zoomEl).addEventListener("click", function () { zoomShow(zoomI - 1); });
+    $(".z-next", zoomEl).addEventListener("click", function () { zoomShow(zoomI + 1); });
+    zoomEl.addEventListener("click", function (e) { if (e.target === zoomEl) zoomEl.close(); });
+    zoomEl.addEventListener("keydown", function (e) { if (e.key === "ArrowLeft") zoomShow(zoomI - 1); else if (e.key === "ArrowRight") zoomShow(zoomI + 1); });
+    var sx = null;
+    zoomEl.addEventListener("pointerdown", function (e) { sx = e.clientX; });
+    zoomEl.addEventListener("pointerup", function (e) { if (sx == null) return; var dx = e.clientX - sx; sx = null; if (Math.abs(dx) > 50) zoomShow(zoomI + (dx < 0 ? 1 : -1)); });
+    zoomEl.addEventListener("close", function () { document.body.style.overflow = ""; });
+  }
+  function zoomShow(i) {
+    zoomI = (i + zoomItems.length) % zoomItems.length;
+    var it = zoomItems[zoomI], img = $("img", zoomEl);
+    img.classList.add("swap");
+    var pre = new Image(); pre.onload = function () { img.src = it.src; img.alt = it.cap; img.classList.remove("swap"); }; pre.src = it.src;
+    $(".zc", zoomEl).textContent = it.cap;
+    $(".zn", zoomEl).textContent = zoomItems.length > 1 ? (zoomI + 1) + " / " + zoomItems.length : "";
+    zoomEl.classList.toggle("single", zoomItems.length < 2);
+  }
+  function openZoom(group, i) {
+    zoomBuild();
+    zoomItems = $$('[data-zoom="' + group + '"]').map(function (a) { return { src: a.getAttribute("href"), cap: a.dataset.caption || "" }; });
+    if (!zoomItems.length) return;
+    zoomShow(i || 0);
+    if (zoomEl.showModal) zoomEl.showModal(); else zoomEl.setAttribute("open", "");
+    document.body.style.overflow = "hidden";
+  }
+  // figures and photos on the page open in the viewer
+  function zoomables() {
+    [[".plate", "training"], [".life figure", "life"]].forEach(function (pair) {
+      $$(pair[0]).forEach(function (fig, k) {
+        var img = $("img", fig); if (!img || fig.dataset.zoomed) return;
+        fig.dataset.zoomed = "1";
+        var full = img.getAttribute("src").replace(/-sm\.webp$/, ".webp");
+        var cap = ($("figcaption", fig) || {}).textContent || img.alt;
+        var a = document.createElement("a"); a.hidden = true; a.href = full; a.dataset.zoom = pair[1]; a.dataset.caption = cap.trim();
+        fig.appendChild(a);
+        var b = document.createElement("button"); b.type = "button"; b.className = "zoom-hit"; b.setAttribute("aria-label", (T("ui.enlarge", "Enlarge photo")) + ": " + img.alt);
+        b.addEventListener("click", function () { openZoom(pair[1], k); });
+        ($(".ph", fig) || fig).appendChild(b);
+      });
+    });
+  }
+
   /* ---------- boot ---------- */
   applyLang();
   currentNav();
@@ -417,6 +478,7 @@
   navAndGauge();
   hero();
   observe();
+  zoomables();
 
   if (page === "home") {
     Promise.all([loadContent(), loadPapers()]).then(function (r) {

@@ -153,6 +153,11 @@ window.I18N = {
     "research.table": "ตารางที่ 1",
     "research.tablet": "วารสารที่ตีพิมพ์มากที่สุด",
     "research.journal": "วารสาร",
+    "research.table2": "ตารางที่ 2",
+    "research.table2t": "จำนวนบทความตามหัวข้อ",
+    "research.topic": "หัวข้อ",
+    "ui.viewer": "ดูภาพ",
+    "ui.enlarge": "ขยายภาพ",
     "research.papers": "บทความ",
 
     "faculty.page.title": "คณาจารย์",

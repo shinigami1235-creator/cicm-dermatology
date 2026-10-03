@@ -362,25 +362,51 @@ html { scrollbar-color: #6e1430 #0f0b0c; }
 .person b { display: block; font-family: var(--font-display); font-weight: 600; }
 .person span { font-size: 0.9rem; color: var(--deep-soft); }
 
-/* ---------- world map ---------- */
-.world { display: grid; gap: 32px; }
-@media (min-width: 1000px) { .world { grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.8fr); align-items: start; } }
-.map { position: relative; width: 100%; aspect-ratio: 1.9; }
+/* ---------- world map and partners ---------- */
+.world { display: grid; gap: clamp(28px, 4vw, 48px); }
+.map { position: relative; width: 100%; max-width: 1040px; aspect-ratio: 1.92; margin: 0 auto; }
 .map svg { width: 100%; height: 100%; overflow: visible; }
 .map .land { fill: #5e1328; stroke: #7c1f38; stroke-width: 0.5; }
-.map .arc { fill: none; stroke: var(--eosin); stroke-width: 1.4; stroke-linecap: round; }
-.map .arc.lit { stroke: var(--orange); stroke-width: 2.2; }
+.map .arc { fill: none; stroke: var(--eosin); stroke-width: 1.4; stroke-linecap: round; transition: stroke 200ms ease, stroke-width 200ms ease; }
+.map .arc.lit { stroke: var(--orange); stroke-width: 2.6; }
 .map .home { fill: var(--orange); }
 .map .pin { fill: var(--deep-ink); }
-.map .pin-label { font-family: var(--font-display); font-size: 11px; fill: var(--deep-ink); paint-order: stroke; stroke: var(--vessel); stroke-width: 3px; }
-.partners { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid color-mix(in srgb, var(--deep-ink) 35%, transparent); }
-.partners li { border-bottom: 1px solid color-mix(in srgb, var(--deep-ink) 18%, transparent); }
-.partners button { width: 100%; text-align: left; background: none; border: 0; padding: 12px 0; display: grid; grid-template-columns: 54px 1fr; gap: 14px; align-items: center; cursor: pointer; }
-.partners img { width: 54px; height: 54px; border-radius: 6px; object-fit: cover; }
-.partners b { display: block; font-family: var(--font-display); font-weight: 600; line-height: 1.25; }
-.partners span { font-size: 0.86rem; color: var(--deep-soft); }
-.partners button:hover b, .partners button[aria-pressed="true"] b { text-decoration: underline; text-decoration-color: var(--orange); }
-.world-note { font-size: 0.9rem; color: var(--deep-soft); margin-top: 16px; }
+.map .pin-label { font-family: var(--font-display); font-size: 15px; fill: var(--deep-ink); paint-order: stroke; stroke: var(--vessel); stroke-width: 4px; }
+.partners { list-style: none; margin: 0; padding: 0; display: grid; gap: clamp(18px, 2vw, 28px); grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 1000px) { .partners { grid-template-columns: repeat(3, 1fr); } }
+.pc > button { width: 100%; text-align: left; background: none; border: 0; padding: 0; cursor: zoom-in; display: grid; gap: 12px; color: inherit; }
+.pc-img { position: relative; display: block; border-radius: 10px; overflow: hidden; aspect-ratio: 4 / 3; background: #4a0f22; }
+.pc-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 700ms var(--ease-out); }
+.pc > button:hover .pc-img img, .pc > button:focus-visible .pc-img img { transform: scale(1.04); }
+.pc-count { position: absolute; right: 10px; bottom: 10px; padding: 4px 10px; border-radius: 999px; background: rgba(20, 6, 12, 0.72); color: #fff; font-family: var(--font-display); font-size: 0.78rem; font-weight: 600; }
+.pc-text { display: grid; gap: 2px; }
+.pc-text b { font-family: var(--font-display); font-weight: 600; font-size: 1.08rem; line-height: 1.25; }
+.pc-text > span { font-size: 0.9rem; color: var(--deep-soft); }
+.pc-text .pc-mou { justify-self: start; margin-top: 6px; padding: 2px 10px; border-radius: 999px; border: 1px solid var(--eosin); color: var(--eosin); font-family: var(--font-display); font-size: 0.76rem; font-weight: 600; }
+.pc > button:hover b { text-decoration: underline; text-decoration-color: var(--orange); }
+@media (max-width: 599px) {
+  .partners { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 calc(-1 * var(--gutter)); padding: 0 var(--gutter) 8px; gap: 14px; scrollbar-width: none; }
+  .partners::-webkit-scrollbar { display: none; }
+  .pc { flex: 0 0 78vw; scroll-snap-align: start; }
+}
+
+/* photo viewer */
+.zoom { border: 0; padding: 0; background: transparent; max-width: none; max-height: none; width: 100vw; height: 100dvh; margin: 0; color: #fff; }
+.zoom::backdrop { background: rgba(10, 4, 7, 0.92); }
+.zoom[open] { display: grid; place-items: center; animation: pop 240ms var(--ease-out); }
+.zoom figure { margin: 0; display: grid; gap: 12px; justify-items: center; padding: 64px 16px 24px; max-width: 100%; }
+.zoom img { max-width: min(92vw, 1500px); max-height: calc(100dvh - 160px); width: auto; height: auto; border-radius: 8px; transition: opacity 200ms ease, filter 200ms ease; user-select: none; -webkit-user-drag: none; }
+.zoom img.swap { opacity: 0.35; filter: blur(4px); }
+.zoom figcaption { display: flex; gap: 16px; font-family: var(--font-display); font-size: 0.95rem; color: #eadbd6; text-align: center; flex-wrap: wrap; justify-content: center; }
+.zoom .round { position: fixed; background: rgba(30, 14, 20, 0.7); color: #fff; border-color: rgba(255, 255, 255, 0.4); }
+.zoom .z-close { top: 14px; right: 14px; }
+.zoom .z-prev { left: 14px; top: 50%; transform: translateY(-50%); }
+.zoom .z-next { right: 14px; top: 50%; transform: translateY(-50%); }
+.zoom .z-prev:active, .zoom .z-next:active { transform: translateY(-50%) scale(0.95); }
+.zoom.single .z-prev, .zoom.single .z-next { display: none; }
+@media (max-width: 599px) { .zoom .z-prev, .zoom .z-next { top: auto; bottom: 14px; transform: none; } .zoom .z-prev:active, .zoom .z-next:active { transform: scale(0.95); } }
+.zoom-hit { position: absolute; inset: 0; width: 100%; height: 100%; background: none; border: 0; cursor: zoom-in; z-index: 1; }
+.life figure { position: relative; }
 
 /* ---------- research: journal grammar on hematoxylin ---------- */
 .journal { font-family: var(--font-text); }
@@ -795,3 +821,11 @@ html[data-hero="lens"] #slideHero, html[data-hero="lens"] #typeHero { display: n
 .pick-row a[aria-current="true"] { background: var(--orange); color: var(--on-orange); border-color: var(--orange); }
 .pick-toggle svg { width: 18px; height: 18px; flex: none; }
 @media (max-width: 699px) { .pick-toggle { width: 44px; padding: 0; justify-content: center; } .pick-toggle span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } }
+
+/* research: left column carries both tables and stays in view beside the papers */
+.topic-table { margin-top: 44px; }
+.topic-table td a { text-decoration: none; }
+.topic-table td a:hover { text-decoration: underline; text-decoration-color: var(--eosin); }
+.topic-table td:last-child { display: flex; align-items: center; justify-content: flex-end; gap: 10px; }
+.tbar { display: inline-block; height: 6px; width: calc(var(--w) * 0.9); max-width: 120px; min-width: 4px; border-radius: 3px; background: var(--eosin); opacity: 0.75; }
+@media (min-width: 900px) { .research-side { position: sticky; top: calc(var(--nav-h) + 24px); align-self: start; } }

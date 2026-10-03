@@ -73,15 +73,22 @@ async function main() {
     b.addEventListener("mouseleave", () => on(false));
     b.addEventListener("focus", () => on(true));
     b.addEventListener("blur", () => on(false));
-    b.addEventListener("click", () => on(b.getAttribute("aria-pressed") !== "true"));
   });
 }
 
 function renderList(partners) {
   if (!listEl) return;
-  listEl.innerHTML = partners.map((p) => `<li><button type="button" aria-pressed="false" data-name="${esc(p.name)}">
-    <img src="${esc(p.photo)}-sm.webp" alt="" loading="lazy" width="54" height="54">
-    <span><b>${esc(p.name)}</b>${p.place ? `<span>${esc(p.place)}</span>` : ""}</span></button></li>`).join("");
+  const th = (window.CICM_LANG === "th");
+  listEl.innerHTML = partners.map((p, i) => {
+    const n = p.photos.length;
+    const count = n > 1 ? `<span class="pc-count">${th ? n + " ภาพ" : n + " photos"}</span>` : "";
+    const mou = p.mou ? `<span class="pc-mou">${th ? "ลงนาม MOU" : "MOU signed"}</span>` : "";
+    return `<li class="pc"><button type="button" aria-pressed="false" data-name="${esc(p.name)}" data-zoom-group="partner-${i}" aria-label="${esc(p.name)}. ${th ? "ดูภาพ" : "View photos"}">
+      <span class="pc-img"><img src="photos/${esc(p.photos[0])}.webp" srcset="photos/${esc(p.photos[0])}-sm.webp 720w, photos/${esc(p.photos[0])}.webp 1600w" sizes="(min-width: 1000px) 30vw, (min-width: 600px) 45vw, 80vw" alt="" loading="lazy">${count}</span>
+      <span class="pc-text"><b>${esc(p.name)}</b>${p.place ? `<span>${esc(p.place)}</span>` : ""}${mou}</span></button>
+      ${p.photos.map((ph) => `<a hidden data-zoom="partner-${i}" href="photos/${esc(ph)}.webp" data-caption="${esc(p.name)}${p.place ? " · " + esc(p.place) : ""}"></a>`).join("")}</li>`;
+  }).join("");
+  listEl.querySelectorAll(".pc > button").forEach((b) => b.addEventListener("click", () => window.CICM && window.CICM.openZoom(b.dataset.zoomGroup, 0)));
 }
 
 main().catch((e) => console.error(e));
