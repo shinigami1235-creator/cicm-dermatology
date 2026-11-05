@@ -8,7 +8,7 @@
 
   C.loadPapers().then(function (data) {
     var papers = data.papers, s = C.stats(papers);
-    $("#volRange").textContent = "PubMed, " + s.y0 + (lang === "th" ? " ถึง " : " to ") + s.y1;
+    $("#volRange").textContent = (s.sc ? "PubMed + Scopus, " : "PubMed, ") + s.y0 + (lang === "th" ? " ถึง " : " to ") + s.y1;
     $("#researchLede").textContent = C.researchLede(s);
     $("#journalTable").innerHTML = C.journalTable(papers, 8);
     var fig = $("#yearFig"); fig.innerHTML = C.yearFigure(papers); fig.classList.add("in");

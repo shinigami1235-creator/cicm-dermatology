@@ -106,6 +106,11 @@ window.I18N = {
     "life.fbblocked": "เบราว์เซอร์นี้บล็อกโพสต์จาก Facebook กดเปิดเพจเพื่ออ่านข่าวล่าสุด",
     "life.fbopen": "เปิดเพจ CICM_Dermatology บน Facebook",
     "life.fbposts": "โพสต์ล่าสุดบน Facebook",
+    "research.table3": "ตารางที่ 3",
+    "research.table3t": "อาจารย์ในฐานข้อมูล Scopus",
+    "research.docs": "เอกสาร",
+    "research.cites": "การอ้างอิง",
+    "life.fbend": "โพสต์ที่เก่ากว่านี้อยู่บนเพจ Facebook",
 
     "apply.title": "สมัครเรียน CICM Dermatology",
     "apply.req": "คุณสมบัติและค่าเล่าเรียน",

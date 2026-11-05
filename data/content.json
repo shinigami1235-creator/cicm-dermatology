@@ -519,7 +519,13 @@
     "Skin biology",
     "Keratinocytes",
     "Hair"
-   ]
+   ],
+   "scopus": {
+    "id": "50861806200",
+    "docs": 44,
+    "cites": 1790,
+    "h": 16
+   }
   },
   {
    "id": "premjit",
@@ -542,7 +548,13 @@
     "Hand eczema",
     "Geriatric dermatology and skin aging",
     "Psychodermatology"
-   ]
+   ],
+   "scopus": {
+    "id": "56495307800",
+    "docs": 25,
+    "cites": 288,
+    "h": 10
+   }
   },
   {
    "id": "punyaphat",
@@ -570,7 +582,13 @@
     "Fat",
     "Dermatosurgery",
     "Skin cancer"
-   ]
+   ],
+   "scopus": {
+    "id": "56593282200",
+    "docs": 23,
+    "cites": 339,
+    "h": 11
+   }
   },
   {
    "id": "sunatra",
@@ -590,7 +608,13 @@
    "expertise": [
     "Nail surgery",
     "Laser and injectables"
-   ]
+   ],
+   "scopus": {
+    "id": "55821343400",
+    "docs": 8,
+    "cites": 94,
+    "h": 5
+   }
   },
   {
    "id": "pawit",
@@ -611,7 +635,13 @@
     "Laser and energy-based devices",
     "Skin and translational immunology",
     "Contact dermatitis"
-   ]
+   ],
+   "scopus": {
+    "id": "57209327231",
+    "docs": 16,
+    "cites": 387,
+    "h": 10
+   }
   },
   {
    "id": "sittha",
@@ -624,7 +654,13 @@
     "MBChB, University of Edinburgh",
     "B.Sc. (Hons) First Class in Medicine, University of St Andrews"
    ],
-   "expertise": []
+   "expertise": [],
+   "scopus": {
+    "id": "58575830800",
+    "docs": 1,
+    "cites": 0,
+    "h": 0
+   }
   }
  ],
  "staff": [
@@ -752,6 +788,10 @@
   "https://www.facebook.com/permalink.php?story_fbid=pfbid02dmKRFPtPnBAWCCmco2icMAUsa8ugpFP1eTKAB5oPsRSrgfKVAAMjzjHzGK183v3Sl&id=100064737292426",
   "https://www.facebook.com/permalink.php?story_fbid=pfbid0KhmwRPjETAmELmVT5N4fYZ7UNL66f9WaJp4v7vgTFPivEWK25FFhCjWFM8UbVwAFl&id=100064737292426",
   "https://www.facebook.com/permalink.php?story_fbid=pfbid07nUZhjtwi8U1p6e2xs8Aeud74XpGkPbRCdti9fjJ5SBj8FdpaqxRWV7XCJLLfPLSl&id=100064737292426",
-  "https://www.facebook.com/permalink.php?story_fbid=pfbid0ZiqyqVNS12wVnXPLEDE5LrVeLRHLU4Tx18X6roWvJecw3cQMwv34vjRDsuyiv5YCl&id=100064737292426"
- ]
+  "https://www.facebook.com/permalink.php?story_fbid=pfbid0ZiqyqVNS12wVnXPLEDE5LrVeLRHLU4Tx18X6roWvJecw3cQMwv34vjRDsuyiv5YCl&id=100064737292426",
+  "https://www.facebook.com/permalink.php?story_fbid=pfbid02ep9ZUHGrt3Y4tSDqM4ezMjmRSD7tvWGAGLfSTKFV3M9MPm8vZVaDdDSvY99THN98l&id=100064737292426",
+  "https://www.facebook.com/permalink.php?story_fbid=pfbid02Pok6X235mtu4KaL94cdRw2QLgkyfYqsLTrZacAUoTvQtsgRfKKjsuHvWGwvU254il&id=100064737292426",
+  "https://www.facebook.com/permalink.php?story_fbid=pfbid0tYwqtAihhUT87PdogP98ybur22PFRpKkqLnafqhfANCqzaBprPKzYyh6FGywS9vGl&id=100064737292426"
+ ],
+ "scopusUpdated": "2026-11-05"
 }

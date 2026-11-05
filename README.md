@@ -20,7 +20,7 @@ Announcements, downloads and faculty achievements can come from a Google Sheet. 
    - announcements: `date`, `tag_en`, `tag_th`, `title_en`, `title_th`, `link`, `pinned`
    - downloads: `group`, `title_en`, `title_th`, `url`
    - achievements: `faculty_id`, `year`, `text_en`, `text_th`, `link`
-   - facebook: `url`. One Facebook post link per row, newest first. The home page shows up to six. To get a link, open the post on Facebook, click its date, and copy the address. Facebook no longer fills the Page plugin's timeline, so these rows are what shows under the page header.
+   - facebook: `url`. One Facebook post link per row, newest first. The home page loads them three at a time as visitors scroll the Facebook column, with no limit. To get a link, open the post on Facebook, click its date, and copy the address. Facebook no longer fills the Page plugin's timeline, so these rows are what shows under the page header.
 3. Share the sheet as "Anyone with the link can view".
 4. Copy the long ID from the sheet's link (`docs.google.com/spreadsheets/d/THIS_PART/edit`) into `sheetId` in `js/config.js`.
 
@@ -36,6 +36,12 @@ Column notes:
 ## Updating the publication list
 
 `data/publications.json` was built from PubMed on 3 October 2026. To refresh it, run the same PubMed author searches again and replace the file. Each paper keeps its PMID, DOI, authors, journal, year, topic and study design.
+
+## Scopus
+
+Each lecturer's Scopus ID, document count, citations and h-index sit under `scopus` in `data/content.json`, with the date in `scopusUpdated`. They show on the faculty page, the staff cards and Table 3 of the research section. To refresh them, open each lecturer's Scopus profile and copy the three numbers.
+
+Scopus Preview, the free version, hides the paper lists, so Scopus-only papers need an export from someone signed in through Thammasat. On each lecturer's profile choose Documents > Export all > CSV, put the CSV files in one folder, then run `python tools/scopus_merge.py <folder>`. Papers already in the list gain a Scopus link and citation count, and papers only in Scopus are added.
 
 ## Editing pages
 

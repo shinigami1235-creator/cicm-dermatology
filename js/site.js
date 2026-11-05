@@ -98,15 +98,35 @@
     var extra = au.length > 8 ? au.slice(6).filter(function (a) { return FAC_KEYS.indexOf(a) > -1; }) : [];
     var auHTML = shown.map(function (a) { return FAC_KEYS.indexOf(a) > -1 ? "<b>" + esc(a) + "</b>" : esc(a); }).join(", ");
     if (au.length > 8) auHTML += (extra.length ? ", …, " + extra.map(function (a) { return "<b>" + esc(a) + "</b>"; }).join(", ") : "") + ", et al.";
-    var href = p.doi ? "https://doi.org/" + p.doi : "https://pubmed.ncbi.nlm.nih.gov/" + p.pmid + "/";
+    var href = paperHref(p);
     var badge = p.design ? '<span class="badge">' + esc(p.design) + "</span>" : "";
     return '<li class="ref"><div><a class="ttl" href="' + href + '" target="_blank" rel="noopener">' + esc(p.title) + "</a>" +
       '<div class="au">' + auHTML + "</div>" +
       '<div class="src"><i>' + esc(p.journal) + "</i><span class=\"tnum\">" + p.year + "</span>" + badge +
       (opts.topic ? '<span class="badge topic">' + esc(p.topic) + "</span>" : "") +
-      '<a href="https://pubmed.ncbi.nlm.nih.gov/' + p.pmid + '/" target="_blank" rel="noopener">PMID ' + p.pmid + "</a></div></div></li>";
+      (p.pmid ? '<a href="https://pubmed.ncbi.nlm.nih.gov/' + p.pmid + '/" target="_blank" rel="noopener">PMID ' + p.pmid + "</a>" : "") +
+      (p.eid ? '<a href="https://www.scopus.com/record/display.uri?eid=' + encodeURIComponent(p.eid) + '&origin=resultslist" target="_blank" rel="noopener">Scopus</a>' : "") + "</div></div></li>";
   }
 
+  function paperHref(p) {
+    if (p.doi) return "https://doi.org/" + p.doi;
+    if (p.pmid) return "https://pubmed.ncbi.nlm.nih.gov/" + p.pmid + "/";
+    return p.eid ? "https://www.scopus.com/record/display.uri?eid=" + encodeURIComponent(p.eid) + "&origin=resultslist" : "#";
+  }
+  function scopusUrl(id) { return "https://www.scopus.com/authid/detail.uri?authorId=" + encodeURIComponent(id); }
+  function fmtN(n) { return Number(n).toLocaleString(lang === "th" ? "th-TH" : "en-US"); }
+  function scopusTable(c) {
+    var fac = c.faculty.filter(function (f) { return f.scopus && f.scopus.id; });
+    if (!fac.length) return "";
+    var d = c.scopusUpdated ? new Date(c.scopusUpdated + "T00:00:00") : null;
+    var when = d ? d.toLocaleDateString(lang === "th" ? "th-TH" : "en-GB", { day: "numeric", month: "short", year: "numeric" }) : "";
+    return "<caption><b>" + T("research.table3", "Table 3") + "</b> " + T("research.table3t", "Faculty in Scopus") + (when ? " · " + when : "") + "</caption><thead><tr><th>" +
+      T("research.lecturer", "Lecturer") + '</th><th class="num">' + T("research.docs", "Documents") + '</th><th class="num">' + T("research.cites", "Citations") + '</th><th class="num">h-index</th></tr></thead><tbody>' +
+      fac.map(function (f) {
+        return '<tr><td><a href="' + scopusUrl(f.scopus.id) + '" target="_blank" rel="noopener">' + esc(f.name) + '</a></td><td class="num tnum">' + fmtN(f.scopus.docs) +
+          '</td><td class="num tnum">' + fmtN(f.scopus.cites) + '</td><td class="num tnum">' + f.scopus.h + "</td></tr>";
+      }).join("") + "</tbody>";
+  }
   function yearFigure(papers) {
     var years = []; for (var y = 2011; y <= 2026; y++) years.push(y);
     var all = {}, rct = {};
@@ -139,17 +159,19 @@
     return {
       n: papers.length,
       j: Object.keys(journals).length,
+      sc: papers.some(function (p) { return p.eid; }),
       rct: papers.filter(function (p) { return p.design === "Randomized Controlled Trial"; }).length,
       y0: Math.min.apply(null, papers.map(function (p) { return p.year; })),
       y1: Math.max.apply(null, papers.map(function (p) { return p.year; }))
     };
   }
   function researchLede(s) {
-    if (lang === "th") return "อาจารย์และสมาชิกหลักสูตรมีบทความในฐานข้อมูล PubMed " + s.n + " บทความ ในวารสาร " + s.j + " ฉบับ รวมการทดลองแบบสุ่มมีกลุ่มควบคุม " + s.rct + " เรื่อง";
-    return "Faculty and program members have " + s.n + " papers indexed in PubMed across " + s.j + " journals, including " + s.rct + " randomized controlled trials.";
+    var db = s.sc ? "PubMed " + (lang === "th" ? "หรือ" : "or") + " Scopus" : "PubMed";
+    if (lang === "th") return "อาจารย์และสมาชิกหลักสูตรมีบทความในฐานข้อมูล " + db + " " + s.n + " บทความ ในวารสาร " + s.j + " ฉบับ รวมการทดลองแบบสุ่มมีกลุ่มควบคุม " + s.rct + " เรื่อง";
+    return "Faculty and program members have " + s.n + " papers indexed in " + db + " across " + s.j + " journals, including " + s.rct + " randomized controlled trials.";
   }
 
-  window.CICM = { openZoom: function (g, i) { openZoom(g, i); }, loadContent: loadContent, loadPapers: loadPapers, refHTML: refHTML, yearFigure: yearFigure, journalTable: journalTable, stats: stats, researchLede: researchLede, esc: esc, icon: icon, FAC_KEYS: FAC_KEYS, reveal: function (el) { observe(el); } };
+  window.CICM = { openZoom: function (g, i) { openZoom(g, i); }, loadContent: loadContent, loadPapers: loadPapers, refHTML: refHTML, paperHref: paperHref, scopusTable: scopusTable, scopusUrl: scopusUrl, fmtN: fmtN, yearFigure: yearFigure, journalTable: journalTable, stats: stats, researchLede: researchLede, esc: esc, icon: icon, FAC_KEYS: FAC_KEYS, reveal: function (el) { observe(el); } };
 
   /* ---------- reveals ----------
      A scroll check rather than an observer, so fast flicks and slow devices never leave content hidden. */
@@ -386,7 +408,7 @@
       band.appendChild(d);
     });
   }
-  function renderResearchHome(papers) {
+  function renderResearchHome(papers, c) {
     if (!$("#yearFig")) return;
     var s = stats(papers);
     $("#yearFig").innerHTML = yearFigure(papers);
@@ -396,7 +418,8 @@
     $("#topicTable").innerHTML = "<caption><b>" + T("research.table2", "Table 2") + "</b> " + T("research.table2t", "Papers by topic") + "</caption><thead><tr><th>" + T("research.topic", "Topic") + "</th><th>" + T("research.papers", "Papers") + "</th></tr></thead><tbody>" +
       topics.map(function (t) { return '<tr><td><a href="research.html?topic=' + encodeURIComponent(t) + '">' + esc(t) + '</a></td><td><span class="tbar" style="--w:' + (tc[t] / tc[topics[0]] * 100).toFixed(0) + '%"></span>' + tc[t] + "</td></tr>"; }).join("") + "</tbody>";
     $("#researchLede").textContent = researchLede(s);
-    $("#volRange").textContent = "PubMed, " + s.y0 + (lang === "th" ? " ถึง " : " to ") + s.y1;
+    $("#volRange").textContent = (s.sc ? "PubMed + Scopus, " : "PubMed, ") + s.y0 + (lang === "th" ? " ถึง " : " to ") + s.y1;
+    if ($("#scopusTable")) $("#scopusTable").innerHTML = scopusTable(c);
     $("#allPapersLink").textContent = lang === "th" ? "ดูบทความทั้งหมด " + s.n + " เรื่อง" : "All " + s.n + " papers";
     var latest = papers.filter(function (p) { return p.faculty.length && p.topic !== "Other medicine"; }).slice(0, 5);
     $("#latestRefs").innerHTML = latest.map(function (p) { return refHTML(p); }).join("");
@@ -421,13 +444,36 @@
         '</p><a class="btn btn-primary" href="' + esc(pageUrl) + '" target="_blank" rel="noopener">' + T("life.fbopen", "Open CICM_Dermatology on Facebook") + "</a></div>";
     }
     function mount(posts) {
-      var w = Math.max(280, Math.min(500, Math.floor(box.clientWidth) - 2));
+      var w = Math.max(280, Math.min(500, Math.floor(box.clientWidth) - 2)), next = 0, BATCH = 3;
       box.innerHTML = '<div class="fb-head-plugin"><div class="fb-page" data-href="' + esc(pageUrl) + '" data-tabs="" data-width="' + w +
         '" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div></div>' +
-        '<div class="fb-posts" tabindex="0" aria-label="' + T("life.fbposts", "Latest Facebook posts") + '">' +
-        posts.map(function (u) { return '<div class="fb-post" data-href="' + esc(u) + '" data-width="' + w + '" data-show-text="true"></div>'; }).join("") + "</div>";
+        '<div class="fb-posts" tabindex="0" aria-label="' + T("life.fbposts", "Latest Facebook posts") + '"><div class="fb-more" aria-hidden="true"></div></div>';
+      var list = $(".fb-posts", box), more = $(".fb-more", box);
+      function parse(el) { if (window.FB && window.FB.XFBML) window.FB.XFBML.parse(el); }
+      function addBatch() {
+        if (next >= posts.length) return;
+        var g = document.createElement("div");
+        g.className = "fb-batch";
+        g.innerHTML = posts.slice(next, next + BATCH).map(function (u) { return '<div class="fb-post" data-href="' + esc(u) + '" data-width="' + w + '" data-show-text="true"></div>'; }).join("");
+        next += BATCH;
+        list.insertBefore(g, more);
+        if (next >= posts.length) {
+          more.outerHTML = '<div class="fb-end"><p>' + T("life.fbend", "Older posts are on the Facebook page.") + '</p><a class="btn btn-primary" href="' + esc(pageUrl) +
+            '" target="_blank" rel="noopener">' + T("life.fbopen", "Open CICM_Dermatology on Facebook") + "</a></div>";
+          if (io) io.disconnect();
+        }
+        parse(g);
+      }
+      var io = null;
+      addBatch();
+      if (next < posts.length) {
+        if ("IntersectionObserver" in window) {
+          io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) addBatch(); }, { root: list, rootMargin: "0px 0px 900px 0px" });
+          io.observe(more);
+        } else while (next < posts.length) addBatch();
+      }
       if (!$("#fb-root")) { var r = document.createElement("div"); r.id = "fb-root"; document.body.appendChild(r); }
-      if (window.FB && window.FB.XFBML) window.FB.XFBML.parse(box);
+      if (window.FB && window.FB.XFBML) parse(box);
       else {
         var sc = document.createElement("script");
         sc.async = true; sc.crossOrigin = "anonymous";
@@ -439,7 +485,7 @@
     }
     function go() {
       loadContent().then(function (c) {
-        var posts = (c.facebookPosts || []).map(fbClean).filter(Boolean).slice(0, 6);
+        var posts = (c.facebookPosts || []).map(fbClean).filter(Boolean);
         mount(posts);
       }).catch(function () { mount([]); });
     }
@@ -516,7 +562,7 @@
   if (page === "home") {
     Promise.all([loadContent(), loadPapers()]).then(function (r) {
       var c = r[0], papers = r[1].papers;
-      renderNotices(c); renderPrograms(c); renderReel(c, papers); renderStaff(c); renderResearchHome(papers);
+      renderNotices(c); renderPrograms(c); renderReel(c, papers); renderStaff(c); renderResearchHome(papers, c);
       observe($("#programList"));
     }).catch(function (e) { console.error(e); });
     facebook();

@@ -24,6 +24,7 @@
       '<div class="st-cols"><div><h4>' + T("ui.edu", "Education") + "</h4>" + eduList(f) + "</div>" +
       "<div>" + (f.expertise.length ? "<h4>" + T("ui.exp", "Expertise") + "</h4>" + chips(f) : "") + achList(f, ach) +
       (n ? '<p class="st-papers"><a href="research.html?lecturer=' + encodeURIComponent(f.pubmed) + '"><b>' + n + "</b> " + (lang === "th" ? "บทความใน PubMed" : "papers in PubMed") + "</a></p>" : "") +
+      (f.scopus && f.scopus.docs ? '<p class="st-papers"><a href="' + C.scopusUrl(f.scopus.id) + '" target="_blank" rel="noopener"><b>' + f.scopus.h + "</b> " + (lang === "th" ? "h-index ใน Scopus" : "h-index in Scopus") + "</a></p>" : "") +
       "</div></div>";
   }
 
