@@ -15,11 +15,12 @@ Thai is at `?lang=th` on any page, or the EN/TH switch in the top bar.
 
 Announcements, downloads and faculty achievements can come from a Google Sheet. Until a sheet is connected, the site reads `data/content.json`.
 
-1. Make a Google Sheet with three tabs named `announcements`, `downloads` and `achievements`.
+1. Make a Google Sheet with four tabs named `announcements`, `downloads`, `achievements` and `facebook`.
 2. Put these column names in row 1 of each tab:
    - announcements: `date`, `tag_en`, `tag_th`, `title_en`, `title_th`, `link`, `pinned`
    - downloads: `group`, `title_en`, `title_th`, `url`
    - achievements: `faculty_id`, `year`, `text_en`, `text_th`, `link`
+   - facebook: `url`. One Facebook post link per row, newest first. The home page shows up to six. To get a link, open the post on Facebook, click its date, and copy the address. Facebook no longer fills the Page plugin's timeline, so these rows are what shows under the page header.
 3. Share the sheet as "Anyone with the link can view".
 4. Copy the long ID from the sheet's link (`docs.google.com/spreadsheets/d/THIS_PART/edit`) into `sheetId` in `js/config.js`.
 

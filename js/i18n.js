@@ -103,7 +103,9 @@ window.I18N = {
     "life.fb": "บน Facebook",
     "life.open": "เปิดเพจ",
     "life.fbload": "กำลังโหลดฟีด Facebook",
-    "life.fbblocked": "เบราว์เซอร์นี้บล็อกฟีด Facebook กดเปิดเพจเพื่ออ่านข่าวล่าสุด",
+    "life.fbblocked": "เบราว์เซอร์นี้บล็อกโพสต์จาก Facebook กดเปิดเพจเพื่ออ่านข่าวล่าสุด",
+    "life.fbopen": "เปิดเพจ CICM_Dermatology บน Facebook",
+    "life.fbposts": "โพสต์ล่าสุดบน Facebook",
 
     "apply.title": "สมัครเรียน CICM Dermatology",
     "apply.req": "คุณสมบัติและค่าเล่าเรียน",

@@ -469,7 +469,7 @@ html { scrollbar-color: #6e1430 #0f0b0c; }
 .life .l2, .life .l3 { grid-column: span 3; } .life .l2 img, .life .l3 img { aspect-ratio: 1; }
 .life figcaption { margin-top: 8px; color: var(--fat-pale-soft); }
 .fb { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 18px 40px -18px rgba(58, 42, 6, 0.4); min-height: 300px; display: grid; }
-.fb iframe { border: 0; width: 100%; height: 640px; }
+.fb iframe { border: 0; }
 .fb-fallback { padding: 22px; color: #1c1e21; font-size: 0.95rem; }
 .fb-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 12px; }
 .fb-head h3 { font-size: 1.15rem; }
@@ -582,8 +582,13 @@ html { scrollbar-color: #6e1430 #0f0b0c; }
 .map .pin-label { font-size: 15px; stroke-width: 4px; }
 .fee.head span:first-child { text-align: left; }
 .fb { position: relative; }
-.fb::before { content: "CICM_Dermatology"; position: absolute; inset: auto 0 50% 0; text-align: center; font-family: var(--font-display); font-weight: 600; color: #6b5a2a; z-index: 0; }
-.fb iframe { position: relative; z-index: 1; }
+.fb { align-content: start; }
+.fb-head-plugin { padding: 8px 8px 0; min-height: 80px; border-bottom: 1px solid #e4e6eb; }
+.fb-posts { max-height: 620px; overflow-y: auto; overscroll-behavior: contain; padding: 10px 8px; display: grid; gap: 12px; justify-items: center; background: #f0f2f5; }
+.fb-posts:empty { display: none; }
+.fb-post { width: 100%; max-width: 500px; min-height: 120px; background: #fff; border-radius: 8px; }
+.fb.is-blocked { align-content: center; }
+.fb-fallback .btn { margin-top: 12px; }
 :lang(th) h1, :lang(th) h2, :lang(th) h3 { line-height: 1.28; letter-spacing: 0; word-break: keep-all; }
 .scope-clone { display: grid; align-items: end; }
 @media (min-width: 600px) and (max-width: 899px) { .tools { grid-template-columns: repeat(3, 1fr); } .tools .field:first-child { grid-column: 1 / -1; } }

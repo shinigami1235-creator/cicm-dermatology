@@ -69,13 +69,15 @@
       return Promise.all([
         sheetTab(tabs.announcements || "announcements").catch(function () { return null; }),
         sheetTab(tabs.downloads || "downloads").catch(function () { return null; }),
-        sheetTab(tabs.achievements || "achievements").catch(function () { return null; })
+        sheetTab(tabs.achievements || "achievements").catch(function () { return null; }),
+        sheetTab(tabs.facebook || "facebook").catch(function () { return null; })
       ]).then(function (res) {
         if (res[0] && res[0].length) c.announcements = res[0].map(function (r) {
           return { date: r.date, tag: { en: r.tag_en, th: r.tag_th }, title: { en: r.title_en, th: r.title_th }, link: r.link, pinned: /^(y|yes|true|1)$/i.test(r.pinned || "") };
         });
         if (res[1] && res[1].length) c.downloads = res[1].map(function (r) { return { group: r.group, title: { en: r.title_en, th: r.title_th }, url: r.url }; });
         if (res[2] && res[2].length) c.achievements = res[2].map(function (r) { return { faculty: r.faculty_id, year: r.year, text: { en: r.text_en, th: r.text_th }, link: r.link }; });
+        if (res[3] && res[3].length) c.facebookPosts = res[3].map(function (r) { return r.url; }).filter(Boolean);
         return c;
       });
     });
@@ -399,18 +401,49 @@
     var latest = papers.filter(function (p) { return p.faculty.length && p.topic !== "Other medicine"; }).slice(0, 5);
     $("#latestRefs").innerHTML = latest.map(function (p) { return refHTML(p); }).join("");
   }
+  function fbClean(u) {
+    try {
+      var x = new URL(u), sid = x.searchParams.get("story_fbid"), id = x.searchParams.get("id");
+      if (sid && id) return "https://www.facebook.com/permalink.php?story_fbid=" + sid + "&id=" + id;
+      if (x.searchParams.get("v")) return x.origin + x.pathname + "?v=" + x.searchParams.get("v");
+      return x.origin + x.pathname;
+    } catch (e) { return ""; }
+  }
+  /* Facebook stopped filling the Page plugin's timeline tab, so the box shows the
+     page header (Follow button) and the posts staff list in data/content.json
+     or the sheet's "facebook" tab, each as a single-post embed. */
   function facebook() {
     var box = $("#fb"); if (!box) return;
-    function mount() {
-      var w = Math.max(280, Math.min(500, Math.floor(box.clientWidth)));
-      var href = encodeURIComponent(CFG.facebookPage || "https://www.facebook.com/profile.php?id=100064737292426");
-      box.innerHTML = '<iframe title="CICM Dermatology on Facebook" loading="lazy" src="https://www.facebook.com/plugins/page.php?href=' + href + "&tabs=timeline&width=" + w + "&height=640&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&locale=" + (lang === "th" ? "th_TH" : "en_US") + '" allow="encrypted-media; clipboard-write; web-share" style="height:640px"></iframe>';
-      var note = document.createElement("p");
-      note.className = "legend"; note.style.marginTop = "10px";
-      note.textContent = T("life.fbblocked", "Some browsers block this feed. Open the page to read the latest posts.");
-      box.parentNode.appendChild(note);
+    var pageUrl = CFG.facebookPage || "https://www.facebook.com/profile.php?id=100064737292426";
+    function fallback() {
+      box.classList.add("is-blocked");
+      box.innerHTML = '<div class="fb-fallback"><p>' + T("life.fbblocked", "Your browser blocked the Facebook posts. Open the page to read them.") +
+        '</p><a class="btn btn-primary" href="' + esc(pageUrl) + '" target="_blank" rel="noopener">' + T("life.fbopen", "Open CICM_Dermatology on Facebook") + "</a></div>";
     }
-    if ("IntersectionObserver" in window) { var o = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { o.disconnect(); mount(); } }, { rootMargin: "400px" }); o.observe(box); } else mount();
+    function mount(posts) {
+      var w = Math.max(280, Math.min(500, Math.floor(box.clientWidth) - 2));
+      box.innerHTML = '<div class="fb-head-plugin"><div class="fb-page" data-href="' + esc(pageUrl) + '" data-tabs="" data-width="' + w +
+        '" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div></div>' +
+        '<div class="fb-posts" tabindex="0" aria-label="' + T("life.fbposts", "Latest Facebook posts") + '">' +
+        posts.map(function (u) { return '<div class="fb-post" data-href="' + esc(u) + '" data-width="' + w + '" data-show-text="true"></div>'; }).join("") + "</div>";
+      if (!$("#fb-root")) { var r = document.createElement("div"); r.id = "fb-root"; document.body.appendChild(r); }
+      if (window.FB && window.FB.XFBML) window.FB.XFBML.parse(box);
+      else {
+        var sc = document.createElement("script");
+        sc.async = true; sc.crossOrigin = "anonymous";
+        sc.src = "https://connect.facebook.net/" + (lang === "th" ? "th_TH" : "en_US") + "/sdk.js#xfbml=1&version=v25.0";
+        sc.onerror = fallback;
+        document.body.appendChild(sc);
+      }
+      setTimeout(function () { if (!box.querySelector("iframe")) fallback(); }, 10000);
+    }
+    function go() {
+      loadContent().then(function (c) {
+        var posts = (c.facebookPosts || []).map(fbClean).filter(Boolean).slice(0, 6);
+        mount(posts);
+      }).catch(function () { mount([]); });
+    }
+    if ("IntersectionObserver" in window) { var o = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { o.disconnect(); go(); } }, { rootMargin: "600px" }); o.observe(box); } else go();
   }
 
 

@@ -7,7 +7,8 @@ window.CICM_CONFIG = {
   tabs: {
     announcements: "announcements",
     downloads: "downloads",
-    achievements: "achievements"
+    achievements: "achievements",
+    facebook: "facebook"
   },
   facebookPage: "https://www.facebook.com/profile.php?id=100064737292426",
   applyUrl: "https://eptumed.com/applyCICM/index.php"
