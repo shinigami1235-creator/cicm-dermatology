@@ -460,18 +460,13 @@
         if (next >= posts.length) {
           more.outerHTML = '<div class="fb-end"><p>' + T("life.fbend", "Older posts are on the Facebook page.") + '</p><a class="btn btn-primary" href="' + esc(pageUrl) +
             '" target="_blank" rel="noopener">' + T("life.fbopen", "Open CICM_Dermatology on Facebook") + "</a></div>";
-          if (io) io.disconnect();
+          list.removeEventListener("scroll", onList);
         }
         parse(g);
       }
-      var io = null;
+      function onList() { if (next < posts.length && list.scrollTop + list.clientHeight > list.scrollHeight - 900) addBatch(); }
       addBatch();
-      if (next < posts.length) {
-        if ("IntersectionObserver" in window) {
-          io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) addBatch(); }, { root: list, rootMargin: "0px 0px 900px 0px" });
-          io.observe(more);
-        } else while (next < posts.length) addBatch();
-      }
+      list.addEventListener("scroll", onList, { passive: true });
       if (!$("#fb-root")) { var r = document.createElement("div"); r.id = "fb-root"; document.body.appendChild(r); }
       if (window.FB && window.FB.XFBML) parse(box);
       else {
@@ -489,7 +484,12 @@
         mount(posts);
       }).catch(function () { mount([]); });
     }
-    if ("IntersectionObserver" in window) { var o = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { o.disconnect(); go(); } }, { rootMargin: "600px" }); o.observe(box); } else go();
+    var started = false;
+    function near() {
+      if (started || box.getBoundingClientRect().top > innerHeight + 600) return;
+      started = true; removeEventListener("scroll", near); go();
+    }
+    addEventListener("scroll", near, { passive: true }); near();
   }
 
 
