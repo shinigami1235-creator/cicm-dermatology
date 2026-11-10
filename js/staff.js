@@ -134,33 +134,49 @@
     var cards = Array.prototype.slice.call(stage.querySelectorAll(".dk-card")), stack = stage.querySelector(".dk-stack"),
         info = stage.querySelector(".dk-info"), count = stage.querySelector(".dk-count");
     var order = fac.map(function (_, i) { return i; });
+    // cards still flying off the top after a swipe: card index -> timer.
+    // The order changes at once so the panel and counter always match the front card,
+    // and layout() leaves a flying card alone until its throw finishes.
+    var flying = {};
     function layout(dragX) {
       order.forEach(function (ci, pos) {
         var el = cards[ci], d = Math.min(pos, 3);
-        el.style.zIndex = String(fac.length - pos);
         el.setAttribute("aria-hidden", String(pos !== 0));
+        if (flying[ci] != null) return;
+        el.style.zIndex = String(fac.length - pos);
         if (pos === 0 && dragX != null) { el.style.transition = "none"; el.style.transform = "translateX(" + dragX + "px) rotate(" + (dragX * 0.05) + "deg)"; return; }
         el.style.transition = "";
         el.style.transform = "translate(" + (d * 22) + "px," + (d * -10) + "px) rotate(" + (d * 3.2) + "deg) scale(" + (1 - d * 0.045) + ")";
         el.style.opacity = pos > 3 ? "0" : "1";
       });
     }
+    function land(ci) {
+      clearTimeout(flying[ci]); delete flying[ci];
+      cards[ci].style.opacity = "1";
+    }
     function showInfo() {
       var f = fac[order[0]];
       info.classList.add("out");
-      setTimeout(function () { info.innerHTML = "<h3>" + esc(f.name) + "</h3>" + details(f, f.n, ach); info.classList.remove("out"); }, reduce ? 0 : 200);
+      setTimeout(function () { if (fac[order[0]] !== f) return; info.innerHTML = "<h3>" + esc(f.name) + "</h3>" + details(f, f.n, ach); info.classList.remove("out"); }, reduce ? 0 : 200);
       count.textContent = (order[0] + 1) + " / " + fac.length;
     }
     function go(d, flingX) {
       if (d > 0) {
-        var top = cards[order[0]];
+        var ci = order.shift(); order.push(ci);
         if (!reduce) {
+          var top = cards[ci];
+          if (flying[ci] != null) clearTimeout(flying[ci]);
+          top.style.zIndex = String(fac.length + 1);
           top.style.transition = "transform 320ms cubic-bezier(0.23, 1, 0.32, 1), opacity 320ms ease";
           top.style.transform = "translateX(" + (flingX || -window.innerWidth * 0.6) + "px) rotate(" + ((flingX || -1) > 0 ? 14 : -14) + "deg)";
           top.style.opacity = "0";
-          setTimeout(function () { order.push(order.shift()); top.style.opacity = "1"; layout(); }, 300);
-        } else { order.push(order.shift()); layout(); }
-      } else { order.unshift(order.pop()); layout(); }
+          flying[ci] = setTimeout(function () { land(ci); layout(); }, 300);
+        }
+      } else {
+        order.unshift(order.pop());
+        if (flying[order[0]] != null) land(order[0]);   // brought back before its throw finished
+      }
+      layout();
       showInfo();
     }
     stage.querySelectorAll(".dk-nav button").forEach(function (b) { b.addEventListener("click", function () { go(+b.dataset.d); }); });
