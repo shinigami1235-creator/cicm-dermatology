@@ -85,7 +85,7 @@
   }
   var papersP = null;
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json").then(function (r) { return r.json(); });
+    if (!papersP) papersP = fetch("data/publications.json?v=20261110e").then(function (r) { return r.json(); });
     return papersP;
   }
 
@@ -167,8 +167,8 @@
   }
   function researchLede(s) {
     var db = s.sc ? "PubMed " + (lang === "th" ? "หรือ" : "or") + " Scopus" : "PubMed";
-    if (lang === "th") return "อาจารย์และสมาชิกหลักสูตรมีบทความในฐานข้อมูล " + db + " " + s.n + " บทความ ในวารสาร " + s.j + " ฉบับ รวมการทดลองแบบสุ่มมีกลุ่มควบคุม " + s.rct + " เรื่อง";
-    return "Faculty and program members have " + s.n + " papers indexed in " + db + " across " + s.j + " journals, including " + s.rct + " randomized controlled trials.";
+    if (lang === "th") return "อาจารย์ CICM Dermatology มีบทความในฐานข้อมูล " + db + " " + s.n + " บทความ ในวารสาร " + s.j + " ฉบับ รวมการทดลองแบบสุ่มมีกลุ่มควบคุม " + s.rct + " เรื่อง";
+    return "CICM Dermatology lecturers have " + s.n + " papers indexed in " + db + " across " + s.j + " journals, including " + s.rct + " randomized controlled trials.";
   }
 
   window.CICM = { openZoom: function (g, i) { openZoom(g, i); }, loadContent: loadContent, loadPapers: loadPapers, refHTML: refHTML, paperHref: paperHref, scopusTable: scopusTable, scopusUrl: scopusUrl, fmtN: fmtN, yearFigure: yearFigure, journalTable: journalTable, stats: stats, researchLede: researchLede, esc: esc, icon: icon, FAC_KEYS: FAC_KEYS, reveal: function (el) { observe(el); } };

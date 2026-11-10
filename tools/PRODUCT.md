@@ -22,7 +22,7 @@ The official-feeling home of the Dermatology (International Program) at Chulabho
 
 ## Positioning
 
-The program describes itself as Thailand's first international graduate program in dermatology and aesthetic dermatology. Its faculty and graduates publish in international journals (112 PubMed papers 2011 to 2026 across 53 journals, 22 randomized controlled trials), students take electives abroad, and training is hands-on with real patients and modern equipment.
+The program describes itself as Thailand's first international graduate program in dermatology and aesthetic dermatology. Its faculty and graduates publish in international journals (85 PubMed papers by the lecturers, 2011 to 2026, across 39 journals, 16 randomized controlled trials), students take electives abroad, and training is hands-on with real patients and modern equipment.
 
 ## Operating Context
 

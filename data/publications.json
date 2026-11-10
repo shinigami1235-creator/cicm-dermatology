@@ -3,28 +3,6 @@
 "source": "PubMed (NCBI E-utilities)",
 "papers": [
 {
-"pmid": "42345215",
-"title": "From Solubilization to Structural Perturbation: The Mechanism of Polyquaternium-51-Driven Enhanced Transdermal Delivery of Glabridin",
-"authors": [
-"Hu Z",
-"Dong S",
-"Huang J",
-"Zhang L",
-"Hu Z",
-"Wang H",
-"Qin L",
-"Tangthianchaichana J",
-"Lu Y"
-],
-"journal": "Langmuir",
-"iso": "Langmuir",
-"year": 2026,
-"doi": "10.1021/acs.langmuir.6c01695",
-"faculty": [],
-"topic": "Clinical dermatology",
-"design": ""
-},
-{
 "pmid": "42731113",
 "title": "Photothermal-Activated Platelet-Rich Plasma Versus Conventional Platelet-Rich Plasma for Melasma: A Split-Face, Double-Blind Randomized Controlled Trial",
 "authors": [
@@ -44,30 +22,6 @@
 ],
 "topic": "Injectables & aesthetics",
 "design": "Randomized Controlled Trial"
-},
-{
-"pmid": "40124024",
-"title": "Application of Gelatin/Vanillin/Fe3+/AGP-AgNPs Hydrogels Promotes Wound Contraction, Enhances Dermal Growth Factor Expression, and Minimizes Skin Irritation",
-"authors": [
-"Lapmanee S",
-"Bhubhanil S",
-"Khongkow M",
-"Namdee K",
-"Yingmema W",
-"Bhummaphan N",
-"Wongchitrat P",
-"Charoenphon N",
-"Hutchison JA",
-"Talodthaisong C",
-"Kulchat S"
-],
-"journal": "ACS Omega",
-"iso": "ACS Omega",
-"year": 2025,
-"doi": "10.1021/acsomega.4c10648",
-"faculty": [],
-"topic": "Wound healing",
-"design": ""
 },
 {
 "pmid": "41064808",
@@ -137,25 +91,6 @@
 "design": "Review"
 },
 {
-"pmid": "40230515",
-"title": "Fixed drug eruption induced by Etoricoxib in Thailand: A case report",
-"authors": [
-"Siriwattanasatorn M",
-"Kamudhamas A",
-"Sivapornpan N",
-"Noonpugdee M",
-"Kamalashiran C",
-"Phetkate P"
-],
-"journal": "Toxicology Reports",
-"iso": "Toxicol Rep",
-"year": 2025,
-"doi": "10.1016/j.toxrep.2025.102010",
-"faculty": [],
-"topic": "Psoriasis & inflammatory skin disease",
-"design": "Case Reports"
-},
-{
 "pmid": "40488775",
 "title": "Localized corticosteroid delivery in alopecia areata using microneedle patch technology",
 "authors": [
@@ -205,53 +140,6 @@
 "design": ""
 },
 {
-"pmid": "40362555",
-"title": "Potential Cutaneous Applications of Boesenbergia rotunda Extract Based on Its In Vitro Anti-Melanogenic and Anti-Fibroproliferative Properties",
-"authors": [
-"Salakshna N",
-"Thanasarnaksorn W",
-"Kanjanasirirat P",
-"Jearawuttanakul K",
-"Chabang N",
-"Rangkansenee N",
-"Panich U",
-"Thanachaiphiwat S",
-"Borwornpinyo S",
-"Hongeng S"
-],
-"journal": "International Journal of Molecular Sciences",
-"iso": "Int J Mol Sci",
-"year": 2025,
-"doi": "10.3390/ijms26094319",
-"faculty": [],
-"topic": "Pigment & melasma",
-"design": ""
-},
-{
-"pmid": "40565255",
-"title": "Progenitor Cell Dynamics in Androgenetic Alopecia: Insights from Spatially Resolved Transcriptomics",
-"authors": [
-"Charoensuksira S",
-"Surinlert P",
-"Krajarng A",
-"Nualsanit T",
-"Payuhakrit W",
-"Panpinyaporn P",
-"Khumsri W",
-"Thanasarnaksorn W",
-"Suwanchinda A",
-"Hongeng S",
-"Ponnikorn S"
-],
-"journal": "International Journal of Molecular Sciences",
-"iso": "Int J Mol Sci",
-"year": 2025,
-"doi": "10.3390/ijms26125792",
-"faculty": [],
-"topic": "Hair & nails",
-"design": ""
-},
-{
 "pmid": "40167830",
 "title": "The comparative study of letibotulinum toxin A and onabotulinum toxin A in treatment of primary axillary hyperhidrosis",
 "authors": [
@@ -267,30 +155,6 @@
 ],
 "topic": "Injectables & aesthetics",
 "design": "Randomized Controlled Trial"
-},
-{
-"pmid": "41025315",
-"title": "Transfersomal delivery of Centella asiatica promotes efficient excision wound healing in rats",
-"authors": [
-"Lapmanee S",
-"Bunwatcharaphansakun P",
-"Phongsupa W",
-"Namdee K",
-"Suttisintong K",
-"Asawapirom U",
-"Ruktanonchai U",
-"Wongchitrat P",
-"Bhubhanil S",
-"Maitarad P",
-"Khongkow M"
-],
-"journal": "Drug Delivery",
-"iso": "Drug Deliv",
-"year": 2025,
-"doi": "10.1080/10717544.2025.2563649",
-"faculty": [],
-"topic": "Wound healing",
-"design": ""
 },
 {
 "pmid": "38873171",
@@ -309,44 +173,6 @@
 "Nitayavardhana S"
 ],
 "topic": "Injectables & aesthetics",
-"design": ""
-},
-{
-"pmid": "39727600",
-"title": "Cannabidiol-Loaded Lipid Nanoparticles Incorporated in Polyvinyl Alcohol and Sodium Alginate Hydrogel Scaffold for Enhancing Cell Migration and Accelerating Wound Healing",
-"authors": [
-"Lapmanee S",
-"Bhubhanil S",
-"Charoenphon N",
-"Inchan A",
-"Bunwatcharaphansakun P",
-"Khongkow M",
-"Namdee K"
-],
-"journal": "Gels",
-"iso": "Gels",
-"year": 2024,
-"doi": "10.3390/gels10120843",
-"faculty": [],
-"topic": "Wound healing",
-"design": ""
-},
-{
-"pmid": "39328960",
-"title": "Cannabis-Containing Cream for CKD-Associated Pruritus: A Double-Blind, Placebo Controlled Trial",
-"authors": [
-"Anumas S",
-"Kuropakornpong P",
-"Chakkavittumrong P",
-"Tasanarong A",
-"Pattharanitima P"
-],
-"journal": "Kidney Medicine",
-"iso": "Kidney Med",
-"year": 2024,
-"doi": "10.1016/j.xkme.2024.100894",
-"faculty": [],
-"topic": "Psoriasis & inflammatory skin disease",
 "design": ""
 },
 {
@@ -369,46 +195,6 @@
 "Meephansan J"
 ],
 "topic": "Hair & nails",
-"design": ""
-},
-{
-"pmid": "39201715",
-"title": "Disturbance of Immune Microenvironment in Androgenetic Alopecia through Spatial Transcriptomics",
-"authors": [
-"Charoensuksira S",
-"Tantiwong S",
-"Pongklaokam J",
-"Hanvivattanakul S",
-"Surinlert P",
-"Krajarng A",
-"Thanasarnaksorn W",
-"Hongeng S",
-"Ponnikorn S"
-],
-"journal": "International Journal of Molecular Sciences",
-"iso": "Int J Mol Sci",
-"year": 2024,
-"doi": "10.3390/ijms25169031",
-"faculty": [],
-"topic": "Hair & nails",
-"design": ""
-},
-{
-"pmid": "39336125",
-"title": "Melatonin Augments the Expression of Core Transcription Factors in Aged and Alzheimer's Patient Skin Fibroblasts",
-"authors": [
-"Shukla M",
-"Duangrat R",
-"Nopparat C",
-"Sotthibundhu A",
-"Govitrapong P"
-],
-"journal": "Biology",
-"iso": "Biology (Basel)",
-"year": 2024,
-"doi": "10.3390/biology13090698",
-"faculty": [],
-"topic": "Skin biology & immunology",
 "design": ""
 },
 {
@@ -498,27 +284,6 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Skin biology & immunology",
-"design": ""
-},
-{
-"pmid": "37553989",
-"title": "Antiproliferative and Anti-Inflammatory Activities of Deprungsith Formulation and Its Bioactive Compounds Against Mild Psoriasis and Potential of Metabolic Herb-Drug Interactions",
-"authors": [
-"Na-Bangchang K",
-"Teerachaisakul M",
-"Muhamad P",
-"Kasemnitichok Y",
-"Sangnarong N",
-"Boonprasert K",
-"Tarasuk M",
-"Plengsuriyakarn T"
-],
-"journal": "Journal of Evidence-based Integrative Medicine",
-"iso": "J Evid Based Integr Med",
-"year": 2023,
-"doi": "10.1177/2515690X231191101",
-"faculty": [],
-"topic": "Psoriasis & inflammatory skin disease",
 "design": ""
 },
 {
@@ -826,24 +591,6 @@
 "design": ""
 },
 {
-"pmid": "36015117",
-"title": "Skin Anti-Aging Potential of Ipomoea pes-caprae Ethanolic Extracts on Promoting Cell Proliferation and Collagen Production in Human Fibroblasts (CCD-986sk Cells)",
-"authors": [
-"Panichakul T",
-"Ponnikorn S",
-"Tupchiangmai W",
-"Haritakun W",
-"Srisanga K"
-],
-"journal": "Pharmaceuticals",
-"iso": "Pharmaceuticals (Basel)",
-"year": 2022,
-"doi": "10.3390/ph15080969",
-"faculty": [],
-"topic": "Skin aging",
-"design": ""
-},
-{
 "pmid": "36065340",
 "title": "Skin Microbiota Profiles from Tape Stripping and Skin Biopsy Samples of Patients with Psoriasis Treated with Narrowband Ultraviolet B",
 "authors": [
@@ -949,40 +696,6 @@
 "design": "Randomized Controlled Trial"
 },
 {
-"pmid": "34980962",
-"title": "A Systematic Review and Meta-analysis of Randomized Controlled Trials of United States Food and Drug Administration-Approved, Home-use, Low-Level Light/Laser Therapy Devices for Pattern Hair Loss: Device Design and Technology",
-"authors": [
-"Lueangarun S",
-"Visutjindaporn P",
-"Parcharoen Y",
-"Jamparuang P",
-"Tempark T"
-],
-"journal": "The Journal of Clinical and Aesthetic Dermatology",
-"iso": "J Clin Aesthet Dermatol",
-"year": 2021,
-"doi": "",
-"faculty": [],
-"topic": "Hair & nails",
-"design": ""
-},
-{
-"pmid": "34804354",
-"title": "Clinical Comparison of Topical 2.5% Benzoyl Peroxide plus 5% Niacinamide to 2.5% Benzoyl Peroxide Alone in the Treatment of Mild to Moderate Facial Acne Vulgaris",
-"authors": [
-"Kaewsanit T",
-"Chakkavittumrong P",
-"Waranuch N"
-],
-"journal": "The Journal of Clinical and Aesthetic Dermatology",
-"iso": "J Clin Aesthet Dermatol",
-"year": 2021,
-"doi": "",
-"faculty": [],
-"topic": "Acne",
-"design": ""
-},
-{
 "pmid": "32910030",
 "title": "Comparison of Fractional Picosecond 1064-nm Laser and Fractional Carbon Dioxide Laser for Treating Atrophic Acne Scars: A Randomized Split-Face Trial",
 "authors": [
@@ -1085,40 +798,6 @@
 "design": ""
 },
 {
-"pmid": "33002283",
-"title": "Postinflammatory and rebound hyperpigmentation as a complication after treatment efficacy of telangiectatic melasma with 585 nanometers Q-switched Nd: YAG laser and 4% hydroquinone cream in skin phototypes III-V",
-"authors": [
-"Lueangarun S",
-"Namboonlue C",
-"Tempark T"
-],
-"journal": "Journal of Cosmetic Dermatology",
-"iso": "J Cosmet Dermatol",
-"year": 2021,
-"doi": "10.1111/jocd.13756",
-"faculty": [],
-"topic": "Lasers & light",
-"design": "Randomized Controlled Trial"
-},
-{
-"pmid": "34410946",
-"title": "Scoparone Induces Expression of Pluripotency Transcription Factors SOX2 and NANOG in Dermal Papilla Cells",
-"authors": [
-"Suwanprakorn N",
-"Chanvorachote P",
-"Tongyen T",
-"Sritularak B",
-"Suvanprakorn P"
-],
-"journal": "In Vivo",
-"iso": "In Vivo",
-"year": 2021,
-"doi": "10.21873/invivo.12541",
-"faculty": [],
-"topic": "Hair & nails",
-"design": ""
-},
-{
 "pmid": "31982887",
 "title": "Synergistic Effects of the 308-nm Excimer Light and Topical Calcipotriol for the Treatment of Chronic Hand Eczema: A Randomized Controlled Study",
 "authors": [
@@ -1180,21 +859,6 @@
 "design": "Case Reports"
 },
 {
-"pmid": "33584955",
-"title": "An Herbal Extract Combination (Biochanin A, Acetyl tetrapeptide-3, and Ginseng Extracts) versus 3% Minoxidil Solution for the Treatment of Androgenetic Alopecia: A 24-week, Prospective, Randomized, Triple-blind, Controlled Trial",
-"authors": [
-"Lueangarun S",
-"Panchaprateep R"
-],
-"journal": "The Journal of Clinical and Aesthetic Dermatology",
-"iso": "J Clin Aesthet Dermatol",
-"year": 2020,
-"doi": "10.1007/s13555-020-00448-x",
-"faculty": [],
-"topic": "Hair & nails",
-"design": ""
-},
-{
 "pmid": "31429496",
 "title": "Capsule-like naevus: digital 3D reconstruction of its steric structure",
 "authors": [
@@ -1229,37 +893,6 @@
 "Juntongjin P"
 ],
 "topic": "Lasers & light",
-"design": "Randomized Controlled Trial"
-},
-{
-"pmid": "32970299",
-"title": "Efficacy and Safety of Oral Minoxidil 5 mg Once Daily in the Treatment of Male Patients with Androgenetic Alopecia: An Open-Label and Global Photographic Assessment",
-"authors": [
-"Panchaprateep R",
-"Lueangarun S"
-],
-"journal": "Dermatology and Therapy",
-"iso": "Dermatol Ther (Heidelb)",
-"year": 2020,
-"doi": "10.1007/s13555-020-00448-x",
-"faculty": [],
-"topic": "Hair & nails",
-"design": ""
-},
-{
-"pmid": "31609077",
-"title": "Efficacy of anti-inflammatory moisturizer vs hydrophilic cream in elderly patients with moderate to severe xerosis: A split site, triple-blinded, randomized, controlled trial",
-"authors": [
-"Lueangarun S",
-"Soktepy B",
-"Tempark T"
-],
-"journal": "Journal of Cosmetic Dermatology",
-"iso": "J Cosmet Dermatol",
-"year": 2020,
-"doi": "10.1111/jocd.13183",
-"faculty": [],
-"topic": "Skin biology & immunology",
 "design": "Randomized Controlled Trial"
 },
 {
@@ -1395,22 +1028,6 @@
 "design": ""
 },
 {
-"pmid": "33223739",
-"title": "Transient Treatment Response of Platelet-rich Plasma Injection for Temporal Triangular Alopecia: A Case Report with Dermoscopic Examination Follow-up",
-"authors": [
-"Lueangarun S",
-"Pacharapakornpong S",
-"Tempark T"
-],
-"journal": "International Journal of Trichology",
-"iso": "Int J Trichology",
-"year": 2020,
-"doi": "10.4103/ijt.ijt_52_20",
-"faculty": [],
-"topic": "Injectables & aesthetics",
-"design": "Case Reports"
-},
-{
 "pmid": "32415885",
 "title": "UV308 excimer lamp phototherapy for the treatment of alopecia areata: A randomized, self-controlled study",
 "authors": [
@@ -1482,24 +1099,6 @@
 ],
 "topic": "Psoriasis & inflammatory skin disease",
 "design": "Randomized Controlled Trial"
-},
-{
-"pmid": "30688020",
-"title": "Clinical efficacy of 0.5% topical mangosteen extract in nanoparticle loaded gel in treatment of mild-to-moderate acne vulgaris: A 12-week, split-face, double-blinded, randomized, controlled trial",
-"authors": [
-"Lueangarun S",
-"Sriviriyakul K",
-"Tempark T",
-"Managit C",
-"Sithisarn P"
-],
-"journal": "Journal of Cosmetic Dermatology",
-"iso": "J Cosmet Dermatol",
-"year": 2019,
-"doi": "10.1111/jocd.12856",
-"faculty": [],
-"topic": "Acne",
-"design": ""
 },
 {
 "pmid": "31807046",
@@ -1580,22 +1179,6 @@
 "design": ""
 },
 {
-"pmid": "30945430",
-"title": "Efficacy and safety of moisturizer containing 5% panthenol, madecassoside, and copper-zinc-manganese versus 0.02% triamcinolone acetonide cream in decreasing adverse reaction and downtime after ablative fractional carbon dioxide laser resurfacing: A split-face, double-blinded, randomized, controlled trial",
-"authors": [
-"Lueangarun S",
-"Srituravanit A",
-"Tempark T"
-],
-"journal": "Journal of Cosmetic Dermatology",
-"iso": "J Cosmet Dermatol",
-"year": 2019,
-"doi": "10.1111/jocd.12951",
-"faculty": [],
-"topic": "Lasers & light",
-"design": "Randomized Controlled Trial"
-},
-{
 "pmid": "31680312",
 "title": "Intractable disseminated maculopapular eruption in a patient with granulocyte macrophage colony-stimulating factor-producing anaplastic thyroid carcinoma",
 "authors": [
@@ -1639,38 +1222,6 @@
 ],
 "topic": "Psoriasis & inflammatory skin disease",
 "design": ""
-},
-{
-"pmid": "31749955",
-"title": "Successful Treatment of Digital Ischemia Following a Carbon Dioxide Laser and Tourniquet for a Digital Procedure With Adjuvant Low-Level Laser Therapy",
-"authors": [
-"Lueangarun S",
-"Tempark T"
-],
-"journal": "Journal of Lasers in Medical Sciences",
-"iso": "J Lasers Med Sci",
-"year": 2019,
-"doi": "10.15171/jlms.2019.41",
-"faculty": [],
-"topic": "Clinical dermatology",
-"design": "Case Reports"
-},
-{
-"pmid": "31585489",
-"title": "The 24-hr, 28-day, and 7-day post-moisturizing efficacy of ceramides 1, 3, 6-II containing moisturizing cream compared with hydrophilic cream on skin dryness and barrier disruption in senile xerosis treatment",
-"authors": [
-"Lueangarun S",
-"Tragulplaingam P",
-"Sugkraroek S",
-"Tempark T"
-],
-"journal": "Dermatologic Therapy",
-"iso": "Dermatol Ther",
-"year": 2019,
-"doi": "10.1111/dth.13090",
-"faculty": [],
-"topic": "Skin biology & immunology",
-"design": "Randomized Controlled Trial"
 },
 {
 "pmid": "31903956",
@@ -1729,21 +1280,6 @@
 ],
 "topic": "Hair & nails",
 "design": ""
-},
-{
-"pmid": "29431228",
-"title": "Efficacy of MAS063DP lotion vs 0.02% triamcinolone acetonide lotion in improving post-ablative fractional CO2 laser resurfacing wound healing: a split-face, triple-blinded, randomized, controlled trial",
-"authors": [
-"Lueangarun S",
-"Tempark T"
-],
-"journal": "International Journal of Dermatology",
-"iso": "Int J Dermatol",
-"year": 2018,
-"doi": "10.1111/ijd.13922",
-"faculty": [],
-"topic": "Lasers & light",
-"design": "Randomized Controlled Trial"
 },
 {
 "pmid": "29505310",
@@ -1806,25 +1342,6 @@
 "design": "Randomized Controlled Trial"
 },
 {
-"pmid": "29883000",
-"title": "Sun protection behavior and knowledge of patients attending laser clinic to prevent adverse events of laser: A cross-sectional, single-center, tertiary care study",
-"authors": [
-"Tempark T",
-"Lueangarun S",
-"Chatproedprai S",
-"Panchaprateep R",
-"Pongprutthipan M",
-"Wananukul S"
-],
-"journal": "Photodermatology, Photoimmunology & Photomedicine",
-"iso": "Photodermatol Photoimmunol Photomed",
-"year": 2018,
-"doi": "10.1111/phpp.12400",
-"faculty": [],
-"topic": "Lasers & light",
-"design": "Clinical Trial"
-},
-{
 "pmid": "29461121",
 "title": "Topical 3% tranexamic acid enhances the efficacy of 1064-nm Q-switched neodymium-doped yttrium aluminum garnet laser in the treatment of melasma",
 "authors": [
@@ -1839,22 +1356,6 @@
 "Juntongjin P"
 ],
 "topic": "Lasers & light",
-"design": "Randomized Controlled Trial"
-},
-{
-"pmid": "29659406",
-"title": "Topical Botulinum Toxin Type A Liposomal Cream for Primary Axillary Hyperhidrosis: A Double-Blind, Randomized, Split-Site, Vehicle-Controlled Study",
-"authors": [
-"Lueangarun S",
-"Sermsilp C",
-"Tempark T"
-],
-"journal": "Dermatologic Surgery",
-"iso": "Dermatol Surg",
-"year": 2018,
-"doi": "10.1097/DSS.0000000000001532",
-"faculty": [],
-"topic": "Injectables & aesthetics",
 "design": "Randomized Controlled Trial"
 },
 {

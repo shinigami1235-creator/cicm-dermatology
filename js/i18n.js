@@ -141,7 +141,7 @@ window.I18N = {
     "depth.subcutis": "ชั้นไขมันใต้ผิวหนัง",
 
     "research.page.title": "งานวิจัยที่ได้ตีพิมพ์",
-    "research.page.lede": "ทุกบทความในหน้านี้อยู่ในฐานข้อมูล PubMed และมีอาจารย์หรือสมาชิกหลักสูตร CICM Dermatology เป็นผู้แต่ง ค้นหาจากชื่อเรื่อง หรือกรองตามหัวข้อ อาจารย์ ปี หรือรูปแบบการศึกษา",
+    "research.page.lede": "ทุกบทความในหน้านี้อยู่ในฐานข้อมูล PubMed และมีอาจารย์ CICM Dermatology เป็นผู้แต่ง ค้นหาจากชื่อเรื่อง หรือกรองตามหัวข้อ อาจารย์ ปี หรือรูปแบบการศึกษา",
     "research.search": "ค้นหาชื่อเรื่องและผู้แต่ง",
     "research.searchph": "เช่น melasma, laser, psoriasis",
     "research.lecturer": "อาจารย์",

@@ -10,7 +10,7 @@ IMPORTMAP = '''<script type="module" src="js/emblem.js"></script>
 <script src="js/pick.js" defer></script>'''
 PAGES = {
   'index.html': ('CICM Dermatology | Thammasat University', "Master's and Ph.D. programs in dermatology at Chulabhorn International College of Medicine, Thammasat University.", IMPORTMAP),
-  'research.html': ('Research | CICM Dermatology', 'Papers by the CICM Dermatology faculty and program members, indexed in PubMed.', ''),
+  'research.html': ('Research | CICM Dermatology', 'Papers by the CICM Dermatology lecturers, indexed in PubMed.', ''),
   'faculty.html': ('Faculty | CICM Dermatology', 'Lecturers and staff of the CICM Dermatology program.', ''),
   'admissions.html': ('Admissions | CICM Dermatology', 'Entry requirements, courses, tuition and downloads for the CICM Dermatology program.', ''),
 }

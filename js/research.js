@@ -18,7 +18,6 @@
       var n = papers.filter(function (p) { return p.faculty.indexOf(k) > -1; }).length;
       fL.insertAdjacentHTML("beforeend", '<option value="' + k + '">' + NAMES[k] + " (" + n + ")</option>");
     });
-    fL.insertAdjacentHTML("beforeend", '<option value="_program">' + (lang === "th" ? "สมาชิกหลักสูตร" : "Program members") + "</option>");
     for (var y = s.y1; y >= s.y0; y--) { var ny = papers.filter(function (p) { return p.year === y; }).length; if (ny) fY.insertAdjacentHTML("beforeend", '<option value="' + y + '">' + y + " (" + ny + ")</option>"); }
     DESIGNS.forEach(function (d) { var nd = papers.filter(function (p) { return p.design === d; }).length; if (nd) fD.insertAdjacentHTML("beforeend", '<option value="' + d + '">' + d + " (" + nd + ")</option>"); });
 
@@ -41,8 +40,7 @@
     if (params.get("topic")) { topic = params.get("topic"); topicsEl.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", String(x.dataset.t === topic)); }); }
 
     function match(p) {
-      if (fL.value === "_program" && p.faculty.length) return false;
-      if (fL.value && fL.value !== "_program" && p.faculty.indexOf(fL.value) < 0) return false;
+      if (fL.value && p.faculty.indexOf(fL.value) < 0) return false;
       if (fY.value && String(p.year) !== fY.value) return false;
       if (fD.value && p.design !== fD.value) return false;
       if (topic && p.topic !== topic) return false;

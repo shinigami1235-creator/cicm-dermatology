@@ -12,9 +12,8 @@ for k,f in fac.items():
         aff=(au['aff'] if au else '').lower()
         if f=='Nitayavardhana' and not (derm.search(p['title']) and (re.search('thammasat|chulabhorn|dermatolog|siriraj|ramathibodi',aff) or not aff)): continue
         papers.setdefault(i,{**p,'faculty':[]})['faculty'].append(k)
-for i in ids['_aff']:
-    p=recs.get(i)
-    if p: papers.setdefault(i,{**p,'faculty':[]})['program']=True
+# Only papers with a current lecturer as author. The old CICM affiliation search pulled in
+# papers from other departments, so it is no longer used.
 L=[p for p in papers.values() if not re.match(r'(Author )?Correction|Erratum',p['title'],re.I)]
 L=[p for p in L if p['faculty'] or derm.search(p['title'])]
 L=[p for p in L if p['faculty'] or not (re.search(r'\brats?\b|rabbit|myoblast|neural|alzheimer|vancomycin|Polyquaternium',p['title'],re.I) and not re.search('skin|wound|hair|derm|psoria',p['title'],re.I))]

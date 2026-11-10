@@ -5,7 +5,7 @@ Proof of concept for the Dermatology (International Program) at Chulabhorn Inter
 ## Pages
 
 - `index.html`: home page, one scroll from the skin surface down through each layer
-- `research.html`: every PubMed paper by the faculty and program members, with search and filters
+- `research.html`: every PubMed paper by the lecturers, with search and filters
 - `faculty.html`: full profiles, recent papers and achievements
 - `admissions.html`: courses, requirements, English scores, documents, tuition and downloads
 
