@@ -2,8 +2,8 @@
 (function () {
   "use strict";
   var d = document.documentElement.dataset, th = window.CICM_LANG === "th";
-  var page = (location.pathname.match(/(?:^|\/)(?:atlas-|book-)?(research|faculty|admissions)\.html$/) || [])[1] || "index";
-  var DESIGN = [["skin", th ? "ชั้นผิว" : "Skin layers"], ["atlas", th ? "แผ่นภาพแอตลาส" : "Atlas plates"], ["book", th ? "สมุดหลักสูตร" : "Program book"]];
+  var page = (location.pathname.match(/(?:^|\/)(?:atlas-)?(research|faculty|admissions)\.html$/) || [])[1] || "index";
+  var DESIGN = [["skin", th ? "ชั้นผิว" : "Skin layers"], ["atlas", th ? "แผ่นภาพแอตลาส" : "Atlas plates"]];
   var OPEN = [["type", th ? "ตัวอักษร" : "DERMA / TOLOGY"], ["slide", th ? "สไลด์" : "Microscope slide"], ["lens", th ? "เลนส์" : "Lens"]];
   var STAFF = [["spotlight", th ? "สปอตไลต์" : "Spotlight"], ["masthead", th ? "รายชื่อ" : "Name list"], ["deck", th ? "สำรับการ์ด" : "Card deck"]];
   function designHref(k) {

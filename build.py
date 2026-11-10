@@ -3,7 +3,6 @@
 Three designs are built side by side so the teachers can compare them:
   skin   index.html, research.html, faculty.html, admissions.html (the original)
   atlas  atlas.html, atlas-research.html, atlas-faculty.html, atlas-admissions.html
-  book   book.html, book-research.html, book-faculty.html, book-admissions.html
 Research, faculty and admissions share one source file across the designs; each
 design has its own home page source (src/atlas.html, src/book.html) and stylesheet.
 """
@@ -12,7 +11,7 @@ ROOT = pathlib.Path(__file__).parent
 SRC = ROOT / 'src'
 head = (SRC/'head.html').read_text(); header = (SRC/'header.html').read_text(); footer = (SRC/'footer.html').read_text()
 
-V = '20261110a'  # bump on every push that changes a design's CSS or JS
+V = '20261110b'  # bump on every push that changes a design's CSS or JS
 DESIGNS = {
   'skin': {
     'theme': '#0f0b0c',
@@ -31,12 +30,7 @@ DESIGNS = {
     'home_scripts': '<script type="module" src="js/map.js"></script>\n<script src="js/atlas.js?v=%s" defer></script>\n<script src="js/pick.js?v=%s" defer></script>' % (V, V),
     'page_scripts': '<script src="js/atlas.js?v=%s" defer></script>\n<script src="js/pick.js?v=%s" defer></script>' % (V, V),
   },
-  'book': {
-    'theme': '#ffffff',
-    'styles': '<link rel="stylesheet" href="css/fonts-book.css">\n<link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="stylesheet" href="css/print-base.css?v=%s">\n<link rel="stylesheet" href="css/book.css?v=%s">' % (V, V),
-    'home_scripts': '<script type="module" src="js/map.js"></script>\n<script src="js/book.js?v=%s" defer></script>\n<script src="js/pick.js?v=%s" defer></script>' % (V, V),
-    'page_scripts': '<script src="js/book.js?v=%s" defer></script>\n<script src="js/pick.js?v=%s" defer></script>' % (V, V),
-  },
+
 }
 PAGES = {
   'index': ('CICM Dermatology | Thammasat University', "Master's and Ph.D. programs in dermatology at Chulabhorn International College of Medicine, Thammasat University."),

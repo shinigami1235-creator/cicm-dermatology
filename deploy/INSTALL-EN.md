@@ -28,15 +28,14 @@ Every link inside the site is relative, so the folder works under `/dermatology/
 
 ## Three designs for the teachers
 
-The site carries three designs so the teachers can choose one:
+The site carries two designs so the teachers can choose one:
 
 | Design | Home page |
 | --- | --- |
 | Skin layers | `index.html` |
 | Atlas plates | `atlas.html` |
-| Program book | `book.html` |
 
-The square button at the bottom right of every page switches between them. Once the teachers choose, I will remove the other two designs and the button.
+The square button at the bottom right of every page switches between them. Once the teachers choose, I will remove the other design and the button.
 
 ## Before launch
 
