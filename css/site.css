@@ -21,6 +21,10 @@
   --cell-ink: #ecdff4;
   --cell-soft: #b9a2cc;
   --eosin: #f39bc0;
+  --gland: #f5a07a;
+  --gland-ink: #2e0f06;
+  --gland-soft: #6b2a16;
+  --teal: #12786f;
   --fat-pale: #fbefc0;
   --fat-pale-ink: #3a2a06;
   --fat-pale-soft: #6f5714;
@@ -172,6 +176,7 @@ html { scrollbar-color: #6e1430 #0f0b0c; }
 .layer[data-layer="deep"] { background: var(--deep); color: var(--deep-ink); }
 .layer[data-layer="vessel"] { background: var(--vessel); color: var(--deep-ink); }
 .layer[data-layer="cell"] { background: var(--cell); color: var(--cell-ink); }
+.layer[data-layer="gland"] { background: var(--gland); color: var(--gland-ink); }
 .layer[data-layer="fat-pale"] { background: var(--fat-pale); color: var(--fat-pale-ink); }
 .layer[data-layer="fat"] { background: var(--fat); color: var(--fat-ink); }
 .layer[data-layer="surface"] { background: var(--surface); color: var(--surface-ink); }
@@ -871,3 +876,50 @@ html[data-hero="lens"] #slideHero, html[data-hero="lens"] #typeHero { display: n
 .scopus-table { margin-top: 28px; }
 .scopus-line { margin-top: 14px; font-size: 0.92rem; }
 .scopus-line b { margin-right: 6px; }
+
+/* ---------- CICM conference: the sweat gland layer, in the coral of the conference artwork ---------- */
+.conf-top { display: grid; gap: 28px 56px; align-items: end; margin-bottom: clamp(32px, 4vw, 52px); }
+.conf-top .sec-head { margin-bottom: 0; }
+@media (min-width: 1000px) { .conf-top { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); } }
+.conf-facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.conf-facts li { display: grid; grid-template-columns: clamp(3.6rem, 5vw, 4.4rem) 1fr; gap: 14px; align-items: baseline; padding: 12px 0; border-top: 1px solid color-mix(in srgb, var(--gland-ink) 22%, transparent); }
+.conf-facts b { font-family: var(--font-display); font-weight: 600; font-size: clamp(2rem, 3vw, 2.6rem); line-height: 1; }
+.conf-facts span { font-size: 1.02rem; color: var(--gland-soft); }
+.conf-film { position: relative; margin: 0; border-radius: 22px; overflow: hidden; aspect-ratio: 16 / 9; background: #3a140a; }
+.conf-preview { width: 100%; height: 100%; object-fit: cover; display: block; }
+.conf-play { position: absolute; left: clamp(14px, 2.4vw, 28px); bottom: clamp(14px, 2.4vw, 28px); display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 22px 0 16px; border: 0; border-radius: 999px; background: var(--orange); color: var(--on-orange); font-family: var(--font-display); font-weight: 600; font-size: 1rem; cursor: pointer; transition: background-color 160ms ease, transform 160ms var(--ease-out); }
+.conf-play:hover { background: var(--orange-press); }
+.conf-play:active { transform: scale(0.97); }
+.conf-play svg { width: 22px; height: 22px; }
+.conf-days { display: grid; gap: 18px; margin-top: clamp(28px, 4vw, 44px); }
+@media (min-width: 860px) { .conf-days { grid-template-columns: 1.6fr 1fr; } }
+.conf-day { background: color-mix(in srgb, #fff 34%, transparent); border-radius: 22px; padding: clamp(20px, 2.6vw, 30px); display: grid; gap: 18px; align-content: start; }
+.conf-day header { display: grid; gap: 2px; }
+.conf-date { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; }
+.conf-place { margin: 0; color: var(--gland-soft); }
+.conf-day > div { display: grid; gap: 18px; }
+@media (min-width: 860px) { .conf-day:first-child { grid-template-columns: 1fr 1fr; } .conf-day:first-child header { grid-column: 1 / -1; } }
+.conf-track h3 { font-size: clamp(1.25rem, 1.6vw, 1.5rem); line-height: 1.15; margin: 0 0 6px; color: var(--teal); }
+.conf-track p { margin: 0; }
+.conf-speakers { margin: 22px 0 0; font-size: 0.98rem; line-height: 1.7; color: var(--gland-soft); }
+.conf-speakers b { font-family: var(--font-display); font-weight: 600; color: var(--gland-ink); margin-right: 8px; }
+.conf-reels { margin-top: clamp(40px, 5vw, 64px); }
+.conf-reels h3 { font-size: clamp(1.4rem, 2vw, 1.8rem); margin: 0 0 18px; }
+.conf-reels ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 1.6vw, 22px); max-width: 820px; }
+.conf-reels button { position: relative; width: 100%; padding: 0; border: 0; background: #3a140a; border-radius: 18px; overflow: hidden; cursor: pointer; aspect-ratio: 9 / 16; display: block; color: #fff; text-align: left; }
+.conf-reels img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 500ms var(--ease-out); }
+.conf-reels button:hover img { transform: scale(1.03); }
+.conf-reels button::after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgba(30, 8, 4, 0.82)); }
+.conf-reel-play { position: absolute; top: 12px; right: 12px; z-index: 1; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--orange); color: var(--on-orange); }
+.conf-reel-play svg { width: 18px; height: 18px; }
+.conf-reel-t { position: absolute; left: 14px; right: 14px; bottom: 14px; z-index: 1; display: grid; gap: 2px; font-family: var(--font-display); }
+.conf-reel-t b { font-weight: 600; font-size: clamp(0.92rem, 1.4vw, 1.1rem); line-height: 1.2; }
+.conf-reel-t span { font-size: 0.85rem; opacity: 0.85; }
+@media (max-width: 599px) {
+  .conf-reels ul { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 calc(-1 * var(--gutter)); padding: 0 var(--gutter) 6px; scrollbar-width: none; }
+  .conf-reels ul::-webkit-scrollbar { display: none; }
+  .conf-reels li { flex: 0 0 56vw; scroll-snap-align: start; }
+}
+.conf-next { margin: 26px 0 0; display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; }
+/* vertical videos play in a narrow frame */
+.film.tall { width: min(92vw, calc((100dvh - 120px) * 9 / 16)); }

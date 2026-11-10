@@ -226,9 +226,9 @@
   var LAYERS = {
     surface: ["#0f0b0c", "#ffffff", "dark"], epi: ["#f2c4ae", "#3b1610", "light"], dermis: ["#b03a4c", "#fff1ee", "dark"],
     deep: ["#6e1430", "#ffe9ec", "dark"], vessel: ["#3c0a19", "#ffe9ec", "dark"], cell: ["#20112b", "#ecdff4", "dark"],
-    "fat-pale": ["#fbefc0", "#3a2a06", "light"], fat: ["#f9d93d", "#2b1d05", "light"]
+    gland: ["#f5a07a", "#2e0f06", "light"], "fat-pale": ["#fbefc0", "#3a2a06", "light"], fat: ["#f9d93d", "#2b1d05", "light"]
   };
-  var DEPTH_NAMES = { surface: "Surface", epidermis: "Epidermis", papillary: "Papillary dermis", reticular: "Reticular dermis", plexus: "Deep vascular plexus", cell: "Cell level", subcutis: "Subcutis" };
+  var DEPTH_NAMES = { surface: "Surface", epidermis: "Epidermis", papillary: "Papillary dermis", reticular: "Reticular dermis", plexus: "Deep vascular plexus", cell: "Cell level", gland: "Sweat gland", subcutis: "Subcutis" };
   function fmtDepth(v) { return v < 1000 ? Math.round(v) + " µm" : (v / 1000).toFixed(1) + " mm"; }
   function navAndGauge() {
     var nav = $("#nav"), gauge = $("#gauge");
@@ -309,11 +309,28 @@
         vio.observe(v);
       }
     }
+    // silent previews (the conference recap) play only while on screen
+    var previews = $$("video.conf-preview");
+    if (previews.length && !reduce && !(navigator.connection && navigator.connection.saveData)) {
+      var checkPreviews = function () {
+        previews.forEach(function (pv) {
+          var r = pv.getBoundingClientRect(), on = r.bottom > 0 && r.top < window.innerHeight;
+          if (on) { if (!pv.getAttribute("src")) pv.src = pv.dataset.src; if (pv.paused) { var pp = pv.play(); if (pp && pp.catch) pp.catch(function () {}); } }
+          else if (!pv.paused) pv.pause();
+        });
+      };
+      window.addEventListener("scroll", checkPreviews, { passive: true });
+      checkPreviews();
+    }
     var dlg = $("#film"), btns = $$("[data-film]");
     if (dlg && btns.length) {
       var fv = $("video", dlg), src = $("source", fv);
+      var filmPoster = fv.getAttribute("poster");
       btns.forEach(function (btn) { btn.addEventListener("click", function () {
-        if (!src.src) { src.src = src.dataset.src; fv.load(); }
+        // data-film names its own video; an empty data-film plays the program film
+        var want = btn.dataset.film || src.dataset.src;
+        if (src.getAttribute("src") !== want) { src.setAttribute("src", want); fv.poster = btn.dataset.poster || filmPoster; fv.load(); }
+        dlg.classList.toggle("tall", btn.hasAttribute("data-film-tall"));
         if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
         var pr = fv.play(); if (pr && pr.catch) pr.catch(function () {});
       }); });
