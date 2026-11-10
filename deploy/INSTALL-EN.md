@@ -26,16 +26,9 @@ Open the site through nginx rather than double-clicking `index.html` since the p
 
 Every link inside the site is relative, so the folder works under `/dermatology/` without any change to the code.
 
-## Three designs for the teachers
+## Layout options for the teachers
 
-The site carries two designs so the teachers can choose one:
-
-| Design | Home page |
-| --- | --- |
-| Skin layers | `index.html` |
-| Atlas plates | `atlas.html` |
-
-The square button at the bottom right of every page switches between them. Once the teachers choose, I will remove the other design and the button.
+The home page carries three openings and three faculty layouts so the teachers can choose. The "Compare layouts" button at the bottom right of the home page switches between them. Once the teachers choose, I will remove the other options and the button.
 
 ## Before launch
 

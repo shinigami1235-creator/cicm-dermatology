@@ -1,23 +1,6 @@
 # CICM Dermatology website
 
-Proof of concept for the Dermatology (International Program) at Chulabhorn International College of Medicine, Thammasat University. Static HTML with no PHP or database, previewed on GitHub Pages and headed for https://cicm.tu.ac.th/dermatology/. The site carries a noindex tag until CICM approves it.
-
-## Three designs
-
-The teachers are choosing between two designs that share the same content, data and Thai text. The button at the bottom right of every page switches between them (`js/pick.js`).
-
-| Design | Pages | Source |
-| --- | --- | --- |
-| Skin layers | `index.html`, `research.html`, `faculty.html`, `admissions.html` | `css/site.css`, `src/index.html` |
-| Atlas plates | `atlas.html`, `atlas-research.html`, `atlas-faculty.html`, `atlas-admissions.html` | `css/print-base.css`, `css/atlas.css`, `js/atlas.js`, `src/atlas.html` |
-
-Research, faculty and admissions use the same source file in every design. `css/print-base.css` holds the rules the atlas and book designs share, driven by the colour and font tokens each design sets at the top of its own stylesheet. The Program book design was withdrawn on 10 November 2026; its unbuilt sources remain in `src/book.html`, `css/book.css` and `js/book.js`. Once a design is chosen, rename its pages to the plain names, delete the other two designs and `js/pick.js`, and trim `build.py`.
-
-The film clips in `media/loops/` were cut from the program film with ffmpeg, cropped to remove the burned-in subtitles.
-
-## Installing on the CICM server
-
-`deploy/` holds the install notes for CICM IT in English and Thai and an nginx snippet. `python3 deploy/package.py` builds the zip for IT with only the files the website serves.
+Proof of concept for the Dermatology (International Program) at Chulabhorn International College of Medicine, Thammasat University. Static HTML hosted on GitHub Pages. The site carries a noindex tag until CICM approves it.
 
 ## Pages
 
@@ -27,6 +10,10 @@ The film clips in `media/loops/` were cut from the program film with ffmpeg, cro
 - `admissions.html`: courses, requirements, English scores, documents, tuition and downloads
 
 Thai is at `?lang=th` on any page, or the EN/TH switch in the top bar.
+
+## Installing on the CICM server
+
+`deploy/` holds the install notes for CICM IT in English and Thai and an nginx snippet for https://cicm.tu.ac.th/dermatology/. `python3 deploy/package.py` builds the zip for IT with only the files the website serves.
 
 ## Updating content without code
 
@@ -74,5 +61,5 @@ The pages are assembled from `src/` by `build.py` (shared head, header and foote
 - Photos: CICM_Dermatology Facebook page.
 - Faculty portraits and course tables: cicm.tu.ac.th Dermatology page.
 - Film and hero loop: the CICM Dermatology program film.
-- Fonts: Bai Jamjuree, Anuphan, Source Serif 4, Noto Serif Thai, Archivo and Sarabun (SIL Open Font License), self-hosted.
+- Fonts: Bai Jamjuree, Anuphan, Source Serif 4 and Noto Serif Thai (SIL Open Font License), self-hosted.
 - World map: Natural Earth via world-atlas.

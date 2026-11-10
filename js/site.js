@@ -234,12 +234,6 @@
     var nav = $("#nav"), gauge = $("#gauge");
     var secs = $$("[data-layer]");
     if (!nav) return;
-    if (!secs.length) {
-      // atlas and book designs: no tissue layers, the bar only turns solid once the page scrolls
-      var solid = function () { nav.classList.toggle("is-solid", window.scrollY > 30); };
-      window.addEventListener("scroll", solid, { passive: true }); solid();
-      return;
-    }
     var mark = gauge && $(".gauge-mark", gauge), read = gauge && $(".gauge-read", gauge), readB = read && $("b", read), readS = read && $("span", read);
     var lastTone = "", lastName = "";
     function frame() {
@@ -555,22 +549,7 @@
     });
   }
 
-  /* Links built in JS point at the original pages. In the atlas and book designs
-     they are rewritten to that design's copy of the page before they are followed. */
-  function designLinks() {
-    var d = document.documentElement.dataset.design;
-    if (!d || d === "skin") return;
-    var re = /^(index|research|faculty|admissions)\.html/;
-    function fix(e) {
-      var a = e.target.closest && e.target.closest("a[href]"); if (!a) return;
-      var h = a.getAttribute("href"), m = h.match(re); if (!m) return;
-      a.setAttribute("href", h.replace(re, d + (m[1] === "index" ? "" : "-" + m[1]) + ".html"));
-    }
-    ["pointerover", "focusin", "click", "auxclick"].forEach(function (t) { document.addEventListener(t, fix, true); });
-  }
-
   /* ---------- boot ---------- */
-  designLinks();
   applyLang();
   currentNav();
   menu();
