@@ -1,6 +1,6 @@
 # CICM Dermatology website: install notes
 
-I built this website for the Dermatology (International Program) and it is ready to try on your server. It is plain HTML, CSS and JavaScript with no PHP and no database, so nothing needs to be installed on nginx 1.30.6. Please copy the `dermatology` folder into the web root and open https://cicm.tu.ac.th/dermatology/.
+I built this website for the Dermatology (International Program) and it is ready to try on your server. It is plain HTML, CSS and JavaScript and needs no PHP, database or other software on nginx 1.30.6. Please copy the `dermatology` folder into the web root and open https://cicm.tu.ac.th/dermatology/.
 
 ## What is in this package
 
@@ -24,7 +24,7 @@ Open the site through nginx rather than double-clicking `index.html` since the p
 3. Run `nginx -t`, then `nginx -s reload`.
 4. Open https://cicm.tu.ac.th/dermatology/ and check that the photos, the program film and the research tables load.
 
-Every link inside the site is relative, so the folder works under `/dermatology/` without any change to the code.
+Every link inside the site is relative and works under `/dermatology/`.
 
 ## Layout options for the teachers
 

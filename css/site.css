@@ -901,6 +901,7 @@ html[data-hero="lens"] #slideHero, html[data-hero="lens"] #typeHero { display: n
 @media (min-width: 860px) { .conf-day:first-child { grid-template-columns: 1fr 1fr; } .conf-day:first-child header { grid-column: 1 / -1; } }
 .conf-track h3 { font-size: clamp(1.25rem, 1.6vw, 1.5rem); line-height: 1.15; margin: 0 0 6px; color: var(--teal); }
 .conf-track p { margin: 0; }
+.conf-track .conf-format { margin-top: 4px; font-size: 0.92rem; color: var(--gland-soft); }
 .conf-speakers { margin: 22px 0 0; font-size: 0.98rem; line-height: 1.7; color: var(--gland-soft); }
 .conf-speakers b { font-family: var(--font-display); font-weight: 600; color: var(--gland-ink); margin-right: 8px; }
 .conf-reels { margin-top: clamp(40px, 5vw, 64px); }
