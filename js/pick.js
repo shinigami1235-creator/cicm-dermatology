@@ -3,7 +3,7 @@
   "use strict";
   var d = document.documentElement.dataset, th = window.CICM_LANG === "th";
   var OPEN = [["type", th ? "ตัวอักษร" : "DERMA / TOLOGY"], ["slide", th ? "สไลด์" : "Microscope slide"], ["lens", th ? "เลนส์" : "Lens"]];
-  var STAFF = [["spotlight", th ? "สปอตไลต์" : "Spotlight"], ["masthead", th ? "รายชื่อ" : "Name list"], ["deck", th ? "สำรับการ์ด" : "Card deck"]];
+  var STAFF = [["deck", th ? "สำรับการ์ด" : "Card deck"], ["spotlight", th ? "สปอตไลต์" : "Spotlight"], ["masthead", th ? "รายชื่อ" : "Name list"]];
   function link(key, val, label, cur) {
     var u = new URL(location.href); u.searchParams.set(key, val); u.hash = key === "staff" ? "faculty" : "";
     return '<a href="' + u.pathname + u.search + u.hash + '" aria-current="' + (cur === val) + '">' + label + "</a>";
