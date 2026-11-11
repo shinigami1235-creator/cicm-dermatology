@@ -13,4 +13,7 @@ with zipfile.ZipFile(OUT, 'w', zipfile.ZIP_DEFLATED) as z:
         files += sorted(p for p in (ROOT / d).rglob('*') if p.is_file())
     for p in files:
         z.write(p, 'cicm-dermatology/dermatology/' + p.relative_to(ROOT).as_posix())
+    plugin = ROOT / 'backend' / 'cicm-dermatology-content'
+    for p in sorted(q for q in plugin.rglob('*') if q.is_file()):
+        z.write(p, 'cicm-dermatology/wordpress-plugin/' + p.relative_to(plugin.parent).as_posix())
 print(OUT, len(files), 'site files')

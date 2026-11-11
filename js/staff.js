@@ -10,7 +10,7 @@
   var lang = window.CICM_LANG, which = document.documentElement.dataset.staff || "spotlight";
   var COLORS = ["#fde9d7", "#fbe40b", "#fff8d9", "#e8e7e8", "#f67b1e", "#fad5b4"];
 
-  function cut(f) { return url("people/" + f.id + "-cut.webp"); }
+  function cut(f) { return url(f.cut || f.photo || "people/" + f.id + "-cut.webp"); }
   // set by the deck and spotlight layouts; the 3D orbit calls it through CICM.facultyTo
   var jumpTo = null;
   function who(f) { return [f.title, f.post].filter(Boolean).join(" · "); }

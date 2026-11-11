@@ -38,7 +38,7 @@ The home page carries three openings and three faculty layouts so the teachers c
 
 ## Your server and the editing backend
 
-The website needs nothing from PHP or the database today. Staff editing comes later as a WordPress backend, and these are the points to prepare for it:
+The website itself needs no PHP or database. Staff edit it through WordPress with the CICM Dermatology Content plugin in the `wordpress-plugin` folder of this package. WordPress only stores the content and writes `data/content.json` into the site folder on every save, so visitors never touch WordPress and the site keeps working if WordPress is down. Points to prepare:
 
 | Item | Your server | What it needs |
 | --- | --- | --- |
@@ -49,5 +49,22 @@ The website needs nothing from PHP or the database today. Staff editing comes la
 | Server charset | latin1 | Create the site's database as `utf8mb4` with `utf8mb4_unicode_ci` since Thai text needs it. |
 | Database user | root3 | Create a separate user that can reach only the site's database. |
 | Upload size | | Set `client_max_body_size` in nginx and `upload_max_filesize` and `post_max_size` in PHP to at least 64M for PDF forms and photos. |
+
+## Install the editing backend
+
+1. Install WordPress at `/dermatology/cms/` (or any address you prefer) on its own `utf8mb4` database and database user.
+2. Copy `wordpress-plugin/cicm-dermatology-content` into `wp-content/plugins/` and activate it under Plugins.
+3. Add these two lines to `wp-config.php`, with your real folder and address:
+   ```php
+   define( 'CICM_SITE_DIR', '/var/www/html/dermatology' );
+   define( 'CICM_SITE_URL', 'https://cicm.tu.ac.th/dermatology/' );
+   ```
+4. Give the PHP user write access to `dermatology/data/` only, since the plugin writes `content.json` there and nowhere else. It refuses any folder that does not hold `index.html`, `js/site.js` and a `data` folder.
+5. Open CICM Dermatology > Settings in the dashboard and press Import from the site. This copies what the site shows now into WordPress.
+6. Create an account with the Editor role for each staff member who edits. Editors see the CICM Dermatology menu; only administrators see Settings.
+
+Staff then edit announcements, programs and fees, permanent and visiting lecturers, hospital groups, academic officers, achievements, downloads, training abroad partners, Facebook posts and the curriculum. Each save goes live on the next page load, and the History tab keeps the last 15 saves for rollback. Photos and PDF forms go through the WordPress media library.
+
+WordPress pages outside the dashboard send visitors to the site address. The content is also available as JSON at `/wp-json/cicm/v1/content`.
 
 Please tell me once the site opens on localhost, or send me a screenshot of anything that fails.

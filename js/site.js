@@ -70,7 +70,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json?v=20261111d").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261111e").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -92,7 +92,7 @@
   }
   var papersP = null;
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261111d").then(function (r) { return r.json(); });
+    if (!papersP) papersP = fetch("data/publications.json?v=20261111e").then(function (r) { return r.json(); });
     return papersP;
   }
 

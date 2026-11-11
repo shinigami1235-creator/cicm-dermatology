@@ -525,7 +525,8 @@
     "docs": 44,
     "cites": 1790,
     "h": 16
-   }
+   },
+   "cut": "people/jitlada-cut.webp"
   },
   {
    "id": "premjit",
@@ -554,7 +555,8 @@
     "docs": 25,
     "cites": 288,
     "h": 10
-   }
+   },
+   "cut": "people/premjit-cut.webp"
   },
   {
    "id": "punyaphat",
@@ -588,7 +590,8 @@
     "docs": 23,
     "cites": 339,
     "h": 11
-   }
+   },
+   "cut": "people/punyaphat-cut.webp"
   },
   {
    "id": "sunatra",
@@ -614,7 +617,8 @@
     "docs": 8,
     "cites": 94,
     "h": 5
-   }
+   },
+   "cut": "people/sunatra-cut.webp"
   },
   {
    "id": "pawit",
@@ -641,7 +645,8 @@
     "docs": 16,
     "cites": 387,
     "h": 10
-   }
+   },
+   "cut": "people/pawit-cut.webp"
   },
   {
    "id": "sittha",
@@ -660,7 +665,8 @@
     "docs": 1,
     "cites": 0,
     "h": 0
-   }
+   },
+   "cut": "people/sittha-cut.webp"
   },
   {
    "id": "rueangrit",
@@ -683,7 +689,8 @@
     "Botulinum toxin",
     "Filler",
     "Facial design"
-   ]
+   ],
+   "cut": "people/rueangrit-cut.webp"
   },
   {
    "id": "sasin",
@@ -702,7 +709,8 @@
     "Omics",
     "AI and machine learning",
     "Aesthetics and longevity"
-   ]
+   ],
+   "cut": "people/sasin-cut.webp"
   }
  ],
  "staff": [

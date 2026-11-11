@@ -17,6 +17,12 @@ Thai is at `?lang=th` on any page, or the EN/TH switch in the top bar.
 
 ## Updating content without code
 
+## Editing backend (WordPress)
+
+`backend/cicm-dermatology-content/` is a WordPress plugin. Staff edit announcements, programs and fees, permanent and visiting lecturers, hospital groups, officers, achievements, downloads, partners, Facebook posts and the curriculum in the dashboard, and every save writes `data/content.json` into the site folder. The site stays static and reads that file as before. Install steps are in `deploy/INSTALL-EN.md` and `deploy/INSTALL-TH.md`. `php backend/tests/test.php` checks the plugin's cleaning and saving against the current `data/content.json` without WordPress.
+
+## Google Sheet (until WordPress is in)
+
 Announcements, downloads and faculty achievements can come from a Google Sheet. Until a sheet is connected, the site reads `data/content.json`.
 
 1. Make a Google Sheet with four tabs named `announcements`, `downloads`, `achievements` and `facebook`.
