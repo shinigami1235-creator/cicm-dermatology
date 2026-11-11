@@ -29,6 +29,11 @@
               return '<li><a href="' + href + '" target="_blank" rel="noopener">' + esc(p.title) + "</a><small>" + esc(p.journal) + ", " + esc(p.year) + "</small></li>";
             }).join("") + '</ul><p style="margin-top:14px"><a class="link-arrow" href="research.html?lecturer=' + encodeURIComponent(f.pubmed) + '"><span>' +
             (lang === "th" ? T("ui.allby", "All papers by") + " " + esc(f.name) : "All papers by " + esc(f.name)) + "</span>" + C.icon("arrow") + "</a></p>" : "") +
+          // papers in journals PubMed does not index; a link at the end of the line becomes the link
+          (f.otherPubs && f.otherPubs.length ? "<h3>" + T("ui.otherpubs", "Other publications") + '</h3><ul class="papers other">' + f.otherPubs.map(function (line) {
+            var m = String(line).match(/^(.*?)\s*(https?:\/\/\S+)$/), text = m ? m[1] : String(line);
+            return "<li>" + (m ? '<a href="' + C.url(m[2]) + '" target="_blank" rel="noopener">' + esc(text) + "</a>" : esc(text)) + "</li>";
+          }).join("") + "</ul>" : "") +
           "</div></article>";
       }).join("");
       var vbox = $("#vProfiles"), groups = c.visitingGroups || [];

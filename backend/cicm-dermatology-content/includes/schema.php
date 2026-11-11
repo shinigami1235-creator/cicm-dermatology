@@ -52,6 +52,7 @@ function cicm_schema() {
 				'education'    => array( 'type' => 'lines', 'label' => 'Education', 'hint' => 'One per line' ),
 				'expertise'    => array( 'type' => 'lines', 'label' => 'Expertise', 'hint' => 'One per line' ),
 				'pubmed'       => array( 'type' => 'text', 'label' => 'Name on PubMed', 'hint' => 'Meephansan J' ),
+				'otherPubs'    => array( 'type' => 'lines', 'label' => 'Other publications', 'hint' => 'Papers not in PubMed, one citation per line. A link at the end of a line becomes the link.' ),
 				'scopus.id'    => array( 'type' => 'text', 'label' => 'Scopus author ID' ),
 				'scopus.docs'  => array( 'type' => 'number', 'label' => 'Scopus documents' ),
 				'scopus.cites' => array( 'type' => 'number', 'label' => 'Scopus citations' ),
