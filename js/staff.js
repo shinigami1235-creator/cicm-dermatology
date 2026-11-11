@@ -8,7 +8,7 @@
   var stage = document.getElementById("staffStage"); if (!stage) return;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var lang = window.CICM_LANG, which = document.documentElement.dataset.staff || "spotlight";
-  var COLORS = ["#fde9d7", "#fbe40b", "#fff8d9", "#e8e7e8", "#f67b1e", "#fad5b4"];
+  var COLORS = ["#fff8d9", "#fbe40b", "#fde9d7", "#ffffff", "#fdeeb0", "#fad5b4"];
 
   function cut(f) { return url(f.cut || f.photo || "people/" + f.id + "-cut.webp"); }
   // set by the deck and spotlight layouts; the 3D orbit calls it through CICM.facultyTo
@@ -213,7 +213,7 @@
   }
 
   /* ---------- visiting lecturers: tiles grouped by hospital, a dialog for each profile ---------- */
-  var GROUP_COLORS = ["#fde9d7", "#fbe40b", "#e8e7e8", "#fff8d9", "#fad5b4", "#f67b1e", "#fde9d7"];
+  var GROUP_COLORS = ["#fff8d9", "#fbe40b", "#fde9d7", "#ffffff", "#fdeeb0", "#fad5b4", "#fff8d9"];
   var visitingList = [];
   function visiting(c) {
     var box = document.getElementById("vGroups"), dlg = document.getElementById("vDlg");

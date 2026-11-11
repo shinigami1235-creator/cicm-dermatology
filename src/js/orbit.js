@@ -18,7 +18,7 @@ function webglOK() {
 
 
 const R_IN = 2.5, R_OUT = 3.95, S_IN = 0.9, S_OUT = 0.74, LIFT = 0.55, TILT = 0.3;
-const RING_IN = "#f67b1e", RING_OUT = "#fbe40b";
+const RING_IN = "#fbe40b", RING_OUT = "#fff8d9";
 const easeOut = (t) => 1 - Math.pow(1 - t, 3);
 const easeBack = (t) => { const c = 1.4; return 1 + (c + 1) * Math.pow(t - 1, 3) + c * Math.pow(t - 1, 2); };
 const clamp01 = (x) => Math.max(0, Math.min(1, x));

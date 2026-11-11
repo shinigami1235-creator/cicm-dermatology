@@ -70,7 +70,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json?v=20261111g").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261111h").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -92,7 +92,7 @@
   }
   var papersP = null;
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261111g").then(function (r) { return r.json(); }).then(function (d) {
+    if (!papersP) papersP = fetch("data/publications.json?v=20261111h").then(function (r) { return r.json(); }).then(function (d) {
       // every lecturer tagged on a paper is bolded in the author lists
       d.papers.forEach(function (p) { p.faculty.forEach(function (k) { if (FAC_KEYS.indexOf(k) < 0) FAC_KEYS.push(k); }); });
       return d;
@@ -235,11 +235,12 @@
 
   /* ---------- nav tone + depth gauge ---------- */
   var LAYERS = {
-    surface: ["#7a0b10", "#ffffff", "dark"], epi: ["#fde9d7", "#2b0a06", "light"], dermis: ["#f67b1e", "#2b0a06", "light"],
-    deep: ["#d8161e", "#ffffff", "dark"], vessel: ["#8f0d13", "#ffffff", "dark"], cell: ["#fffaf0", "#2b0a06", "light"],
-    gland: ["#fbe40b", "#2b0a06", "light"], "fat-pale": ["#fff8d9", "#2b0a06", "light"], fat: ["#f67b1e", "#2b0a06", "light"]
+    surface: ["#7a0b10", "#ffffff", "dark"], epi: ["#fff8d9", "#2a1606", "light"], dermis: ["#fbe40b", "#2a1606", "light"],
+    deep: ["#f67b1e", "#2a1606", "light"], vessel: ["#fde5cf", "#2a1606", "light"], cell: ["#fffcf5", "#2a1606", "light"],
+    gland: ["#fbb27a", "#2a1606", "light"], "fat-pale": ["#fff3e8", "#2a1606", "light"], fat: ["#f67b1e", "#2a1606", "light"]
   };
-  var NAVY_NAV = { dermis: 1, gland: 1, fat: 1 };
+  // the CICM wordmark and the orange Apply button vanish on yellow and orange, so the bar turns pale there
+  var NAVY_NAV = { dermis: 1, deep: 1, gland: 1, fat: 1 };
   var DEPTH_NAMES = { surface: "Surface", epidermis: "Epidermis", papillary: "Papillary dermis", reticular: "Reticular dermis", plexus: "Deep vascular plexus", cell: "Cell level", gland: "Sweat gland", subcutis: "Subcutis" };
   function fmtDepth(v) { return v < 1000 ? Math.round(v) + " µm" : (v / 1000).toFixed(1) + " mm"; }
   function navAndGauge() {
@@ -254,8 +255,7 @@
       var cur = secs[0], idx = 0;
       for (var i = 0; i < secs.length; i++) { if (secs[i].getBoundingClientRect().top <= navLine) { cur = secs[i]; idx = i; } }
       var L = LAYERS[cur.dataset.layer] || LAYERS.surface;
-      // the CICM wordmark and the orange Apply button vanish on orange and amber, so the bar turns navy there
-      if (NAVY_NAV[cur.dataset.layer]) L = LAYERS.surface;
+      if (NAVY_NAV[cur.dataset.layer]) L = LAYERS["fat-pale"];
       var tone = cur.dataset.layer + (y > 30);
       if (tone !== lastTone) {
         nav.style.setProperty("--nav-bg", L[0]); nav.style.setProperty("--nav-ink", L[1]);
