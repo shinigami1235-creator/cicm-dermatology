@@ -13,11 +13,11 @@
 <link rel="icon" href="assets/cicm-mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="preload" href="fonts/bai-jamjuree-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=20261110c">
+<link rel="stylesheet" href="css/site.css?v=20261111a">
 <script>document.documentElement.classList.replace('no-js','js');(function(){var q=new URLSearchParams(location.search),h=q.get('hero'),s=q.get('staff');try{if(h)localStorage.setItem('cicm-hero',h);else h=localStorage.getItem('cicm-hero');if(s)localStorage.setItem('cicm-staff',s);else s=localStorage.getItem('cicm-staff')}catch(e){}var d=document.documentElement.dataset;d.hero=['slide','type','lens'].indexOf(h)>-1?h:'type';d.staff=['spotlight','masthead','deck'].indexOf(s)>-1?s:'deck'})()</script>
 <script src="js/config.js" defer></script>
-<script src="js/i18n.js?v=20261110e" defer></script>
-<script src="js/site.js?v=20261110e" defer></script>
+<script src="js/i18n.js?v=20261111a" defer></script>
+<script src="js/site.js?v=20261111a" defer></script>
 
 </head>
 <body data-page="faculty">
@@ -84,12 +84,17 @@
   <section class="page-head layer" data-layer="deep" data-depth="1600" data-depth-name="reticular" style="padding-bottom:0">
     <div class="wrap">
       <h1 data-i18n="faculty.page.title">The faculty</h1>
-      <p data-i18n="faculty.page.lede">Lecturers and staff of the Dermatology program, with their training, expertise and recent papers.</p>
+      <p data-i18n="faculty.page.lede">Permanent and visiting lecturers and the staff of the Dermatology program, with their training, expertise and recent papers.</p>
     </div>
   </section>
   <section class="layer" data-layer="deep" data-depth="1600" data-depth-name="reticular" style="padding-top:clamp(40px,6vw,72px)">
     <div class="wrap">
       <div class="profiles" id="profiles"></div>
+      <div class="block" id="visiting-lecturers">
+        <h2 data-i18n="visit.title">Visiting lecturers</h2>
+        <p class="muted-note" data-i18n="visit.page">Doctors from seven hospitals and clinics who teach in the program.</p>
+        <div class="vprofs" id="vProfiles"></div>
+      </div>
       <div class="block">
         <h2 data-i18n="staff.title">Academic officers</h2>
         <p class="muted-note" data-i18n="staff.body">Thanks to the academic officers who support the program and its students.</p>
@@ -136,6 +141,6 @@
   </div>
 </footer>
 
-<script src="js/pages.js" defer></script>
+<script src="js/pages.js?v=20261111a" defer></script>
 </body>
 </html>

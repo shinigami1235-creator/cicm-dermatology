@@ -661,6 +661,48 @@
     "cites": 0,
     "h": 0
    }
+  },
+  {
+   "id": "rueangrit",
+   "pubmed": "Siriphanit R",
+   "photo": "people/rueangrit.webp",
+   "name": "Rueangrit Siriphanit",
+   "title": "",
+   "post": "M.D., M.Sc.",
+   "education": [
+    "M.D. (Honor class), Khon Kaen University",
+    "M.Sc. in Dermatology, Chulabhorn International College of Medicine, Thammasat University",
+    "Ph.D. candidate in Dermatology, Chulabhorn International College of Medicine, Thammasat University",
+    "Fellowship in Laser and Cosmetic Dermatology, Florida International University and Mount Sinai Medical Center, USA",
+    "Fellowship in General Dermatology and Mohs Surgery, Florida International University and Mount Sinai Medical Center, USA"
+   ],
+   "expertise": [
+    "Aesthetic dermatology",
+    "Laser",
+    "Energy-based devices",
+    "Botulinum toxin",
+    "Filler",
+    "Facial design"
+   ]
+  },
+  {
+   "id": "sasin",
+   "pubmed": "Charoensuksira S",
+   "photo": "people/sasin.webp",
+   "name": "Sasin Charoensuksira",
+   "title": "",
+   "post": "M.D.",
+   "education": [
+    "M.D., Faculty of Medicine Siriraj Hospital, Mahidol University",
+    "Ph.D. in Dermatology, Chulabhorn International College of Medicine, Thammasat University (2019 to present)",
+    "Bioinformatics and Molecular Systems Biology, Mahidol Apprenticeship Program Curriculum (MAP-C)"
+   ],
+   "expertise": [
+    "Bioinformatics",
+    "Omics",
+    "AI and machine learning",
+    "Aesthetics and longevity"
+   ]
   }
  ],
  "staff": [
@@ -793,5 +835,285 @@
   "https://www.facebook.com/permalink.php?story_fbid=pfbid02Pok6X235mtu4KaL94cdRw2QLgkyfYqsLTrZacAUoTvQtsgRfKKjsuHvWGwvU254il&id=100064737292426",
   "https://www.facebook.com/permalink.php?story_fbid=pfbid0tYwqtAihhUT87PdogP98ybur22PFRpKkqLnafqhfANCqzaBprPKzYyh6FGywS9vGl&id=100064737292426"
  ],
- "scopusUpdated": "2026-11-05"
+ "scopusUpdated": "2026-11-05",
+ "visiting": [
+  {
+   "id": "patlada",
+   "photo": "people/patlada-bust.webp",
+   "name": "Patlada Ingkaninanda",
+   "title": "",
+   "post": "M.D.",
+   "role": "Head of the Division of Dermatology",
+   "place": "Rajavithi Hospital",
+   "education": [
+    "Thai Board of Dermatology, Ramathibodi Hospital, Mahidol University",
+    "M.D. (Second-Class Honors), Ramathibodi Hospital, Mahidol University"
+   ],
+   "expertise": [],
+   "group": "rajavithi"
+  },
+  {
+   "id": "onsiri",
+   "photo": "people/onsiri-bust.webp",
+   "name": "Onsiri Serirat",
+   "title": "Asst. Prof.",
+   "post": "M.D.",
+   "role": "Dermatology Unit",
+   "place": "Rajavithi Hospital",
+   "education": [
+    "M.D., Matias H. Aznar Memorial College of Medicine, Southwestern University, Philippines",
+    "Diploma in Dermatology, Institute of Dermatology",
+    "Specialist certificate in Dermatology, Medical Council of Thailand",
+    "Specialist certificate in Family Medicine, Medical Council of Thailand",
+    "B.Pharm., Chulalongkorn University"
+   ],
+   "expertise": [
+    "Dermatology and aesthetics"
+   ],
+   "group": "rajavithi"
+  },
+  {
+   "id": "woranit",
+   "photo": "people/woranit-bust.webp",
+   "name": "Woranit Onprasert",
+   "title": "",
+   "post": "M.D.",
+   "role": "Dermatosurgery and laser, Division of Dermatology",
+   "place": "Rajavithi Hospital",
+   "education": [
+    "M.D. (First-Class Honors), Ramathibodi Hospital, Mahidol University",
+    "Diploma in Dermatology, Ramathibodi Hospital, Mahidol University",
+    "Fellowship in Dermatosurgery and Laser, Ramathibodi Hospital, Mahidol University"
+   ],
+   "expertise": [],
+   "group": "rajavithi"
+  },
+  {
+   "id": "phurit",
+   "photo": "people/phurit-bust.webp",
+   "name": "Phurit Phurisrisak",
+   "title": "",
+   "post": "M.D.",
+   "role": "Dermatology Center",
+   "place": "Rajavithi Hospital",
+   "education": [
+    "M.D., Chulalongkorn University",
+    "Diplomate, Thai Board of Dermatology, Institute of Dermatology",
+    "Graduate Diploma in Clinical Medical Science (Internal Medicine), Chulalongkorn University"
+   ],
+   "expertise": [
+    "Skin, hair and nails",
+    "Aesthetic laser"
+   ],
+   "group": "rajavithi"
+  },
+  {
+   "id": "suphattra",
+   "photo": "people/suphattra-bust.webp",
+   "name": "Suphattra Trakanwittayarak",
+   "title": "",
+   "post": "M.D., M.Sc.",
+   "role": "Division of Dermatology",
+   "place": "Rajavithi Hospital",
+   "education": [
+    "M.D., Chulalongkorn University",
+    "M.Sc. in Clinical Dermatology, Chulabhorn International College of Medicine, Thammasat University",
+    "Diplomate, Thai Board of Dermatology, Siriraj Hospital",
+    "Clinical Fellowship in Hair Disorders and Hair Transplantation, Siriraj Hospital"
+   ],
+   "expertise": [],
+   "group": "rajavithi"
+  },
+  {
+   "id": "wilai",
+   "photo": "people/wilai-bust.webp",
+   "name": "Wilai Thanasarnaksorn",
+   "title": "Assoc. Prof.",
+   "post": "M.D.",
+   "role": "Head of the Samitivej Esthetic Institute",
+   "place": "Samitivej Hospital",
+   "education": [],
+   "expertise": [
+    "Cosmetic dermatology",
+    "Laser and light therapy",
+    "Botulinum toxin",
+    "Filler",
+    "Exosomes"
+   ],
+   "group": "samitivej"
+  },
+  {
+   "id": "smith",
+   "photo": "people/smith-bust.webp",
+   "name": "Smith Arayaskul",
+   "title": "",
+   "post": "M.D., M.Sc.",
+   "role": "Aesthetic and lifestyle medicine",
+   "place": "Samitivej Sukhumvit Hospital",
+   "education": [
+    "M.D. (First-Class Honors), Chulalongkorn University",
+    "M.Sc. in Dermatology, Srinakharinwirot University",
+    "Thai Board of Preventive Medicine (Lifestyle Medicine)",
+    "International Board Certification in Lifestyle Medicine",
+    "American Board Certification in Anti-Aging and Regenerative Medicine (A4M)"
+   ],
+   "expertise": [
+    "Integrative aesthetics",
+    "Regenerative medicine",
+    "Genetic counseling"
+   ],
+   "group": "samitivej"
+  },
+  {
+   "id": "chontavat",
+   "photo": "people/chontavat-bust.webp",
+   "name": "Chontavat Suvanpiyasiri",
+   "title": "",
+   "post": "M.D., Ph.D.",
+   "role": "Head of the Dermatology and Aesthetic Center",
+   "place": "MedPark Hospital",
+   "education": [
+    "M.D., Chiang Mai University",
+    "Ph.D. in Immunology, Thomas Jefferson University, USA",
+    "Diplomate, Thai Board of Dermatology, Institute of Dermatology",
+    "Clinical Fellowship in Dermatology, University of Pennsylvania, USA"
+   ],
+   "expertise": [],
+   "group": "medpark"
+  },
+  {
+   "id": "atchima",
+   "photo": "people/atchima-bust.webp",
+   "name": "Atchima Suwanchinda",
+   "title": "",
+   "post": "M.D., M.Sc., Ph.D.",
+   "role": "Dermatologic surgery",
+   "place": "Chulabhorn Hospital",
+   "education": [
+    "M.D., Siriraj Hospital, Mahidol University",
+    "M.Sc. in Dermatology, Boston University School of Medicine, USA",
+    "Ph.D. in Dermatology, Mae Fah Luang University",
+    "Fellowship in Dermatologic Surgery and Laser, Ramathibodi Hospital, Mahidol University",
+    "Diplomate, American Board of Laser Surgery and Medicine in Dermatology"
+   ],
+   "expertise": [],
+   "group": "chulabhorn"
+  },
+  {
+   "id": "jutamas",
+   "photo": "people/jutamas-bust.webp",
+   "name": "Jutamas Tankunakorn",
+   "title": "",
+   "post": "M.D.",
+   "role": "Division of Dermatology",
+   "place": "Ramathibodi Hospital",
+   "education": [
+    "M.D. (First-Class Honors), Siriraj Hospital, Mahidol University",
+    "Diplomate, Thai Board of Dermatology, Ramathibodi Hospital, Mahidol University",
+    "Clinical Fellowship, Institute of Dermatology"
+   ],
+   "expertise": [
+    "Autoimmune bullous disease",
+    "Skin signs in rheumatic disease",
+    "Drug eruptions",
+    "Cosmetic surgery and laser"
+   ],
+   "group": "rama"
+  },
+  {
+   "id": "ratchanee",
+   "photo": "people/ratchanee-bust.webp",
+   "name": "Ratchanee Vipanurat",
+   "title": "",
+   "post": "M.D.",
+   "role": "Center for Dermatology and Cosmetic Surgery",
+   "place": "Praram 9 Hospital",
+   "education": [
+    "M.D., Thammasat University",
+    "Diplomate, Thai Board of Dermatology, Institute of Dermatology",
+    "Diplomate, American Board of Anti-Aging and Regenerative Medicine"
+   ],
+   "expertise": [
+    "Skin and aesthetic laser"
+   ],
+   "group": "praram9"
+  },
+  {
+   "id": "kamphon",
+   "photo": "people/kamphon-bust.webp",
+   "name": "Kamphon Socharoentam",
+   "title": "",
+   "post": "M.D., M.Sc.",
+   "role": "Dermatologist",
+   "place": "KTC Clinic",
+   "education": [
+    "M.D., Rangsit University",
+    "M.Sc. in Dermatology, Boston University School of Medicine, USA",
+    "Fellowship in Cutaneous Surgery and Cosmetic Dermatology, University of Miami Miller School of Medicine, USA",
+    "Diplomate, American Board of Laser Surgery in Dermatology"
+   ],
+   "expertise": [
+    "Cosmetic dermatology",
+    "Dermatologic surgery",
+    "Filler",
+    "Botulinum toxin",
+    "Thread lift",
+    "Facial aging",
+    "Laser",
+    "Scar treatment"
+   ],
+   "group": "ktc"
+  }
+ ],
+ "visitingGroups": [
+  {
+   "id": "rajavithi",
+   "name": {
+    "en": "Rajavithi Hospital",
+    "th": "โรงพยาบาลราชวิถี"
+   }
+  },
+  {
+   "id": "samitivej",
+   "name": {
+    "en": "Samitivej Hospital",
+    "th": "โรงพยาบาลสมิติเวช"
+   }
+  },
+  {
+   "id": "medpark",
+   "name": {
+    "en": "MedPark Hospital",
+    "th": "โรงพยาบาลเมดพาร์ค"
+   }
+  },
+  {
+   "id": "chulabhorn",
+   "name": {
+    "en": "Chulabhorn Hospital",
+    "th": "โรงพยาบาลจุฬาภรณ์"
+   }
+  },
+  {
+   "id": "rama",
+   "name": {
+    "en": "Ramathibodi Hospital",
+    "th": "โรงพยาบาลรามาธิบดี"
+   }
+  },
+  {
+   "id": "praram9",
+   "name": {
+    "en": "Praram 9 Hospital",
+    "th": "โรงพยาบาลพระราม 9"
+   }
+  },
+  {
+   "id": "ktc",
+   "name": {
+    "en": "KTC Clinic",
+    "th": "คลินิก KTC"
+   }
+  }
+ ]
 }

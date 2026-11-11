@@ -63,7 +63,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261111a").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -85,7 +85,7 @@
   }
   var papersP = null;
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261110e").then(function (r) { return r.json(); });
+    if (!papersP) papersP = fetch("data/publications.json?v=20261111a").then(function (r) { return r.json(); });
     return papersP;
   }
 
@@ -224,10 +224,11 @@
 
   /* ---------- nav tone + depth gauge ---------- */
   var LAYERS = {
-    surface: ["#0f0b0c", "#ffffff", "dark"], epi: ["#f2c4ae", "#3b1610", "light"], dermis: ["#b03a4c", "#fff1ee", "dark"],
-    deep: ["#6e1430", "#ffe9ec", "dark"], vessel: ["#3c0a19", "#ffe9ec", "dark"], cell: ["#20112b", "#ecdff4", "dark"],
-    gland: ["#f5a07a", "#2e0f06", "light"], "fat-pale": ["#fbefc0", "#3a2a06", "light"], fat: ["#f9d93d", "#2b1d05", "light"]
+    surface: ["#06283f", "#ffffff", "dark"], epi: ["#fde7d3", "#06283f", "light"], dermis: ["#f47b20", "#06283f", "light"],
+    deep: ["#c8202f", "#ffffff", "dark"], vessel: ["#1d4787", "#ffffff", "dark"], cell: ["#0b2235", "#eef3f8", "dark"],
+    gland: ["#ffc65c", "#06283f", "light"], "fat-pale": ["#fff4e0", "#06283f", "light"], fat: ["#ffa500", "#06283f", "light"]
   };
+  var NAVY_NAV = { dermis: 1, gland: 1, fat: 1 };
   var DEPTH_NAMES = { surface: "Surface", epidermis: "Epidermis", papillary: "Papillary dermis", reticular: "Reticular dermis", plexus: "Deep vascular plexus", cell: "Cell level", gland: "Sweat gland", subcutis: "Subcutis" };
   function fmtDepth(v) { return v < 1000 ? Math.round(v) + " µm" : (v / 1000).toFixed(1) + " mm"; }
   function navAndGauge() {
@@ -242,6 +243,8 @@
       var cur = secs[0], idx = 0;
       for (var i = 0; i < secs.length; i++) { if (secs[i].getBoundingClientRect().top <= navLine) { cur = secs[i]; idx = i; } }
       var L = LAYERS[cur.dataset.layer] || LAYERS.surface;
+      // the CICM wordmark and the orange Apply button vanish on orange and amber, so the bar turns navy there
+      if (NAVY_NAV[cur.dataset.layer]) L = LAYERS.surface;
       var tone = cur.dataset.layer + (y > 30);
       if (tone !== lastTone) {
         nav.style.setProperty("--nav-bg", L[0]); nav.style.setProperty("--nav-ink", L[1]);

@@ -31,6 +31,18 @@
             (lang === "th" ? T("ui.allby", "All papers by") + " " + esc(f.name) : "All papers by " + esc(f.name)) + "</span>" + C.icon("arrow") + "</a></p>" : "") +
           "</div></article>";
       }).join("");
+      var vbox = $("#vProfiles"), groups = c.visitingGroups || [];
+      if (vbox && c.visiting) vbox.innerHTML = groups.map(function (g) {
+        return c.visiting.filter(function (v) { return v.group === g.id; }).map(function (v) {
+          var who = [v.title, v.post].filter(Boolean).join(" · ");
+          return '<article class="vprof rise" id="' + v.id + '"><div class="vprof-pic"><img src="' + v.photo + '" alt="' + esc(v.name) + '" loading="lazy" width="533" height="640"></div><div>' +
+            '<div class="who">' + esc(who) + "</div><h3>" + esc(v.name) + '</h3><p class="vprof-place"><b>' + esc(v.role) + "</b><br>" + esc(v.place) + "</p>" +
+            (v.education.length ? "<h4>" + T("ui.edu", "Education") + '</h4><ul class="edu">' + v.education.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>" : "") +
+            (v.expertise.length ? "<h4>" + T("ui.exp", "Expertise") + '</h4><ul class="chips">' + v.expertise.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>" : "") +
+            "</div></article>";
+        }).join("");
+      }).join("");
+      if (vbox) C.reveal(vbox);
       $("#staffList").innerHTML = c.staff.map(function (s) {
         return '<div class="person"><img src="' + s.photo + '" alt="" loading="lazy" width="64" height="70"><div><b>' + esc(s.name) + "</b><span>" + esc(P(s.role)) + "</span><br><span>" + s.education.map(esc).join("<br>") + "</span></div></div>";
       }).join("");

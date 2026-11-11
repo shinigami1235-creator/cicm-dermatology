@@ -8,7 +8,7 @@
   var stage = document.getElementById("staffStage"); if (!stage) return;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var lang = window.CICM_LANG, which = document.documentElement.dataset.staff || "spotlight";
-  var COLORS = ["#f2c4ae", "#f39bc0", "#fbefc0", "#cdb7e0", "#f9d93d", "#a8d8b9"];
+  var COLORS = ["#fde7d3", "#ffc65c", "#fff4e0", "#d6e2f5", "#ffa500", "#f9d0ac"];
 
   function cut(f) { return "people/" + f.id + "-cut.webp"; }
   function who(f) { return [f.title, f.post].filter(Boolean).join(" · "); }
@@ -36,6 +36,7 @@
     stage.dataset.layout = which;
     if (which === "masthead") masthead(fac, ach); else if (which === "deck") deck(fac, ach); else spotlight(fac, ach);
     officers(c.staff);
+    visiting(c);
   });
 
   /* ---------- spotlight ---------- */
@@ -192,6 +193,48 @@
     }
     stack.addEventListener("pointerup", end); stack.addEventListener("pointercancel", end);
     layout(); showInfo();
+  }
+
+  /* ---------- visiting lecturers: tiles grouped by hospital, a dialog for each profile ---------- */
+  var GROUP_COLORS = ["#fde7d3", "#ffc65c", "#d6e2f5", "#fff4e0", "#f9d0ac", "#ffa500", "#fde7d3"];
+  function visiting(c) {
+    var box = document.getElementById("vGroups"), dlg = document.getElementById("vDlg");
+    if (!box || !c.visiting) return;
+    var groups = c.visitingGroups || [], list = [];
+    groups.forEach(function (g, gi) {
+      c.visiting.forEach(function (v) { if (v.group === g.id) list.push(Object.assign({}, v, { color: GROUP_COLORS[gi % GROUP_COLORS.length], groupName: P(g.name) })); });
+    });
+    box.innerHTML = groups.map(function (g) {
+      var mine = list.filter(function (v) { return v.group === g.id; });
+      return '<section class="v-group" aria-label="' + esc(P(g.name)) + '"><h4>' + esc(P(g.name)) + (mine.length > 1 ? " <span>" + mine.length + "</span>" : "") + '</h4><ul class="v-tiles">' +
+        mine.map(function (v) {
+          return '<li><button class="vt" type="button" data-i="' + list.indexOf(v) + '" style="--c:' + v.color + '">' +
+            '<span class="vt-pic"><img src="' + v.photo + '" alt="" loading="lazy" width="533" height="640"></span>' +
+            '<b class="vt-name">' + esc(v.name) + '</b><span class="vt-who">' + esc(who(v)) + "</span></button></li>";
+        }).join("") + "</ul></section>";
+    }).join("");
+    var inner = document.getElementById("vDlgIn"), counter = document.getElementById("vDlgCount"), cur = 0;
+    function show(i) {
+      cur = (i + list.length) % list.length; var v = list[cur];
+      dlg.style.setProperty("--c", v.color);
+      inner.innerHTML = '<div class="vdlg-pic"><img src="' + v.photo + '" alt="' + esc(v.name) + '"></div><div class="vdlg-text">' +
+        '<p class="vdlg-who">' + esc(who(v)) + '</p><h3 id="vDlgName">' + esc(v.name) + "</h3>" +
+        '<p class="vdlg-place"><b>' + esc(v.role) + "</b><br>" + esc(v.place) + "</p>" +
+        (v.education.length ? "<h4>" + T("ui.edu", "Education") + "</h4>" + eduList(v) : "") +
+        (v.expertise.length ? "<h4>" + T("ui.exp", "Expertise") + "</h4>" + chips(v) : "") + "</div>";
+      counter.textContent = (cur + 1) + " / " + list.length;
+    }
+    box.addEventListener("click", function (e) {
+      var b = e.target.closest(".vt"); if (!b) return;
+      show(+b.dataset.i); dlg.showModal(); dlg.querySelector(".vdlg-x").focus();
+    });
+    dlg.querySelectorAll(".vdlg-nav button").forEach(function (b) { b.addEventListener("click", function () { show(cur + (+b.dataset.d)); }); });
+    dlg.addEventListener("keydown", function (e) { if (e.key === "ArrowRight") show(cur + 1); else if (e.key === "ArrowLeft") show(cur - 1); });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg || e.target.closest("[data-close]")) dlg.close(); });
+    dlg.addEventListener("close", function () { var b = box.querySelector('.vt[data-i="' + cur + '"]'); if (b) b.focus(); });
+    var sx = null;
+    inner.addEventListener("pointerdown", function (e) { sx = e.clientX; });
+    inner.addEventListener("pointerup", function (e) { if (sx == null) return; var dx = e.clientX - sx; sx = null; if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1)); });
   }
 
   /* ---------- academic officers ---------- */

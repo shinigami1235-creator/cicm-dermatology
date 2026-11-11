@@ -1,7 +1,7 @@
 import json,re
 raw=json.load(open('/mnt/user-data/uploads/CICM/research/pubmed-raw.json'))
 ids,recs=raw['ids'],raw['recs']
-fac={'Meephansan J':'Meephansan','Juntongjin P':'Juntongjin','Sirithanabadeekul P':'Sirithanabadeekul','Nitayavardhana S':'Nitayavardhana','Phadungsaksawasdi P':'Phadungsaksawasdi'}
+fac={'Meephansan J':'Meephansan','Juntongjin P':'Juntongjin','Sirithanabadeekul P':'Sirithanabadeekul','Nitayavardhana S':'Nitayavardhana','Phadungsaksawasdi P':'Phadungsaksawasdi','Charoensuksira S':'Charoensuksira','Siriphanit R':'Siriphanit'}
 derm=re.compile(r'skin|derm|psoria|acne|melasma|hair|alopecia|nail|keratinocyte|laser|vitiligo|eczema|wound|botulinum|filler|pigment|melano|cutaneous|aging|ageing|urticaria|photo|pruritus|hyperhidrosis|scar|keloid|tattoo|rosacea|wrinkle|transdermal|topical|collagen|fibroblast|exosome|microneedle|lupus|pemphig|lymphoma|melanoma|contact|UVB|sebac|axillary|facial|cellulite|naevus|nevus|hypomelanosis|panniculitis|eruption|bullous|sunscreen|moistur|Malassezia',re.I)
 papers={}
 for k,f in fac.items():

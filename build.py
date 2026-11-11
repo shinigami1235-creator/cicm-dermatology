@@ -6,7 +6,7 @@ IMPORTMAP = '''<script type="module" src="js/emblem.js"></script>
 <script type="module" src="js/map.js"></script>
 <script src="js/scope.js" defer></script>
 <script src="js/heroes.js" defer></script>
-<script src="js/staff.js?v=20261110d" defer></script>
+<script src="js/staff.js?v=20261111a" defer></script>
 <script src="js/pick.js" defer></script>'''
 PAGES = {
   'index.html': ('CICM Dermatology | Thammasat University', "Master's and Ph.D. programs in dermatology at Chulabhorn International College of Medicine, Thammasat University.", IMPORTMAP),

@@ -18,7 +18,9 @@
 "year": 2026,
 "doi": "10.1111/phpp.70122",
 "faculty": [
-"Meephansan J"
+"Meephansan J",
+"Charoensuksira S",
+"Siriphanit R"
 ],
 "topic": "Injectables & aesthetics",
 "design": "Randomized Controlled Trial"
@@ -66,7 +68,9 @@
 "doi": "10.1111/exd.70176",
 "faculty": [
 "Meephansan J",
-"Sirithanabadeekul P"
+"Sirithanabadeekul P",
+"Charoensuksira S",
+"Siriphanit R"
 ],
 "topic": "Injectables & aesthetics",
 "design": ""
@@ -112,7 +116,8 @@
 "doi": "10.1007/s00403-025-04307-7",
 "faculty": [
 "Meephansan J",
-"Sirithanabadeekul P"
+"Sirithanabadeekul P",
+"Charoensuksira S"
 ],
 "topic": "Hair & nails",
 "design": ""
@@ -134,9 +139,36 @@
 "doi": "10.1007/s00403-025-03908-6",
 "faculty": [
 "Meephansan J",
-"Sirithanabadeekul P"
+"Sirithanabadeekul P",
+"Charoensuksira S"
 ],
 "topic": "Injectables & aesthetics",
+"design": ""
+},
+{
+"pmid": "40565255",
+"title": "Progenitor Cell Dynamics in Androgenetic Alopecia: Insights from Spatially Resolved Transcriptomics",
+"authors": [
+"Charoensuksira S",
+"Surinlert P",
+"Krajarng A",
+"Nualsanit T",
+"Payuhakrit W",
+"Panpinyaporn P",
+"Khumsri W",
+"Thanasarnaksorn W",
+"Suwanchinda A",
+"Hongeng S",
+"Ponnikorn S"
+],
+"journal": "International Journal of Molecular Sciences",
+"iso": "Int J Mol Sci",
+"year": 2025,
+"doi": "10.3390/ijms26125792",
+"faculty": [
+"Charoensuksira S"
+],
+"topic": "Hair & nails",
 "design": ""
 },
 {
@@ -192,7 +224,32 @@
 "year": 2024,
 "doi": "10.1007/s00403-024-03453-8",
 "faculty": [
-"Meephansan J"
+"Meephansan J",
+"Charoensuksira S"
+],
+"topic": "Hair & nails",
+"design": ""
+},
+{
+"pmid": "39201715",
+"title": "Disturbance of Immune Microenvironment in Androgenetic Alopecia through Spatial Transcriptomics",
+"authors": [
+"Charoensuksira S",
+"Tantiwong S",
+"Pongklaokam J",
+"Hanvivattanakul S",
+"Surinlert P",
+"Krajarng A",
+"Thanasarnaksorn W",
+"Hongeng S",
+"Ponnikorn S"
+],
+"journal": "International Journal of Molecular Sciences",
+"iso": "Int J Mol Sci",
+"year": 2024,
+"doi": "10.3390/ijms25169031",
+"faculty": [
+"Charoensuksira S"
 ],
 "topic": "Hair & nails",
 "design": ""
@@ -214,7 +271,8 @@
 "year": 2024,
 "doi": "10.1111/phpp.13004",
 "faculty": [
-"Meephansan J"
+"Meephansan J",
+"Charoensuksira S"
 ],
 "topic": "Lasers & light",
 "design": "Clinical Trial"
@@ -255,7 +313,8 @@
 "doi": "10.1007/s00403-024-03396-0",
 "faculty": [
 "Meephansan J",
-"Sirithanabadeekul P"
+"Sirithanabadeekul P",
+"Charoensuksira S"
 ],
 "topic": "Lasers & light",
 "design": "Randomized Controlled Trial"
@@ -281,7 +340,8 @@
 "doi": "10.1007/s00403-024-03448-5",
 "faculty": [
 "Meephansan J",
-"Sirithanabadeekul P"
+"Sirithanabadeekul P",
+"Charoensuksira S"
 ],
 "topic": "Skin biology & immunology",
 "design": ""
@@ -304,7 +364,8 @@
 "year": 2023,
 "doi": "10.1038/s41598-023-31610-y",
 "faculty": [
-"Meephansan J"
+"Meephansan J",
+"Charoensuksira S"
 ],
 "topic": "Lasers & light",
 "design": ""
@@ -518,7 +579,8 @@
 "year": 2022,
 "doi": "10.1016/j.jdermsci.2022.10.003",
 "faculty": [
-"Meephansan J"
+"Meephansan J",
+"Charoensuksira S"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
 "design": ""
