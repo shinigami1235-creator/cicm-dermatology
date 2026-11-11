@@ -63,7 +63,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json?v=20261111a").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261111b").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -85,7 +85,7 @@
   }
   var papersP = null;
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261111a").then(function (r) { return r.json(); });
+    if (!papersP) papersP = fetch("data/publications.json?v=20261111b").then(function (r) { return r.json(); });
     return papersP;
   }
 
@@ -124,7 +124,7 @@
       T("research.lecturer", "Lecturer") + '</th><th class="num">' + T("research.docs", "Documents") + '</th><th class="num">' + T("research.cites", "Citations") + '</th><th class="num">h-index</th></tr></thead><tbody>' +
       fac.map(function (f) {
         return '<tr><td><a href="' + scopusUrl(f.scopus.id) + '" target="_blank" rel="noopener">' + esc(f.name) + '</a></td><td class="num tnum">' + fmtN(f.scopus.docs) +
-          '</td><td class="num tnum">' + fmtN(f.scopus.cites) + '</td><td class="num tnum">' + f.scopus.h + "</td></tr>";
+          '</td><td class="num tnum">' + (f.scopus.cites ? fmtN(f.scopus.cites) : "") + '</td><td class="num tnum">' + (f.scopus.h || "") + "</td></tr>";
       }).join("") + "</tbody>";
   }
   function yearFigure(papers) {
@@ -224,9 +224,9 @@
 
   /* ---------- nav tone + depth gauge ---------- */
   var LAYERS = {
-    surface: ["#06283f", "#ffffff", "dark"], epi: ["#fde7d3", "#06283f", "light"], dermis: ["#f47b20", "#06283f", "light"],
-    deep: ["#c8202f", "#ffffff", "dark"], vessel: ["#1d4787", "#ffffff", "dark"], cell: ["#0b2235", "#eef3f8", "dark"],
-    gland: ["#ffc65c", "#06283f", "light"], "fat-pale": ["#fff4e0", "#06283f", "light"], fat: ["#ffa500", "#06283f", "light"]
+    surface: ["#14110f", "#ffffff", "dark"], epi: ["#fde9d7", "#14110f", "light"], dermis: ["#f67b1e", "#14110f", "light"],
+    deep: ["#d8161e", "#ffffff", "dark"], vessel: ["#1b7a3a", "#ffffff", "dark"], cell: ["#1e1a18", "#f4f2f0", "dark"],
+    gland: ["#fbe40b", "#14110f", "light"], "fat-pale": ["#fff8d9", "#14110f", "light"], fat: ["#f67b1e", "#14110f", "light"]
   };
   var NAVY_NAV = { dermis: 1, gland: 1, fat: 1 };
   var DEPTH_NAMES = { surface: "Surface", epidermis: "Epidermis", papillary: "Papillary dermis", reticular: "Reticular dermis", plexus: "Deep vascular plexus", cell: "Cell level", gland: "Sweat gland", subcutis: "Subcutis" };

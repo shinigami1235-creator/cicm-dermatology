@@ -18,7 +18,7 @@
           "<h3>" + T("ui.edu", "Education") + '</h3><ul class="edu">' + f.education.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>" +
           (f.expertise.length ? "<h3>" + T("ui.exp", "Expertise") + '</h3><ul class="chips">' + f.expertise.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>" : "") +
           (f.scopus && f.scopus.id ? '<p class="scopus-line"><a href="' + C.scopusUrl(f.scopus.id) + '" target="_blank" rel="noopener"><b>Scopus</b> ' +
-            C.fmtN(f.scopus.docs) + " " + (lang === "th" ? T("research.docs", "เอกสาร") : f.scopus.docs === 1 ? "document" : "documents") + " · " + C.fmtN(f.scopus.cites) + " " + T("research.cites", "citations").toLowerCase() + " · h-index " + f.scopus.h + "</a></p>" : "") +
+            C.fmtN(f.scopus.docs) + " " + (lang === "th" ? T("research.docs", "เอกสาร") : f.scopus.docs === 1 ? "document" : "documents") + (f.scopus.cites ? " · " + C.fmtN(f.scopus.cites) + " " + T("research.cites", "citations").toLowerCase() : "") + (f.scopus.h ? " · h-index " + f.scopus.h : "") + "</a></p>" : "") +
           "</div><div>" +
           (ach.length ? "<h3>" + T("ui.ach", "Achievements") + '</h3><ul class="ach">' + ach.map(function (a) {
             var txt = esc(P(a.text)); if (a.link) txt = '<a href="' + esc(a.link) + '" target="_blank" rel="noopener">' + txt + "</a>";

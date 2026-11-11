@@ -1,6 +1,7 @@
 /* The CICM emblem in 3D. Model built in Blender from the traced logo (assets/cicm-emblem.glb).
    Falls back to the still render when WebGL is missing or motion is reduced. */
 import * as THREE from "three";
+import "./orbit.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 

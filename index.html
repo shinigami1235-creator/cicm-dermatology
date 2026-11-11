@@ -13,16 +13,16 @@
 <link rel="icon" href="assets/cicm-mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="preload" href="fonts/bai-jamjuree-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=20261111a">
+<link rel="stylesheet" href="css/site.css?v=20261111b">
 <script>document.documentElement.classList.replace('no-js','js');(function(){var q=new URLSearchParams(location.search),h=q.get('hero'),s=q.get('staff');try{if(h)localStorage.setItem('cicm-hero',h);else h=localStorage.getItem('cicm-hero');if(s)localStorage.setItem('cicm-staff',s);else s=localStorage.getItem('cicm-staff')}catch(e){}var d=document.documentElement.dataset;d.hero=['slide','type','lens'].indexOf(h)>-1?h:'type';d.staff=['spotlight','masthead','deck'].indexOf(s)>-1?s:'deck'})()</script>
 <script src="js/config.js" defer></script>
-<script src="js/i18n.js?v=20261111a" defer></script>
-<script src="js/site.js?v=20261111a" defer></script>
-<script type="module" src="js/emblem.js"></script>
+<script src="js/i18n.js?v=20261111b" defer></script>
+<script src="js/site.js?v=20261111b" defer></script>
+<script type="module" src="js/emblem.js?v=20261111b"></script>
 <script type="module" src="js/map.js"></script>
 <script src="js/scope.js" defer></script>
 <script src="js/heroes.js" defer></script>
-<script src="js/staff.js?v=20261111a" defer></script>
+<script src="js/staff.js?v=20261111b" defer></script>
 <script src="js/pick.js" defer></script>
 </head>
 <body data-page="home">
@@ -297,6 +297,10 @@
         <h2 id="faculty-title" data-i18n="faculty.title">The faculty</h2>
         <p data-i18n="faculty.lede">Eight permanent lecturers who trained in Thailand, Japan, the United States, the United Kingdom and Switzerland.</p>
       </div>
+      <div class="orbit" id="orbit" aria-hidden="true">
+        <div class="orbit-tag" id="orbitTag"><b></b><span></span></div>
+        <p class="orbit-key"><span><i class="ok ok-in"></i><span data-i18n="orbit.in">Inner ring: permanent lecturers</span></span><span><i class="ok ok-out"></i><span data-i18n="orbit.out">Outer ring: visiting lecturers</span></span></p>
+      </div>
       <div class="staff-stage" id="staffStage"></div>
       <div class="visiting" id="visiting">
         <div class="v-head">
@@ -392,7 +396,7 @@
           <div class="conf-track"><h3 data-i18n="conf.t3">Cadaver Workshop</h3><p data-i18n="conf.t3t">Anatomy to clinical application</p><p class="conf-format" data-i18n="conf.t3f">Lectures, hands-on training and live demonstration</p></div>
         </article>
       </div>
-      <p class="conf-speakers rise"><b data-i18n="conf.faculty">Faculty</b> Assoc. Prof. Jitlada Meephansan, M.D., Ph.D. · Assoc. Prof. Premjit Juntongjin, M.D. · Assoc. Prof. Punyaphat Sirithanabadeekul, M.D. · Asst. Prof. Sunatra Nitayavardhana, M.D. · Pawit Phadungsaksawasdi, M.D., Ph.D. · Rueangrit Siriphanit, M.D., M.Sc. · Sasin Charoensuksira, M.D., Ph.D.</p>
+      <p class="conf-speakers rise"><b data-i18n="conf.faculty">Faculty</b> Assoc. Prof. Jitlada Meephansan, M.D., Ph.D. · Assoc. Prof. Premjit Juntongjin, M.D. · Assoc. Prof. Punyaphat Sirithanabadeekul, M.D. · Asst. Prof. Sunatra Nitayavardhana, M.D. · Pawit Phadungsaksawasdi, M.D., Ph.D. · Rueangrit Siriphanit, M.D., M.Sc., Ph.D. · Sasin Charoensuksira, M.D., Ph.D.</p>
       <div class="conf-reels">
         <h3 class="rise" data-i18n="conf.reels">CICM 2026 videos</h3>
         <ul>

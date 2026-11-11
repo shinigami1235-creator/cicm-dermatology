@@ -8,9 +8,11 @@
   var stage = document.getElementById("staffStage"); if (!stage) return;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var lang = window.CICM_LANG, which = document.documentElement.dataset.staff || "spotlight";
-  var COLORS = ["#fde7d3", "#ffc65c", "#fff4e0", "#d6e2f5", "#ffa500", "#f9d0ac"];
+  var COLORS = ["#fde9d7", "#fbe40b", "#fff8d9", "#e8e7e8", "#f67b1e", "#fad5b4"];
 
   function cut(f) { return "people/" + f.id + "-cut.webp"; }
+  // set by the deck and spotlight layouts; the 3D orbit calls it through CICM.facultyTo
+  var jumpTo = null;
   function who(f) { return [f.title, f.post].filter(Boolean).join(" · "); }
   function eduList(f) { return '<ul class="st-edu">' + f.education.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>"; }
   function chips(f) { return f.expertise.length ? '<ul class="chips">' + f.expertise.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>" : ""; }
@@ -24,7 +26,7 @@
       '<div class="st-cols"><div><h4>' + T("ui.edu", "Education") + "</h4>" + eduList(f) + "</div>" +
       "<div>" + (f.expertise.length ? "<h4>" + T("ui.exp", "Expertise") + "</h4>" + chips(f) : "") + achList(f, ach) +
       (n ? '<p class="st-papers"><a href="research.html?lecturer=' + encodeURIComponent(f.pubmed) + '"><b>' + n + "</b> " + (lang === "th" ? "บทความใน PubMed" : "papers in PubMed") + "</a></p>" : "") +
-      (f.scopus && f.scopus.docs ? '<p class="st-papers"><a href="' + C.scopusUrl(f.scopus.id) + '" target="_blank" rel="noopener"><b>' + f.scopus.h + "</b> " + (lang === "th" ? "h-index ใน Scopus" : "h-index in Scopus") + "</a></p>" : "") +
+      (f.scopus && f.scopus.h ? '<p class="st-papers"><a href="' + C.scopusUrl(f.scopus.id) + '" target="_blank" rel="noopener"><b>' + f.scopus.h + "</b> " + (lang === "th" ? "h-index ใน Scopus" : "h-index in Scopus") + "</a></p>" : "") +
       "</div></div>";
   }
 
@@ -37,6 +39,14 @@
     if (which === "masthead") masthead(fac, ach); else if (which === "deck") deck(fac, ach); else spotlight(fac, ach);
     officers(c.staff);
     visiting(c);
+    C.facultyTo = function (id) {
+      var i = fac.findIndex(function (f) { return f.id === id; });
+      if (i < 0) return;
+      if (jumpTo) jumpTo(i);
+      stage.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+    };
+    C.people = { faculty: fac.map(function (f) { return { id: f.id, name: f.name, who: who(f), photo: cut(f), inner: true }; }), visiting: visitingList };
+    window.dispatchEvent(new Event("cicm:people"));
   });
 
   /* ---------- spotlight ---------- */
@@ -81,6 +91,7 @@
     var arch = stage.querySelector(".sp-arch"), sx = null;
     arch.addEventListener("pointerdown", function (e) { sx = e.clientX; });
     arch.addEventListener("pointerup", function (e) { if (sx == null) return; var dx = e.clientX - sx; sx = null; if (Math.abs(dx) > 40) { render(i + (dx < 0 ? 1 : -1)); schedule(); } });
+    jumpTo = function (k) { render(k); };
     render(0, true); setPaused(reduce);
     new IntersectionObserver(function (es) { if (es[0].isIntersecting) schedule(); else clearTimeout(timer); }).observe(root);
   }
@@ -193,10 +204,17 @@
     }
     stack.addEventListener("pointerup", end); stack.addEventListener("pointercancel", end);
     layout(); showInfo();
+    jumpTo = function (ci) {
+      if (order[0] === ci) return;
+      while (order[0] !== ci) order.push(order.shift());
+      Object.keys(flying).forEach(function (k) { land(+k); });
+      layout(); showInfo();
+    };
   }
 
   /* ---------- visiting lecturers: tiles grouped by hospital, a dialog for each profile ---------- */
-  var GROUP_COLORS = ["#fde7d3", "#ffc65c", "#d6e2f5", "#fff4e0", "#f9d0ac", "#ffa500", "#fde7d3"];
+  var GROUP_COLORS = ["#fde9d7", "#fbe40b", "#e8e7e8", "#fff8d9", "#fad5b4", "#f67b1e", "#fde9d7"];
+  var visitingList = [];
   function visiting(c) {
     var box = document.getElementById("vGroups"), dlg = document.getElementById("vDlg");
     if (!box || !c.visiting) return;
@@ -224,10 +242,13 @@
         (v.expertise.length ? "<h4>" + T("ui.exp", "Expertise") + "</h4>" + chips(v) : "") + "</div>";
       counter.textContent = (cur + 1) + " / " + list.length;
     }
+    function open(i) { show(i); dlg.showModal(); dlg.querySelector(".vdlg-x").focus(); }
     box.addEventListener("click", function (e) {
       var b = e.target.closest(".vt"); if (!b) return;
-      show(+b.dataset.i); dlg.showModal(); dlg.querySelector(".vdlg-x").focus();
+      open(+b.dataset.i);
     });
+    visitingList = list.map(function (v) { return { id: v.id, name: v.name, who: who(v), place: v.place, photo: v.photo, color: v.color }; });
+    C.visitingOpen = function (id) { var i = list.findIndex(function (v) { return v.id === id; }); if (i > -1) open(i); };
     dlg.querySelectorAll(".vdlg-nav button").forEach(function (b) { b.addEventListener("click", function () { show(cur + (+b.dataset.d)); }); });
     dlg.addEventListener("keydown", function (e) { if (e.key === "ArrowRight") show(cur + 1); else if (e.key === "ArrowLeft") show(cur - 1); });
     dlg.addEventListener("click", function (e) { if (e.target === dlg || e.target.closest("[data-close]")) dlg.close(); });
