@@ -3,11 +3,12 @@
   "use strict";
   var C = window.CICM, T = window.t, lang = window.CICM_LANG;
   var $ = function (s) { return document.querySelector(s); };
-  var NAMES = { "Meephansan J": "Jitlada Meephansan", "Juntongjin P": "Premjit Juntongjin", "Sirithanabadeekul P": "Punyaphat Sirithanabadeekul", "Nitayavardhana S": "Sunatra Nitayavardhana", "Phadungsaksawasdi P": "Pawit Phadungsaksawasdi" };
+  var NAMES = {};   // PubMed name -> full name, from the permanent lecturers in content.json
   var DESIGNS = ["Randomized Controlled Trial", "Clinical Trial", "Meta-Analysis", "Systematic Review", "Review", "Case Reports"];
 
-  C.loadPapers().then(function (data) {
-    var papers = data.papers, s = C.stats(papers);
+  Promise.all([C.loadPapers(), C.loadContent()]).then(function (r) {
+    var data = r[0], papers = data.papers, s = C.stats(papers);
+    r[1].faculty.forEach(function (f) { if (f.pubmed) NAMES[f.pubmed] = f.name; });
     $("#volRange").textContent = (s.sc ? "PubMed + Scopus, " : "PubMed, ") + s.y0 + (lang === "th" ? " ถึง " : " to ") + s.y1;
     $("#researchLede").textContent = C.researchLede(s);
     $("#journalTable").innerHTML = C.journalTable(papers, 8);
@@ -16,7 +17,7 @@
     var q = $("#q"), fL = $("#fLect"), fY = $("#fYear"), fD = $("#fDesign"), topicsEl = $("#topics");
     Object.keys(NAMES).forEach(function (k) {
       var n = papers.filter(function (p) { return p.faculty.indexOf(k) > -1; }).length;
-      fL.insertAdjacentHTML("beforeend", '<option value="' + k + '">' + NAMES[k] + " (" + n + ")</option>");
+      fL.insertAdjacentHTML("beforeend", '<option value="' + C.esc(k) + '">' + C.esc(NAMES[k]) + " (" + n + ")</option>");
     });
     for (var y = s.y1; y >= s.y0; y--) { var ny = papers.filter(function (p) { return p.year === y; }).length; if (ny) fY.insertAdjacentHTML("beforeend", '<option value="' + y + '">' + y + " (" + ny + ")</option>"); }
     DESIGNS.forEach(function (d) { var nd = papers.filter(function (p) { return p.design === d; }).length; if (nd) fD.insertAdjacentHTML("beforeend", '<option value="' + d + '">' + d + " (" + nd + ")</option>"); });
