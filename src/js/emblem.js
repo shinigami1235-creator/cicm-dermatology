@@ -3,6 +3,7 @@
 import * as THREE from "three";
 import "./orbit.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { MeshoptDecoder } from "three/addons/libs/meshopt_decoder.module.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 
 const stage = document.getElementById("stage");
@@ -37,7 +38,7 @@ function start() {
   scene.add(pivot);
 
   let model = null;
-  new GLTFLoader().load("assets/cicm-emblem.glb", (gltf) => {
+  new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).load("assets/cicm-emblem.glb?v=2", (gltf) => {
     model = gltf.scene;
     model.rotation.x = Math.PI / 2; // Blender lays the emblem flat; stand it up facing the camera
     const box = new THREE.Box3().setFromObject(model);

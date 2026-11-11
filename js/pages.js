@@ -1,7 +1,7 @@
 /* Faculty and admissions page renderers */
 (function () {
   "use strict";
-  var C = window.CICM, T = window.t, P = window.pick, lang = window.CICM_LANG, esc = C.esc;
+  var C = window.CICM, T = window.t, P = window.pick, lang = window.CICM_LANG, esc = C.esc, url = C.url;
   var $ = function (s) { return document.querySelector(s); };
   var page = document.body.dataset.page;
 
@@ -12,8 +12,8 @@
         var mine = f.pubmed ? papers.filter(function (p) { return p.faculty.indexOf(f.pubmed) > -1; }) : [];
         var ach = (c.achievements || []).filter(function (a) { return a.faculty === f.id; });
         var who = [f.title, f.post].filter(Boolean).join(" · ");
-        return '<article class="profile rise" id="' + f.id + '">' +
-          '<div class="pic"><img src="' + f.photo + '" alt="' + esc(f.name) + '" loading="lazy" width="200" height="219"></div>' +
+        return '<article class="profile rise" id="' + esc(f.id) + '">' +
+          '<div class="pic"><img src="' + url(f.photo) + '" alt="' + esc(f.name) + '" loading="lazy" width="200" height="219"></div>' +
           '<div><div class="who">' + esc(who) + "</div><h2>" + esc(f.name) + "</h2>" +
           "<h3>" + T("ui.edu", "Education") + '</h3><ul class="edu">' + f.education.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>" +
           (f.expertise.length ? "<h3>" + T("ui.exp", "Expertise") + '</h3><ul class="chips">' + f.expertise.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>" : "") +
@@ -21,12 +21,12 @@
             C.fmtN(f.scopus.docs) + " " + (lang === "th" ? T("research.docs", "เอกสาร") : f.scopus.docs === 1 ? "document" : "documents") + (f.scopus.cites ? " · " + C.fmtN(f.scopus.cites) + " " + T("research.cites", "citations").toLowerCase() : "") + (f.scopus.h ? " · h-index " + f.scopus.h : "") + "</a></p>" : "") +
           "</div><div>" +
           (ach.length ? "<h3>" + T("ui.ach", "Achievements") + '</h3><ul class="ach">' + ach.map(function (a) {
-            var txt = esc(P(a.text)); if (a.link) txt = '<a href="' + esc(a.link) + '" target="_blank" rel="noopener">' + txt + "</a>";
+            var txt = esc(P(a.text)); if (a.link) txt = '<a href="' + url(a.link) + '" target="_blank" rel="noopener">' + txt + "</a>";
             return '<li><span class="y">' + esc(a.year) + "</span>" + txt + "</li>"; }).join("") + "</ul>" : "") +
           (mine.length ? "<h3>" + T("ui.recent", "Recent papers") + " · " + mine.length + " " + T("ui.pubcount", "papers in PubMed") + '</h3><ul class="papers">' +
             mine.slice(0, 5).map(function (p) {
               var href = C.paperHref(p);
-              return '<li><a href="' + href + '" target="_blank" rel="noopener">' + esc(p.title) + "</a><small>" + esc(p.journal) + ", " + p.year + "</small></li>";
+              return '<li><a href="' + href + '" target="_blank" rel="noopener">' + esc(p.title) + "</a><small>" + esc(p.journal) + ", " + esc(p.year) + "</small></li>";
             }).join("") + '</ul><p style="margin-top:14px"><a class="link-arrow" href="research.html?lecturer=' + encodeURIComponent(f.pubmed) + '"><span>' +
             (lang === "th" ? T("ui.allby", "All papers by") + " " + esc(f.name) : "All papers by " + esc(f.name)) + "</span>" + C.icon("arrow") + "</a></p>" : "") +
           "</div></article>";
@@ -35,7 +35,7 @@
       if (vbox && c.visiting) vbox.innerHTML = groups.map(function (g) {
         return c.visiting.filter(function (v) { return v.group === g.id; }).map(function (v) {
           var who = [v.title, v.post].filter(Boolean).join(" · ");
-          return '<article class="vprof rise" id="' + v.id + '"><div class="vprof-pic"><img src="' + v.photo + '" alt="' + esc(v.name) + '" loading="lazy" width="533" height="640"></div><div>' +
+          return '<article class="vprof rise" id="' + esc(v.id) + '"><div class="vprof-pic"><img src="' + url(v.photo) + '" alt="' + esc(v.name) + '" loading="lazy" width="533" height="640"></div><div>' +
             '<div class="who">' + esc(who) + "</div><h3>" + esc(v.name) + '</h3><p class="vprof-place"><b>' + esc(v.role) + "</b><br>" + esc(v.place) + "</p>" +
             (v.education.length ? "<h4>" + T("ui.edu", "Education") + '</h4><ul class="edu">' + v.education.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>" : "") +
             (v.expertise.length ? "<h4>" + T("ui.exp", "Expertise") + '</h4><ul class="chips">' + v.expertise.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>" : "") +
@@ -44,7 +44,7 @@
       }).join("");
       if (vbox) C.reveal(vbox);
       $("#staffList").innerHTML = c.staff.map(function (s) {
-        return '<div class="person"><img src="' + s.photo + '" alt="" loading="lazy" width="64" height="70"><div><b>' + esc(s.name) + "</b><span>" + esc(P(s.role)) + "</span><br><span>" + s.education.map(esc).join("<br>") + "</span></div></div>";
+        return '<div class="person"><img src="' + url(s.photo) + '" alt="" loading="lazy" width="64" height="70"><div><b>' + esc(s.name) + "</b><span>" + esc(P(s.role)) + "</span><br><span>" + s.education.map(esc).join("<br>") + "</span></div></div>";
       }).join("");
       C.reveal($("#profiles"));
       if (location.hash) { var el = document.querySelector(location.hash); if (el) el.scrollIntoView(); }
@@ -92,7 +92,7 @@
         if (!items.length) return "";
         return '<div class="dl-group"><h3>' + T("dl." + g[0], g[1]) + "</h3>" + items.map(function (d) {
           var folder = /drive\.google\.com\/drive\/folders/.test(d.url);
-          return '<a class="dl" href="' + esc(d.url) + '" target="_blank" rel="noopener"><span class="t">' + esc(P(d.title)) + '</span><span class="k">' + C.icon(folder ? "folder" : "file") + (folder ? T("ui.folder", "Folder") : "PDF") + "</span></a>";
+          return '<a class="dl" href="' + url(d.url) + '" target="_blank" rel="noopener"><span class="t">' + esc(P(d.title)) + '</span><span class="k">' + C.icon(folder ? "folder" : "file") + (folder ? T("ui.folder", "Folder") : "PDF") + "</span></a>";
         }).join("") + "</div>";
       }).join("");
     });

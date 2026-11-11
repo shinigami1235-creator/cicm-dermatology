@@ -2,11 +2,22 @@
 import pathlib
 SRC = pathlib.Path(__file__).parent / 'src'; OUT = pathlib.Path(__file__).parent
 head = (SRC/'head.html').read_text(); header = (SRC/'header.html').read_text(); footer = (SRC/'footer.html').read_text()
-IMPORTMAP = '''<script type="module" src="js/emblem.js?v=20261111b"></script>
-<script type="module" src="js/map.js"></script>
+IMPORTMAP = '''<script>
+/* the 3D emblem (three.js) and the map (d3) are large, so each loads only when its section is near */
+document.addEventListener("DOMContentLoaded", function () {
+  [["js/emblem.js?v=20261111d", "#orbit, #stage"], ["js/map.js?v=20261111d", "#map"]].forEach(function (job) {
+    var els = document.querySelectorAll(job[1]), done = false;
+    function go() { if (done) return; done = true; import("./" + job[0]); }
+    if (!els.length) return;
+    if (!("IntersectionObserver" in window)) return go();
+    var io = new IntersectionObserver(function (es) { if (es.some(function (e) { return e.isIntersecting; })) { io.disconnect(); go(); } }, { rootMargin: "1200px 0px" });
+    els.forEach(function (el) { io.observe(el); });
+  });
+});
+</script>
 <script src="js/scope.js" defer></script>
 <script src="js/heroes.js" defer></script>
-<script src="js/staff.js?v=20261111b" defer></script>
+<script src="js/staff.js?v=20261111d" defer></script>
 <script src="js/pick.js" defer></script>'''
 PAGES = {
   'index.html': ('CICM Dermatology | Thammasat University', "Master's and Ph.D. programs in dermatology at Chulabhorn International College of Medicine, Thammasat University.", IMPORTMAP),

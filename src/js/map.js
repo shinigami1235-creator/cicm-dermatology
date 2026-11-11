@@ -127,7 +127,7 @@ function renderList(partners) {
     if (arcByName[p.name]) arcByName[p.name].classList.add("lit");
     nameEl.textContent = p.name;
     placeEl.textContent = [p.place, p.mou ? T("MOU signed", "ลงนาม MOU") : ""].filter(Boolean).join(" · ");
-    thumbs.innerHTML = n > 1 ? p.photos.map((ph, x) => `<button type="button" aria-label="${T("Photo", "ภาพที่")} ${x + 1}"><img src="photos/${ph}-sm.webp" alt="" loading="lazy"></button>`).join("") : "";
+    thumbs.innerHTML = n > 1 ? p.photos.map((ph, x) => `<button type="button" aria-label="${T("Photo", "ภาพที่")} ${x + 1}"><img src="photos/${esc(ph)}-sm.webp" alt="" loading="lazy"></button>`).join("") : "";
     thumbs.querySelectorAll("button").forEach((t, x) => t.addEventListener("click", () => photo(x)));
     stageEl.classList.toggle("single", n < 2);
     photo(0);

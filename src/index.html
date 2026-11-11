@@ -37,7 +37,7 @@
         <div class="sl-world">
           <div class="sl-slide">
             <div class="sl-label"><span>CICM Derm.</span><span>M.Sc. / Ph.D.</span><span>Thammasat U.</span><span>H&amp;E · 2026</span></div>
-            <img class="sl-tissue" src="assets/he-section.webp" alt="" width="2000" height="750" decoding="async">
+            <img class="sl-tissue" src="assets/he-section.webp" alt="" width="2000" height="750" decoding="async" loading="lazy">
           </div>
         </div>
         <div class="sl-field">
@@ -165,7 +165,7 @@
         <p data-i18n="programs.lede">Two master's tracks and a Ph.D., all taught in English. The master's programs take two years while the Ph.D. runs two to four years depending on how you enter.</p>
       </div>
       <div class="programs" id="programList"></div>
-      <p style="margin-top:28px" class="rise"><a class="link-arrow" href="admissions.html#courses"><span data-i18n="programs.more">See the courses, requirements and fees</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+      <p style="margin-top:28px" class="rise"><a class="link-arrow" href="admissions.html#courses"><span data-i18n="programs.more">See the courses and requirements</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
 
       <div class="for-who">
         <div class="rise">
@@ -297,7 +297,7 @@
         </ul>
       </div>
       <figure class="conf-film rise">
-        <video class="conf-preview" muted loop playsinline preload="none" poster="media/conference/recap.jpg" data-src="media/conference/preview.mp4" aria-hidden="true"></video>
+        <video class="conf-preview" muted loop playsinline preload="none" data-poster-lazy="media/conference/recap.jpg" data-src="media/conference/preview.mp4" aria-hidden="true"></video>
         <button class="conf-play" type="button" data-film="media/conference/recap.mp4" data-poster="media/conference/recap.jpg"><svg aria-hidden="true"><use href="#i-play"/></svg><span data-i18n="conf.watch">Watch the CICM 2026 recap (2:12)</span></button>
       </figure>
       <div class="conf-days">
@@ -349,6 +349,7 @@
   <section class="layer apply" id="apply" data-layer="fat" data-depth="4000" data-depth-name="subcutis" aria-labelledby="apply-title">
     <div class="wrap">
       <h2 id="apply-title" class="rise" data-i18n="apply.title">Apply to CICM Dermatology</h2>
+      <table class="apply-fees rise" id="applyFees"></table>
       <ol class="steps">
         <li class="rise"><h3 data-i18n="step.1">Check the requirements</h3><p data-i18n="step.1t">Read the entry requirements and English score minimums for your program.</p></li>
         <li class="rise" style="--d:60ms"><h3 data-i18n="step.2">Prepare your documents</h3><p data-i18n="step.2t">Application form, ID or passport, degree certificates, transcript, medical license, internship certificate, English score, CV and three recommendation letters.</p></li>
@@ -372,7 +373,8 @@
 {{footer}}
 <dialog class="film" id="film" aria-label="CICM Dermatology film">
   <button class="btn btn-primary film-close" type="button" data-close-film><svg aria-hidden="true"><use href="#i-close"/></svg><span data-i18n="ui.close">Close</span></button>
-  <video controls playsinline preload="none" poster="media/hero-poster.jpg"><source data-src="media/film.mp4" type="video/mp4"></video>
+  <video controls playsinline preload="none" poster="media/hero-poster.jpg"><source type="video/mp4"></video>
+  <div class="film-yt" data-youtube="U9tSlLikkEE"></div>
 </dialog>
 </body>
 </html>

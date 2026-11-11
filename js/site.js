@@ -9,6 +9,13 @@
   var CFG = window.CICM_CONFIG || {};
   var page = document.body.dataset.page;
 
+  // links and image paths can come from the staff Google Sheet: only web, mail, phone and site-relative
+  // addresses pass, so a javascript: or data: value turns into "#"; the result is HTML-escaped
+  function url(u) {
+    u = String(u == null ? "" : u).trim();
+    var ok = /^(https?:|mailto:|tel:)/i.test(u) || (!/^[a-z][a-z0-9+.-]*:/i.test(u) && !/^\/\//.test(u));
+    return esc(ok ? u : "#");
+  }
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function icon(id) { return '<svg aria-hidden="true"><use href="#i-' + id + '"/></svg>'; }
   function fmtBaht(n) { return Number(n).toLocaleString("en-US"); }
@@ -63,7 +70,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json?v=20261111b").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261111d").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -85,7 +92,7 @@
   }
   var papersP = null;
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261111b").then(function (r) { return r.json(); });
+    if (!papersP) papersP = fetch("data/publications.json?v=20261111d").then(function (r) { return r.json(); });
     return papersP;
   }
 
@@ -102,7 +109,7 @@
     var badge = p.design ? '<span class="badge">' + esc(p.design) + "</span>" : "";
     return '<li class="ref"><div><a class="ttl" href="' + href + '" target="_blank" rel="noopener">' + esc(p.title) + "</a>" +
       '<div class="au">' + auHTML + "</div>" +
-      '<div class="src"><i>' + esc(p.journal) + "</i><span class=\"tnum\">" + p.year + "</span>" + badge +
+      '<div class="src"><i>' + esc(p.journal) + "</i><span class=\"tnum\">" + esc(p.year) + "</span>" + badge +
       (opts.topic ? '<span class="badge topic">' + esc(p.topic) + "</span>" : "") +
       (p.pmid ? '<a href="https://pubmed.ncbi.nlm.nih.gov/' + p.pmid + '/" target="_blank" rel="noopener">PMID ' + p.pmid + "</a>" : "") +
       (p.eid ? '<a href="https://www.scopus.com/record/display.uri?eid=' + encodeURIComponent(p.eid) + '&origin=resultslist" target="_blank" rel="noopener">Scopus</a>' : "") + "</div></div></li>";
@@ -171,7 +178,7 @@
     return "CICM Dermatology lecturers have " + s.n + " papers indexed in " + db + " across " + s.j + " journals, including " + s.rct + " randomized controlled trials.";
   }
 
-  window.CICM = { openZoom: function (g, i) { openZoom(g, i); }, loadContent: loadContent, loadPapers: loadPapers, refHTML: refHTML, paperHref: paperHref, scopusTable: scopusTable, scopusUrl: scopusUrl, fmtN: fmtN, yearFigure: yearFigure, journalTable: journalTable, stats: stats, researchLede: researchLede, esc: esc, icon: icon, FAC_KEYS: FAC_KEYS, reveal: function (el) { observe(el); } };
+  window.CICM = { url: url, openZoom: function (g, i) { openZoom(g, i); }, loadContent: loadContent, loadPapers: loadPapers, refHTML: refHTML, paperHref: paperHref, scopusTable: scopusTable, scopusUrl: scopusUrl, fmtN: fmtN, yearFigure: yearFigure, journalTable: journalTable, stats: stats, researchLede: researchLede, esc: esc, icon: icon, FAC_KEYS: FAC_KEYS, reveal: function (el) { observe(el); } };
 
   /* ---------- reveals ----------
      A scroll check rather than an observer, so fast flicks and slow devices never leave content hidden. */
@@ -224,9 +231,9 @@
 
   /* ---------- nav tone + depth gauge ---------- */
   var LAYERS = {
-    surface: ["#14110f", "#ffffff", "dark"], epi: ["#fde9d7", "#14110f", "light"], dermis: ["#f67b1e", "#14110f", "light"],
-    deep: ["#d8161e", "#ffffff", "dark"], vessel: ["#1b7a3a", "#ffffff", "dark"], cell: ["#1e1a18", "#f4f2f0", "dark"],
-    gland: ["#fbe40b", "#14110f", "light"], "fat-pale": ["#fff8d9", "#14110f", "light"], fat: ["#f67b1e", "#14110f", "light"]
+    surface: ["#7a0b10", "#ffffff", "dark"], epi: ["#fde9d7", "#2b0a06", "light"], dermis: ["#f67b1e", "#2b0a06", "light"],
+    deep: ["#d8161e", "#ffffff", "dark"], vessel: ["#8f0d13", "#ffffff", "dark"], cell: ["#fffaf0", "#2b0a06", "light"],
+    gland: ["#fbe40b", "#2b0a06", "light"], "fat-pale": ["#fff8d9", "#2b0a06", "light"], fat: ["#f67b1e", "#2b0a06", "light"]
   };
   var NAVY_NAV = { dermis: 1, gland: 1, fat: 1 };
   var DEPTH_NAMES = { surface: "Surface", epidermis: "Epidermis", papillary: "Papillary dermis", reticular: "Reticular dermis", plexus: "Deep vascular plexus", cell: "Cell level", gland: "Sweat gland", subcutis: "Subcutis" };
@@ -312,6 +319,15 @@
         vio.observe(v);
       }
     }
+    // video posters far down the page load when the video comes near
+    var lazyPosters = $$("video[data-poster-lazy]");
+    if (lazyPosters.length) {
+      var setPoster = function (v) { v.poster = v.dataset.posterLazy; v.removeAttribute("data-poster-lazy"); };
+      if ("IntersectionObserver" in window) {
+        var pio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { setPoster(e.target); pio.unobserve(e.target); } }); }, { rootMargin: "800px 0px" });
+        lazyPosters.forEach(function (v) { pio.observe(v); });
+      } else lazyPosters.forEach(setPoster);
+    }
     // silent previews (the conference recap) play only while on screen
     var previews = $$("video.conf-preview");
     if (previews.length && !reduce && !(navigator.connection && navigator.connection.saveData)) {
@@ -327,18 +343,22 @@
     }
     var dlg = $("#film"), btns = $$("[data-film]");
     if (dlg && btns.length) {
-      var fv = $("video", dlg), src = $("source", fv);
+      var fv = $("video", dlg), src = $("source", fv), yt = $(".film-yt", dlg);
       var filmPoster = fv.getAttribute("poster");
       btns.forEach(function (btn) { btn.addEventListener("click", function () {
-        // data-film names its own video; an empty data-film plays the program film
-        var want = btn.dataset.film || src.dataset.src;
-        if (src.getAttribute("src") !== want) { src.setAttribute("src", want); fv.poster = btn.dataset.poster || filmPoster; fv.load(); }
+        // data-film names its own video; an empty data-film plays the program film from YouTube,
+        // which only loads once someone presses play
+        var tube = !btn.dataset.film;
+        dlg.classList.toggle("is-yt", tube);
         dlg.classList.toggle("tall", btn.hasAttribute("data-film-tall"));
+        if (tube) {
+          yt.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(yt.dataset.youtube) + '?autoplay=1&rel=0&playsinline=1" title="CICM Dermatology film" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>';
+        } else if (src.getAttribute("src") !== btn.dataset.film) { src.setAttribute("src", btn.dataset.film); fv.poster = btn.dataset.poster || filmPoster; fv.load(); }
         if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
-        var pr = fv.play(); if (pr && pr.catch) pr.catch(function () {});
+        if (!tube) { var pr = fv.play(); if (pr && pr.catch) pr.catch(function () {}); }
       }); });
       $("[data-close-film]", dlg).addEventListener("click", function () { dlg.close(); });
-      dlg.addEventListener("close", function () { fv.pause(); });
+      dlg.addEventListener("close", function () { fv.pause(); yt.innerHTML = ""; });
       dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
     }
   }
@@ -348,7 +368,7 @@
     var box = $("#notices"); if (!box) return;
     var list = c.announcements.slice().sort(function (a, b) { return (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0); }).slice(0, 4);
     box.innerHTML = list.map(function (n) {
-      return '<a class="notice" href="' + esc(n.link || "admissions.html#downloads") + '"' + (/^https?:/.test(n.link || "") ? ' target="_blank" rel="noopener"' : "") + ' data-pinned="' + (!!n.pinned) + '">' +
+      return '<a class="notice" href="' + url(n.link || "admissions.html#downloads") + '"' + (/^https?:/.test(n.link || "") ? ' target="_blank" rel="noopener"' : "") + ' data-pinned="' + (!!n.pinned) + '">' +
         '<span class="tag">' + esc(P(n.tag)) + "</span><span class=\"t\">" + esc(P(n.title)) + "</span>" + icon("arrow") + "</a>";
     }).join("");
   }
@@ -357,9 +377,12 @@
     box.innerHTML = c.programs.map(function (p, i) {
       return '<article class="program rise" style="--d:' + (i * 70) + 'ms"><div><h3><small>' + esc(p.code) + "</small>" + esc(P(p.name)) + '</h3><p class="deg">' + esc(P(p.degree)) + "</p></div>" +
         "<p>" + esc(P(p.focus)) + "</p>" +
-        "<dl><div><dt>" + T("ui.length", "Length") + "</dt><dd>" + esc(P(p.length)) + "</dd></div>" +
-        "<div><dt>" + T("ui.fees", "Fees per semester") + '</dt><dd class="fee2"><span>' + T("ui.thai", "Thai students") + "</span><b>" + fmtBaht(p.fee.thai) + ' THB</b><span>' + T("ui.foreign", "Foreign students") + "</span><b>" + fmtBaht(p.fee.foreign) + " THB</b></dd></div></dl></article>";
+        "<dl><div><dt>" + T("ui.length", "Length") + "</dt><dd>" + esc(P(p.length)) + "</dd></div></dl></article>";
     }).join("");
+    // fees sit in the closing apply section, after the training, faculty and research
+    var fees = $("#applyFees");
+    if (fees) fees.innerHTML = "<caption>" + T("ui.fees", "Fees per semester") + "</caption><thead><tr><th></th><th>" + T("ui.thai", "Thai students") + "</th><th>" + T("ui.foreign", "Foreign students") + "</th></tr></thead><tbody>" +
+      c.programs.map(function (p) { return "<tr><th scope=\"row\">" + esc(P(p.name)) + "<small>" + esc(P(p.length)) + "</small></th><td class=\"tnum\">" + fmtBaht(p.fee.thai) + " THB</td><td class=\"tnum\">" + fmtBaht(p.fee.foreign) + " THB</td></tr>"; }).join("") + "</tbody>";
   }
 
   function renderReel(c, papers) {
@@ -367,7 +390,7 @@
     var fac = c.faculty, cnt = {};
     papers.forEach(function (p) { p.faculty.forEach(function (f) { cnt[f] = (cnt[f] || 0) + 1; }); });
     var i = 0, timer = null, DUR = 8000, paused = reduce;
-    box.innerHTML = '<div class="reel-photo"><img alt="" src="' + fac[0].photo + '"></div>' +
+    box.innerHTML = '<div class="reel-photo"><img alt="" src="' + url(fac[0].photo) + '"></div>' +
       '<div class="reel-body"><div class="reel-swap" aria-live="polite"></div>' +
       '<div class="reel-nav"><button class="round" type="button" data-prev aria-label="' + T("ui.prev", "Previous") + '">' + icon("prev") + "</button>" +
       '<div class="reel-dots" role="group" aria-label="Lecturers">' + fac.map(function (f, k) { return '<button type="button" data-k="' + k + '" aria-label="' + esc(f.name) + '"><i></i></button>'; }).join("") + "</div>" +
@@ -424,7 +447,7 @@
     c.staff.forEach(function (s) {
       var d = document.createElement("div");
       d.className = "person";
-      d.innerHTML = '<img src="' + s.photo + '" alt="" loading="lazy" width="64" height="70"><div><b>' + esc(s.name) + "</b><span>" + esc(P(s.role)) + "</span></div>";
+      d.innerHTML = '<img src="' + url(s.photo) + '" alt="" loading="lazy" width="64" height="70"><div><b>' + esc(s.name) + "</b><span>" + esc(P(s.role)) + "</span></div>";
       band.appendChild(d);
     });
   }
@@ -461,11 +484,11 @@
     function fallback() {
       box.classList.add("is-blocked");
       box.innerHTML = '<div class="fb-fallback"><p>' + T("life.fbblocked", "Your browser blocked the Facebook posts. Open the page to read them.") +
-        '</p><a class="btn btn-primary" href="' + esc(pageUrl) + '" target="_blank" rel="noopener">' + T("life.fbopen", "Open CICM_Dermatology on Facebook") + "</a></div>";
+        '</p><a class="btn btn-primary" href="' + url(pageUrl) + '" target="_blank" rel="noopener">' + T("life.fbopen", "Open CICM_Dermatology on Facebook") + "</a></div>";
     }
     function mount(posts) {
       var w = Math.max(280, Math.min(500, Math.floor(box.clientWidth) - 2)), next = 0, BATCH = 3;
-      box.innerHTML = '<div class="fb-head-plugin"><div class="fb-page" data-href="' + esc(pageUrl) + '" data-tabs="" data-width="' + w +
+      box.innerHTML = '<div class="fb-head-plugin"><div class="fb-page" data-href="' + url(pageUrl) + '" data-tabs="" data-width="' + w +
         '" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div></div>' +
         '<div class="fb-posts" tabindex="0" aria-label="' + T("life.fbposts", "Latest Facebook posts") + '"><div class="fb-more" aria-hidden="true"></div></div>';
       var list = $(".fb-posts", box), more = $(".fb-more", box);
@@ -474,7 +497,7 @@
         if (next >= posts.length) return;
         var g = document.createElement("div");
         g.className = "fb-batch";
-        g.innerHTML = posts.slice(next, next + BATCH).map(function (u) { return '<div class="fb-post" data-href="' + esc(u) + '" data-width="' + w + '" data-show-text="true"></div>'; }).join("");
+        g.innerHTML = posts.slice(next, next + BATCH).map(function (u) { return '<div class="fb-post" data-href="' + url(u) + '" data-width="' + w + '" data-show-text="true"></div>'; }).join("");
         next += BATCH;
         list.insertBefore(g, more);
         if (next >= posts.length) {

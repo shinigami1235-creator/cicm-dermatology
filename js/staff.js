@@ -4,13 +4,13 @@
    deck:      a stack of cards you swipe through */
 (function () {
   "use strict";
-  var C = window.CICM, T = window.t, P = window.pick, esc = C.esc;
+  var C = window.CICM, T = window.t, P = window.pick, esc = C.esc, url = C.url;
   var stage = document.getElementById("staffStage"); if (!stage) return;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var lang = window.CICM_LANG, which = document.documentElement.dataset.staff || "spotlight";
   var COLORS = ["#fde9d7", "#fbe40b", "#fff8d9", "#e8e7e8", "#f67b1e", "#fad5b4"];
 
-  function cut(f) { return "people/" + f.id + "-cut.webp"; }
+  function cut(f) { return url("people/" + f.id + "-cut.webp"); }
   // set by the deck and spotlight layouts; the 3D orbit calls it through CICM.facultyTo
   var jumpTo = null;
   function who(f) { return [f.title, f.post].filter(Boolean).join(" · "); }
@@ -227,7 +227,7 @@
       return '<section class="v-group" aria-label="' + esc(P(g.name)) + '"><h4>' + esc(P(g.name)) + (mine.length > 1 ? " <span>" + mine.length + "</span>" : "") + '</h4><ul class="v-tiles">' +
         mine.map(function (v) {
           return '<li><button class="vt" type="button" data-i="' + list.indexOf(v) + '" style="--c:' + v.color + '">' +
-            '<span class="vt-pic"><img src="' + v.photo + '" alt="" loading="lazy" width="533" height="640"></span>' +
+            '<span class="vt-pic"><img src="' + url(v.photo) + '" alt="" loading="lazy" width="533" height="640"></span>' +
             '<b class="vt-name">' + esc(v.name) + '</b><span class="vt-who">' + esc(who(v)) + "</span></button></li>";
         }).join("") + "</ul></section>";
     }).join("");
@@ -235,7 +235,7 @@
     function show(i) {
       cur = (i + list.length) % list.length; var v = list[cur];
       dlg.style.setProperty("--c", v.color);
-      inner.innerHTML = '<div class="vdlg-pic"><img src="' + v.photo + '" alt="' + esc(v.name) + '"></div><div class="vdlg-text">' +
+      inner.innerHTML = '<div class="vdlg-pic"><img src="' + url(v.photo) + '" alt="' + esc(v.name) + '"></div><div class="vdlg-text">' +
         '<p class="vdlg-who">' + esc(who(v)) + '</p><h3 id="vDlgName">' + esc(v.name) + "</h3>" +
         '<p class="vdlg-place"><b>' + esc(v.role) + "</b><br>" + esc(v.place) + "</p>" +
         (v.education.length ? "<h4>" + T("ui.edu", "Education") + "</h4>" + eduList(v) : "") +

@@ -1,10 +1,11 @@
 /* Faculty orbit on the home page. The CICM emblem sits in the middle; when the section comes into view its
    red, yellow and orange arrows spin into place, then the lecturers fly out into two rings: the permanent
-   lecturers on the inner ring, the visiting lecturers on the outer ring. Hover shows a name, a click opens
-   the profile (the deck card or the visiting dialog), a drag spins the rings.
+   lecturers on the inner ring, the visiting lecturers on the outer ring. Hover shows a name and a drag spins
+   the rings. The faces are not links since the deck and tiles right below hold the profiles.
    The deck and tiles below carry the same content, so the orbit is hidden without WebGL or with reduced motion. */
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { MeshoptDecoder } from "three/addons/libs/meshopt_decoder.module.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 
 const box = document.getElementById("orbit");
@@ -15,11 +16,6 @@ function webglOK() {
   try { const c = document.createElement("canvas"); return !!(c.getContext("webgl2") || c.getContext("webgl")); } catch (e) { return false; }
 }
 
-if (box) {
-  if (reduce || !webglOK()) box.classList.add("off");
-  else if (window.CICM && window.CICM.people) start(window.CICM.people);
-  else window.addEventListener("cicm:people", () => start(window.CICM.people), { once: true });
-}
 
 const R_IN = 2.5, R_OUT = 3.95, S_IN = 0.9, S_OUT = 0.74, LIFT = 0.55, TILT = 0.3;
 const RING_IN = "#f67b1e", RING_OUT = "#fbe40b";
@@ -71,7 +67,7 @@ function start(people) {
   const root = new THREE.Group(); scene.add(root);
   const spinners = [];   // { group, from, delay }
   let ready = false;
-  new GLTFLoader().load("assets/cicm-emblem.glb", (gltf) => {
+  new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).load("assets/cicm-emblem.glb?v=2", (gltf) => {
     const model = gltf.scene;
     model.rotation.x = Math.PI / 2;
     model.updateMatrixWorld(true);
@@ -153,15 +149,9 @@ function start(people) {
   });
   canvas.addEventListener("pointerleave", () => { ndc.set(-9, -9); });
   canvas.addEventListener("pointerdown", (e) => { drag = { x: e.clientX, moved: false }; });
-  window.addEventListener("pointerup", () => {
-    if (drag && !drag.moved && hot) {
-      const p = hot.userData.p;
-      if (hot.userData.inner) window.CICM.facultyTo(p.id); else window.CICM.visitingOpen(p.id);
-    }
-    drag = null;
-  });
+  window.addEventListener("pointerup", () => { drag = null; });
   canvas.addEventListener("pointerdown", (e) => {
-    // touch has no hover: pick on press so a tap opens the profile
+    // touch has no hover: a tap shows the name tag
     if (e.pointerType !== "mouse") { const r = canvas.getBoundingClientRect(); ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1); pick(); }
   });
   function pick() {
@@ -227,4 +217,11 @@ function start(people) {
     renderer.render(scene, camera);
     requestAnimationFrame(loop);
   }
+}
+
+// started last, after the constants above exist: this file can load after the lecturer list is ready
+if (box) {
+  if (reduce || !webglOK()) box.classList.add("off");
+  else if (window.CICM && window.CICM.people) start(window.CICM.people);
+  else window.addEventListener("cicm:people", () => start(window.CICM.people), { once: true });
 }

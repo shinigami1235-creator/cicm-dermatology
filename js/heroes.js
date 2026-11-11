@@ -112,7 +112,10 @@
         panels = el.querySelectorAll(".ty-panel"), meta = el.querySelector(".ty-meta"), hint = el.querySelector(".ty-hint"),
         video = el.querySelector("video");
     ["webm", "mp4"].forEach(function (k) { var s = document.createElement("source"); s.src = video.dataset["src" + k[0].toUpperCase() + k.slice(1)]; s.type = "video/" + k; video.appendChild(s); });
-    video.preload = "auto"; video.load();
+    var fetched = false;
+    function fetchFilm() { if (fetched) return; fetched = true; video.preload = "auto"; video.load(); }
+    ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (ev) { window.addEventListener(ev, fetchFilm, { once: true, passive: true }); });
+    window.addEventListener("load", function () { setTimeout(fetchFilm, 3000); });
     if (!reduce) new IntersectionObserver(function (es) { var pr = es[0].isIntersecting ? video.play() : (video.pause(), null); if (pr && pr.catch) pr.catch(function () {}); }).observe(stage);
     function fit() {
       top.style.letterSpacing = ""; top.style.marginRight = "";
