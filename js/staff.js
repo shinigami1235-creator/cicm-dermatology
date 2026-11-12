@@ -8,7 +8,7 @@
   var stage = document.getElementById("staffStage"); if (!stage) return;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var lang = window.CICM_LANG, which = document.documentElement.dataset.staff || "spotlight";
-  var COLORS = ["#fff8d9", "#fbe40b", "#fde9d7", "#ffffff", "#fdeeb0", "#fad5b4"];
+  var COLORS = ["#fff8d9"];
 
   function cut(f) { return url(f.cut || f.photo || "people/" + f.id + "-cut.webp"); }
   // set by the deck and spotlight layouts; the 3D orbit calls it through CICM.facultyTo
@@ -135,7 +135,7 @@
     stage.innerHTML = '<div class="dk"><div class="dk-col"><div class="dk-stack" tabindex="0" role="group" aria-roledescription="card stack" aria-label="' + T("faculty.title", "The faculty") + '">' +
       fac.map(function (f, i) {
         return '<article class="dk-card" data-i="' + i + '" style="--c:' + f.color + '" aria-hidden="' + (i !== 0) + '">' +
-          '<div class="dk-top"><span class="dk-who">' + esc(who(f)) + "</span>" + (f.n ? '<span class="dk-n"><b>' + f.n + "</b> " + (lang === "th" ? "บทความ" : "papers") + "</span>" : "") + "</div>" +
+          '<div class="dk-top"><span class="dk-who">' + esc(who(f)) + "</span></div>" +
           '<h3 class="dk-name">' + esc(f.name) + "</h3>" +
           '<img src="' + cut(f) + '" alt="" draggable="false"' + (i > 2 ? ' loading="lazy"' : "") + "></article>";
       }).join("") + "</div>" +
@@ -213,7 +213,7 @@
   }
 
   /* ---------- visiting lecturers: tiles grouped by hospital, a dialog for each profile ---------- */
-  var GROUP_COLORS = ["#fff8d9", "#fbe40b", "#fde9d7", "#ffffff", "#fdeeb0", "#fad5b4", "#fff8d9"];
+  var GROUP_COLORS = ["#fff8d9"];
   var visitingList = [];
   function visiting(c) {
     var box = document.getElementById("vGroups"), dlg = document.getElementById("vDlg");
