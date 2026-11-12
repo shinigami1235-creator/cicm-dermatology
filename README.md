@@ -40,7 +40,7 @@ Column notes:
 
 - `pinned`: type `yes` to keep an announcement at the top.
 - `group` for downloads: `announcements`, `forms`, `programs` or `folders`.
-- `faculty_id`: `jitlada`, `premjit`, `punyaphat`, `sunatra`, `pawit` or `sittha`.
+- `faculty_id`: `jitlada`, `premjit`, `punyaphat`, `sunatra`, `pawit`, `rueangrit` or `sasin`.
 - Leave a Thai column empty and the English text shows in both languages.
 
 ## Updating the publication list

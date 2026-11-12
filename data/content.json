@@ -649,26 +649,6 @@
    "cut": "people/pawit-cut.webp"
   },
   {
-   "id": "sittha",
-   "pubmed": "",
-   "photo": "people/sittha.webp",
-   "name": "Sittha Sriprachya-Anunt",
-   "title": "",
-   "post": "M.D.",
-   "education": [
-    "MBChB, University of Edinburgh",
-    "B.Sc. (Hons) First Class in Medicine, University of St Andrews"
-   ],
-   "expertise": [],
-   "scopus": {
-    "id": "58575830800",
-    "docs": 1,
-    "cites": 0,
-    "h": 0
-   },
-   "cut": "people/sittha-cut.webp"
-  },
-  {
    "id": "rueangrit",
    "pubmed": "Siriphanit R",
    "photo": "people/rueangrit.webp",
