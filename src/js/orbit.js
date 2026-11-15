@@ -1,11 +1,10 @@
-/* Faculty orbit on the home page. The CICM emblem sits in the middle; when the section comes into view its
+/* Faculty orbit on the home page. The CICM emblem (the full logo with its ring text, see logo3d.js) sits in the middle; when the section comes into view its
    red, yellow and orange arrows spin into place, then the lecturers fly out into two rings: the permanent
    lecturers on the inner ring, the visiting lecturers on the outer ring. Hover shows a name and a drag spins
    the rings. The faces are not links since the deck and tiles right below hold the profiles.
    The deck and tiles below carry the same content, so the orbit is hidden without WebGL or with reduced motion. */
 import * as THREE from "three";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { MeshoptDecoder } from "three/addons/libs/meshopt_decoder.module.js";
+import { buildEmblem } from "./logo3d.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 
 const box = document.getElementById("orbit");
@@ -67,23 +66,13 @@ function start(people) {
   const root = new THREE.Group(); scene.add(root);
   const spinners = [];   // { group, from, delay }
   let ready = false;
-  new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).load("assets/cicm-emblem.glb?v=2", (gltf) => {
-    const model = gltf.scene;
-    model.rotation.x = Math.PI / 2;
-    model.updateMatrixWorld(true);
-    const b = new THREE.Box3().setFromObject(model), size = b.getSize(new THREE.Vector3());
-    model.position.sub(b.getCenter(new THREE.Vector3()));
-    const holder = new THREE.Group(); holder.add(model); holder.scale.setScalar(2.3 / size.y);
+  buildEmblem().then((model) => {
+    const S = 1.62 / (model.userData.reach + 0.06);
+    const holder = new THREE.Group(); holder.add(model); holder.scale.setScalar(S);
     root.add(holder);
-    // the logo is printed on white; a cream disc behind it keeps the red arrow visible on the red section
-    const disc = new THREE.Mesh(new THREE.CircleGeometry(1.62, 96), new THREE.MeshBasicMaterial({ color: 0xfde9d7, toneMapped: false }));
-    disc.position.z = -0.35; root.add(disc);
-    model.traverse((o) => {
-      if (!o.isMesh || !o.material) return;
-      const m = o.material;
-      if (m.metalness > 0.5) { m.color.set(0x9a989b); m.metalness = 0.35; m.roughness = 0.55; m.envMapIntensity = 0.6; }
-      else { m.envMapIntensity = 0.2; m.roughness = Math.max(m.roughness, 0.6); }
-    });
+    // the logo is printed on white, so it sits on a white disc that takes in the arrow tip
+    const disc = new THREE.Mesh(new THREE.CircleGeometry(1.66, 128), new THREE.MeshBasicMaterial({ color: 0xffffff, toneMapped: false }));
+    disc.position.z = -0.12; root.add(disc);
     root.updateMatrixWorld(true);
     // each arrow gets its own pivot at the emblem centre so it can spin round the tower
     [["Red", 0], ["Yellow", 0.1], ["Arrow", 0.2]].forEach(([name, delay], k) => {
@@ -93,7 +82,7 @@ function start(people) {
       spinners.push({ group: pivot, from: Math.PI * 2 + 0.9 + k * 0.8, delay });
     });
     ready = true;
-  });
+  }).catch(() => {});
 
   // rings
   const ringIn = new THREE.Group(), ringOut = new THREE.Group();

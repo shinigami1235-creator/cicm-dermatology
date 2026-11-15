@@ -12,16 +12,16 @@
 <meta property="og:image" content="media/hero-poster.jpg">
 <link rel="icon" href="assets/cicm-mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/fonts.css">
-<link rel="preload" href="fonts/bai-jamjuree-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=20261112b">
+<link rel="preload" href="fonts/ibm-plex-sans-thai-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=20261115b">
 <script>document.documentElement.classList.replace('no-js','js');(function(){var q=new URLSearchParams(location.search),h=q.get('hero'),s=q.get('staff');try{if(h)localStorage.setItem('cicm-hero',h);else h=localStorage.getItem('cicm-hero');if(s)localStorage.setItem('cicm-staff',s);else s=localStorage.getItem('cicm-staff')}catch(e){}var d=document.documentElement.dataset;d.hero=['slide','type','lens'].indexOf(h)>-1?h:'type';d.staff=['spotlight','masthead','deck'].indexOf(s)>-1?s:'deck'})()</script>
 <script src="js/config.js" defer></script>
-<script src="js/i18n.js?v=20261112b" defer></script>
-<script src="js/site.js?v=20261112b" defer></script>
+<script src="js/i18n.js?v=20261115b" defer></script>
+<script src="js/site.js?v=20261115b" defer></script>
 <script>
 /* the 3D emblem (three.js) and the map (d3) are large, so each loads only when its section is near */
 document.addEventListener("DOMContentLoaded", function () {
-  [["js/emblem.js?v=20261112b", "#orbit, #stage"], ["js/map.js?v=20261112b", "#map"]].forEach(function (job) {
+  [["js/emblem.js?v=20261115b", "#orbit, #stage"], ["js/map.js?v=20261115b", "#map"]].forEach(function (job) {
     var els = document.querySelectorAll(job[1]), done = false;
     function go() { if (done) return; done = true; import("./" + job[0]); }
     if (!els.length) return;
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 <script src="js/scope.js" defer></script>
 <script src="js/heroes.js" defer></script>
-<script src="js/staff.js?v=20261112b" defer></script>
+<script src="js/staff.js?v=20261115b" defer></script>
 <script src="js/pick.js" defer></script>
 </head>
 <body data-page="home">
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <section class="ty" id="typeHero" data-layer="surface" data-depth="0" data-depth-name="surface" aria-labelledby="ty-title">
     <div class="ty-stage">
-      <div class="ty-film"><video muted loop playsinline preload="none" poster="media/hero-poster.jpg" aria-hidden="true" data-src-webm="media/hero-loop.webm" data-src-mp4="media/hero-loop.mp4"></video></div>
+      <div class="ty-film"><video muted loop playsinline preload="none" poster="media/hero-poster.jpg" aria-hidden="true" data-src-webm="media/hero-loop.webm" data-src-mp4="media/hero-loop.mp4" data-src-hd="media/hero-hd.mp4"></video></div>
       <div class="ty-gap">
         <div class="ty-panel" data-from="0.16" data-to="0.42">
           <h2 data-i18n="sl.p1">Three programs, taught in English</h2>
@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </g>
       </svg>
       <span class="scope-mag" id="lensMag">10×</span>
-      <div class="scope-badge" id="stage"><img class="still" src="assets/cicm-mark.svg" alt="" width="220" height="210"></div>
+      <div class="scope-badge" id="stage"><img class="still" src="assets/cicm-emblem.svg" alt="" width="220" height="220"></div>
     </div>
 
     <div class="scope-tools wrap">
@@ -250,11 +250,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <section class="layer" id="programs" data-layer="epi" data-depth="60" data-depth-name="epidermis" aria-labelledby="programs-title">
     <div class="wrap">
-      <div class="notices-head rise">
+      <div class="notice-box rise">
+      <div class="notices-head">
         <h2 data-i18n="notices.title">Announcements</h2>
         <a class="link-arrow" href="admissions.html#downloads"><span data-i18n="notices.all">All downloads</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
-      <div class="notices rise" id="notices" aria-live="polite"></div>
+      <div class="notices" id="notices" aria-live="polite"></div>
+      </div>
 
       <div class="sec-head rise">
         <h2 id="programs-title" data-i18n="programs.title">Three programs</h2>

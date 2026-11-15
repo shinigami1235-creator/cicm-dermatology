@@ -1,9 +1,8 @@
-/* The CICM emblem in 3D. Model built in Blender from the traced logo (assets/cicm-emblem.glb).
+/* The CICM emblem in 3D, built from the official logo file by logo3d.js.
    Falls back to the still render when WebGL is missing or motion is reduced. */
 import * as THREE from "three";
 import "./orbit.js";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { MeshoptDecoder } from "three/addons/libs/meshopt_decoder.module.js";
+import { buildEmblem } from "./logo3d.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 
 const stage = document.getElementById("stage");
@@ -38,22 +37,14 @@ function start() {
   scene.add(pivot);
 
   let model = null;
-  new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).load("assets/cicm-emblem.glb?v=2", (gltf) => {
-    model = gltf.scene;
-    model.rotation.x = Math.PI / 2; // Blender lays the emblem flat; stand it up facing the camera
-    const box = new THREE.Box3().setFromObject(model);
-    const c = box.getCenter(new THREE.Vector3());
-    model.position.sub(c);
-    model.traverse((o) => {
-      if (o.isMesh && o.material) {
-        o.material.envMapIntensity = o.material.metalness > 0.5 ? 1.15 : 0.55;
-      }
-    });
+  buildEmblem().then((m) => {
+    model = m;
+    model.scale.setScalar(1.15 / m.userData.reach);
     pivot.add(model);
     pivot.scale.setScalar(0.001);
     stage.classList.add("has-3d");
     born = performance.now();
-  }, undefined, () => { renderer.domElement.remove(); });
+  }).catch(() => { renderer.domElement.remove(); });
 
   function size() {
     const r = renderer.domElement.getBoundingClientRect();

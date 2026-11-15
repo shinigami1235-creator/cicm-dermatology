@@ -845,7 +845,7 @@
   },
   {
    "id": "onsiri",
-   "photo": "people/onsiri-bust.webp",
+   "photo": "people/onsiri-photo.webp",
    "name": "Onsiri Serirat",
    "title": "Asst. Prof.",
    "post": "M.D.",
@@ -865,7 +865,7 @@
   },
   {
    "id": "woranit",
-   "photo": "people/woranit-bust.webp",
+   "photo": "people/woranit-photo.webp",
    "name": "Woranit Onprasert",
    "title": "",
    "post": "M.D.",
@@ -957,7 +957,7 @@
   },
   {
    "id": "chontavat",
-   "photo": "people/chontavat-bust.webp",
+   "photo": "people/chontavat-photo.webp",
    "name": "Chontavat Suvanpiyasiri",
    "title": "",
    "post": "M.D., Ph.D.",
@@ -974,7 +974,7 @@
   },
   {
    "id": "atchima",
-   "photo": "people/atchima-bust.webp",
+   "photo": "people/atchima-photo.webp",
    "name": "Atchima Suwanchinda",
    "title": "",
    "post": "M.D., M.Sc., Ph.D.",
@@ -992,7 +992,7 @@
   },
   {
    "id": "jutamas",
-   "photo": "people/jutamas-bust.webp",
+   "photo": "people/jutamas-photo.webp",
    "name": "Jutamas Tankunakorn",
    "title": "",
    "post": "M.D.",
@@ -1013,7 +1013,7 @@
   },
   {
    "id": "ratchanee",
-   "photo": "people/ratchanee-bust.webp",
+   "photo": "people/ratchanee-photo.webp",
    "name": "Ratchanee Vipanurat",
    "title": "",
    "post": "M.D.",
@@ -1031,7 +1031,7 @@
   },
   {
    "id": "kamphon",
-   "photo": "people/kamphon-bust.webp",
+   "photo": "people/kamphon-photo.webp",
    "name": "Kamphon Socharoentam",
    "title": "",
    "post": "M.D., M.Sc.",

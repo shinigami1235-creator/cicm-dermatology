@@ -116,12 +116,32 @@
     function fetchFilm() { if (fetched) return; fetched = true; video.preload = "auto"; video.load(); }
     ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (ev) { window.addEventListener(ev, fetchFilm, { once: true, passive: true }); });
     window.addEventListener("load", function () { setTimeout(fetchFilm, 3000); });
-    if (!reduce) new IntersectionObserver(function (es) { var pr = es[0].isIntersecting ? video.play() : (video.pause(), null); if (pr && pr.catch) pr.catch(function () {}); }).observe(stage);
+    if (!reduce) new IntersectionObserver(function (es) { var pr = es[0].isIntersecting ? video.play() : (video.pause(), null); if (pr && pr.catch) pr.catch(function () {}); if (hd && !es[0].isIntersecting) hd.pause(); }).observe(stage);
+    /* the small loop plays behind the words; once the words are done the full-size 1920 px film fades in over it */
+    var hd = null, hdReady = false, hdOn = false, film = el.querySelector(".ty-film"), save = navigator.connection && navigator.connection.saveData;
+    function loadHD() {
+      if (hd || save || !video.dataset.srcHd) return;
+      hd = document.createElement("video");
+      hd.className = "ty-hd"; hd.muted = true; hd.loop = true; hd.playsInline = true; hd.setAttribute("aria-hidden", "true"); hd.preload = "auto";
+      hd.src = video.dataset.srcHd;
+      hd.addEventListener("canplaythrough", function () { hdReady = true; }, { once: true });
+      film.appendChild(hd);
+    }
+    function showHD(on) {
+      if (!hd || !hdReady || on === hdOn) return;
+      hdOn = on;
+      if (on) { try { hd.currentTime = video.currentTime % (hd.duration || 41.5); } catch (e) {} var pr = hd.play(); if (pr && pr.catch) pr.catch(function () {}); }
+      film.classList.toggle("hd-on", on);
+      if (!on) setTimeout(function () { if (!hdOn) hd.pause(); }, 700);
+    }
+    /* Thai reads ตจวิทยา as one word, so it stays on one line and the film opens below it */
+    var one = lang === "th";
+    if (one) { stage.classList.add("one"); el.querySelector(".ty-bot").hidden = true; }
     function fit() {
       top.style.letterSpacing = ""; top.style.marginRight = "";
       stage.style.setProperty("--tyfs", "100px");
       var avail = Math.min(window.innerWidth - 2 * Math.max(16, window.innerWidth * 0.04), 1500);
-      var wb = bot.getBoundingClientRect().width, fs = 100 * avail / wb;
+      var wb = (one ? top : bot).getBoundingClientRect().width, fs = 100 * avail / wb;
       fs = Math.min(fs, window.innerHeight * 0.36);
       stage.style.setProperty("--tyfs", fs.toFixed(1) + "px");
       if (lang !== "th") {
@@ -137,11 +157,24 @@
       var sMin = window.innerWidth >= 900 ? 0.5 : 0.82, sc = 1 - (1 - sMin) * o;
       var room = H - 68 - 40 - 2 * lh * sc;
       var gap = Math.max(0, room) * o + smooth(0.92, 1, p) * H * 0.7;
+      if (one) {
+        var end = smooth(0.92, 1, p), mid = H / 2;
+        var up = (mid - (68 + 16 + lh * sc / 2)) * o + end * H * 0.7;
+        lineTop.style.transform = "translateY(" + (-up).toFixed(1) + "px) scale(" + sc.toFixed(3) + ")";
+        var under = mid - up + lh * sc / 2 + 12;
+        var gt = (mid + (under - mid) * o) * (1 - end), gb = (mid - (mid - 40) * o) * (1 - end);
+        stage.style.setProperty("--gt", Math.max(0, gt).toFixed(1) + "px");
+        stage.style.setProperty("--gb", Math.max(0, gb).toFixed(1) + "px");
+      } else {
       var dy = gap / 2 + lh * sc / 2 - lh / 2;
       lineTop.style.transform = "translateY(" + (-dy).toFixed(1) + "px) scale(" + sc.toFixed(3) + ")";
       lineBot.style.transform = "translateY(" + dy.toFixed(1) + "px) scale(" + sc.toFixed(3) + ")";
       stage.style.setProperty("--gap", gap.toFixed(1) + "px");
+      }
       panels.forEach(function (pn) { pn.classList.toggle("is-on", p >= +pn.dataset.from && p < +pn.dataset.to); });
+      if (p > 0.3) loadHD();
+      showHD(p >= 0.9);
+      film.style.setProperty("--lift", smooth(0.9, 1, p).toFixed(3));
       meta.classList.toggle("is-gone", p > 0.05);
       hint.classList.toggle("is-gone", p > 0.03);
     }
