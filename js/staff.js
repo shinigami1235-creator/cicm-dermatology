@@ -8,7 +8,7 @@
   var stage = document.getElementById("staffStage"); if (!stage) return;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var lang = window.CICM_LANG, which = document.documentElement.dataset.staff || "spotlight";
-  var COLORS = ["#fff8d9"];
+  var COLORS = ["#fbe40b"];   // permanent lecturers: the same yellow as their ring in the orbit
 
   function cut(f) { return url(f.cut || f.photo || "people/" + f.id + "-cut.webp"); }
   // set by the deck and spotlight layouts; the 3D orbit calls it through CICM.facultyTo
@@ -264,7 +264,7 @@
     staff.forEach(function (s, i) {
       var d = document.createElement("div");
       d.className = "officer";
-      d.style.setProperty("--c", COLORS[(i + 2) % COLORS.length]);
+      d.style.setProperty("--c", "#fff8d9");
       d.innerHTML = '<div class="officer-pic"><img src="people/' + s.id + '-cut.webp" alt="" loading="lazy"></div><div><b>' + esc(s.name) + "</b><span>" + esc(P(s.role)) + "</span><small>" + s.education.map(esc).join("<br>") + "</small></div>";
       box.appendChild(d);
     });
