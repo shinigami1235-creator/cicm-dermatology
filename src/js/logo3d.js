@@ -14,21 +14,24 @@ const PARTS = {
   "#1b7a3a": { name: "Ring",   z: 0.000, depth: 0.030 },
 };
 
-export async function buildEmblem(url = "assets/cicm-emblem.svg?v=3") {
+export async function buildEmblem(url = "assets/cicm-emblem.svg?v=4") {
   const text = await (await fetch(url)).text();
   const data = new SVGLoader().parse(text);
-  const ring = new THREE.Box3(), pts = [];
+  const pts = [], ringIdx = [];
   const parts = [];
   data.paths.forEach((path) => {
     const hex = "#" + path.color.getHexString(THREE.SRGBColorSpace);
     const cfg = PARTS[hex]; if (!cfg) return;
     const shapes = SVGLoader.createShapes(path);
     parts.push({ cfg, hex, shapes });
-    shapes.forEach((s) => s.getPoints(4).forEach((p) => { pts.push(p); if (cfg.name === "Ring") ring.expandByPoint(new THREE.Vector3(p.x, p.y, 0)); }));
+    shapes.forEach((s) => s.getPoints(4).forEach((p) => { pts.push(p); ringIdx.push(cfg.name === "Ring"); }));
   });
-  // centred on the ring of text, which is the circle the whole logo is drawn on
-  const size = ring.getSize(new THREE.Vector3()), c = ring.getCenter(new THREE.Vector3());
-  const k = 2 / size.y;   // the ring of text is 2 units across
+  // the ring of text leaves a gap at the top for the arrow, so its box is not square;
+  // a least-squares circle through the letters gives the true centre the logo is drawn on
+  const rp = pts.filter((p, i) => ringIdx[i]);
+  const c = fitCircle(rp);
+  let rMax = 0; rp.forEach((p) => { rMax = Math.max(rMax, Math.hypot(p.x - c.x, p.y - c.y)); });
+  const k = 1 / rMax;   // the outer edge of the ring text sits at radius 1
   let reach = 0; pts.forEach((p) => { reach = Math.max(reach, Math.hypot(p.x - c.x, p.y - c.y) * k); });
 
   const root = new THREE.Group(); root.name = "CICM_Emblem";
@@ -48,4 +51,16 @@ export async function buildEmblem(url = "assets/cicm-emblem.svg?v=3") {
     root.add(mesh);
   });
   return root;
+}
+
+// Kasa circle fit: solves x^2 + y^2 + Dx + Ey + F = 0 in the least-squares sense
+function fitCircle(p) {
+  let sx = 0, sy = 0, sxx = 0, syy = 0, sxy = 0, sxz = 0, syz = 0, sz = 0;
+  const n = p.length;
+  p.forEach(({ x, y }) => { const z = x * x + y * y; sx += x; sy += y; sxx += x * x; syy += y * y; sxy += x * y; sxz += x * z; syz += y * z; sz += z; });
+  const A = [[sxx, sxy, sx], [sxy, syy, sy], [sx, sy, n]], b = [-sxz, -syz, -sz];
+  const det = (m) => m[0][0] * (m[1][1] * m[2][2] - m[1][2] * m[2][1]) - m[0][1] * (m[1][0] * m[2][2] - m[1][2] * m[2][0]) + m[0][2] * (m[1][0] * m[2][1] - m[1][1] * m[2][0]);
+  const d = det(A), col = (i) => A.map((r, j) => r.map((v, k) => (k === i ? b[j] : v)));
+  const D = det(col(0)) / d, E = det(col(1)) / d;
+  return { x: -D / 2, y: -E / 2 };
 }

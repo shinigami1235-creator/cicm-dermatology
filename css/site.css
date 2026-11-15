@@ -126,7 +126,7 @@ html { scrollbar-color: #f67b1e #3d1e08; }
 .nav-in { display: flex; align-items: center; gap: 20px; width: 100%; padding-inline: var(--gutter); }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex: none; }
 .brand .tu { width: 34px; height: 34px; }
-.brand .wm { height: 30px; width: auto; }
+.brand .wm { height: 36px; width: auto; }
 .brand .wm-dark { display: none; }
 .nav[data-tone="light"] .wm-light { display: none; }
 .nav[data-tone="light"] .wm-dark { display: block; }
@@ -533,16 +533,16 @@ html { scrollbar-color: #f67b1e #3d1e08; }
 .contact a, .contact b { font-weight: 600; font-size: 1.02rem; overflow-wrap: anywhere; }
 
 /* ---------- footer ---------- */
-.foot { background: var(--dark); color: #d9d4d0; padding: 56px 0 40px; font-size: 0.92rem; }
+.foot { background: #ffffff; color: #2a1606; padding: 56px 0 40px; font-size: 0.92rem; border-top: 1px solid #f1e4d4; }
 .foot-top { display: grid; gap: 28px; }
 @media (min-width: 900px) { .foot-top { grid-template-columns: 1.3fr 1fr 1fr; } }
 .foot-marks { display: flex; align-items: center; gap: 16px; }
 .foot-marks img { height: 56px; width: auto; }
-.foot .foot-h { font-size: 0.82rem; color: #b1afb1; font-weight: 600; margin-bottom: 10px; }
+.foot .foot-h { font-size: 0.82rem; color: #6b4e34; font-weight: 600; margin-bottom: 10px; }
 .foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
 .foot a { text-decoration: none; }
 .foot a:hover { text-decoration: underline; }
-.foot-base { margin-top: 40px; padding-top: 20px; border-top: 1px solid #6a3812; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; color: #b1afb1; font-size: 0.84rem; }
+.foot-base { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ead9c6; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; color: #6b4e34; font-size: 0.84rem; }
 
 /* ---------- inner pages ---------- */
 .page-head { padding: calc(var(--nav-h) + clamp(48px, 8vw, 104px)) 0 clamp(48px, 7vw, 88px); position: relative; }

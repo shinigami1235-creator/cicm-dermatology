@@ -70,7 +70,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json?v=20261115b").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261115c").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -92,7 +92,7 @@
   }
   var papersP = null;
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261115b").then(function (r) { return r.json(); }).then(function (d) {
+    if (!papersP) papersP = fetch("data/publications.json?v=20261115c").then(function (r) { return r.json(); }).then(function (d) {
       // every lecturer tagged on a paper is bolded in the author lists
       d.papers.forEach(function (p) { p.faculty.forEach(function (k) { if (FAC_KEYS.indexOf(k) < 0) FAC_KEYS.push(k); }); });
       return d;
@@ -154,7 +154,7 @@
       if (i % 3 === 0 || y === 2026) s += '<text class="axis" x="' + (x + w / 2) + '" y="' + (H + 16) + '" text-anchor="middle">' + y + "</text>";
     });
     s += "</svg>";
-    return s + '<figcaption class="legend"><b>' + T("research.fig", "Fig. 5") + "</b> " + T("research.figt", "Papers per year. The light part of each bar is randomized controlled trials.") + "</figcaption>";
+    return s + '<figcaption class="legend"><b>' + T("research.fig", "Fig. 5") + "</b> " + T("research.figt", "Papers per year. The dark part of each bar is randomized controlled trials.") + "</figcaption>";
   }
 
   function journalTable(papers, n) {
@@ -545,7 +545,7 @@
   function zoomBuild() {
     if (zoomEl) return;
     zoomEl = document.createElement("dialog");
-    zoomEl.className = "zoom";
+    zoomEl.className = "zoom"; zoomEl.setAttribute("closedby", "any");
     zoomEl.setAttribute("aria-label", T("ui.viewer", "Photo viewer"));
     zoomEl.innerHTML = '<figure><img alt=""><figcaption><span class="zc"></span><span class="zn tnum"></span></figcaption></figure>' +
       '<button class="round z-close" type="button" aria-label="' + T("ui.close", "Close") + '">' + icon("close") + "</button>" +

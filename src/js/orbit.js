@@ -161,12 +161,13 @@ function start(people) {
   function loop(now) {
     if (!visible) return;
     const dt = Math.min(0.05, (now - last) / 1000); last = now;
+    if (t0 === null) { const r = box.getBoundingClientRect(); if (r.top < innerHeight * 0.7 && r.bottom > innerHeight * 0.3) t0 = now; }   // a fast jump can skip the observer's 30% step
     const t = t0 === null ? 0 : (now - t0) / 1000;
 
     if (ready) spinners.forEach((s) => { s.group.rotation.z = -s.from * (1 - easeOut(clamp01((t - s.delay) / 2.0))); });
     sway.x += ((pointer.y * 0.18 + Math.sin(now / 2400) * 0.04) - sway.x) * 0.05;
     sway.y += ((pointer.x * 0.35 + Math.sin(now / 3100) * 0.12) - sway.y) * 0.05;
-    root.rotation.set(-sway.x - Math.atan(tilt) * 0.9, sway.y, 0);   // face the camera even when it looks down
+    root.quaternion.copy(camera.quaternion); root.rotateX(-sway.x); root.rotateY(sway.y);   // square to the camera so the disc stays a circle
     root.position.y = LIFT + Math.sin(now / 1300) * 0.04;
 
     if (!drag) pick();

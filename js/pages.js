@@ -13,7 +13,7 @@
         var ach = (c.achievements || []).filter(function (a) { return a.faculty === f.id; });
         var who = [f.title, f.post].filter(Boolean).join(" · ");
         return '<article class="profile rise" id="' + esc(f.id) + '">' +
-          '<div class="pic"><img src="' + url(f.photo) + '" alt="' + esc(f.name) + '" loading="lazy" width="200" height="219"></div>' +
+          '<div class="pic"><img src="' + url(f.photo) + '" alt="' + esc(f.name) + '" loading="lazy" width="400" height="438"></div>' +
           '<div><div class="who">' + esc(who) + "</div><h2>" + esc(f.name) + "</h2>" +
           "<h3>" + T("ui.edu", "Education") + '</h3><ul class="edu">' + f.education.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>" +
           (f.expertise.length ? "<h3>" + T("ui.exp", "Expertise") + '</h3><ul class="chips">' + f.expertise.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>" : "") +

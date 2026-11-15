@@ -45,14 +45,14 @@
       if (jumpTo) jumpTo(i);
       stage.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
     };
-    C.people = { faculty: fac.map(function (f) { return { id: f.id, name: f.name, who: who(f), photo: cut(f), inner: true }; }), visiting: visitingList };
+    C.people = { faculty: fac.map(function (f) { return { id: f.id, name: f.name, who: who(f), photo: url(f.photo) || cut(f), inner: true }; }), visiting: visitingList };
     window.dispatchEvent(new Event("cicm:people"));
   });
 
   /* ---------- spotlight ---------- */
   function spotlight(fac, ach) {
     stage.innerHTML = '<div class="sp">' +
-      '<div class="sp-names" role="tablist" aria-label="' + T("faculty.title", "The faculty") + '">' +
+      '<div class="sp-names" role="tablist" aria-label="' + T("faculty.title", "Faculty") + '">' +
       fac.map(function (f, i) {
         return '<button role="tab" type="button" id="sp-t' + i + '" aria-controls="sp-panel" aria-selected="' + (i === 0) + '" tabindex="' + (i === 0 ? 0 : -1) + '" style="--c:' + f.color + '">' +
           "<b>" + esc(f.name) + "</b><span>" + esc(who(f)) + "</span><i></i></button>";
@@ -132,7 +132,7 @@
 
   /* ---------- deck ---------- */
   function deck(fac, ach) {
-    stage.innerHTML = '<div class="dk"><div class="dk-col"><div class="dk-stack" tabindex="0" role="group" aria-roledescription="card stack" aria-label="' + T("faculty.title", "The faculty") + '">' +
+    stage.innerHTML = '<div class="dk"><div class="dk-col"><div class="dk-stack" tabindex="0" role="group" aria-roledescription="card stack" aria-label="' + T("faculty.title", "Faculty") + '">' +
       fac.map(function (f, i) {
         return '<article class="dk-card" data-i="' + i + '" style="--c:' + f.color + '" aria-hidden="' + (i !== 0) + '">' +
           '<div class="dk-top"><span class="dk-who">' + esc(who(f)) + "</span></div>" +

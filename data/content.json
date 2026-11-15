@@ -61,8 +61,8 @@
     "th": "ปรัชญาดุษฎีบัณฑิต สาขาตจวิทยา"
    },
    "focus": {
-    "en": "Research, innovation and new knowledge in dermatology, by thesis alone or by coursework and thesis.",
-    "th": "งานวิจัย นวัตกรรม และองค์ความรู้ใหม่ทางตจวิทยา เรียนแบบวิทยานิพนธ์อย่างเดียว หรือรายวิชาร่วมกับวิทยานิพนธ์"
+    "en": "Original research in dermatology, by thesis only or by coursework and thesis.",
+    "th": "งานวิจัยต้นฉบับทางตจวิทยา เรียนแบบวิทยานิพนธ์อย่างเดียว หรือรายวิชาร่วมกับวิทยานิพนธ์"
    },
    "length": {
     "en": "2 to 4 years, 48 to 75 credits by plan",
@@ -505,7 +505,7 @@
   {
    "id": "jitlada",
    "pubmed": "Meephansan J",
-   "photo": "people/jitlada.webp",
+   "photo": "people/jitlada-portrait.webp",
    "name": "Jitlada Meephansan",
    "title": "Assoc. Prof.",
    "post": "M.D., Ph.D.",
@@ -526,12 +526,12 @@
     "cites": 1790,
     "h": 16
    },
-   "cut": "people/jitlada-cut.webp"
+   "cut": "people/jitlada-deck.webp"
   },
   {
    "id": "premjit",
    "pubmed": "Juntongjin P",
-   "photo": "people/premjit.webp",
+   "photo": "people/premjit-portrait.webp",
    "name": "Premjit Juntongjin",
    "title": "Assoc. Prof.",
    "post": "M.D.",
@@ -556,12 +556,12 @@
     "cites": 288,
     "h": 10
    },
-   "cut": "people/premjit-cut.webp"
+   "cut": "people/premjit-deck.webp"
   },
   {
    "id": "punyaphat",
    "pubmed": "Sirithanabadeekul P",
-   "photo": "people/punyaphat.webp",
+   "photo": "people/punyaphat-portrait.webp",
    "name": "Punyaphat Sirithanabadeekul",
    "title": "Assoc. Prof.",
    "post": "M.D.",
@@ -591,12 +591,12 @@
     "cites": 339,
     "h": 11
    },
-   "cut": "people/punyaphat-cut.webp"
+   "cut": "people/punyaphat-deck.webp"
   },
   {
    "id": "sunatra",
    "pubmed": "Nitayavardhana S",
-   "photo": "people/sunatra.webp",
+   "photo": "people/sunatra-portrait.webp",
    "name": "Sunatra Nitayavardhana",
    "title": "Asst. Prof.",
    "post": "M.D.",
@@ -618,12 +618,12 @@
     "cites": 94,
     "h": 5
    },
-   "cut": "people/sunatra-cut.webp"
+   "cut": "people/sunatra-deck.webp"
   },
   {
    "id": "pawit",
    "pubmed": "Phadungsaksawasdi P",
-   "photo": "people/pawit.webp",
+   "photo": "people/pawit-portrait.webp",
    "name": "Pawit Phadungsaksawasdi",
    "title": "",
    "post": "M.D., Ph.D.",
@@ -646,12 +646,12 @@
     "cites": 387,
     "h": 10
    },
-   "cut": "people/pawit-cut.webp"
+   "cut": "people/pawit-deck.webp"
   },
   {
    "id": "rueangrit",
    "pubmed": "Siriphanit R",
-   "photo": "people/rueangrit.webp",
+   "photo": "people/rueangrit-portrait.webp",
    "name": "Rueangrit Siriphanit",
    "title": "",
    "post": "M.D., M.Sc., Ph.D.",
@@ -670,7 +670,7 @@
     "Filler",
     "Facial design"
    ],
-   "cut": "people/rueangrit-cut.webp",
+   "cut": "people/rueangrit-deck.webp",
    "otherPubs": [
     "Siriboonpipattana W, Siriphanit R, Srisongmueang N, Pipatnanun R, Mala C, Karin P, Koosirirat T, Paileeklee S, Luvira V. Proportion of third-year medical students of Khon Kaen University who have knowledge about self prevention from blood and body fluid borne infection. Srinagarind Medical Journal. 2016;31(5):58. https://www.tci-thaijo.org/index.php/SRIMEDJ/article/view/68219"
    ]
@@ -678,7 +678,7 @@
   {
    "id": "sasin",
    "pubmed": "Charoensuksira S",
-   "photo": "people/sasin.webp",
+   "photo": "people/sasin-portrait.webp",
    "name": "Sasin Charoensuksira",
    "title": "",
    "post": "M.D.",
@@ -693,7 +693,7 @@
     "AI and machine learning",
     "Aesthetics and longevity"
    ],
-   "cut": "people/sasin-cut.webp"
+   "cut": "people/sasin-deck.webp"
   }
  ],
  "staff": [
@@ -845,7 +845,7 @@
   },
   {
    "id": "onsiri",
-   "photo": "people/onsiri-photo.webp",
+   "photo": "people/onsiri-portrait.webp",
    "name": "Onsiri Serirat",
    "title": "Asst. Prof.",
    "post": "M.D.",
@@ -865,7 +865,7 @@
   },
   {
    "id": "woranit",
-   "photo": "people/woranit-photo.webp",
+   "photo": "people/woranit-portrait.webp",
    "name": "Woranit Onprasert",
    "title": "",
    "post": "M.D.",
@@ -957,7 +957,7 @@
   },
   {
    "id": "chontavat",
-   "photo": "people/chontavat-photo.webp",
+   "photo": "people/chontavat-portrait.webp",
    "name": "Chontavat Suvanpiyasiri",
    "title": "",
    "post": "M.D., Ph.D.",
@@ -974,7 +974,7 @@
   },
   {
    "id": "atchima",
-   "photo": "people/atchima-photo.webp",
+   "photo": "people/atchima-portrait.webp",
    "name": "Atchima Suwanchinda",
    "title": "",
    "post": "M.D., M.Sc., Ph.D.",
@@ -992,7 +992,7 @@
   },
   {
    "id": "jutamas",
-   "photo": "people/jutamas-photo.webp",
+   "photo": "people/jutamas-portrait.webp",
    "name": "Jutamas Tankunakorn",
    "title": "",
    "post": "M.D.",
@@ -1013,7 +1013,7 @@
   },
   {
    "id": "ratchanee",
-   "photo": "people/ratchanee-photo.webp",
+   "photo": "people/ratchanee-portrait.webp",
    "name": "Ratchanee Vipanurat",
    "title": "",
    "post": "M.D.",
@@ -1031,7 +1031,7 @@
   },
   {
    "id": "kamphon",
-   "photo": "people/kamphon-photo.webp",
+   "photo": "people/kamphon-portrait.webp",
    "name": "Kamphon Socharoentam",
    "title": "",
    "post": "M.D., M.Sc.",

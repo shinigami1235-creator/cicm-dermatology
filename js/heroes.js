@@ -113,10 +113,17 @@
         video = el.querySelector("video");
     ["webm", "mp4"].forEach(function (k) { var s = document.createElement("source"); s.src = video.dataset["src" + k[0].toUpperCase() + k.slice(1)]; s.type = "video/" + k; video.appendChild(s); });
     var fetched = false;
-    function fetchFilm() { if (fetched) return; fetched = true; video.preload = "auto"; video.load(); }
+    var onScreen = false;
+    function playFilm() { if (reduce || !onScreen) return; var pr = video.play(); if (pr && pr.catch) pr.catch(function () {}); }
+    // load() resets the element, so play again once it is ready
+    function fetchFilm() { if (fetched) return; fetched = true; video.preload = "auto"; video.addEventListener("canplay", playFilm, { once: true }); video.load(); }
+    video.addEventListener("pause", function () { if (onScreen && !reduce && !document.hidden) setTimeout(playFilm, 200); });
     ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (ev) { window.addEventListener(ev, fetchFilm, { once: true, passive: true }); });
-    window.addEventListener("load", function () { setTimeout(fetchFilm, 3000); });
-    if (!reduce) new IntersectionObserver(function (es) { var pr = es[0].isIntersecting ? video.play() : (video.pause(), null); if (pr && pr.catch) pr.catch(function () {}); if (hd && !es[0].isIntersecting) hd.pause(); }).observe(stage);
+    window.addEventListener("load", fetchFilm);
+    if (!reduce) new IntersectionObserver(function (es) {
+      onScreen = es[0].isIntersecting;
+      if (onScreen) playFilm(); else { video.pause(); if (hd) hd.pause(); }
+    }).observe(stage);
     /* the small loop plays behind the words; once the words are done the full-size 1920 px film fades in over it */
     var hd = null, hdReady = false, hdOn = false, film = el.querySelector(".ty-film"), save = navigator.connection && navigator.connection.saveData;
     function loadHD() {
