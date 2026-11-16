@@ -70,7 +70,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json?v=20261116c").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261116d").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -92,7 +92,7 @@
   }
   var papersP = null;
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261116c").then(function (r) { return r.json(); }).then(function (d) {
+    if (!papersP) papersP = fetch("data/publications.json?v=20261116d").then(function (r) { return r.json(); }).then(function (d) {
       // every lecturer tagged on a paper is bolded in the author lists
       d.papers.forEach(function (p) { p.faculty.forEach(function (k) { if (FAC_KEYS.indexOf(k) < 0) FAC_KEYS.push(k); }); });
       return d;
@@ -331,7 +331,9 @@
         else a.classList.toggle("is-current", on);
       });
     }
+    var lock = null;   // while a menu jump is under way, show the item that was clicked
     function update() {
+      if (lock) { mark(lock); return; }
       var navEl = $("#nav"), line = (navEl ? navEl.offsetHeight : 68) + window.innerHeight * 0.3, key = base;
       secs.forEach(function (el) { if (el.getBoundingClientRect().top <= line) key = el.dataset.navSec; });
       var atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
@@ -342,6 +344,82 @@
     window.addEventListener("scroll", function () { if (queued) return; queued = true; requestAnimationFrame(function () { queued = false; update(); }); }, { passive: true });
     window.addEventListener("resize", update);
     update();
+
+    /* In-page jumps. Sections further down (the training map, the research list) fill in as they
+       come near, which pushes the target down while the smooth scroll is still on its way. Keep
+       re-aiming until the target sits under the menu bar and stays there. */
+    function aim(el) {
+      var navEl = $("#nav"), off = (navEl ? navEl.offsetHeight : 68) + 12;
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      return Math.max(0, Math.min(max, Math.round(el.getBoundingClientRect().top + window.scrollY - off)));
+    }
+    var active = null, INPUT = ["wheel", "touchstart", "keydown", "mousedown"];
+    function jump(el, key, smooth) {
+      if (active) active();
+      var live = true, t0 = performance.now(), target = aim(el), still = 0, lastY = -1, ro = null, timer = 0;
+      var behavior = smooth && !reduce ? "smooth" : "auto";
+      function end() {
+        if (!live) return; live = false; active = null;
+        INPUT.forEach(function (t) { window.removeEventListener(t, end); });
+        if (ro) ro.disconnect(); clearTimeout(timer);
+        lock = null; update();
+      }
+      active = end;
+      INPUT.forEach(function (t) { window.addEventListener(t, end, { passive: true }); });
+      lock = key || null; if (lock) mark(lock);
+      window.scrollTo({ top: target, behavior: behavior });
+      (function tick() {
+        if (!live) return;
+        var now = aim(el);
+        if (Math.abs(now - target) > 2) { target = now; window.scrollTo({ top: target, behavior: behavior }); still = 0; }
+        var y = Math.round(window.scrollY);
+        still = Math.abs(y - target) <= 2 && y === lastY ? still + 1 : 0; lastY = y;
+        if (still > 20 || performance.now() - t0 > 6000) return landed();
+        requestAnimationFrame(tick);
+      })();
+      // after landing, sections above may still fill in (the map loads its script and photos once
+      // it is near); hold the target under the menu bar for a while unless the reader scrolls away
+      function landed() {
+        lock = null; update();
+        if (!("ResizeObserver" in window)) return end();
+        var at = Math.round(window.scrollY);
+        ro = new ResizeObserver(function () {
+          if (!live) return;
+          if (Math.abs(Math.round(window.scrollY) - at) > 2) return end();
+          var t = aim(el);
+          if (Math.abs(t - at) > 2) { at = t; window.scrollTo({ top: t, behavior: "auto" }); }
+        });
+        ro.observe(document.body);
+        timer = setTimeout(end, 12000);
+      }
+    }
+    function keyFor(el, a) {
+      if (el === foot || (foot && foot.contains(el))) return "contact";
+      var s = el.closest("[data-nav-sec]");
+      return (s && s.dataset.navSec) || (a && a.dataset.nav) || null;
+    }
+    function samePage(url) {
+      var strip = function (p) { return p.replace(/index\.html$/, ""); };
+      return url.origin === location.origin && strip(url.pathname) === strip(location.pathname);
+    }
+    document.addEventListener("click", function (e) {
+      if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var a = e.target.closest && e.target.closest("a[href*='#']");
+      if (!a || a.target === "_blank") return;
+      var url = new URL(a.getAttribute("href"), location.href);
+      if (!samePage(url) || url.hash.length < 2) return;
+      var el = document.getElementById(decodeURIComponent(url.hash.slice(1)));
+      if (!el) return;
+      e.preventDefault();
+      if (location.hash !== url.hash) history.pushState(null, "", url.hash);
+      jump(el, keyFor(el, a), true);
+    });
+    // arriving from another page with a hash (index.html#conference): the browser jumps before the
+    // page has filled in, so correct the landing once everything above has loaded
+    if (location.hash.length > 1) {
+      var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (target && page !== "programs") window.addEventListener("load", function () { jump(target, keyFor(target), false); });
+    }
   }
 
   /* ---------- hero film ---------- */
@@ -645,6 +723,7 @@
     Promise.all([loadContent(), loadPapers()]).then(function (r) {
       var c = r[0], papers = r[1].papers;
       renderNotices(c); renderPrograms(c); renderReel(c, papers); renderStaff(c); renderResearchHome(papers, c);
+      var pl = $("#partners"); if (pl && c.partners) pl.style.setProperty("--rows", c.partners.length);   // hold the map list's height until map.js fills it
       observe($("#programList"));
     }).catch(function (e) { console.error(e); });
     facebook();

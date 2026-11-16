@@ -416,6 +416,8 @@ html { scrollbar-color: #f67b1e #3d1e08; }
 .map { grid-area: map; }
 .pstage { grid-area: stage; }
 .partners { grid-area: list; list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.partners:empty { min-height: calc(var(--rows, 0) * 94px - 6px); }
+@media (max-width: 600px) { .partners:empty { min-height: calc(var(--rows, 0) * 86.7px - 6px); } }
 @media (min-width: 1000px) {
   .world { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); grid-template-areas: "map map" "stage list"; align-items: start; column-gap: clamp(32px, 4vw, 56px); }
   .pstage { position: sticky; top: calc(var(--nav-h) + 20px); }
