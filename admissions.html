@@ -13,11 +13,11 @@
 <link rel="icon" href="assets/cicm-emblem.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="preload" href="fonts/ibm-plex-sans-thai-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=20261116b">
+<link rel="stylesheet" href="css/site.css?v=20261116c">
 <script>document.documentElement.classList.replace('no-js','js');(function(){var q=new URLSearchParams(location.search),h=q.get('hero'),s=q.get('staff');try{if(h)localStorage.setItem('cicm-hero',h);else h=localStorage.getItem('cicm-hero');if(s)localStorage.setItem('cicm-staff',s);else s=localStorage.getItem('cicm-staff')}catch(e){}var d=document.documentElement.dataset;d.hero=['slide','type','lens'].indexOf(h)>-1?h:'type';d.staff=['spotlight','masthead','deck'].indexOf(s)>-1?s:'deck'})()</script>
 <script src="js/config.js" defer></script>
-<script src="js/i18n.js?v=20261116b" defer></script>
-<script src="js/site.js?v=20261116b" defer></script>
+<script src="js/i18n.js?v=20261116c" defer></script>
+<script src="js/site.js?v=20261116c" defer></script>
 
 </head>
 <body data-page="admissions">
@@ -59,19 +59,18 @@
     <nav class="nav-links" aria-label="Main">
       <a href="index.html" data-nav="home"><svg aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="nav.home">Home</span></a>
       <div class="nav-dd">
-        <button type="button" class="nav-dd-btn" aria-expanded="false" aria-controls="dd-programs"><span data-i18n="nav.programs">Programs</span><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+        <button type="button" class="nav-dd-btn" data-nav="programs" aria-expanded="false" aria-controls="dd-programs"><span data-i18n="nav.programs">Programs</span><svg aria-hidden="true"><use href="#i-down"/></svg></button>
         <ul class="nav-dd-panel" id="dd-programs">
-          <li><a href="index.html#programs" data-i18n="nav.allPrograms">All programs</a></li>
-          <li><a href="admissions.html#clinical"><small>M.Sc.</small> <span data-i18n="nav.pClinical">Clinical Dermatology</span></a></li>
-          <li><a href="admissions.html#cosmetic"><small>M.Sc.</small> <span data-i18n="nav.pCosmetic">Cosmetic Dermatology</span></a></li>
-          <li><a href="admissions.html#phd"><small>Ph.D.</small> <span data-i18n="nav.pPhd">Dermatology</span></a></li>
+          <li><a href="programs.html" data-i18n="nav.allPrograms">All programs</a></li>
+          <li><a href="programs.html#clinical"><small>M.Sc.</small> <span data-i18n="nav.pClinical">Clinical Dermatology</span></a></li>
+          <li><a href="programs.html#cosmetic"><small>M.Sc.</small> <span data-i18n="nav.pCosmetic">Cosmetic Dermatology</span></a></li>
+          <li><a href="programs.html#phd"><small>Ph.D.</small> <span data-i18n="nav.pPhd">Dermatology</span></a></li>
         </ul>
       </div>
       <div class="nav-dd">
         <button type="button" class="nav-dd-btn" data-nav="admissions" aria-expanded="false" aria-controls="dd-admissions"><span data-i18n="nav.admissions">Admissions</span><svg aria-hidden="true"><use href="#i-down"/></svg></button>
         <ul class="nav-dd-panel" id="dd-admissions">
           <li><a href="admissions.html" data-i18n="nav.howApply">How to apply</a></li>
-          <li><a href="admissions.html#courses" data-i18n="adm.courses">Courses</a></li>
           <li><a href="admissions.html#requirements" data-i18n="adm.req">Entry requirements</a></li>
           <li><a href="admissions.html#english" data-i18n="adm.eng">English score minimums</a></li>
           <li><a href="admissions.html#tuition" data-i18n="adm.fees">Tuition</a></li>
@@ -93,7 +92,7 @@
   </div>
   <nav aria-label="Menu">
     <a href="index.html" data-i18n="nav.home">Home</a>
-    <a href="index.html#programs" data-i18n="nav.programs">Programs</a>
+    <a href="programs.html" data-i18n="nav.programs">Programs</a>
     <a href="admissions.html" data-i18n="nav.admissions">Admissions</a>
     <a href="faculty.html" data-i18n="nav.faculty">Faculty</a>
     <a href="research.html" data-i18n="nav.research">Research</a>
@@ -122,15 +121,14 @@
 
   <section class="layer" data-layer="epi" data-depth="80" data-depth-name="epidermis" style="padding-top:clamp(40px,6vw,72px)">
     <div class="wrap">
-      <div class="block" id="courses">
+      <div class="block adm-progs" id="courses">
         <h2 data-i18n="adm.courses">Courses</h2>
-        <p class="prose" data-i18n="adm.coursesLede">The study plan for each program, taken from the CICM program documents.</p>
-        <div class="tabs" role="tablist" aria-label="Programs">
-          <button role="tab" type="button" id="tab-clinical" aria-controls="panel" aria-selected="true" data-p="clinical"><span>M.Sc. Clinical</span></button>
-          <button role="tab" type="button" id="tab-cosmetic" aria-controls="panel" aria-selected="false" data-p="cosmetic"><span>M.Sc. Cosmetic</span></button>
-          <button role="tab" type="button" id="tab-phd" aria-controls="panel" aria-selected="false" data-p="phd"><span>Ph.D.</span></button>
+        <p class="prose" data-i18n="adm.coursesLede2">Study plans, course descriptions, credits and thesis rules for each program are on the Programs page.</p>
+        <div class="adm-prog-links">
+          <a class="pbtn" href="programs.html#clinical"><small>M.Sc.</small> <span data-i18n="nav.pClinical">Clinical Dermatology</span><svg aria-hidden="true"><use href="#i-next"/></svg></a>
+          <a class="pbtn" href="programs.html#cosmetic"><small>M.Sc.</small> <span data-i18n="nav.pCosmetic">Cosmetic Dermatology</span><svg aria-hidden="true"><use href="#i-next"/></svg></a>
+          <a class="pbtn" href="programs.html#phd"><small>Ph.D.</small> <span data-i18n="nav.pPhd">Dermatology</span><svg aria-hidden="true"><use href="#i-next"/></svg></a>
         </div>
-        <div id="panel" role="tabpanel" aria-labelledby="tab-clinical" class="cols-2"></div>
       </div>
 
       <div class="block cols-2 req">
@@ -200,7 +198,7 @@
     <div class="junction" data-to="var(--fat-pale)"></div>
   </section>
 
-  <section class="layer" id="downloads" data-layer="fat-pale" data-depth="3500" data-depth-name="subcutis">
+  <section class="layer" id="downloads" data-nav-sec="downloads" data-layer="fat-pale" data-depth="3500" data-depth-name="subcutis">
     <div class="wrap cols-2">
       <div>
         <h2 style="font-size:clamp(2rem,4vw,3.4rem);line-height:1.04;margin-bottom:16px" data-i18n="adm.dl">Downloads</h2>
@@ -228,7 +226,7 @@
       <div>
         <p class="foot-h" data-i18n="foot.site">Site</p>
         <ul>
-          <li><a href="index.html#programs" data-i18n="nav.programs">Programs</a></li>
+          <li><a href="programs.html" data-i18n="nav.programs">Programs</a></li>
           <li><a href="admissions.html" data-i18n="nav.admissions">Admissions</a></li>
           <li><a href="research.html" data-i18n="nav.research">Research</a></li>
           <li><a href="faculty.html" data-i18n="nav.faculty">Faculty</a></li>

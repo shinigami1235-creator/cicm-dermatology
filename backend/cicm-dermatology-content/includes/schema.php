@@ -139,6 +139,11 @@ function cicm_schema() {
 			'help'  => 'The study plans as JSON. Saving is refused if the JSON is not valid.',
 			'type'  => 'json',
 		),
+		'programInfo' => array(
+			'label' => 'Program details page (advanced)',
+			'help'  => 'Everything on programs.html as JSON: philosophy, objectives, outcomes, credits, courses, requirements, training sites and careers. Saving is refused if the JSON is not valid.',
+			'type'  => 'json',
+		),
 		'scopusUpdated' => array(
 			'label' => 'Scopus figures updated on',
 			'type'  => 'date',

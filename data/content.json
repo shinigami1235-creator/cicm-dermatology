@@ -49,16 +49,16 @@
     "th": "การดูแลผิวเพื่อความงามและหัตถการความงาม รวมถึงการออกแบบใบหน้าและการฉีด คลินิกความงาม และศัลยกรรมผิวหนัง"
    },
    "length": {
-    "en": "2 years, 38 credits",
-    "th": "2 ปี 38 หน่วยกิต"
+    "en": "2 years, 36 credits",
+    "th": "2 ปี 36 หน่วยกิต"
    },
    "years": {
     "en": "2 years",
     "th": "2 ปี"
    },
    "credits": {
-    "en": "38 credits",
-    "th": "38 หน่วยกิต"
+    "en": "36 credits",
+    "th": "36 หน่วยกิต"
    },
    "fee": {
     "thai": 165000,
@@ -290,7 +290,7 @@
    },
    {
     "term": "Year 2, semester 3",
-    "total": 10,
+    "total": 8,
     "courses": [
      [
       "CMD 752",
@@ -305,7 +305,7 @@
      [
       "CMD 712",
       "Hands-on Experiences in Dermatology",
-      2
+      0
      ],
      [
       "CMD 800",
@@ -339,8 +339,8 @@
      "th": "สำเร็จปริญญาโท"
     },
     "detail": {
-     "en": "Thesis 48 credits. At least 2 years (4 regular semesters).",
-     "th": "วิทยานิพนธ์ 48 หน่วยกิต อย่างน้อย 2 ปี (4 ภาคการศึกษาปกติ)"
+     "en": "Dissertation 48 credits. At least 2 years (4 regular semesters).",
+     "th": "ดุษฎีนิพนธ์ 48 หน่วยกิต อย่างน้อย 2 ปี (4 ภาคการศึกษาปกติ)"
     }
    },
    {
@@ -350,8 +350,8 @@
      "th": "สำเร็จปริญญาตรี (แพทยศาสตรบัณฑิต)"
     },
     "detail": {
-     "en": "Thesis 72 credits. At least 4 years (8 regular semesters).",
-     "th": "วิทยานิพนธ์ 72 หน่วยกิต อย่างน้อย 4 ปี (8 ภาคการศึกษาปกติ)"
+     "en": "Dissertation 72 credits. At least 4 years (8 regular semesters).",
+     "th": "ดุษฎีนิพนธ์ 72 หน่วยกิต อย่างน้อย 4 ปี (8 ภาคการศึกษาปกติ)"
     }
    },
    {
@@ -361,8 +361,8 @@
      "th": "สำเร็จปริญญาโท"
     },
     "detail": {
-     "en": "Coursework 21 credits, electives 4 credits, thesis 36 credits. At least 3 years (6 regular semesters).",
-     "th": "รายวิชา 21 หน่วยกิต วิชาเลือก 4 หน่วยกิต วิทยานิพนธ์ 36 หน่วยกิต อย่างน้อย 3 ปี (6 ภาคการศึกษาปกติ)"
+     "en": "Required courses 19 credits, electives 6 credits, dissertation 36 credits. At least 3 years (6 regular semesters).",
+     "th": "วิชาบังคับ 19 หน่วยกิต วิชาเลือก 6 หน่วยกิต ดุษฎีนิพนธ์ 36 หน่วยกิต อย่างน้อย 3 ปี (6 ภาคการศึกษาปกติ)"
     }
    },
    {
@@ -372,8 +372,8 @@
      "th": "สำเร็จปริญญาตรี (แพทยศาสตรบัณฑิต)"
     },
     "detail": {
-     "en": "Coursework 23 credits, electives 4 credits, thesis 48 credits. At least 4 years (8 regular semesters).",
-     "th": "รายวิชา 23 หน่วยกิต วิชาเลือก 4 หน่วยกิต วิทยานิพนธ์ 48 หน่วยกิต อย่างน้อย 4 ปี (8 ภาคการศึกษาปกติ)"
+     "en": "Required courses 21 credits, electives 6 credits, dissertation 48 credits. At least 4 years (8 regular semesters).",
+     "th": "วิชาบังคับ 21 หน่วยกิต วิชาเลือก 6 หน่วยกิต ดุษฎีนิพนธ์ 48 หน่วยกิต อย่างน้อย 4 ปี (8 ภาคการศึกษาปกติ)"
     }
    }
   ]
@@ -1130,5 +1130,1141 @@
     "th": "คลินิก KTC"
    }
   }
- ]
+ ],
+ "programInfo": {
+  "msc": {
+   "awarded": {
+    "en": "Master of Science (Dermatology)",
+    "th": "วิทยาศาสตรมหาบัณฑิต (ตจวิทยา)"
+   },
+   "plan": {
+    "en": "Plan 1 (academic plan): coursework and thesis",
+    "th": "แผน 1 (แผนวิชาการ) ศึกษารายวิชาและทำวิทยานิพนธ์"
+   },
+   "duration": {
+    "en": "2 years, 4 regular semesters",
+    "th": "2 ปี 4 ภาคการศึกษาปกติ"
+   },
+   "philosophy": {
+    "en": "The program brings together fundamental and emerging knowledge in dermatology to train medical graduates with academic excellence and ethical values who contribute as much as they can to society.",
+    "th": "บูรณาการความรู้พื้นฐานและความรู้ใหม่ทางตจวิทยา เพื่อผลิตมหาบัณฑิตทางการแพทย์ที่มีความเป็นเลิศทางวิชาการและมีคุณธรรมจริยธรรม และสร้างประโยชน์สูงสุดแก่สังคม"
+   },
+   "objectives": [
+    {
+     "en": "Broad knowledge of dermatology and the ability to practise accurately to professional standards.",
+     "th": "มีความรู้ความเข้าใจทางตจวิทยาอย่างกว้างขวาง และปฏิบัติงานได้ถูกต้องตามมาตรฐานวิชาชีพ"
+    },
+    {
+     "en": "The skills to conduct and produce valuable research in dermatology.",
+     "th": "มีทักษะและสมรรถนะในการทำวิจัยที่มีคุณค่าทางตจวิทยา"
+    },
+    {
+     "en": "A broad outlook and the drive to keep developing.",
+     "th": "มีวิสัยทัศน์กว้างไกลและใฝ่พัฒนาตนเองอย่างต่อเนื่อง"
+    },
+    {
+     "en": "Professional ethics and moral conduct as physicians.",
+     "th": "มีจริยธรรมและจรรยาบรรณแห่งวิชาชีพแพทย์"
+    },
+    {
+     "en": "Career advancement and professional growth.",
+     "th": "มีความก้าวหน้าและเติบโตในสายอาชีพ"
+    },
+    {
+     "en": "The confidence to present research, views and new knowledge at national and international meetings.",
+     "th": "มีความมั่นใจในการนำเสนอผลงานวิชาการ ความคิดเห็น และความรู้ใหม่ทั้งในระดับชาติและนานาชาติ"
+    }
+   ],
+   "outcomes": [
+    {
+     "group": {
+      "en": "Knowledge",
+      "th": "ความรู้"
+     },
+     "code": "K1",
+     "text": {
+      "en": "Demonstrate comprehensive knowledge of dermatological sciences, including clinical dermatology, dermatopathology and aesthetic dermatology, with an understanding of disease mechanisms and therapeutic advances.",
+      "th": "Demonstrate comprehensive knowledge of dermatological sciences, including clinical dermatology, dermatopathology and aesthetic dermatology, with an understanding of disease mechanisms and therapeutic advances."
+     }
+    },
+    {
+     "group": {
+      "en": "Knowledge",
+      "th": "ความรู้"
+     },
+     "code": "K2",
+     "text": {
+      "en": "Evaluate current literature and apply evidence-based concepts in clinical decisions and dermatological research.",
+      "th": "Evaluate current literature and apply evidence-based concepts in clinical decisions and dermatological research."
+     }
+    },
+    {
+     "group": {
+      "en": "Skills",
+      "th": "ทักษะ"
+     },
+     "code": "S1",
+     "text": {
+      "en": "Apply research methods and technologies to design and conduct independent research that advances dermatological science.",
+      "th": "Apply research methods and technologies to design and conduct independent research that advances dermatological science."
+     }
+    },
+    {
+     "group": {
+      "en": "Skills",
+      "th": "ทักษะ"
+     },
+     "code": "S2",
+     "text": {
+      "en": "Perform specialized dermatological procedures and clinical assessments accurately, with sound reasoning and patient-centered care.",
+      "th": "Perform specialized dermatological procedures and clinical assessments accurately, with sound reasoning and patient-centered care."
+     }
+    },
+    {
+     "group": {
+      "en": "Ethics",
+      "th": "จริยธรรม"
+     },
+     "code": "E1",
+     "text": {
+      "en": "Follow professional ethics and international standards in clinical and research practice, protecting patient confidentiality, academic integrity and regulatory compliance.",
+      "th": "Follow professional ethics and international standards in clinical and research practice, protecting patient confidentiality, academic integrity and regulatory compliance."
+     }
+    },
+    {
+     "group": {
+      "en": "Character",
+      "th": "คุณลักษณะ"
+     },
+     "code": "C1",
+     "text": {
+      "en": "Lead and mentor in academic and clinical dermatology settings.",
+      "th": "Lead and mentor in academic and clinical dermatology settings."
+     }
+    },
+    {
+     "group": {
+      "en": "Character",
+      "th": "คุณลักษณะ"
+     },
+     "code": "C2",
+     "text": {
+      "en": "Work with multidisciplinary healthcare teams to improve dermatological research and patient outcomes.",
+      "th": "Work with multidisciplinary healthcare teams to improve dermatological research and patient outcomes."
+     }
+    }
+   ],
+   "years": [
+    {
+     "year": {
+      "en": "Year 1",
+      "th": "ปีที่ 1"
+     },
+     "text": {
+      "en": "Fundamental and clinical dermatology, procedures done well, and a working grasp of how research is planned and carried out.",
+      "th": "มีความรู้ตจวิทยาพื้นฐานและคลินิก ทำหัตถการได้อย่างมีประสิทธิภาพ และเข้าใจกระบวนการวิจัยและการลงมือปฏิบัติ"
+     }
+    },
+    {
+     "year": {
+      "en": "Year 2",
+      "th": "ปีที่ 2"
+     },
+     "text": {
+      "en": "In-depth research skills, original thinking, and finding and solving problems.",
+      "th": "มีทักษะการวิจัยเชิงลึก คิดนอกกรอบ และระบุและแก้ปัญหาได้อย่างมีประสิทธิภาพ"
+     }
+    }
+   ],
+   "careers": [
+    {
+     "title": {
+      "en": "Teaching",
+      "th": "การสอนและงานวิชาการ"
+     },
+     "text": {
+      "en": "University lecturer or academic staff in dermatology, medical sciences, health sciences and related fields.",
+      "th": "อาจารย์มหาวิทยาลัยและบุคลากรสายวิชาการด้านตจวิทยา วิทยาศาสตร์การแพทย์ วิทยาศาสตร์สุขภาพ และสาขาที่เกี่ยวข้อง"
+     }
+    },
+    {
+     "title": {
+      "en": "Research and innovation",
+      "th": "วิจัยและนวัตกรรม"
+     },
+     "text": {
+      "en": "Researcher in universities, government research institutes, private research organisations and healthcare companies.",
+      "th": "นักวิจัยในมหาวิทยาลัย สถาบันวิจัยภาครัฐ องค์กรวิจัยเอกชน และอุตสาหกรรมด้านสุขภาพ"
+     }
+    },
+    {
+     "title": {
+      "en": "Clinical and biomedical research",
+      "th": "วิจัยทางคลินิกและชีวการแพทย์"
+     },
+     "text": {
+      "en": "Clinical research, biomedical research, clinical trials and new treatments in dermatology and medical sciences.",
+      "th": "งานวิจัยทางคลินิก งานวิจัยชีวการแพทย์ การทดลองทางคลินิก และการพัฒนาความรู้และนวัตกรรมด้านตจวิทยาและวิทยาศาสตร์การแพทย์"
+     }
+    },
+    {
+     "title": {
+      "en": "Healthcare industry",
+      "th": "อุตสาหกรรมสุขภาพ"
+     },
+     "text": {
+      "en": "Pharmaceutical, medical device, cosmeceutical and aesthetic medicine companies.",
+      "th": "บริษัทยา เครื่องมือแพทย์ เวชสำอาง และเวชศาสตร์ความงาม"
+     }
+    },
+    {
+     "title": {
+      "en": "Academic and research leadership",
+      "th": "ผู้นำด้านวิชาการและวิจัย"
+     },
+     "text": {
+      "en": "Leading academic, research and organisational units in dermatology and the health sciences.",
+      "th": "ตำแหน่งผู้นำในหน่วยงานวิชาการ วิจัย และองค์กรด้านตจวิทยาและวิทยาศาสตร์สุขภาพ"
+     }
+    }
+   ],
+   "facilities": {
+    "thailand": [
+     "Chulabhorn International College of Medicine, Thammasat University (Rangsit Campus)",
+     "Thammasat University Hospital",
+     "Pan-Suphan-Hong Foundation",
+     "Bumrungrad International Hospital",
+     "Samitivej Sukhumvit Hospital",
+     "Rajavithi Hospital"
+    ],
+    "abroad": [
+     "Aichi Medical University, Aichi, Japan",
+     "Central Japan International Medical Center (CJIMC), Gifu, Japan",
+     "Hokkaido University Hospital, Sapporo, Japan",
+     "Nagoya City University, Nagoya, Japan",
+     "Niigata University, Japan",
+     "Hamamatsu University, Japan",
+     "Kizawa Memorial Hospital, Japan",
+     "Yamanashi University, Japan",
+     "Shonan Beauty Clinic, Tokyo, Japan",
+     "Erasmus University, the Netherlands",
+     "Mirabel Clinic, Seoul, South Korea",
+     "Hautwerk Clinic, Zurich, Switzerland",
+     "Greater Miami Skin and Laser Center, Miami, Florida, USA"
+    ]
+   },
+   "requirements": [
+    {
+     "title": {
+      "en": "Registering for the thesis",
+      "th": "การลงทะเบียนวิทยานิพนธ์"
+     },
+     "items": [
+      {
+       "en": "Students register for the thesis after at least 2 regular semesters of coursework, with at least 12 credits and a GPAX of 3.00 or higher.",
+       "th": "ลงทะเบียนวิทยานิพนธ์ได้หลังเรียนรายวิชาอย่างน้อย 2 ภาคการศึกษาปกติ ได้อย่างน้อย 12 หน่วยกิต และมีคะแนนเฉลี่ยสะสมไม่ต่ำกว่า 3.00"
+      },
+      {
+       "en": "The thesis is written and presented in English.",
+       "th": "เขียนและนำเสนอวิทยานิพนธ์เป็นภาษาอังกฤษ"
+      },
+      {
+       "en": "After registering, the student submits a proposal to the Dermatology Program Committee, and the Dean appoints an advisory and examination committee of at least 3 members to guide the student and run the proposal and final defense.",
+       "th": "หลังลงทะเบียน นักศึกษาเสนอเค้าโครงต่อคณะกรรมการหลักสูตรตจวิทยา และคณบดีแต่งตั้งคณะกรรมการที่ปรึกษาและสอบวิทยานิพนธ์อย่างน้อย 3 คน เพื่อให้คำแนะนำและจัดสอบเค้าโครงและสอบป้องกัน"
+      },
+      {
+       "en": "Thesis advisors meet the graduate program standards of the Ministry of Higher Education, Science, Research and Innovation (MHESI).",
+       "th": "อาจารย์ที่ปรึกษามีคุณสมบัติตามเกณฑ์มาตรฐานหลักสูตรระดับบัณฑิตศึกษาของกระทรวงการอุดมศึกษา วิทยาศาสตร์ วิจัยและนวัตกรรม (อว.)"
+      }
+     ]
+    },
+    {
+     "title": {
+      "en": "Proposal examination",
+      "th": "การสอบเค้าโครงวิทยานิพนธ์"
+     },
+     "items": [
+      {
+       "en": "The Dean appoints a committee of 3: the thesis advisor, a Thammasat University faculty member and an external expert. The advisor holds a doctorate or is at least an Associate Professor in the field.",
+       "th": "คณบดีแต่งตั้งคณะกรรมการ 3 คน ได้แก่ อาจารย์ที่ปรึกษา อาจารย์มหาวิทยาลัยธรรมศาสตร์ และผู้ทรงคุณวุฒิภายนอก อาจารย์ที่ปรึกษาต้องมีวุฒิปริญญาเอกหรือดำรงตำแหน่งไม่ต่ำกว่ารองศาสตราจารย์ในสาขานั้น"
+      },
+      {
+       "en": "The student registers for the thesis in the semester of the proposal exam and submits the proposal through the CICM Graduate Studies Program with the advisor's approval.",
+       "th": "ลงทะเบียนวิทยานิพนธ์ในภาคการศึกษาที่สอบเค้าโครง และยื่นเค้าโครงผ่านฝ่ายบัณฑิตศึกษา CICM โดยได้รับความเห็นชอบจากอาจารย์ที่ปรึกษา"
+      },
+      {
+       "en": "The proposal passes on a unanimous vote of the committee.",
+       "th": "เค้าโครงผ่านเมื่อคณะกรรมการมีมติเป็นเอกฉันท์"
+      }
+     ]
+    },
+    {
+     "title": {
+      "en": "Thesis defense",
+      "th": "การสอบป้องกันวิทยานิพนธ์"
+     },
+     "items": [
+      {
+       "en": "Students take the defense after passing the required foreign language examination.",
+       "th": "สอบป้องกันได้หลังสอบผ่านภาษาต่างประเทศตามเกณฑ์"
+      },
+      {
+       "en": "The defense follows Thammasat University regulations, and an S (satisfactory) grade needs a unanimous vote of the committee.",
+       "th": "การสอบเป็นไปตามระเบียบมหาวิทยาลัยธรรมศาสตร์ และได้ระดับ S (ผ่าน) เมื่อคณะกรรมการมีมติเป็นเอกฉันท์"
+      }
+     ]
+    }
+   ],
+   "quality": {
+    "en": "The program is run and improved under the AUN-QA quality assurance guidelines and reports to the university at the end of each academic year.",
+    "th": "หลักสูตรดำเนินงานและพัฒนาตามแนวทางการประกันคุณภาพ AUN-QA และรายงานต่อมหาวิทยาลัยทุกสิ้นปีการศึกษา"
+   },
+   "tracks": {
+    "clinical": {
+     "total": 42,
+     "structure": [
+      [
+       "core",
+       8
+      ],
+      [
+       "major",
+       18
+      ],
+      [
+       "elective",
+       4
+      ],
+      [
+       "thesis",
+       12
+      ]
+     ],
+     "groups": {
+      "core": [
+       {
+        "code": "CMB 600",
+        "name": "Responsible Research and Ethics in Bioclinical Sciences",
+        "credits": 2,
+        "desc": "Introduction to responsible research; relevant information for initiating research; critical reading and analysis; guidelines for good practice, ethics and regulations in bioclinical sciences; responsible protocol writing; planning and setting up experiments and research; responsible peer review; good data management practice and quality standards; considerations for reports and publication; ethical issues in publication; and presentation of research results."
+       },
+       {
+        "code": "CMB 601",
+        "name": "Statistical Methods in Bioclinical Sciences",
+        "credits": 2,
+        "desc": "Principles and application of biostatistics to bioclinical research; types of variables and data; data presentation and summarization; population and sample; probability distributions; research and statistical hypotheses; estimation and hypothesis testing; parametric and non-parametric statistics; statistical tests for reliability and diagnosis; sample size estimation; and statistical software."
+       },
+       {
+        "code": "CMD 601",
+        "name": "Clinical Dermatology I",
+        "credits": 2,
+        "desc": "Structure of skin lesions and fundamentals of clinical diagnosis; clinical manifestations of common skin diseases and their pathogenesis, etiology, prognosis and management."
+       },
+       {
+        "code": "CMD 602",
+        "name": "Dermatology Seminar",
+        "credits": 1,
+        "desc": "Discussion of problems in patient care, clinical diagnosis, pathological diagnosis, laboratory investigation and treatment of chronic and rare skin diseases."
+       },
+       {
+        "code": "CMD 603",
+        "name": "Dermatology Journal Club",
+        "credits": 1,
+        "desc": "Formal presentation and discussion of current research in dermatological sciences and clinical dermatology by students, supervised by the course committee."
+       }
+      ],
+      "major": [
+       {
+        "code": "CMD 611",
+        "name": "Dermatology Clinic I",
+        "credits": 2,
+        "desc": "History taking and physical examination of outpatients; common dermatologic conditions and complicated skin diseases; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors."
+       },
+       {
+        "code": "CMD 612",
+        "name": "Basic Dermatology",
+        "credits": 2,
+        "desc": "Structure and function of the skin; epidermis and keratinization; cell-cell adhesion, the epidermal-dermal junction and related diseases; dermis, fibroblasts and extracellular matrix proteins; eccrine and apocrine glands; melanocytes and pigmentation; subcutaneous fat and related diseases; biology of hair; biology of nails; photobiology and photoimmunology; photoprotection; principles of topical therapy; principles of systemic therapy and immunosuppressive medication; common investigations in dermatological practice."
+       },
+       {
+        "code": "CMD 613",
+        "name": "Advanced Dermatology",
+        "credits": 2,
+        "desc": "Innate and adaptive immunity in the skin; cytokines, chemokines and antigen-antibody reactions; humoral immunity and complement; production and activation of neutrophils and eosinophils; immunopathogenesis of atopic dermatitis and psoriasis; pruritus and neurobiology of the skin; biologic drugs and targeted therapy; stem cells and basic signaling pathways in the skin; in vitro and in vivo models for investigative dermatology."
+       },
+       {
+        "code": "CMD 614",
+        "name": "Dermatopathology",
+        "credits": 2,
+        "desc": "Histopathological examination and interpretation of skin diseases."
+       },
+       {
+        "code": "CMD 615",
+        "name": "Investigations in Dermatology",
+        "credits": 2,
+        "desc": "Principles of molecular biology techniques; dermoscopy of skin conditions and hair; skin and soft tissue imaging; bioinformatics in dermatology; AI in dermatology; bio-based materials in dermatology and cosmetology; cell-based therapy; exosomes; teledermatology; how to generate good research; systematic review and meta-analysis; clinic operating systems; healthcare communication and public speaking."
+       },
+       {
+        "code": "CMD 616",
+        "name": "Clinical Dermatology II",
+        "credits": 2,
+        "desc": "Structure of skin lesions and fundamentals of clinical diagnosis; clinical manifestations of complicated skin diseases."
+       },
+       {
+        "code": "CMD 617",
+        "name": "Dermatology Clinic II",
+        "credits": 2,
+        "desc": "History taking and physical examination of outpatients; common dermatologic conditions and complicated skin diseases; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors."
+       },
+       {
+        "code": "CMD 711",
+        "name": "Dermatosurgery",
+        "credits": 2,
+        "desc": "Treatment of skin diseases, aging skin and skin tumors by surgery and laser; excision and repair; electrosurgery; cryosurgery; ablative laser and chemical peels; non-ablative laser and light therapy; botulinum toxin and soft tissue augmentation; vascular laser and treatment of varicose veins; cosmetic and skin care in dermatology, supervised by professors."
+       },
+       {
+        "code": "CMD 712",
+        "name": "Hands-on Experiences in Dermatology",
+        "credits": 2,
+        "desc": "Practice in dermatological procedures: fruit lab and biopsy, cadaver workshop, laser and injection. The clinical track grades it on an average score; the cosmetic track grades it P (pass) or N (not pass) with no credits."
+       }
+      ],
+      "elective": [
+       {
+        "code": "CMD 721",
+        "name": "Dermatological Practice I",
+        "credits": 2,
+        "desc": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor."
+       },
+       {
+        "code": "CMD 722",
+        "name": "Dermatological Practice II",
+        "credits": 2,
+        "desc": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor."
+       },
+       {
+        "code": "CMD 723",
+        "name": "Laser and Injection",
+        "credits": 2,
+        "desc": "Aesthetic treatment with current equipment and technology, from basic principles and clinical use to preventing and treating complications; laser, radiofrequency and other devices for pigmentary disorders, tattoos, hair loss, acne, scars, photoaging, wrinkles and hair removal."
+       }
+      ],
+      "thesis": [
+       {
+        "code": "CMD 800",
+        "name": "Thesis",
+        "credits": 12,
+        "desc": "Literature review, a research outline and systematic research that creates new knowledge in dermatology, with research ethics; writing the thesis; presenting results and preparing articles for publication; ethics in publishing, under the thesis advisory committee."
+       }
+      ]
+     },
+     "electiveNote": {
+      "en": "Choose 4 credits.",
+      "th": "เลือกเรียน 4 หน่วยกิต"
+     }
+    },
+    "cosmetic": {
+     "total": 36,
+     "structure": [
+      [
+       "core",
+       8
+      ],
+      [
+       "major",
+       14
+      ],
+      [
+       "elective",
+       2
+      ],
+      [
+       "thesis",
+       12
+      ]
+     ],
+     "groups": {
+      "core": [
+       {
+        "code": "CMB 600",
+        "name": "Responsible Research and Ethics in Bioclinical Sciences",
+        "credits": 2,
+        "desc": "Introduction to responsible research; relevant information for initiating research; critical reading and analysis; guidelines for good practice, ethics and regulations in bioclinical sciences; responsible protocol writing; planning and setting up experiments and research; responsible peer review; good data management practice and quality standards; considerations for reports and publication; ethical issues in publication; and presentation of research results."
+       },
+       {
+        "code": "CMB 601",
+        "name": "Statistical Methods in Bioclinical Sciences",
+        "credits": 2,
+        "desc": "Principles and application of biostatistics to bioclinical research; types of variables and data; data presentation and summarization; population and sample; probability distributions; research and statistical hypotheses; estimation and hypothesis testing; parametric and non-parametric statistics; statistical tests for reliability and diagnosis; sample size estimation; and statistical software."
+       },
+       {
+        "code": "CMD 601",
+        "name": "Clinical Dermatology I",
+        "credits": 2,
+        "desc": "Structure of skin lesions and fundamentals of clinical diagnosis; clinical manifestations of common skin diseases and their pathogenesis, etiology, prognosis and management."
+       },
+       {
+        "code": "CMD 602",
+        "name": "Dermatology Seminar",
+        "credits": 1,
+        "desc": "Discussion of problems in patient care, clinical diagnosis, pathological diagnosis, laboratory investigation and treatment of chronic and rare skin diseases."
+       },
+       {
+        "code": "CMD 603",
+        "name": "Dermatology Journal Club",
+        "credits": 1,
+        "desc": "Formal presentation and discussion of current research in dermatological sciences and clinical dermatology by students, supervised by the course committee."
+       }
+      ],
+      "major": [
+       {
+        "code": "CMD 611",
+        "name": "Dermatology Clinic I",
+        "credits": 2,
+        "desc": "History taking and physical examination of outpatients; common dermatologic conditions and complicated skin diseases; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors."
+       },
+       {
+        "code": "CMD 612",
+        "name": "Basic Dermatology",
+        "credits": 2,
+        "desc": "Structure and function of the skin; epidermis and keratinization; cell-cell adhesion, the epidermal-dermal junction and related diseases; dermis, fibroblasts and extracellular matrix proteins; eccrine and apocrine glands; melanocytes and pigmentation; subcutaneous fat and related diseases; biology of hair; biology of nails; photobiology and photoimmunology; photoprotection; principles of topical therapy; principles of systemic therapy and immunosuppressive medication; common investigations in dermatological practice."
+       },
+       {
+        "code": "CMD 618",
+        "name": "Cosmetic Dermatology Clinic I",
+        "credits": 2,
+        "desc": "History taking and physical examination of outpatients; common aesthetic dermatologic conditions; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors."
+       },
+       {
+        "code": "CMD 619",
+        "name": "Cosmetic Dermatology Clinic II",
+        "credits": 2,
+        "desc": "History taking and physical examination of outpatients; complicated aesthetic dermatologic conditions; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors."
+       },
+       {
+        "code": "CMD 711",
+        "name": "Dermatosurgery",
+        "credits": 2,
+        "desc": "Treatment of skin diseases, aging skin and skin tumors by surgery and laser; excision and repair; electrosurgery; cryosurgery; ablative laser and chemical peels; non-ablative laser and light therapy; botulinum toxin and soft tissue augmentation; vascular laser and treatment of varicose veins; cosmetic and skin care in dermatology, supervised by professors."
+       },
+       {
+        "code": "CMD 712",
+        "name": "Hands-on Experiences in Dermatology",
+        "credits": 0,
+        "desc": "Practice in dermatological procedures: fruit lab and biopsy, cadaver workshop, laser and injection. The clinical track grades it on an average score; the cosmetic track grades it P (pass) or N (not pass) with no credits."
+       },
+       {
+        "code": "CMD 751",
+        "name": "Cosmetic Dermatology",
+        "credits": 2,
+        "desc": "Common conditions such as acne, melasma, freckles and hair problems, their pathogenesis, treatment options and new technology; cosmeceuticals, their types, trends, skin penetration and how to choose them for a patient; anti-aging, including topical and oral treatment, food, vitamins and basic investigations; stem cell therapy in cosmetic practice; marketing and running a cosmetic practice."
+       },
+       {
+        "code": "CMD 752",
+        "name": "Facial Design and Injection",
+        "credits": 2,
+        "desc": "Facial analysis and choosing the right candidate for each treatment; botulinum toxin, filler and fat transfer, with facial and body anatomy, mechanism and basic pharmacology of each product, indications and contraindications; managing risks and complications; supervised hands-on sessions."
+       }
+      ],
+      "elective": [
+       {
+        "code": "CMD 722",
+        "name": "Dermatological Practice II",
+        "credits": 2,
+        "desc": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor."
+       },
+       {
+        "code": "CMD 723",
+        "name": "Laser and Injection",
+        "credits": 2,
+        "desc": "Aesthetic treatment with current equipment and technology, from basic principles and clinical use to preventing and treating complications; laser, radiofrequency and other devices for pigmentary disorders, tattoos, hair loss, acne, scars, photoaging, wrinkles and hair removal."
+       }
+      ],
+      "thesis": [
+       {
+        "code": "CMD 800",
+        "name": "Thesis",
+        "credits": 12,
+        "desc": "Literature review, a research outline and systematic research that creates new knowledge in dermatology, with research ethics; writing the thesis; presenting results and preparing articles for publication; ethics in publishing, under the thesis advisory committee."
+       }
+      ]
+     },
+     "electiveNote": {
+      "en": "Choose 2 credits.",
+      "th": "เลือกเรียน 2 หน่วยกิต"
+     }
+    }
+   }
+  },
+  "phd": {
+   "awarded": {
+    "en": "Doctor of Philosophy (Dermatology)",
+    "th": "ปรัชญาดุษฎีบัณฑิต (ตจวิทยา)"
+   },
+   "plan": {
+    "en": "Plan 1 by dissertation, or Plan 2 by coursework and dissertation",
+    "th": "แผน 1 ทำดุษฎีนิพนธ์ หรือแผน 2 ศึกษารายวิชาและทำดุษฎีนิพนธ์"
+   },
+   "duration": {
+    "en": "2 to 4 years minimum, by study plan",
+    "th": "อย่างน้อย 2 ถึง 4 ปี ตามแผนการศึกษา"
+   },
+   "philosophy": {
+    "en": "The program brings together fundamental and emerging knowledge in dermatology to train doctoral graduates with academic excellence and strong ethical values who contribute as much as they can to society.",
+    "th": "บูรณาการความรู้พื้นฐานและความรู้ใหม่ทางตจวิทยา เพื่อผลิตดุษฎีบัณฑิตที่มีความเป็นเลิศทางวิชาการและมีคุณธรรมจริยธรรม และสร้างประโยชน์สูงสุดแก่สังคม"
+   },
+   "objectives": [
+    {
+     "en": "International-level knowledge and skills in dermatology, kept current with advances in science and medical technology, and the academic leadership to move dermatology forward in Thailand.",
+     "th": "มีความรู้และสมรรถนะทางตจวิทยาระดับนานาชาติ พัฒนาตนเองให้ทันความก้าวหน้าทางวิทยาศาสตร์และเทคโนโลยีการแพทย์ และเป็นผู้นำทางวิชาการที่พัฒนาตจวิทยาของประเทศ"
+    },
+    {
+     "en": "Advanced expertise to fill the shortage of dermatology faculty and researchers in public and private institutions.",
+     "th": "มีความรู้และสมรรถนะขั้นสูงเพื่อช่วยแก้ปัญหาการขาดแคลนอาจารย์และนักวิจัยด้านตจวิทยาในสถาบันภาครัฐและเอกชน"
+    },
+    {
+     "en": "Vision, integrity, ethical responsibility and academic leadership that serve dermatology and society.",
+     "th": "มีวิสัยทัศน์ คุณธรรม จริยธรรม และภาวะผู้นำทางวิชาการ เพื่อประโยชน์ต่อตจวิทยาและสังคม"
+    }
+   ],
+   "outcomes": [
+    {
+     "group": {
+      "en": "Knowledge",
+      "th": "ความรู้"
+     },
+     "code": "K1",
+     "text": {
+      "en": "Critically evaluate and synthesize advanced knowledge of dermatological sciences, including the molecular and cellular mechanisms of skin disease, emerging therapies and the concepts shaping the field.",
+      "th": "Critically evaluate and synthesize advanced knowledge of dermatological sciences, including the molecular and cellular mechanisms of skin disease, emerging therapies and the concepts shaping the field."
+     }
+    },
+    {
+     "group": {
+      "en": "Knowledge",
+      "th": "ความรู้"
+     },
+     "code": "K2",
+     "text": {
+      "en": "Develop and lead independent, high-impact research that changes how skin disorders are understood, diagnosed and treated.",
+      "th": "Develop and lead independent, high-impact research that changes how skin disorders are understood, diagnosed and treated."
+     }
+    },
+    {
+     "group": {
+      "en": "Skills",
+      "th": "ทักษะ"
+     },
+     "code": "S1",
+     "text": {
+      "en": "Design, conduct and critically analyze dermatological research with current methods, technologies and interdisciplinary approaches.",
+      "th": "Design, conduct and critically analyze dermatological research with current methods, technologies and interdisciplinary approaches."
+     }
+    },
+    {
+     "group": {
+      "en": "Skills",
+      "th": "ทักษะ"
+     },
+     "code": "S2",
+     "text": {
+      "en": "Master specialized dermatological procedures and new interventions, with advanced assessment and management of complex clinical cases.",
+      "th": "Master specialized dermatological procedures and new interventions, with advanced assessment and management of complex clinical cases."
+     }
+    },
+    {
+     "group": {
+      "en": "Ethics",
+      "th": "จริยธรรม"
+     },
+     "code": "E1",
+     "text": {
+      "en": "Keep the highest ethical standards in research and clinical practice, with full compliance with international regulations, research integrity and patient-centered ethics.",
+      "th": "Keep the highest ethical standards in research and clinical practice, with full compliance with international regulations, research integrity and patient-centered ethics."
+     }
+    },
+    {
+     "group": {
+      "en": "Character",
+      "th": "คุณลักษณะ"
+     },
+     "code": "C1",
+     "text": {
+      "en": "Lead and mentor junior researchers, clinicians and healthcare professionals.",
+      "th": "Lead and mentor junior researchers, clinicians and healthcare professionals."
+     }
+    },
+    {
+     "group": {
+      "en": "Character",
+      "th": "คุณลักษณะ"
+     },
+     "code": "C2",
+     "text": {
+      "en": "Work within multidisciplinary and global research networks to advance dermatological science and patient care.",
+      "th": "Work within multidisciplinary and global research networks to advance dermatological science and patient care."
+     }
+    }
+   ],
+   "years": [
+    {
+     "year": {
+      "en": "Year 1",
+      "th": "ปีที่ 1"
+     },
+     "text": {
+      "en": "Fundamental and clinical dermatology, procedures done effectively and safely, and the principles and methods of research.",
+      "th": "มีความรู้ตจวิทยาพื้นฐานและคลินิก ทำหัตถการได้อย่างมีประสิทธิภาพและปลอดภัย และประยุกต์หลักและวิธีการวิจัยได้"
+     }
+    },
+    {
+     "year": {
+      "en": "Year 2",
+      "th": "ปีที่ 2"
+     },
+     "text": {
+      "en": "Advanced knowledge gained through independent study, and critical, creative thinking to find and solve problems.",
+      "th": "วิเคราะห์และสังเคราะห์ความรู้ขั้นสูงด้วยการเรียนรู้ด้วยตนเอง และคิดอย่างมีวิจารณญาณและสร้างสรรค์เพื่อระบุและแก้ปัญหา"
+     }
+    },
+    {
+     "year": {
+      "en": "Year 3",
+      "th": "ปีที่ 3"
+     },
+     "text": {
+      "en": "In-depth independent study and creative problem solving that moves the research forward.",
+      "th": "ศึกษาเชิงลึกด้วยตนเอง และใช้ความคิดสร้างสรรค์แก้ปัญหาที่ซับซ้อนเพื่อผลักดันงานวิจัย"
+     }
+    },
+    {
+     "year": {
+      "en": "Year 4",
+      "th": "ปีที่ 4"
+     },
+     "text": {
+      "en": "New knowledge from the research, and the confidence to work and present in an international academic setting.",
+      "th": "สร้างองค์ความรู้ใหม่จากงานวิจัย และทำงานและนำเสนอได้อย่างมั่นใจในเวทีวิชาการนานาชาติ"
+     }
+    }
+   ],
+   "yearsNote": {
+    "en": "Plan 1.1 covers years 1 and 2, Plan 2.1 years 1 to 3, and Plans 1.2 and 2.2 all four years.",
+    "th": "แผน 1.1 ครอบคลุมปีที่ 1 และ 2 แผน 2.1 ปีที่ 1 ถึง 3 และแผน 1.2 และ 2.2 ครบ 4 ปี"
+   },
+   "careers": [
+    {
+     "title": {
+      "en": "Teaching",
+      "th": "การสอนและงานวิชาการ"
+     },
+     "text": {
+      "en": "University lecturer or academic staff in dermatology, medical sciences, health sciences and related fields.",
+      "th": "อาจารย์มหาวิทยาลัยและบุคลากรสายวิชาการด้านตจวิทยา วิทยาศาสตร์การแพทย์ วิทยาศาสตร์สุขภาพ และสาขาที่เกี่ยวข้อง"
+     }
+    },
+    {
+     "title": {
+      "en": "Research and innovation",
+      "th": "วิจัยและนวัตกรรม"
+     },
+     "text": {
+      "en": "Researcher in universities, government research institutes, private research organisations and healthcare companies.",
+      "th": "นักวิจัยในมหาวิทยาลัย สถาบันวิจัยภาครัฐ องค์กรวิจัยเอกชน และอุตสาหกรรมด้านสุขภาพ"
+     }
+    },
+    {
+     "title": {
+      "en": "Clinical and biomedical research",
+      "th": "วิจัยทางคลินิกและชีวการแพทย์"
+     },
+     "text": {
+      "en": "Clinical research, biomedical research, clinical trials and new treatments in dermatology and medical sciences.",
+      "th": "งานวิจัยทางคลินิก งานวิจัยชีวการแพทย์ การทดลองทางคลินิก และการพัฒนาความรู้และนวัตกรรมด้านตจวิทยาและวิทยาศาสตร์การแพทย์"
+     }
+    },
+    {
+     "title": {
+      "en": "Healthcare industry",
+      "th": "อุตสาหกรรมสุขภาพ"
+     },
+     "text": {
+      "en": "Pharmaceutical, medical device, cosmeceutical and aesthetic medicine companies.",
+      "th": "บริษัทยา เครื่องมือแพทย์ เวชสำอาง และเวชศาสตร์ความงาม"
+     }
+    },
+    {
+     "title": {
+      "en": "Academic and research leadership",
+      "th": "ผู้นำด้านวิชาการและวิจัย"
+     },
+     "text": {
+      "en": "Leading academic, research and organisational units in dermatology and the health sciences.",
+      "th": "ตำแหน่งผู้นำในหน่วยงานวิชาการ วิจัย และองค์กรด้านตจวิทยาและวิทยาศาสตร์สุขภาพ"
+     }
+    }
+   ],
+   "facilities": {
+    "thailand": [
+     "Chulabhorn International College of Medicine, Thammasat University (Rangsit Campus)",
+     "Pan-Suphan-Hong Foundation",
+     "Bumrungrad International Hospital",
+     "Samitivej Sukhumvit Hospital",
+     "Queen Sirikit 84th Birthday Anniversary Hospital",
+     "Rajavithi Hospital"
+    ],
+    "abroad": [
+     "Aichi Medical University, Aichi, Japan",
+     "Central Japan International Medical Center (CJIMC), Gifu, Japan",
+     "Hokkaido University Hospital, Sapporo, Japan",
+     "Nagoya City University, Nagoya, Japan",
+     "Shonan Beauty Clinic, Tokyo, Japan",
+     "Erasmus University, the Netherlands",
+     "Mirabel Clinic, Seoul, South Korea",
+     "Hautwerk Clinic, Zurich, Switzerland",
+     "Greater Miami Skin and Laser Center, Miami, Florida, USA"
+    ]
+   },
+   "plans": [
+    {
+     "plan": "Plan 1.1",
+     "entry": {
+      "en": "With a master's degree",
+      "th": "สำเร็จปริญญาโท"
+     },
+     "duration": {
+      "en": "At least 2 years, 4 regular semesters",
+      "th": "อย่างน้อย 2 ปี 4 ภาคการศึกษาปกติ"
+     },
+     "total": 48,
+     "structure": [
+      [
+       "dissertation",
+       48
+      ]
+     ],
+     "noncredit": [
+      "PDT 603"
+     ]
+    },
+    {
+     "plan": "Plan 1.2",
+     "entry": {
+      "en": "With a bachelor's degree (M.D.)",
+      "th": "สำเร็จปริญญาตรี (แพทยศาสตรบัณฑิต)"
+     },
+     "duration": {
+      "en": "At least 4 years, 8 regular semesters",
+      "th": "อย่างน้อย 4 ปี 8 ภาคการศึกษาปกติ"
+     },
+     "total": 72,
+     "structure": [
+      [
+       "dissertation",
+       72
+      ]
+     ],
+     "noncredit": [
+      "PDT 603"
+     ]
+    },
+    {
+     "plan": "Plan 2.1",
+     "entry": {
+      "en": "With a master's degree",
+      "th": "สำเร็จปริญญาโท"
+     },
+     "duration": {
+      "en": "At least 3 years, 6 regular semesters",
+      "th": "อย่างน้อย 3 ปี 6 ภาคการศึกษาปกติ"
+     },
+     "total": 61,
+     "structure": [
+      [
+       "required",
+       19
+      ],
+      [
+       "elective",
+       6
+      ],
+      [
+       "dissertation",
+       36
+      ]
+     ],
+     "noncredit": [
+      "PDT 603",
+      "PDT 611",
+      "PDT 617"
+     ]
+    },
+    {
+     "plan": "Plan 2.2",
+     "entry": {
+      "en": "With a bachelor's degree (M.D.)",
+      "th": "สำเร็จปริญญาตรี (แพทยศาสตรบัณฑิต)"
+     },
+     "duration": {
+      "en": "At least 4 years, 8 regular semesters",
+      "th": "อย่างน้อย 4 ปี 8 ภาคการศึกษาปกติ"
+     },
+     "total": 75,
+     "structure": [
+      [
+       "required",
+       21
+      ],
+      [
+       "elective",
+       6
+      ],
+      [
+       "dissertation",
+       48
+      ]
+     ],
+     "noncredit": [
+      "PDT 603",
+      "PDT 611",
+      "PDT 617"
+     ]
+    }
+   ],
+   "plansNote": {
+    "en": "The dissertation advisor may add courses to any plan.",
+    "th": "อาจารย์ที่ปรึกษาอาจกำหนดให้เรียนรายวิชาเพิ่มเติมได้ทุกแผน"
+   },
+   "groups": {
+    "required": [
+     {
+      "code": "CMB 600",
+      "name": "Responsible Research and Ethics in Bioclinical Sciences",
+      "credits": null,
+      "desc": "Introduction to responsible research; relevant information for initiating research; critical reading and analysis; guidelines for good practice, ethics and regulations in bioclinical sciences; responsible protocol writing; planning and setting up experiments and research; responsible peer review; good data management practice and quality standards; considerations for reports and publication; ethical issues in publication; and presentation of research results."
+     },
+     {
+      "code": "CMB 601",
+      "name": "Statistical Methods in Bioclinical Sciences",
+      "credits": null,
+      "desc": "Principles and application of biostatistics to bioclinical research; types of variables and data; data presentation and summarization; population and sample; probability distributions; research and statistical hypotheses; estimation and hypothesis testing; parametric and non-parametric statistics; statistical tests for reliability and diagnosis; sample size estimation; and statistical software."
+     },
+     {
+      "code": "CMD 601",
+      "name": "Clinical Dermatology I",
+      "credits": null,
+      "desc": "Structure and morphology of skin lesions and principles of clinical diagnosis; clinical manifestations, pathogenesis, etiology, prognosis and management of common skin disorders; principles of clinical dermatology and topical therapy; papulosquamous and vesiculobullous disorders; drug eruptions and dermatological emergencies; eczema and dermatitis; acne, rosacea and adnexal disorders; urticaria and angioedema; hair and nail disorders; pigmentary disorders; cutaneous vasculopathies; benign and malignant skin tumors; bacterial, viral, fungal and tropical dermatoses."
+     },
+     {
+      "code": "CMD 602",
+      "name": "Dermatology Seminar",
+      "credits": null,
+      "desc": "Discussion of clinical problems in patient care, clinical and pathological diagnosis, laboratory investigations and the management of chronic and rare skin disorders."
+     },
+     {
+      "code": "CMD 603",
+      "name": "Dermatology Journal Club",
+      "credits": null,
+      "desc": "Formal presentation and discussion of current research in dermatological sciences and clinical dermatology under the course committee, and presentation of research progress."
+     },
+     {
+      "code": "CMD 611",
+      "name": "Dermatology Clinic I",
+      "credits": null,
+      "desc": "History taking and physical examination of outpatients; clinical evaluation of common and complicated skin conditions; signs and symptoms; laboratory investigations; diagnosis; treatment; and follow-up, supervised by faculty members."
+     },
+     {
+      "code": "CMD 612",
+      "name": "Basic Dermatology",
+      "credits": null,
+      "desc": "Development and structure of the epidermis; keratinocyte kinetics and differentiation; epidermal lipids; DNA repair and carcinogenesis; the dermoepidermal junction and basement membrane zone and blistering disorders; collagen, elastin, ground substance and fibroblasts; wound healing; nutrition and the skin; percutaneous absorption and thermoregulation; the sebaceous unit; apocrine and eccrine sweat glands; hair biology; nail structure and growth; inflammation and inflammatory mediators; hormone receptors in the skin; and cutaneous stem cells."
+     },
+     {
+      "code": "CMD 613",
+      "name": "Advanced Dermatology",
+      "credits": null,
+      "desc": "Innate and adaptive immunity in the skin; cytokines and chemokines; humoral immunity and complement; neutrophil and eosinophil production and activation; common signaling pathways; carcinogenesis; immunopathogenesis of atopic dermatitis, contact dermatitis, psoriasis, blistering diseases, acne vulgaris, urticaria, graft-versus-host disease, lichen planus and alopecia areata; immunosuppressive and biologic therapy; cutaneous thermoregulation; neurobiology and hormonal regulation of the skin; cosmeceuticals; and innovations in skin technology."
+     },
+     {
+      "code": "CMD 614",
+      "name": "Dermatopathology",
+      "credits": null,
+      "desc": "Histopathological examination and interpretation of skin diseases."
+     },
+     {
+      "code": "CMD 615",
+      "name": "Investigations in Dermatology",
+      "credits": null,
+      "desc": "Common laboratory investigations in dermatology; dermoscopy; allergy testing; phototesting; cell culture; protein and RNA extraction and quantification; mRNA quantification and PCR; immunohistochemical staining; immunofluorescence; and principles of drug development in dermatology, supervised by faculty members."
+     },
+     {
+      "code": "CMD 616",
+      "name": "Clinical Dermatology II",
+      "credits": null,
+      "desc": "Clinical manifestations, pathogenesis, etiology, prognosis and management of common and complex skin disorders: contact dermatitis; photodermatoses; pediatric dermatology; skin disorders of pregnancy and aging; non-infectious inflammatory dermatoses; skin signs of systemic disease; autoimmune connective tissue diseases; leprosy and mycobacterial infections; sexually transmitted diseases and HIV; orogenital disorders; dermal and subcutaneous disorders; genodermatoses; systemic therapy; photoprotection; complementary and alternative therapy. Requires CMD 601."
+     },
+     {
+      "code": "CMD 617",
+      "name": "Dermatology Clinic II",
+      "credits": null,
+      "desc": "History taking and physical examination of outpatients; clinical evaluation of common and complex skin conditions; signs and symptoms; laboratory investigations; diagnosis; treatment; and follow-up, supervised by faculty members."
+     },
+     {
+      "code": "CMD 711",
+      "name": "Dermatosurgery",
+      "credits": null,
+      "desc": "Surgical and laser treatment of skin diseases, skin aging and skin tumors; excision and repair; electrosurgery; cryosurgery; ablative laser and chemical peels; non-ablative laser and light therapy; botulinum toxin and soft tissue augmentation; vascular laser and varicose veins; cosmetic and skin care in dermatology, supervised by faculty members."
+     }
+    ],
+    "elective": [
+     {
+      "code": "CMD 721",
+      "name": "Dermatological Practice I",
+      "credits": null,
+      "desc": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor."
+     },
+     {
+      "code": "CMD 722",
+      "name": "Dermatological Practice II",
+      "credits": null,
+      "desc": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor."
+     },
+     {
+      "code": "CMB 653",
+      "name": "Clinical Drug Development",
+      "credits": null,
+      "desc": "Key elements of a clinical study: quality standards and regulations such as GMP, GCLP and GCP, audits and inspections; the clinical protocol; case report forms; the investigator brochure; informed consent; ethics committees and institutional review boards; source document verification; monitoring visits; drug accountability; laboratory and clinical supplies; and adverse events."
+     },
+     {
+      "code": "CMB 654",
+      "name": "Current Concepts in Dermatological Drug Discovery and Development",
+      "credits": null,
+      "desc": "How dermatological drugs are discovered and developed: target identification; pre-clinical studies; chemistry, manufacturing and control (CMC); clinical development phases I to IV; pharmacokinetics, toxicokinetics and pharmacogenomics; and regulatory requirements."
+     },
+     {
+      "code": "CMB 655",
+      "name": "Techniques in Dermatological Drug Research and Development",
+      "credits": null,
+      "desc": "Chemical and physical stability testing; in vitro and in vivo models of skin penetration and absorption; in vitro and in vivo models of dermal toxicity and efficacy; and non-invasive bioengineering techniques."
+     },
+     {
+      "code": "CMB 755",
+      "name": "Research Protocol Design",
+      "credits": null,
+      "desc": "Writing a research protocol: background, literature review, research questions and hypotheses; study design, site, population, sample size, sampling, instruments, procedures and data analysis; ethics; timeline, budget and logistics; and publishing the results."
+     }
+    ],
+    "dissertation": [
+     {
+      "code": "CMD 900",
+      "name": "Dissertation",
+      "credits": null,
+      "desc": "A research proposal in bioclinical sciences; research that creates new knowledge or innovation; writing the dissertation; preparing manuscripts for publication; research and publishing ethics. Registered as CMD 900, CMD 901 or CMD 902 by study plan."
+     }
+    ],
+    "noncredit": [
+     {
+      "code": "PDT 603",
+      "name": "Dermatology Journal Seminar",
+      "credits": null,
+      "desc": "Graded P (pass) or N (not pass), no credits."
+     },
+     {
+      "code": "PDT 611",
+      "name": "Clinical Dermatology I",
+      "credits": null,
+      "desc": "Graded P (pass) or N (not pass), no credits."
+     },
+     {
+      "code": "PDT 617",
+      "name": "Clinical Dermatology II",
+      "credits": null,
+      "desc": "Graded P (pass) or N (not pass), no credits."
+     }
+    ]
+   },
+   "requirements": [
+    {
+     "title": {
+      "en": "Registering for the dissertation",
+      "th": "การลงทะเบียนดุษฎีนิพนธ์"
+     },
+     "items": [
+      {
+       "en": "Plan 1: from the first semester, once the student meets the program's requirements and has passed the qualifying examination.",
+       "th": "แผน 1 ลงทะเบียนได้ตั้งแต่ภาคการศึกษาแรก เมื่อมีคุณสมบัติครบตามหลักสูตรและสอบผ่านการสอบวัดคุณสมบัติ"
+      },
+      {
+       "en": "Plan 2: after at least one regular semester with 14 credits of required courses, a GPAX of 3.00 or higher, and a pass in the qualifying examination.",
+       "th": "แผน 2 ลงทะเบียนได้หลังเรียนอย่างน้อย 1 ภาคการศึกษาปกติ ผ่านวิชาบังคับอย่างน้อย 14 หน่วยกิต คะแนนเฉลี่ยสะสมไม่ต่ำกว่า 3.00 และสอบผ่านการสอบวัดคุณสมบัติ"
+      },
+      {
+       "en": "The dissertation is written in English.",
+       "th": "เขียนดุษฎีนิพนธ์เป็นภาษาอังกฤษ"
+      },
+      {
+       "en": "After registering, the student submits a proposal, and the Dean appoints an advisor and a dissertation committee of at least 5 members to guide the student and run the proposal and final examinations.",
+       "th": "หลังลงทะเบียน นักศึกษาเสนอเค้าโครง และคณบดีแต่งตั้งอาจารย์ที่ปรึกษาและคณะกรรมการดุษฎีนิพนธ์อย่างน้อย 5 คน เพื่อให้คำแนะนำและจัดสอบเค้าโครงและสอบปากเปล่าขั้นสุดท้าย"
+      }
+     ]
+    },
+    {
+     "title": {
+      "en": "Dissertation examination",
+      "th": "การสอบดุษฎีนิพนธ์"
+     },
+     "items": [
+      {
+       "en": "The student registers for the full dissertation credits in the semester of the examination.",
+       "th": "ลงทะเบียนดุษฎีนิพนธ์ครบจำนวนหน่วยกิตในภาคการศึกษาที่ขอสอบ"
+      },
+      {
+       "en": "The examination comes after a pass in the English examination. Native English speakers and graduates of an English-medium program within two years of applying are exempt.",
+       "th": "สอบได้หลังสอบผ่านภาษาอังกฤษ ผู้ที่ใช้ภาษาอังกฤษเป็นภาษาราชการและผู้สำเร็จหลักสูตรที่สอนเป็นภาษาอังกฤษภายใน 2 ปีก่อนวันสมัครได้รับการยกเว้น"
+      },
+      {
+       "en": "The committee has at least 5 members, faculty and external experts, chaired by an external expert.",
+       "th": "คณะกรรมการสอบมีอย่างน้อย 5 คน ประกอบด้วยอาจารย์ประจำหลักสูตรและผู้ทรงคุณวุฒิภายนอก โดยประธานเป็นผู้ทรงคุณวุฒิภายนอก"
+      },
+      {
+       "en": "The examination is open to the public.",
+       "th": "การสอบเปิดให้บุคคลทั่วไปเข้าฟังได้"
+      },
+      {
+       "en": "An S (satisfactory) grade needs a unanimous decision of the committee.",
+       "th": "ได้ระดับ S (ผ่าน) เมื่อคณะกรรมการมีมติเป็นเอกฉันท์"
+      }
+     ]
+    },
+    {
+     "title": {
+      "en": "Qualifying examination",
+      "th": "การสอบวัดคุณสมบัติ"
+     },
+     "items": [
+      {
+       "en": "Written and oral, run by the CICM Graduate Program twice each academic year.",
+       "th": "สอบข้อเขียนและสอบปากเปล่า จัดโดยฝ่ายบัณฑิตศึกษา CICM ปีการศึกษาละ 2 ครั้ง"
+      },
+      {
+       "en": "Students can apply from their first semester and must apply within 4 to 6 regular semesters of enrolling.",
+       "th": "สมัครสอบได้ตั้งแต่ภาคการศึกษาแรก และต้องสมัครภายใน 4 ถึง 6 ภาคการศึกษาปกตินับจากวันเข้าศึกษา"
+      },
+      {
+       "en": "Students must pass within two consecutive attempts or lose their student status.",
+       "th": "ต้องสอบผ่านภายใน 2 ครั้งติดต่อกัน มิฉะนั้นพ้นสภาพนักศึกษา"
+      },
+      {
+       "en": "A pass is needed before the dissertation proposal examination.",
+       "th": "ต้องสอบผ่านก่อนสอบเค้าโครงดุษฎีนิพนธ์"
+      }
+     ]
+    }
+   ],
+   "quality": {
+    "en": "Course coordinators teach to the approved syllabus and give students the outline, activities and assessment at the start of each course. Sessions are recorded for review, and students use Moodle and V-Cube to reach classmates and instructors at any time.",
+    "th": "ผู้ประสานงานรายวิชาสอนตามประมวลรายวิชาที่ได้รับอนุมัติ และแจ้งเค้าโครง กิจกรรม และการประเมินผลเมื่อเริ่มรายวิชา การสอนมีการบันทึกเพื่อทบทวนคุณภาพ และนักศึกษาใช้ Moodle และ V-Cube ติดต่อเพื่อนและอาจารย์ได้ทุกเวลา"
+   }
+  }
+ }
 }

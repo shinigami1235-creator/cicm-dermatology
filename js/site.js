@@ -70,7 +70,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json?v=20261116b").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261116c").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -92,7 +92,7 @@
   }
   var papersP = null;
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261116b").then(function (r) { return r.json(); }).then(function (d) {
+    if (!papersP) papersP = fetch("data/publications.json?v=20261116c").then(function (r) { return r.json(); }).then(function (d) {
       // every lecturer tagged on a paper is bolded in the author lists
       d.papers.forEach(function (p) { p.faculty.forEach(function (k) { if (FAC_KEYS.indexOf(k) < 0) FAC_KEYS.push(k); }); });
       return d;
@@ -319,9 +319,29 @@
     });
     document.addEventListener("click", function (e) { if (!e.target.closest(".nav-dd")) close(null); });
   }
+  /* ---------- the menu bar follows where the reader is: the section on screen, else the page ---------- */
   function currentNav() {
-    var map = { home: "home", research: "research", faculty: "faculty", admissions: "admissions" };
-    if (map[page]) $$('.nav-links [data-nav="' + map[page] + '"]').forEach(function (a) { if (a.tagName === "A") a.setAttribute("aria-current", "page"); else a.classList.add("is-current"); });
+    var base = { index: "home", home: "home", research: "research", faculty: "faculty", admissions: "admissions", programs: "programs" }[page] || "";
+    var items = $$(".nav-links [data-nav]"), secs = $$("[data-nav-sec]"), foot = $("#contact"), last = null;
+    function mark(key) {
+      if (key === last) return; last = key;
+      items.forEach(function (a) {
+        var on = a.dataset.nav === key;
+        if (a.tagName === "A") { if (on) a.setAttribute("aria-current", key === base ? "page" : "location"); else a.removeAttribute("aria-current"); }
+        else a.classList.toggle("is-current", on);
+      });
+    }
+    function update() {
+      var navEl = $("#nav"), line = (navEl ? navEl.offsetHeight : 68) + window.innerHeight * 0.3, key = base;
+      secs.forEach(function (el) { if (el.getBoundingClientRect().top <= line) key = el.dataset.navSec; });
+      var atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      if (foot && (atEnd || foot.getBoundingClientRect().top < window.innerHeight * 0.6)) key = "contact";
+      mark(key);
+    }
+    var queued = false;
+    window.addEventListener("scroll", function () { if (queued) return; queued = true; requestAnimationFrame(function () { queued = false; update(); }); }, { passive: true });
+    window.addEventListener("resize", update);
+    update();
   }
 
   /* ---------- hero film ---------- */
@@ -395,7 +415,7 @@
         '<p class="focus">' + esc(P(p.focus)) + "</p>" +
         '<dl class="pfacts"><div>' + icon("cal") + "<dt>" + T("ui.duration", "Duration") + "</dt><dd>" + esc(P(p.years || p.length)) + "</dd></div>" +
         (p.credits ? "<div>" + icon("layers") + "<dt>" + T("ui.credits", "Credits") + "</dt><dd>" + esc(P(p.credits)) + "</dd></div>" : "") + "</dl>" +
-        '<a class="pbtn" href="admissions.html#' + encodeURIComponent(p.id) + '">' + T("ui.progDetails", "Program details") + icon("next") + "</a></article>";
+        '<a class="pbtn" href="programs.html#' + encodeURIComponent(p.id) + '">' + T("ui.progDetails", "Program details") + icon("next") + "</a></article>";
     }).join("");
     // fees sit in the closing apply section, after the training, faculty and research
     var fees = $("#applyFees");

@@ -1,0 +1,34 @@
+<body data-page="programs">
+{{header}}
+<main id="main">
+  <section class="page-head layer" data-layer="epi" data-depth="60" data-depth-name="epidermis" style="padding-bottom:clamp(24px,3vw,36px)">
+    <div class="wrap">
+      <h1 data-i18n="prog.title">Programs</h1>
+      <p data-i18n="prog.lede">Two master's tracks and a Ph.D. in dermatology, all taught in English. Everything below comes from the CICM program documents.</p>
+    </div>
+  </section>
+
+  <section class="layer prog-page" data-layer="epi" data-depth="80" data-depth-name="epidermis" style="padding-top:0">
+    <div class="prog-tabs-bar">
+      <div class="wrap">
+        <div class="tabs prog-tabs" role="tablist" aria-label="Programs">
+          <button role="tab" type="button" id="tab-clinical" aria-controls="progPanel" aria-selected="true" data-p="clinical"><small>M.Sc.</small><span data-i18n="nav.pClinical">Clinical Dermatology</span></button>
+          <button role="tab" type="button" id="tab-cosmetic" aria-controls="progPanel" aria-selected="false" data-p="cosmetic"><small>M.Sc.</small><span data-i18n="nav.pCosmetic">Cosmetic Dermatology</span></button>
+          <button role="tab" type="button" id="tab-phd" aria-controls="progPanel" aria-selected="false" data-p="phd"><small>Ph.D.</small><span data-i18n="nav.pPhd">Dermatology</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div id="progPanel" role="tabpanel" aria-labelledby="tab-clinical" class="prog-panel"></div>
+      <div class="prog-cta">
+        <a class="btn btn-primary" href="https://eptumed.com/applyCICM/index.php" target="_blank" rel="noopener"><span data-i18n="ui.apply">Apply now</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line" href="admissions.html#requirements" data-i18n="adm.req">Entry requirements</a>
+        <a class="btn btn-line" href="admissions.html#tuition" data-i18n="adm.fees">Tuition</a>
+      </div>
+    </div>
+  </section>
+</main>
+{{footer}}
+<script src="js/pages.js" defer></script>
+</body>
+</html>

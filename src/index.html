@@ -2,7 +2,7 @@
 {{header}}
 <main id="main">
 
-  <section class="sl" id="slideHero" data-layer="surface" data-depth="0" data-depth-name="surface" aria-labelledby="sl-title">
+  <section class="sl" id="slideHero" data-nav-sec="home" data-layer="surface" data-depth="0" data-depth-name="surface" aria-labelledby="sl-title">
     <div class="sl-stage">
       <div class="sl-text">
         <div class="sl-panel is-on" data-step="0">
@@ -16,9 +16,9 @@
         <div class="sl-panel" data-step="1">
           <h2 data-i18n="sl.p1">Three programs, taught in English</h2>
           <ul class="sl-progs">
-            <li><a href="admissions.html#courses"><b data-i18n="hero.p1">M.Sc. Clinical Dermatology</b><span data-i18n="sl.p1a">Medical dermatology and procedures. 2 years.</span></a></li>
-            <li><a href="admissions.html#courses"><b data-i18n="hero.p2">M.Sc. Cosmetic Dermatology</b><span data-i18n="sl.p1b">Aesthetic skin care and cosmetic procedures. 2 years.</span></a></li>
-            <li><a href="admissions.html#courses"><b data-i18n="hero.p3">Ph.D. Dermatology</b><span data-i18n="sl.p1c">Research and new treatments. 2 to 4 years.</span></a></li>
+            <li><a href="programs.html#clinical"><b data-i18n="hero.p1">M.Sc. Clinical Dermatology</b><span data-i18n="sl.p1a">Medical dermatology and procedures. 2 years.</span></a></li>
+            <li><a href="programs.html#cosmetic"><b data-i18n="hero.p2">M.Sc. Cosmetic Dermatology</b><span data-i18n="sl.p1b">Aesthetic skin care and cosmetic procedures. 2 years.</span></a></li>
+            <li><a href="programs.html#phd"><b data-i18n="hero.p3">Ph.D. Dermatology</b><span data-i18n="sl.p1c">Research and new treatments. 2 to 4 years.</span></a></li>
           </ul>
         </div>
         <div class="sl-panel" data-step="2">
@@ -56,7 +56,7 @@
     </div>
   </section>
 
-  <section class="ty" id="typeHero" data-layer="surface" data-depth="0" data-depth-name="surface" aria-labelledby="ty-title">
+  <section class="ty" id="typeHero" data-nav-sec="home" data-layer="surface" data-depth="0" data-depth-name="surface" aria-labelledby="ty-title">
     <div class="ty-stage">
       <div class="ty-film"><video muted loop playsinline preload="none" poster="media/hero-poster.jpg" aria-hidden="true" data-src-webm="media/hero-loop.webm" data-src-mp4="media/hero-loop.mp4" data-src-hd="media/hero-hd.mp4"></video></div>
       <div class="ty-gap">
@@ -106,9 +106,9 @@
           <button class="btn btn-line" type="button" data-film><svg aria-hidden="true"><use href="#i-play"/></svg><span data-i18n="hero.film">Watch the film (3:42)</span></button>
         </div>
         <nav class="scope-progs" aria-label="Programs">
-          <a href="admissions.html#courses" data-i18n="hero.p1">M.Sc. Clinical Dermatology</a>
-          <a href="admissions.html#courses" data-i18n="hero.p2">M.Sc. Cosmetic Dermatology</a>
-          <a href="admissions.html#courses" data-i18n="hero.p3">Ph.D. Dermatology</a>
+          <a href="programs.html#clinical" data-i18n="hero.p1">M.Sc. Clinical Dermatology</a>
+          <a href="programs.html#cosmetic" data-i18n="hero.p2">M.Sc. Cosmetic Dermatology</a>
+          <a href="programs.html#phd" data-i18n="hero.p3">Ph.D. Dermatology</a>
         </nav>
       </div>
     </div>
@@ -152,7 +152,7 @@
     </div>
   </section>
 
-  <section class="layer" id="programs" data-layer="epi" data-depth="60" data-depth-name="epidermis" aria-labelledby="programs-title">
+  <section class="layer" id="programs" data-nav-sec="programs" data-layer="epi" data-depth="60" data-depth-name="epidermis" aria-labelledby="programs-title">
     <div class="wrap">
       <div class="notice-box rise">
       <div class="notices-head">
@@ -167,7 +167,7 @@
         <p data-i18n="programs.lede">Two master's programs and a Ph.D., all taught in English. Each master's program takes 2 years and the Ph.D. takes 2 to 4 years depending on the study plan.</p>
       </div>
       <div class="programs" id="programList"></div>
-      <p class="programs-more rise"><a class="btn btn-primary" href="admissions.html#courses"><span data-i18n="programs.more">See the courses and requirements</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+      <p class="programs-more rise"><a class="btn btn-primary" href="programs.html"><span data-i18n="programs.more">See the courses and requirements</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
 
       <div class="for-who">
         <div class="rise">
@@ -183,7 +183,7 @@
     <div class="junction" data-to="var(--dermis)"></div>
   </section>
 
-  <section class="layer" id="training" data-layer="dermis" data-depth="400" data-depth-name="papillary" aria-labelledby="training-title">
+  <section class="layer" id="training" data-nav-sec="programs" data-layer="dermis" data-depth="400" data-depth-name="papillary" aria-labelledby="training-title">
     <div class="wrap">
       <div class="sec-head rise">
         <h2 id="training-title" data-i18n="training.title">Clinical training from the first semester</h2>
@@ -208,7 +208,7 @@
     <div class="junction" data-to="var(--deep)"></div>
   </section>
 
-  <section class="layer" id="faculty" data-layer="deep" data-depth="1600" data-depth-name="reticular" aria-labelledby="faculty-title">
+  <section class="layer" id="faculty" data-nav-sec="faculty" data-layer="deep" data-depth="1600" data-depth-name="reticular" aria-labelledby="faculty-title">
     <div class="wrap">
       <div class="sec-head rise">
         <h2 id="faculty-title" data-i18n="faculty.title">Faculty</h2>
@@ -246,7 +246,7 @@
     <div class="junction" data-to="var(--vessel)"></div>
   </section>
 
-  <section class="layer" id="world" data-layer="vessel" data-depth="2400" data-depth-name="plexus" aria-labelledby="world-title">
+  <section class="layer" id="world" data-nav-sec="programs" data-layer="vessel" data-depth="2400" data-depth-name="plexus" aria-labelledby="world-title">
     <div class="wrap">
       <div class="sec-head rise">
         <h2 id="world-title" data-i18n="world.title">Training abroad</h2>
@@ -261,7 +261,7 @@
     <div class="junction" data-to="var(--cell)"></div>
   </section>
 
-  <section class="layer journal" id="research" data-layer="cell" data-depth="cell" data-depth-name="cell" aria-labelledby="research-title">
+  <section class="layer journal" id="research" data-nav-sec="research" data-layer="cell" data-depth="cell" data-depth-name="cell" aria-labelledby="research-title">
     <div class="wrap">
       <div class="volume rise"><span><b>CICM Dermatology</b></span><span data-i18n="research.vol">Research record</span><span id="volRange">PubMed, 2011 to 2026</span></div>
       <div class="journal-top">
@@ -284,7 +284,7 @@
     <div class="junction" data-to="var(--gland)"></div>
   </section>
 
-  <section class="layer conf" id="conference" data-layer="gland" data-depth="3000" data-depth-name="gland" aria-labelledby="conf-title">
+  <section class="layer conf" id="conference" data-nav-sec="conference" data-layer="gland" data-depth="3000" data-depth-name="gland" aria-labelledby="conf-title">
     <div class="wrap">
       <div class="conf-top">
         <div class="sec-head rise">
@@ -327,7 +327,7 @@
     <div class="junction" data-to="var(--fat-pale)"></div>
   </section>
 
-  <section class="layer" id="life" data-layer="fat-pale" data-depth="3500" data-depth-name="subcutis" aria-labelledby="life-title">
+  <section class="layer" id="life" data-nav-sec="home" data-layer="fat-pale" data-depth="3500" data-depth-name="subcutis" aria-labelledby="life-title">
     <div class="wrap">
       <div class="sec-head rise">
         <h2 id="life-title" data-i18n="life.title">Life at CICM</h2>
@@ -348,7 +348,7 @@
     <div class="junction" data-to="var(--fat)"></div>
   </section>
 
-  <section class="layer apply" id="apply" data-layer="fat" data-depth="4000" data-depth-name="subcutis" aria-labelledby="apply-title">
+  <section class="layer apply" id="apply" data-nav-sec="admissions" data-layer="fat" data-depth="4000" data-depth-name="subcutis" aria-labelledby="apply-title">
     <div class="wrap">
       <h2 id="apply-title" class="rise" data-i18n="apply.title">Apply to CICM Dermatology</h2>
       <table class="apply-fees rise" id="applyFees"></table>
