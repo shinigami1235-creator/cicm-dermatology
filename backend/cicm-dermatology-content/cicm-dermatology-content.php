@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: CICM Dermatology Content
- * Description: Staff edit the CICM Dermatology site (lecturers, announcements, programs and fees, downloads, partners) here. Each save writes data/content.json, which the site reads.
+ * Description: Staff edit the CICM Dermatology site (lecturers, announcements, programs and fees, downloads, partners) here, and keep the research numbers up to date. Each save writes data/content.json, which the site reads.
  * Version: 1.0.0
  * Requires at least: 6.4
  * Requires PHP: 8.1
@@ -17,6 +17,7 @@ require __DIR__ . '/includes/schema.php';
 require __DIR__ . '/includes/sanitize.php';
 require __DIR__ . '/includes/store.php';
 require __DIR__ . '/includes/admin.php';
+require __DIR__ . '/includes/research.php';
 
 /* Administrators and Editors can edit the content; give staff the Editor role. */
 register_activation_hook( __FILE__, function () {
@@ -28,6 +29,7 @@ register_activation_hook( __FILE__, function () {
 	}
 } );
 register_deactivation_hook( __FILE__, function () {
+	wp_clear_scheduled_hook( 'cicm_weekly_research' );
 	foreach ( array( 'administrator', 'editor' ) as $r ) {
 		$role = get_role( $r );
 		if ( $role ) {

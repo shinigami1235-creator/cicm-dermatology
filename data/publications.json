@@ -1,6 +1,6 @@
 {
-"generated": "2026-10-03",
-"source": "PubMed (NCBI E-utilities), searched 3 October 2026; Wiley Online Library (Crossref, Wiley member 311), searched 16 November 2026",
+"generated": "2026-11-16",
+"source": "PubMed (NCBI), searched 3 October 2026; Wiley Online Library (Crossref), OpenAlex and ThaiJO, searched 16 November 2026. Citation counts from OpenAlex, 16 November 2026.",
 "papers": [
 {
 "pmid": "",
@@ -24,7 +24,9 @@
 ],
 "topic": "Injectables & aesthetics",
 "design": "Randomized Controlled Trial",
-"source": "Wiley"
+"source": "Wiley",
+"oa": "W7226304534",
+"cites": 0
 },
 {
 "pmid": "42731113",
@@ -47,7 +49,33 @@
 "Siriphanit R"
 ],
 "topic": "Injectables & aesthetics",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W7212368103",
+"cites": 0,
+"source": "PubMed"
+},
+{
+"pmid": "43028054",
+"title": "Progression of Chronic UVB-Induced Skin Damage During Long-Term Topical Nicotinamide Mononucleotide Treatment in Mice",
+"authors": [
+"Phadungsaksawasdi P",
+"Harnsiriwattana K",
+"Chukanchitipat K",
+"Hunsajarupan N",
+"Pisutpunya A"
+],
+"journal": "International Journal of Molecular Sciences",
+"iso": "",
+"year": 2026,
+"doi": "10.3390/ijms27219807",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Skin aging",
+"design": "",
+"source": "OpenAlex",
+"oa": "W7225247784",
+"cites": 0
 },
 {
 "pmid": "41064808",
@@ -69,7 +97,32 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Skin biology & immunology",
-"design": ""
+"design": "",
+"oa": "W4414915595",
+"cites": 2,
+"source": "PubMed"
+},
+{
+"pmid": "",
+"title": "Efficacy of polynucleotide, fractional CO2 laser, and their combination in treating striae distensae: a randomized intraindividual clinical trial",
+"authors": [
+"Thanasarnaksorn W",
+"Sintopachakul M",
+"Suwanchinda A",
+"Sirithanabadeekul P"
+],
+"journal": "Archives of Dermatological Research",
+"iso": "",
+"year": 2025,
+"doi": "10.1007/s00403-025-04348-y",
+"faculty": [
+"Sirithanabadeekul P"
+],
+"topic": "Lasers & light",
+"design": "Randomized Controlled Trial",
+"source": "OpenAlex",
+"oa": "W4413828374",
+"cites": 1
 },
 {
 "pmid": "41217063",
@@ -97,7 +150,10 @@
 "Siriphanit R"
 ],
 "topic": "Injectables & aesthetics",
-"design": ""
+"design": "",
+"oa": "W4416202067",
+"cites": 3,
+"source": "PubMed"
 },
 {
 "pmid": "40370762",
@@ -116,7 +172,10 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Other medicine",
-"design": "Review"
+"design": "Review",
+"oa": "W4410327790",
+"cites": 22,
+"source": "PubMed"
 },
 {
 "pmid": "40488775",
@@ -144,7 +203,31 @@
 "Charoensuksira S"
 ],
 "topic": "Hair & nails",
-"design": ""
+"design": "",
+"oa": "W4411151288",
+"cites": 2,
+"source": "PubMed"
+},
+{
+"pmid": "",
+"title": "Nursing Care of Patients with Skin Diseases Treated by Surgery",
+"authors": [
+"Treethummakul P",
+"Pattanaprichakul P",
+"Kanokrungsee S",
+"Nitayavardhana S"
+],
+"journal": "Siriraj Medical Bulletin",
+"iso": "",
+"year": 2025,
+"doi": "10.33192/smb.v18i1.268100",
+"faculty": [
+"Nitayavardhana S"
+],
+"topic": "Clinical dermatology",
+"design": "",
+"source": "ThaiJO",
+"url": "https://he02.tci-thaijo.org/index.php/simedbull/article/view/268100"
 },
 {
 "pmid": "39951159",
@@ -167,7 +250,10 @@
 "Charoensuksira S"
 ],
 "topic": "Injectables & aesthetics",
-"design": ""
+"design": "",
+"oa": "W4407560316",
+"cites": 9,
+"source": "PubMed"
 },
 {
 "pmid": "40565255",
@@ -193,7 +279,10 @@
 "Charoensuksira S"
 ],
 "topic": "Hair & nails",
-"design": ""
+"design": "",
+"oa": "W4411380015",
+"cites": 8,
+"source": "PubMed"
 },
 {
 "pmid": "40167830",
@@ -210,7 +299,38 @@
 "Nitayavardhana S"
 ],
 "topic": "Injectables & aesthetics",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W4409087069",
+"cites": 1,
+"source": "PubMed"
+},
+{
+"pmid": "",
+"title": "A Split-Face Comparison of Novel Microneedle Patch versus Botulinum Toxin-A and Microneedle Patch for Improvement in Undereye Skin Texture",
+"authors": [
+"Te P",
+"Meephansan J",
+"Sirithanabadeekul P",
+"Pureesrisak P",
+"Tantisantisom K",
+"Thongma S",
+"Rayanasukha Y",
+"Adulyaritthikul P",
+"Khanchaitit P"
+],
+"journal": "Cosmetics",
+"iso": "",
+"year": 2024,
+"doi": "10.3390/cosmetics11030100",
+"faculty": [
+"Meephansan J",
+"Sirithanabadeekul P"
+],
+"topic": "Injectables & aesthetics",
+"design": "",
+"source": "OpenAlex",
+"oa": "W4399745902",
+"cites": 3
 },
 {
 "pmid": "38873171",
@@ -229,7 +349,10 @@
 "Nitayavardhana S"
 ],
 "topic": "Injectables & aesthetics",
-"design": ""
+"design": "",
+"oa": "W4396520968",
+"cites": 8,
+"source": "PubMed"
 },
 {
 "pmid": "39460779",
@@ -252,7 +375,10 @@
 "Charoensuksira S"
 ],
 "topic": "Hair & nails",
-"design": ""
+"design": "",
+"oa": "W4403784339",
+"cites": 6,
+"source": "PubMed"
 },
 {
 "pmid": "39201715",
@@ -276,7 +402,10 @@
 "Charoensuksira S"
 ],
 "topic": "Hair & nails",
-"design": ""
+"design": "",
+"oa": "W4401974823",
+"cites": 30,
+"source": "PubMed"
 },
 {
 "pmid": "39368074",
@@ -299,7 +428,10 @@
 "Charoensuksira S"
 ],
 "topic": "Lasers & light",
-"design": "Clinical Trial"
+"design": "Clinical Trial",
+"oa": "W4403147941",
+"cites": 8,
+"source": "PubMed"
 },
 {
 "pmid": "38957412",
@@ -316,7 +448,37 @@
 "Juntongjin P"
 ],
 "topic": "Acne",
-"design": ""
+"design": "",
+"oa": "W4400194103",
+"cites": 7,
+"source": "PubMed"
+},
+{
+"pmid": "",
+"title": "The Comparative Efficacy and Safety of 250 μm versus 350 μm Long Microneedle Patch on Under-Eye Skin",
+"authors": [
+"Arepagorn A",
+"Meephansan J",
+"Sirithanabadeekul P",
+"Tantisantisom K",
+"Thongma S",
+"Rayanasukha Y",
+"Boonkoom T",
+"Khanchaitit P"
+],
+"journal": "Cosmetics",
+"iso": "",
+"year": 2024,
+"doi": "10.3390/cosmetics11030092",
+"faculty": [
+"Meephansan J",
+"Sirithanabadeekul P"
+],
+"topic": "Injectables & aesthetics",
+"design": "",
+"source": "OpenAlex",
+"oa": "W4399353260",
+"cites": 4
 },
 {
 "pmid": "39325239",
@@ -341,7 +503,10 @@
 "Charoensuksira S"
 ],
 "topic": "Lasers & light",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W4402871325",
+"cites": 12,
+"source": "PubMed"
 },
 {
 "pmid": "39460761",
@@ -368,7 +533,10 @@
 "Charoensuksira S"
 ],
 "topic": "Skin biology & immunology",
-"design": ""
+"design": "",
+"oa": "W4403786966",
+"cites": 16,
+"source": "PubMed"
 },
 {
 "pmid": "36928592",
@@ -392,7 +560,10 @@
 "Charoensuksira S"
 ],
 "topic": "Lasers & light",
-"design": ""
+"design": "",
+"oa": "W4327679301",
+"cites": 12,
+"source": "PubMed"
 },
 {
 "pmid": "37665186",
@@ -417,7 +588,10 @@
 "Juntongjin P"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": ""
+"design": "",
+"oa": "W4386407386",
+"cites": 3,
+"source": "PubMed"
 },
 {
 "pmid": "37999199",
@@ -436,7 +610,10 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Other medicine",
-"design": ""
+"design": "",
+"oa": "W4387902547",
+"cites": 0,
+"source": "PubMed"
 },
 {
 "pmid": "36416978",
@@ -464,7 +641,10 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Lasers & light",
-"design": ""
+"design": "",
+"oa": "W4309728680",
+"cites": 19,
+"source": "PubMed"
 },
 {
 "pmid": "35642576",
@@ -482,7 +662,10 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Acne",
-"design": ""
+"design": "",
+"oa": "W4281827062",
+"cites": 9,
+"source": "PubMed"
 },
 {
 "pmid": "35737868",
@@ -505,7 +688,10 @@
 "Meephansan J"
 ],
 "topic": "Lasers & light",
-"design": ""
+"design": "",
+"oa": "W4283327084",
+"cites": 9,
+"source": "PubMed"
 },
 {
 "pmid": "34129740",
@@ -523,7 +709,10 @@
 "Meephansan J"
 ],
 "topic": "Lasers & light",
-"design": ""
+"design": "",
+"oa": "W3167248490",
+"cites": 1,
+"source": "PubMed"
 },
 {
 "pmid": "34348293",
@@ -541,7 +730,10 @@
 "Juntongjin P"
 ],
 "topic": "Acne",
-"design": "Meta-Analysis"
+"design": "Meta-Analysis",
+"oa": "W3191608946",
+"cites": 14,
+"source": "PubMed"
 },
 {
 "pmid": "35785468",
@@ -562,7 +754,10 @@
 "Juntongjin P"
 ],
 "topic": "Pigment & melasma",
-"design": ""
+"design": "",
+"oa": "W4283800196",
+"cites": 11,
+"source": "PubMed"
 },
 {
 "pmid": "35665543",
@@ -584,7 +779,10 @@
 "Meephansan J"
 ],
 "topic": "Skin biology & immunology",
-"design": ""
+"design": "",
+"oa": "W4282010382",
+"cites": 16,
+"source": "PubMed"
 },
 {
 "pmid": "36307341",
@@ -607,7 +805,10 @@
 "Charoensuksira S"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": ""
+"design": "",
+"oa": "W4305042037",
+"cites": 6,
+"source": "PubMed"
 },
 {
 "pmid": "35974467",
@@ -633,7 +834,10 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Injectables & aesthetics",
-"design": "Clinical Trial"
+"design": "Clinical Trial",
+"oa": "W4292295252",
+"cites": 13,
+"source": "PubMed"
 },
 {
 "pmid": "35221151",
@@ -654,7 +858,38 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": ""
+"design": "",
+"oa": "W4213125184",
+"cites": 14,
+"source": "PubMed"
+},
+{
+"pmid": "",
+"title": "Keratinocytes in Skin Disorders: The Importance of Keratinocytes as a Barrier",
+"authors": [
+"Komine M",
+"Meijuan J",
+"Kimura-Sashikawa M",
+"Hossain RM",
+"Ansary TM",
+"Oshio T",
+"Meephansan J",
+"Tsuda H",
+"Tominaga S",
+"Ohtsuki M"
+],
+"journal": "IntechOpen",
+"iso": "",
+"year": 2022,
+"doi": "10.5772/intechopen.103732",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Skin biology & immunology",
+"design": "Book chapter",
+"source": "OpenAlex",
+"oa": "W4281553036",
+"cites": 2
 },
 {
 "pmid": "35488471",
@@ -674,7 +909,10 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Lasers & light",
-"design": ""
+"design": "",
+"oa": "W4225134902",
+"cites": 7,
+"source": "PubMed"
 },
 {
 "pmid": "36065340",
@@ -697,7 +935,10 @@
 "Meephansan J"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": ""
+"design": "",
+"oa": "W4293797806",
+"cites": 10,
+"source": "PubMed"
 },
 {
 "pmid": "35942017",
@@ -714,7 +955,10 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Acne",
-"design": ""
+"design": "",
+"oa": "W4302787204",
+"cites": 11,
+"source": "PubMed"
 },
 {
 "pmid": "35995712",
@@ -737,7 +981,10 @@
 "Meephansan J"
 ],
 "topic": "Lasers & light",
-"design": ""
+"design": "",
+"oa": "W4291123805",
+"cites": 15,
+"source": "PubMed"
 },
 {
 "pmid": "35563374",
@@ -760,7 +1007,10 @@
 "Meephansan J"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": ""
+"design": "",
+"oa": "W4225143850",
+"cites": 19,
+"source": "PubMed"
 },
 {
 "pmid": "33538345",
@@ -779,7 +1029,10 @@
 "Nitayavardhana S"
 ],
 "topic": "Lasers & light",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W3126491334",
+"cites": 12,
+"source": "PubMed"
 },
 {
 "pmid": "32910030",
@@ -799,7 +1052,10 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Acne",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W3084354449",
+"cites": 37,
+"source": "PubMed"
 },
 {
 "pmid": "30904000",
@@ -821,7 +1077,10 @@
 "Meephansan J"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": ""
+"design": "",
+"oa": "W2981881986",
+"cites": 24,
+"source": "PubMed"
 },
 {
 "pmid": "33595885",
@@ -838,7 +1097,10 @@
 "Juntongjin P"
 ],
 "topic": "Lasers & light",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W3130196065",
+"cites": 21,
+"source": "PubMed"
 },
 {
 "pmid": "34858799",
@@ -860,7 +1122,10 @@
 "Meephansan J"
 ],
 "topic": "Lasers & light",
-"design": ""
+"design": "",
+"oa": "W3215508780",
+"cites": 8,
+"source": "PubMed"
 },
 {
 "pmid": "33845077",
@@ -881,7 +1146,10 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": ""
+"design": "",
+"oa": "W3148888777",
+"cites": 23,
+"source": "PubMed"
 },
 {
 "pmid": "31982887",
@@ -898,7 +1166,10 @@
 "Juntongjin P"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W3001379453",
+"cites": 9,
+"source": "PubMed"
 },
 {
 "pmid": "33908083",
@@ -922,7 +1193,10 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Clinical dermatology",
-"design": ""
+"design": "",
+"oa": "W3157661205",
+"cites": 3,
+"source": "PubMed"
 },
 {
 "pmid": "31874722",
@@ -942,7 +1216,10 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Hair & nails",
-"design": "Case Reports"
+"design": "Case Reports",
+"oa": "W2995385472",
+"cites": 0,
+"source": "PubMed"
 },
 {
 "pmid": "31429496",
@@ -962,7 +1239,10 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Clinical dermatology",
-"design": "Case Reports"
+"design": "Case Reports",
+"oa": "W2969946188",
+"cites": 1,
+"source": "PubMed"
 },
 {
 "pmid": "32458080",
@@ -979,7 +1259,10 @@
 "Juntongjin P"
 ],
 "topic": "Lasers & light",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W3028816335",
+"cites": 27,
+"source": "PubMed"
 },
 {
 "pmid": "33178380",
@@ -1002,7 +1285,32 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Pigment & melasma",
-"design": ""
+"design": "",
+"oa": "W3098349099",
+"cites": 19,
+"source": "PubMed"
+},
+{
+"pmid": "",
+"title": "Multicentric Castleman's disease presenting with cutaneous plasmacytosis",
+"authors": [
+"Phadungsaksawasdi P",
+"Nakazawa S",
+"Kageyama R",
+"Tokura Y"
+],
+"journal": "Journal of Cutaneous Immunology and Allergy",
+"iso": "",
+"year": 2020,
+"doi": "10.1002/cia2.12111",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Clinical dermatology",
+"design": "Case Reports",
+"source": "OpenAlex",
+"oa": "W3033019210",
+"cites": 0
 },
 {
 "pmid": "33633737",
@@ -1022,7 +1330,10 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Skin biology & immunology",
-"design": "Review"
+"design": "Review",
+"oa": "W3128567931",
+"cites": 153,
+"source": "PubMed"
 },
 {
 "pmid": "31568636",
@@ -1040,7 +1351,10 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Injectables & aesthetics",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W2977387290",
+"cites": 65,
+"source": "PubMed"
 },
 {
 "pmid": "32474952",
@@ -1066,7 +1380,31 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": ""
+"design": "",
+"oa": "W3028666921",
+"cites": 13,
+"source": "PubMed"
+},
+{
+"pmid": "",
+"title": "Skin and Gut Microbiota in Psoriasis: A Systematic Review",
+"authors": [
+"Rungjang A",
+"Meephansan J",
+"Thio HB"
+],
+"journal": "IntechOpen",
+"iso": "",
+"year": 2020,
+"doi": "10.5772/intechopen.92686",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": "Book chapter",
+"source": "OpenAlex",
+"oa": "W3033449529",
+"cites": 2
 },
 {
 "pmid": "32884021",
@@ -1091,7 +1429,10 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Skin biology & immunology",
-"design": ""
+"design": "",
+"oa": "W3082060001",
+"cites": 15,
+"source": "PubMed"
 },
 {
 "pmid": "32416635",
@@ -1111,7 +1452,10 @@
 "Nitayavardhana S"
 ],
 "topic": "Lasers & light",
-"design": ""
+"design": "",
+"oa": "W3025960391",
+"cites": 17,
+"source": "PubMed"
 },
 {
 "pmid": "32415885",
@@ -1129,7 +1473,10 @@
 "Meephansan J"
 ],
 "topic": "Lasers & light",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W3024085388",
+"cites": 2,
+"source": "PubMed"
 },
 {
 "pmid": "32323359",
@@ -1147,7 +1494,10 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Clinical dermatology",
-"design": ""
+"design": "",
+"oa": "W3019500016",
+"cites": 15,
+"source": "PubMed"
 },
 {
 "pmid": "31291937",
@@ -1167,7 +1517,10 @@
 "Meephansan J"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": ""
+"design": "",
+"oa": "W2957916538",
+"cites": 63,
+"source": "PubMed"
 },
 {
 "pmid": "31070845",
@@ -1184,7 +1537,10 @@
 "Juntongjin P"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W2944029243",
+"cites": 21,
+"source": "PubMed"
 },
 {
 "pmid": "31807046",
@@ -1201,7 +1557,10 @@
 "Meephansan J"
 ],
 "topic": "Acne",
-"design": ""
+"design": "",
+"oa": "W2987508155",
+"cites": 16,
+"source": "PubMed"
 },
 {
 "pmid": "31399284",
@@ -1226,7 +1585,10 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": ""
+"design": "",
+"oa": "W2965106036",
+"cites": 33,
+"source": "PubMed"
 },
 {
 "pmid": "31253172",
@@ -1244,7 +1606,10 @@
 "Meephansan J"
 ],
 "topic": "Skin aging",
-"design": ""
+"design": "",
+"oa": "W2955828540",
+"cites": 37,
+"source": "PubMed"
 },
 {
 "pmid": "31692558",
@@ -1262,7 +1627,10 @@
 "Meephansan J"
 ],
 "topic": "Lasers & light",
-"design": ""
+"design": "",
+"oa": "W2969667537",
+"cites": 8,
+"source": "PubMed"
 },
 {
 "pmid": "31680312",
@@ -1287,7 +1655,10 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Clinical dermatology",
-"design": "Case Reports"
+"design": "Case Reports",
+"oa": "W2951674008",
+"cites": 2,
+"source": "PubMed"
 },
 {
 "pmid": "31300254",
@@ -1307,7 +1678,10 @@
 "Phadungsaksawasdi P"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": ""
+"design": "",
+"oa": "W2952637829",
+"cites": 105,
+"source": "PubMed"
 },
 {
 "pmid": "31903956",
@@ -1324,7 +1698,31 @@
 "Meephansan J"
 ],
 "topic": "Hair & nails",
-"design": "Clinical Trial"
+"design": "Clinical Trial",
+"oa": "W2998847977",
+"cites": 5,
+"source": "PubMed"
+},
+{
+"pmid": "",
+"title": "Atopic dermatitis as Th2 disease revisited",
+"authors": [
+"Tokura Y",
+"Phadungsaksawasdi P",
+"Ito T"
+],
+"journal": "Journal of Cutaneous Immunology and Allergy",
+"iso": "",
+"year": 2018,
+"doi": "10.1002/cia2.12033",
+"faculty": [
+"Phadungsaksawasdi P"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": "Review",
+"source": "OpenAlex",
+"oa": "W2899647536",
+"cites": 26
 },
 {
 "pmid": "30291412",
@@ -1345,7 +1743,10 @@
 "Meephansan J"
 ],
 "topic": "Hair & nails",
-"design": ""
+"design": "",
+"oa": "W2895140772",
+"cites": 5,
+"source": "PubMed"
 },
 {
 "pmid": "30096107",
@@ -1365,7 +1766,10 @@
 "Meephansan J"
 ],
 "topic": "Hair & nails",
-"design": ""
+"design": "",
+"oa": "W2887316920",
+"cites": 31,
+"source": "PubMed"
 },
 {
 "pmid": "29505310",
@@ -1382,7 +1786,10 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Lasers & light",
-"design": ""
+"design": "",
+"oa": "W2789642217",
+"cites": 32,
+"source": "PubMed"
 },
 {
 "pmid": "28836690",
@@ -1406,7 +1813,30 @@
 "Juntongjin P"
 ],
 "topic": "Lasers & light",
-"design": ""
+"design": "",
+"oa": "W2750357502",
+"cites": 14,
+"source": "PubMed"
+},
+{
+"pmid": "",
+"title": "Oral Naturally Derived Agents as an Adjuvant Photoprotection after Dermatologic Surgery",
+"authors": [
+"Juntongjin P",
+"Chanyasak C"
+],
+"journal": "IntechOpen",
+"iso": "",
+"year": 2018,
+"doi": "10.5772/intechopen.71750",
+"faculty": [
+"Juntongjin P"
+],
+"topic": "Clinical dermatology",
+"design": "Book chapter",
+"source": "OpenAlex",
+"oa": "W2788579216",
+"cites": 1
 },
 {
 "pmid": "29878718",
@@ -1425,7 +1855,10 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Injectables & aesthetics",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W2805908999",
+"cites": 14,
+"source": "PubMed"
 },
 {
 "pmid": "29461121",
@@ -1442,7 +1875,10 @@
 "Juntongjin P"
 ],
 "topic": "Lasers & light",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W2791958452",
+"cites": 52,
+"source": "PubMed"
 },
 {
 "pmid": "28761364",
@@ -1462,7 +1898,10 @@
 "Meephansan J"
 ],
 "topic": "Wound healing",
-"design": ""
+"design": "",
+"oa": "W2735218346",
+"cites": 105,
+"source": "PubMed"
 },
 {
 "pmid": "27494272",
@@ -1479,7 +1918,10 @@
 "Juntongjin P"
 ],
 "topic": "Pigment & melasma",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W2488604242",
+"cites": 15,
+"source": "PubMed"
 },
 {
 "pmid": "28884378",
@@ -1500,7 +1942,53 @@
 "Meephansan J"
 ],
 "topic": "Hair & nails",
-"design": ""
+"design": "",
+"oa": "W2752209682",
+"cites": 47,
+"source": "PubMed"
+},
+{
+"pmid": "",
+"title": "Knowledge and attitudes towards vitiligo in the general population: A survey based on the simulation video of a real situation",
+"authors": [
+"Juntongjin P",
+"Rachawong C",
+"Nuallaong W"
+],
+"journal": "Dermatologica Sinica",
+"iso": "",
+"year": 2017,
+"doi": "10.1016/j.dsi.2017.10.002",
+"faculty": [
+"Juntongjin P"
+],
+"topic": "Pigment & melasma",
+"design": "",
+"source": "OpenAlex",
+"oa": "W2769087028",
+"cites": 15
+},
+{
+"pmid": "",
+"title": "Pathogenic Role of Cytokines and Effect of Their Inhibition in Psoriasis",
+"authors": [
+"Meephansan J",
+"Subpayasarn U",
+"Komine M",
+"Ohtsuki M"
+],
+"journal": "IntechOpen",
+"iso": "",
+"year": 2017,
+"doi": "10.5772/intechopen.68421",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": "Book chapter",
+"source": "OpenAlex",
+"oa": "W2724699382",
+"cites": 14
 },
 {
 "pmid": "27047633",
@@ -1520,7 +2008,54 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Injectables & aesthetics",
-"design": ""
+"design": "",
+"oa": "W2339176238",
+"cites": 4,
+"source": "PubMed"
+},
+{
+"pmid": "",
+"title": "A systematic review of transforming growth factor beta inhibitor treatments on keloid scars",
+"authors": [
+"Sirithanabadeekul P"
+],
+"journal": "Thai Journal of Pharmaceutical Sciences",
+"iso": "",
+"year": 2016,
+"doi": "",
+"faculty": [
+"Sirithanabadeekul P"
+],
+"topic": "Wound healing",
+"design": "Systematic Review",
+"source": "OpenAlex",
+"url": "http://www.tjps.pharm.chula.ac.th/ojs/index.php/tjps/article/download/143/97",
+"oa": "W2800559786",
+"cites": 1
+},
+{
+"pmid": "",
+"title": "Comparison of the efficacy and safety of 0.1% tacrolimus ointment and 0.1% mometasone furoate cream for adult vitiligo: A single-blinded pilot study",
+"authors": [
+"Silpa-Archa N",
+"Nitayavardhana S",
+"Thanomkitti K",
+"Chularojanamontri L",
+"Varothai S",
+"Wongpraparut C"
+],
+"journal": "Dermatologica Sinica",
+"iso": "",
+"year": 2016,
+"doi": "10.1016/j.dsi.2016.05.005",
+"faculty": [
+"Nitayavardhana S"
+],
+"topic": "Pigment & melasma",
+"design": "Clinical Trial",
+"source": "OpenAlex",
+"oa": "W2460789323",
+"cites": 18
 },
 {
 "pmid": "27206417",
@@ -1537,7 +2072,10 @@
 "Juntongjin P"
 ],
 "topic": "Pigment & melasma",
-"design": "Review"
+"design": "Review",
+"oa": "W2397527810",
+"cites": 53,
+"source": "PubMed"
 },
 {
 "pmid": "27437152",
@@ -1554,7 +2092,38 @@
 "Nitayavardhana S"
 ],
 "topic": "Hair & nails",
-"design": ""
+"design": "",
+"oa": "W2474923900",
+"cites": 7,
+"source": "PubMed"
+},
+{
+"pmid": "",
+"title": "Proportion of Third-Year Medical Students of Khon Kaen University Who Have Knowledge about Self Prevention from Blood and Body Fluid Borne Infection",
+"authors": [
+"Siriboonpipattana W",
+"Siriphanit R",
+"Srisongmueang N",
+"Pipatnanun R",
+"Mala C",
+"Karin P",
+"Koosirirat T",
+"Paileeklee S",
+"Luvira V"
+],
+"journal": "Srinagarind Medical Journal",
+"iso": "",
+"year": 2016,
+"doi": "",
+"faculty": [
+"Siriphanit R"
+],
+"topic": "Other medicine",
+"design": "",
+"source": "ThaiJO",
+"url": "https://www.tci-thaijo.org/index.php/SRIMEDJ/article/view/68219",
+"oa": "W2582422515",
+"cites": 0
 },
 {
 "pmid": "27271600",
@@ -1574,7 +2143,10 @@
 "Meephansan J"
 ],
 "topic": "Skin aging",
-"design": "Review"
+"design": "Review",
+"oa": "W2409710963",
+"cites": 1168,
+"source": "PubMed"
 },
 {
 "pmid": "25622688",
@@ -1591,7 +2163,10 @@
 "Juntongjin P"
 ],
 "topic": "Clinical dermatology",
-"design": "Case Reports"
+"design": "Case Reports",
+"oa": "W2126795856",
+"cites": 1,
+"source": "PubMed"
 },
 {
 "pmid": "25413592",
@@ -1609,7 +2184,10 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Lasers & light",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W2044809726",
+"cites": 71,
+"source": "PubMed"
 },
 {
 "pmid": "25760554",
@@ -1627,7 +2205,10 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Lasers & light",
-"design": "Randomized Controlled Trial"
+"design": "Randomized Controlled Trial",
+"oa": "W2318873612",
+"cites": 35,
+"source": "PubMed"
 },
 {
 "pmid": "25193784",
@@ -1650,7 +2231,10 @@
 "Nitayavardhana S"
 ],
 "topic": "Clinical dermatology",
-"design": ""
+"design": "",
+"oa": "W2073923610",
+"cites": 16,
+"source": "PubMed"
 },
 {
 "pmid": "25566052",
@@ -1668,7 +2252,10 @@
 "Sirithanabadeekul P"
 ],
 "topic": "Clinical dermatology",
-"design": "Case Reports"
+"design": "Case Reports",
+"oa": "W2016295389",
+"cites": 0,
+"source": "PubMed"
 },
 {
 "pmid": "23764374",
@@ -1689,7 +2276,10 @@
 "Meephansan J"
 ],
 "topic": "Skin biology & immunology",
-"design": ""
+"design": "",
+"oa": "W2089208435",
+"cites": 79,
+"source": "PubMed"
 },
 {
 "pmid": "23859407",
@@ -1707,7 +2297,10 @@
 "Nitayavardhana S"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": "Review"
+"design": "Review",
+"oa": "W69549807",
+"cites": 34,
+"source": "PubMed"
 },
 {
 "pmid": "22951280",
@@ -1730,7 +2323,10 @@
 "Meephansan J"
 ],
 "topic": "Skin biology & immunology",
-"design": "Case Reports"
+"design": "Case Reports",
+"oa": "W2046613852",
+"cites": 17,
+"source": "PubMed"
 },
 {
 "pmid": "22673732",
@@ -1750,7 +2346,10 @@
 "Meephansan J"
 ],
 "topic": "Skin biology & immunology",
-"design": ""
+"design": "",
+"oa": "W1976156103",
+"cites": 128,
+"source": "PubMed"
 },
 {
 "pmid": "22924547",
@@ -1769,7 +2368,10 @@
 "Meephansan J"
 ],
 "topic": "Clinical dermatology",
-"design": ""
+"design": "",
+"oa": "W1491337193",
+"cites": 20,
+"source": "PubMed"
 },
 {
 "pmid": "22494834",
@@ -1791,7 +2393,10 @@
 "Meephansan J"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": ""
+"design": "",
+"oa": "W1658773030",
+"cites": 13,
+"source": "PubMed"
 },
 {
 "pmid": "22100205",
@@ -1811,7 +2416,31 @@
 "Meephansan J"
 ],
 "topic": "Skin biology & immunology",
-"design": ""
+"design": "",
+"oa": "W2072720255",
+"cites": 24,
+"source": "PubMed"
+},
+{
+"pmid": "",
+"title": "Eccrine syringofibroadenoma: a case report and review of literature",
+"authors": [
+"Sirithanabadeekul P",
+"Busaracome P"
+],
+"journal": "Thai Journal of Dermatology",
+"iso": "",
+"year": 2011,
+"doi": "",
+"faculty": [
+"Sirithanabadeekul P"
+],
+"topic": "Clinical dermatology",
+"design": "Case Reports",
+"source": "ThaiJO",
+"url": "https://he02.tci-thaijo.org/index.php/TJD/article/view/282934",
+"oa": "W7216622597",
+"cites": 0
 },
 {
 "pmid": "21659065",
@@ -1831,7 +2460,33 @@
 "Meephansan J"
 ],
 "topic": "Psoriasis & inflammatory skin disease",
-"design": ""
+"design": "",
+"oa": "W2137251947",
+"cites": 46,
+"source": "PubMed"
+},
+{
+"pmid": "",
+"title": "Effect of methotrexate on the serum levels of IL-22 in Patients with moderate to severe plaque-type psoriasis",
+"authors": [
+"Meephansan J",
+"Wongpiyabovorn J",
+"Sindhuphak W"
+],
+"journal": "Thai Journal of Dermatology",
+"iso": "",
+"year": 2009,
+"doi": "",
+"faculty": [
+"Meephansan J"
+],
+"topic": "Psoriasis & inflammatory skin disease",
+"design": "",
+"source": "ThaiJO",
+"url": "https://he02.tci-thaijo.org/index.php/TJD/article/view/283126",
+"oa": "W7218124454",
+"cites": 0
 }
-]
+],
+"citesUpdated": "2026-11-16"
 }

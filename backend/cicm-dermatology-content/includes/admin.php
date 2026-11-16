@@ -31,7 +31,7 @@ function cicm_page() {
 	$schema = cicm_schema();
 	$tabs   = array_keys( $schema );
 	$tab    = isset( $_GET['tab'] ) ? sanitize_key( wp_unslash( $_GET['tab'] ) ) : 'announcements';
-	if ( ! in_array( $tab, array_merge( array_map( 'strtolower', $tabs ), array( 'history', 'settings' ) ), true ) ) {
+	if ( ! in_array( $tab, array_merge( array_map( 'strtolower', $tabs ), array( 'research', 'history', 'settings' ) ), true ) ) {
 		$tab = 'announcements';
 	}
 	foreach ( $tabs as $k ) {
@@ -50,13 +50,16 @@ function cicm_page() {
 	foreach ( $schema as $k => $sec ) {
 		echo '<a class="nav-tab' . ( $k === $tab ? ' nav-tab-active' : '' ) . '" href="' . esc_url( cicm_tab_url( strtolower( $k ) ) ) . '">' . esc_html( $sec['label'] ) . '</a>';
 	}
+	echo '<a class="nav-tab' . ( 'research' === $tab ? ' nav-tab-active' : '' ) . '" href="' . esc_url( cicm_tab_url( 'research' ) ) . '">Research sources</a>';
 	echo '<a class="nav-tab' . ( 'history' === $tab ? ' nav-tab-active' : '' ) . '" href="' . esc_url( cicm_tab_url( 'history' ) ) . '">History</a>';
 	if ( current_user_can( 'manage_options' ) ) {
 		echo '<a class="nav-tab' . ( 'settings' === $tab ? ' nav-tab-active' : '' ) . '" href="' . esc_url( cicm_tab_url( 'settings' ) ) . '">Settings</a>';
 	}
 	echo '</nav>';
 
-	if ( 'history' === $tab ) {
+	if ( 'research' === $tab ) {
+		cicm_research_tab();
+	} elseif ( 'history' === $tab ) {
 		cicm_history_tab();
 	} elseif ( 'settings' === $tab ) {
 		cicm_settings_tab();

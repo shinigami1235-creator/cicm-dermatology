@@ -68,3 +68,11 @@ Staff then edit announcements, programs and fees, permanent and visiting lecture
 WordPress pages outside the dashboard send visitors to the site address. The content is also available as JSON at `/wp-json/cicm/v1/content`.
 
 Please tell me once the site opens on localhost, or send me a screenshot of anything that fails.
+
+## Research sources and Scopus
+
+The Research sources tab in the dashboard lists where every paper and number in the research section comes from: PubMed, Wiley Online Library, OpenAlex, ThaiJO, ORCID and Scopus. OpenAlex citation counts refresh there with one button and also once a week on their own, and "Look for new papers in OpenAlex" lists work by the lecturers that the site does not have yet.
+
+Scopus needs a key. Sign in at https://dev.elsevier.com/ with a Thammasat email and create an API key. Since Thammasat subscribes to Scopus, the key works while the server is on the Thammasat network; a server elsewhere also needs an institutional token, which the Thammasat library requests from Elsevier. An administrator enters both in the Research sources tab, or in wp-config.php as `define( 'CICM_SCOPUS_KEY', '...' );` and `define( 'CICM_SCOPUS_INSTTOKEN', '...' );`. They are never written to the site files. "Update Scopus numbers now" then refreshes each lecturer's documents, citations and h-index, and it repeats weekly.
+
+The weekly refresh runs on WP-Cron, which needs site visits or a server cron calling wp-cron.php.

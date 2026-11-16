@@ -27,7 +27,7 @@
       $$("[data-i18n]").forEach(function (el) {
         var v = window.I18N.th[el.dataset.i18n];
         if (!v) return;
-        if (v.indexOf("<br>") > -1) el.innerHTML = v; else el.textContent = v;
+        if (v.indexOf("<br>") > -1 || v.indexOf("<a href=") > -1) el.innerHTML = v; else el.textContent = v;
       });
       $$("[data-i18n-ph]").forEach(function (el) { var v = window.I18N.th[el.dataset.i18nPh]; if (v) el.placeholder = v; });
       $$("[data-i18n-label]").forEach(function (el) { var v = window.I18N.th[el.dataset.i18nLabel]; if (v) el.setAttribute("aria-label", v); });
@@ -70,7 +70,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json?v=20261116e").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261116f").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -90,11 +90,12 @@
     });
     return contentP;
   }
-  var papersP = null;
+  var papersP = null, CITES_WHEN = "";
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261116e").then(function (r) { return r.json(); }).then(function (d) {
+    if (!papersP) papersP = fetch("data/publications.json?v=20261116f").then(function (r) { return r.json(); }).then(function (d) {
       // every lecturer tagged on a paper is bolded in the author lists
       d.papers.forEach(function (p) { p.faculty.forEach(function (k) { if (FAC_KEYS.indexOf(k) < 0) FAC_KEYS.push(k); }); });
+      CITES_WHEN = d.citesUpdated || "";
       return d;
     });
     return papersP;
@@ -117,6 +118,9 @@
       (opts.topic ? '<span class="badge topic">' + esc(p.topic) + "</span>" : "") +
       (p.pmid ? '<a href="https://pubmed.ncbi.nlm.nih.gov/' + p.pmid + '/" target="_blank" rel="noopener">PMID ' + p.pmid + "</a>" : "") +
       (isWiley(p) ? '<a href="https://onlinelibrary.wiley.com/doi/' + esc(p.doi) + '" target="_blank" rel="noopener">Wiley</a>' : "") +
+      (/tci-thaijo\.org/.test(p.url || "") ? '<a href="' + url(p.url) + '" target="_blank" rel="noopener">ThaiJO</a>' : "") +
+      (p.cites ? '<a class="cites" href="https://openalex.org/works?filter=cites:' + encodeURIComponent(p.oa) + '" target="_blank" rel="noopener" title="OpenAlex">' +
+        (lang === "th" ? "อ้างอิง " + fmtN(p.cites) + " ครั้ง" : "Cited " + fmtN(p.cites) + (p.cites === 1 ? " time" : " times")) + "</a>" : "") +
       (p.eid ? '<a href="https://www.scopus.com/record/display.uri?eid=' + encodeURIComponent(p.eid) + '&origin=resultslist" target="_blank" rel="noopener">Scopus</a>' : "") + "</div></div></li>";
   }
 
@@ -124,6 +128,7 @@
   function isWiley(p) { return /^10\.(1111|1002|1155)\//.test(p.doi || ""); }
   function paperHref(p) {
     if (p.doi) return "https://doi.org/" + p.doi;
+    if (p.url) return url(p.url);
     if (p.pmid) return "https://pubmed.ncbi.nlm.nih.gov/" + p.pmid + "/";
     return p.eid ? "https://www.scopus.com/record/display.uri?eid=" + encodeURIComponent(p.eid) + "&origin=resultslist" : "#";
   }
@@ -141,27 +146,48 @@
           '</td><td class="num tnum">' + (f.scopus.cites ? fmtN(f.scopus.cites) : "") + '</td><td class="num tnum">' + (f.scopus.h || "") + "</td></tr>";
       }).join("") + "</tbody>";
   }
+  /* Table 4: papers on this site per lecturer, with OpenAlex citation counts and the h-index they give */
+  function openalexTable(c, papers, when) {
+    var fac = c.faculty.filter(function (f) { return f.pubmed; });
+    var rows = fac.map(function (f) {
+      var cs = papers.filter(function (p) { return p.faculty.indexOf(f.pubmed) > -1; }).map(function (p) { return p.cites || 0; }).sort(function (a, b) { return b - a; });
+      var h = 0; while (h < cs.length && cs[h] >= h + 1) h++;
+      return { f: f, n: cs.length, cites: cs.reduce(function (a, b) { return a + b; }, 0), h: h };
+    }).filter(function (r) { return r.n; });
+    if (!rows.length) return "";
+    var d = when ? new Date(when + "T00:00:00") : null;
+    var w = d ? d.toLocaleDateString(lang === "th" ? "th-TH" : "en-GB", { day: "numeric", month: "short", year: "numeric" }) : "";
+    return "<caption><b>" + T("research.table4", "Table 4") + "</b> " + T("research.table4t", "Papers on this site, cited in OpenAlex") + (w ? " · " + w : "") + "</caption><thead><tr><th>" +
+      T("research.lecturer", "Lecturer") + '</th><th class="num">' + T("research.papers", "Papers") + '</th><th class="num">' + T("research.cites", "Citations") + '</th><th class="num">h-index</th></tr></thead><tbody>' +
+      rows.map(function (r) {
+        var f = r.f, links = (f.openalex ? ' <a class="idlink" href="https://openalex.org/authors/' + encodeURIComponent(f.openalex) + '" target="_blank" rel="noopener">OpenAlex</a>' : "") +
+          (f.orcid ? ' <a class="idlink" href="https://orcid.org/' + encodeURIComponent(f.orcid) + '" target="_blank" rel="noopener">ORCID</a>' : "");
+        return '<tr><td><a href="research.html?lecturer=' + encodeURIComponent(f.pubmed) + '">' + esc(f.name) + "</a>" + links + '</td><td class="num tnum">' + r.n +
+          '</td><td class="num tnum">' + (r.cites ? fmtN(r.cites) : "") + '</td><td class="num tnum">' + (r.h || "") + "</td></tr>";
+      }).join("") + "</tbody>";
+  }
   function yearFigure(papers) {
-    var years = []; for (var y = 2011; y <= 2026; y++) years.push(y);
+    var y0 = Math.min.apply(null, papers.map(function (p) { return p.year; })), y1 = Math.max.apply(null, papers.map(function (p) { return p.year; }));
+    var years = []; for (var y = y0; y <= y1; y++) years.push(y);
     var all = {}, rct = {};
     papers.forEach(function (p) { all[p.year] = (all[p.year] || 0) + 1; if (/Randomized|Clinical Trial/.test(p.design)) rct[p.year] = (rct[p.year] || 0) + 1; });
     var max = Math.max.apply(null, years.map(function (y) { return all[y] || 0; }));
     var top = Math.ceil(max / 5) * 5, W = 560, H = 230, L = 26, B = 22, bw = (W - L) / years.length;
-    var s = '<svg viewBox="0 0 ' + W + " " + (H + B) + '" role="img" aria-label="Papers per year from 2011 to 2026">';
+    var s = '<svg viewBox="0 0 ' + W + " " + (H + B) + '" role="img" aria-label="Papers per year from ' + y0 + " to " + y1 + '">';
     for (var g = 0; g <= top; g += 5) { var gy = H - (g / top) * H; s += '<line class="grid" x1="' + L + '" x2="' + W + '" y1="' + gy + '" y2="' + gy + '"/><text class="axis" x="0" y="' + (gy + 4) + '">' + g + "</text>"; }
     years.forEach(function (y, i) {
       var n = all[y] || 0, r = rct[y] || 0, x = L + i * bw + 3, w = bw - 6, h = (n / top) * H, hr = (r / top) * H;
       s += '<g class="col" style="--i:' + i + '"><rect class="bar" x="' + x + '" y="' + (H - h) + '" width="' + w + '" height="' + h + '" rx="2"><title>' + y + ": " + n + "</title></rect>";
       if (r) s += '<rect class="bar rct" x="' + x + '" y="' + (H - hr) + '" width="' + w + '" height="' + hr + '" rx="2"/>';
       s += "</g>";
-      if (i % 3 === 0 || y === 2026) s += '<text class="axis" x="' + (x + w / 2) + '" y="' + (H + 16) + '" text-anchor="middle">' + y + "</text>";
+      if (i % 3 === 0 || y === y1) s += '<text class="axis" x="' + (x + w / 2) + '" y="' + (H + 16) + '" text-anchor="middle">' + y + "</text>";
     });
     s += "</svg>";
     return s + '<figcaption class="legend"><b>' + T("research.fig", "Fig. 5") + "</b> " + T("research.figt", "Papers per year. The dark part of each bar is randomized controlled trials.") + "</figcaption>";
   }
 
   function journalTable(papers, n) {
-    var c = {}; papers.forEach(function (p) { c[p.journal] = (c[p.journal] || 0) + 1; });
+    var c = {}; papers.forEach(function (p) { if (p.design !== "Book chapter") c[p.journal] = (c[p.journal] || 0) + 1; });
     var rows = Object.keys(c).sort(function (a, b) { return c[b] - c[a] || a.localeCompare(b); }).slice(0, n || 6);
     return '<caption><b>' + T("research.table", "Table 1") + "</b> " + T("research.tablet", "Journals with the most papers") + "</caption>" +
       "<thead><tr><th>" + T("research.journal", "Journal") + "</th><th>" + T("research.papers", "Papers") + "</th></tr></thead><tbody>" +
@@ -169,12 +195,15 @@
   }
 
   function stats(papers) {
-    var journals = {}; papers.forEach(function (p) { journals[p.journal] = 1; });
+    var journals = {}; papers.forEach(function (p) { if (p.design !== "Book chapter") journals[p.journal] = 1; });
     return {
       n: papers.length,
       j: Object.keys(journals).length,
       sc: papers.some(function (p) { return p.eid; }),
       wi: papers.some(isWiley),
+      oa: papers.some(function (p) { return p.source === "OpenAlex"; }),
+      tj: papers.some(function (p) { return p.source === "ThaiJO"; }),
+      ch: papers.filter(function (p) { return p.design === "Book chapter"; }).length,
       rct: papers.filter(function (p) { return p.design === "Randomized Controlled Trial"; }).length,
       y0: Math.min.apply(null, papers.map(function (p) { return p.year; })),
       y1: Math.max.apply(null, papers.map(function (p) { return p.year; }))
@@ -182,18 +211,18 @@
   }
   // "PubMed and Wiley Online Library" in sentences, "PubMed + Wiley" in the running head
   function sources(s, long) {
-    var a = ["PubMed"]; if (s.wi) a.push(long ? "Wiley Online Library" : "Wiley"); if (s.sc) a.push("Scopus");
+    var a = ["PubMed"]; if (s.wi) a.push(long ? "Wiley Online Library" : "Wiley"); if (s.oa) a.push("OpenAlex"); if (s.tj) a.push("ThaiJO"); if (s.sc) a.push("Scopus");
     if (!long) return a.join(" + ");
     var and = lang === "th" ? " และ " : " and ";
     return a.length < 3 ? a.join(and) : a.slice(0, -1).join(", ") + and + a[a.length - 1];
   }
   function researchLede(s) {
     var db = sources(s, true);
-    if (lang === "th") return "อาจารย์ CICM Dermatology มีบทความใน " + db + " " + s.n + " บทความ ในวารสาร " + s.j + " ฉบับ รวมการทดลองแบบสุ่มมีกลุ่มควบคุม " + s.rct + " เรื่อง";
-    return "CICM Dermatology lecturers have " + s.n + " papers in " + db + " across " + s.j + " journals, including " + s.rct + " randomized controlled trials.";
+    if (lang === "th") return "อาจารย์ CICM Dermatology มีผลงานใน " + db + " " + s.n + " เรื่อง ในวารสาร " + s.j + " ฉบับ" + (s.ch ? " และบทในหนังสือ " + s.ch + " บท" : "") + " รวมการทดลองแบบสุ่มมีกลุ่มควบคุม " + s.rct + " เรื่อง";
+    return "CICM Dermatology lecturers have " + s.n + " papers in " + db + ", in " + s.j + " journals" + (s.ch ? " and " + s.ch + " book chapters" : "") + ", including " + s.rct + " randomized controlled trials.";
   }
 
-  window.CICM = { url: url, openZoom: function (g, i) { openZoom(g, i); }, loadContent: loadContent, sources: sources, isWiley: isWiley, loadPapers: loadPapers, refHTML: refHTML, paperHref: paperHref, scopusTable: scopusTable, scopusUrl: scopusUrl, fmtN: fmtN, yearFigure: yearFigure, journalTable: journalTable, stats: stats, researchLede: researchLede, esc: esc, icon: icon, FAC_KEYS: FAC_KEYS, reveal: function (el) { observe(el); } };
+  window.CICM = { url: url, openZoom: function (g, i) { openZoom(g, i); }, loadContent: loadContent, sources: sources, isWiley: isWiley, openalexTable: function (c, p) { return openalexTable(c, p, CITES_WHEN); }, loadPapers: loadPapers, refHTML: refHTML, paperHref: paperHref, scopusTable: scopusTable, scopusUrl: scopusUrl, fmtN: fmtN, yearFigure: yearFigure, journalTable: journalTable, stats: stats, researchLede: researchLede, esc: esc, icon: icon, FAC_KEYS: FAC_KEYS, reveal: function (el) { observe(el); } };
 
   /* ---------- reveals ----------
      A scroll check rather than an observer, so fast flicks and slow devices never leave content hidden. */
@@ -590,6 +619,7 @@
     $("#researchLede").textContent = researchLede(s);
     $("#volRange").textContent = sources(s) + ", " + s.y0 + (lang === "th" ? " ถึง " : " to ") + s.y1;
     if ($("#scopusTable")) $("#scopusTable").innerHTML = scopusTable(c);
+    if ($("#openalexTable")) $("#openalexTable").innerHTML = openalexTable(c, papers, CITES_WHEN);
     $("#allPapersLink").textContent = lang === "th" ? "ดูบทความทั้งหมด " + s.n + " เรื่อง" : "All " + s.n + " papers";
     var latest = papers.filter(function (p) { return p.faculty.length && p.topic !== "Other medicine"; }).slice(0, 5);
     $("#latestRefs").innerHTML = latest.map(function (p) { return refHTML(p); }).join("");

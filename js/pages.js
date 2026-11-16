@@ -19,11 +19,13 @@
           (f.expertise.length ? "<h3>" + T("ui.exp", "Expertise") + '</h3><ul class="chips">' + f.expertise.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>" : "") +
           (f.scopus && f.scopus.id ? '<p class="scopus-line"><a href="' + C.scopusUrl(f.scopus.id) + '" target="_blank" rel="noopener"><b>Scopus</b> ' +
             C.fmtN(f.scopus.docs) + " " + (lang === "th" ? T("research.docs", "เอกสาร") : f.scopus.docs === 1 ? "document" : "documents") + (f.scopus.cites ? " · " + C.fmtN(f.scopus.cites) + " " + T("research.cites", "citations").toLowerCase() : "") + (f.scopus.h ? " · h-index " + f.scopus.h : "") + "</a></p>" : "") +
+          (f.orcid || f.openalex ? '<p class="scopus-line id-line">' + (f.orcid ? '<a href="https://orcid.org/' + encodeURIComponent(f.orcid) + '" target="_blank" rel="noopener"><b>ORCID</b> ' + esc(f.orcid) + "</a>" : "") +
+            (f.openalex ? '<a href="https://openalex.org/authors/' + encodeURIComponent(f.openalex) + '" target="_blank" rel="noopener"><b>OpenAlex</b> ' + T("ui.profile", "profile") + "</a>" : "") + "</p>" : "") +
           "</div><div>" +
           (ach.length ? "<h3>" + T("ui.ach", "Achievements") + '</h3><ul class="ach">' + ach.map(function (a) {
             var txt = esc(P(a.text)); if (a.link) txt = '<a href="' + url(a.link) + '" target="_blank" rel="noopener">' + txt + "</a>";
             return '<li><span class="y">' + esc(a.year) + "</span>" + txt + "</li>"; }).join("") + "</ul>" : "") +
-          (mine.length ? "<h3>" + T("ui.recent", "Recent papers") + " · " + mine.length + " " + T("ui.pubcount", "papers in PubMed") + '</h3><ul class="papers">' +
+          (mine.length ? "<h3>" + T("ui.recent", "Recent papers") + " · " + mine.length + " " + T("ui.pubcount", "published papers") + '</h3><ul class="papers">' +
             mine.slice(0, 5).map(function (p) {
               var href = C.paperHref(p);
               return '<li><a href="' + href + '" target="_blank" rel="noopener">' + esc(p.title) + "</a><small>" + esc(p.journal) + ", " + esc(p.year) + "</small></li>";

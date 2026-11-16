@@ -550,7 +550,9 @@
     "cites": 1790,
     "h": 16
    },
-   "cut": "people/jitlada-card.webp"
+   "cut": "people/jitlada-card.webp",
+   "orcid": "0000-0001-7490-5134",
+   "openalex": "A5048378082"
   },
   {
    "id": "premjit",
@@ -580,7 +582,9 @@
     "cites": 288,
     "h": 10
    },
-   "cut": "people/premjit-card.webp"
+   "cut": "people/premjit-card.webp",
+   "orcid": "0000-0001-7148-7897",
+   "openalex": "A5091034127"
   },
   {
    "id": "punyaphat",
@@ -615,7 +619,9 @@
     "cites": 339,
     "h": 11
    },
-   "cut": "people/punyaphat-card.webp"
+   "cut": "people/punyaphat-card.webp",
+   "orcid": "0000-0002-5107-8153",
+   "openalex": "A5029793514"
   },
   {
    "id": "sunatra",
@@ -642,7 +648,9 @@
     "cites": 94,
     "h": 5
    },
-   "cut": "people/sunatra-card.webp"
+   "cut": "people/sunatra-card.webp",
+   "orcid": "0000-0002-9635-6276",
+   "openalex": "A5065146942"
   },
   {
    "id": "pawit",
@@ -670,7 +678,9 @@
     "cites": 387,
     "h": 10
    },
-   "cut": "people/pawit-card.webp"
+   "cut": "people/pawit-card.webp",
+   "orcid": "0000-0002-6537-2687",
+   "openalex": "A5074212844"
   },
   {
    "id": "rueangrit",
@@ -695,9 +705,8 @@
     "Facial design"
    ],
    "cut": "people/rueangrit-card.webp",
-   "otherPubs": [
-    "Siriboonpipattana W, Siriphanit R, Srisongmueang N, Pipatnanun R, Mala C, Karin P, Koosirirat T, Paileeklee S, Luvira V. Proportion of third-year medical students of Khon Kaen University who have knowledge about self prevention from blood and body fluid borne infection. Srinagarind Medical Journal. 2016;31(5):58. https://www.tci-thaijo.org/index.php/SRIMEDJ/article/view/68219"
-   ]
+   "orcid": "0009-0006-1298-2584",
+   "openalex": "A5120597438"
   },
   {
    "id": "sasin",
@@ -717,7 +726,9 @@
     "AI and machine learning",
     "Aesthetics and longevity"
    ],
-   "cut": "people/sasin-card.webp"
+   "cut": "people/sasin-card.webp",
+   "orcid": "0009-0004-9330-7032",
+   "openalex": "A5091690580"
   }
  ],
  "staff": [

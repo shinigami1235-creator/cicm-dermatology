@@ -55,6 +55,8 @@ function cicm_schema() {
 				'expertise'    => array( 'type' => 'lines', 'label' => 'Expertise', 'hint' => 'One per line' ),
 				'pubmed'       => array( 'type' => 'text', 'label' => 'Name on PubMed', 'hint' => 'Meephansan J' ),
 				'otherPubs'    => array( 'type' => 'lines', 'label' => 'Other publications', 'hint' => 'Papers not in PubMed, one citation per line. A link at the end of a line becomes the link.' ),
+				'orcid'        => array( 'type' => 'text', 'label' => 'ORCID iD', 'hint' => '0000-0001-7490-5134' ),
+				'openalex'     => array( 'type' => 'text', 'label' => 'OpenAlex author ID', 'hint' => 'A5048378082' ),
 				'scopus.id'    => array( 'type' => 'text', 'label' => 'Scopus author ID' ),
 				'scopus.docs'  => array( 'type' => 'number', 'label' => 'Scopus documents' ),
 				'scopus.cites' => array( 'type' => 'number', 'label' => 'Scopus citations' ),
