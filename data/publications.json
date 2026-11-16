@@ -1,7 +1,31 @@
 {
 "generated": "2026-10-03",
-"source": "PubMed (NCBI E-utilities)",
+"source": "PubMed (NCBI E-utilities), searched 3 October 2026; Wiley Online Library (Crossref, Wiley member 311), searched 16 November 2026",
 "papers": [
+{
+"pmid": "",
+"title": "Photo- and Temperature-Conditioned Versus Conventional Platelet-Rich Plasma for Androgenetic Alopecia: A Split-Scalp, Double-Blind, and Randomized Active-Comparator Trial",
+"authors": [
+"Charoensuksira S",
+"Siriphanit R",
+"Valerie C",
+"Thanasarnaksorn W",
+"Suwanchinda A",
+"Meephansan J"
+],
+"journal": "Photodermatology, Photoimmunology & Photomedicine",
+"iso": "Photodermatol Photoimmunol Photomed",
+"year": 2026,
+"doi": "10.1111/phpp.70139",
+"faculty": [
+"Meephansan J",
+"Charoensuksira S",
+"Siriphanit R"
+],
+"topic": "Injectables & aesthetics",
+"design": "Randomized Controlled Trial",
+"source": "Wiley"
+},
 {
 "pmid": "42731113",
 "title": "Photothermal-Activated Platelet-Rich Plasma Versus Conventional Platelet-Rich Plasma for Melasma: A Split-Face, Double-Blind Randomized Controlled Trial",

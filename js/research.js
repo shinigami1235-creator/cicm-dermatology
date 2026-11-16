@@ -9,7 +9,7 @@
   Promise.all([C.loadPapers(), C.loadContent()]).then(function (r) {
     var data = r[0], papers = data.papers, s = C.stats(papers);
     r[1].faculty.forEach(function (f) { if (f.pubmed) NAMES[f.pubmed] = f.name; });
-    $("#volRange").textContent = (s.sc ? "PubMed + Scopus, " : "PubMed, ") + s.y0 + (lang === "th" ? " ถึง " : " to ") + s.y1;
+    $("#volRange").textContent = window.CICM.sources(s) + ", " + s.y0 + (lang === "th" ? " ถึง " : " to ") + s.y1;
     $("#researchLede").textContent = C.researchLede(s);
     $("#journalTable").innerHTML = C.journalTable(papers, 8);
     var fig = $("#yearFig"); fig.innerHTML = C.yearFigure(papers); fig.classList.add("in");

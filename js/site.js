@@ -70,7 +70,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json?v=20261116d").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261116e").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -92,7 +92,7 @@
   }
   var papersP = null;
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261116d").then(function (r) { return r.json(); }).then(function (d) {
+    if (!papersP) papersP = fetch("data/publications.json?v=20261116e").then(function (r) { return r.json(); }).then(function (d) {
       // every lecturer tagged on a paper is bolded in the author lists
       d.papers.forEach(function (p) { p.faculty.forEach(function (k) { if (FAC_KEYS.indexOf(k) < 0) FAC_KEYS.push(k); }); });
       return d;
@@ -116,9 +116,12 @@
       '<div class="src"><i>' + esc(p.journal) + "</i><span class=\"tnum\">" + esc(p.year) + "</span>" + badge +
       (opts.topic ? '<span class="badge topic">' + esc(p.topic) + "</span>" : "") +
       (p.pmid ? '<a href="https://pubmed.ncbi.nlm.nih.gov/' + p.pmid + '/" target="_blank" rel="noopener">PMID ' + p.pmid + "</a>" : "") +
+      (isWiley(p) ? '<a href="https://onlinelibrary.wiley.com/doi/' + esc(p.doi) + '" target="_blank" rel="noopener">Wiley</a>' : "") +
       (p.eid ? '<a href="https://www.scopus.com/record/display.uri?eid=' + encodeURIComponent(p.eid) + '&origin=resultslist" target="_blank" rel="noopener">Scopus</a>' : "") + "</div></div></li>";
   }
 
+  // Wiley journals (and Hindawi, now part of Wiley) by DOI prefix
+  function isWiley(p) { return /^10\.(1111|1002|1155)\//.test(p.doi || ""); }
   function paperHref(p) {
     if (p.doi) return "https://doi.org/" + p.doi;
     if (p.pmid) return "https://pubmed.ncbi.nlm.nih.gov/" + p.pmid + "/";
@@ -171,18 +174,26 @@
       n: papers.length,
       j: Object.keys(journals).length,
       sc: papers.some(function (p) { return p.eid; }),
+      wi: papers.some(isWiley),
       rct: papers.filter(function (p) { return p.design === "Randomized Controlled Trial"; }).length,
       y0: Math.min.apply(null, papers.map(function (p) { return p.year; })),
       y1: Math.max.apply(null, papers.map(function (p) { return p.year; }))
     };
   }
+  // "PubMed and Wiley Online Library" in sentences, "PubMed + Wiley" in the running head
+  function sources(s, long) {
+    var a = ["PubMed"]; if (s.wi) a.push(long ? "Wiley Online Library" : "Wiley"); if (s.sc) a.push("Scopus");
+    if (!long) return a.join(" + ");
+    var and = lang === "th" ? " และ " : " and ";
+    return a.length < 3 ? a.join(and) : a.slice(0, -1).join(", ") + and + a[a.length - 1];
+  }
   function researchLede(s) {
-    var db = s.sc ? "PubMed " + (lang === "th" ? "หรือ" : "or") + " Scopus" : "PubMed";
-    if (lang === "th") return "อาจารย์ CICM Dermatology มีบทความในฐานข้อมูล " + db + " " + s.n + " บทความ ในวารสาร " + s.j + " ฉบับ รวมการทดลองแบบสุ่มมีกลุ่มควบคุม " + s.rct + " เรื่อง";
-    return "CICM Dermatology lecturers have " + s.n + " papers indexed in " + db + " across " + s.j + " journals, including " + s.rct + " randomized controlled trials.";
+    var db = sources(s, true);
+    if (lang === "th") return "อาจารย์ CICM Dermatology มีบทความใน " + db + " " + s.n + " บทความ ในวารสาร " + s.j + " ฉบับ รวมการทดลองแบบสุ่มมีกลุ่มควบคุม " + s.rct + " เรื่อง";
+    return "CICM Dermatology lecturers have " + s.n + " papers in " + db + " across " + s.j + " journals, including " + s.rct + " randomized controlled trials.";
   }
 
-  window.CICM = { url: url, openZoom: function (g, i) { openZoom(g, i); }, loadContent: loadContent, loadPapers: loadPapers, refHTML: refHTML, paperHref: paperHref, scopusTable: scopusTable, scopusUrl: scopusUrl, fmtN: fmtN, yearFigure: yearFigure, journalTable: journalTable, stats: stats, researchLede: researchLede, esc: esc, icon: icon, FAC_KEYS: FAC_KEYS, reveal: function (el) { observe(el); } };
+  window.CICM = { url: url, openZoom: function (g, i) { openZoom(g, i); }, loadContent: loadContent, sources: sources, isWiley: isWiley, loadPapers: loadPapers, refHTML: refHTML, paperHref: paperHref, scopusTable: scopusTable, scopusUrl: scopusUrl, fmtN: fmtN, yearFigure: yearFigure, journalTable: journalTable, stats: stats, researchLede: researchLede, esc: esc, icon: icon, FAC_KEYS: FAC_KEYS, reveal: function (el) { observe(el); } };
 
   /* ---------- reveals ----------
      A scroll check rather than an observer, so fast flicks and slow devices never leave content hidden. */
@@ -522,7 +533,7 @@
         f.education.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul></div><div>" +
         (f.expertise.length ? "<h4>" + T("ui.exp", "Expertise") + '</h4><ul class="chips">' + f.expertise.map(function (e) { return "<li>" + esc(e) + "</li>"; }).join("") + "</ul>" : "") +
         (ach.length ? "<h4 style=\"margin-top:18px\">" + T("ui.ach", "Achievements") + '</h4><ul class="edu">' + ach.slice(0, 3).map(function (a) { return "<li><b>" + esc(a.year) + "</b> " + esc(P(a.text)) + "</li>"; }).join("") + "</ul>" : "") +
-        (n ? '<p class="reel-stat"><b>' + n + "</b>" + T("ui.pubcount", "papers in PubMed") + "</p>" : "") + "</div></div>";
+        (n ? '<p class="reel-stat"><b>' + n + "</b>" + T("ui.pubcount", "published papers") + "</p>" : "") + "</div></div>";
     }
     function show(k, first) {
       i = (k + fac.length) % fac.length;
@@ -577,7 +588,7 @@
     $("#topicTable").innerHTML = "<caption><b>" + T("research.table2", "Table 2") + "</b> " + T("research.table2t", "Papers by topic") + "</caption><thead><tr><th>" + T("research.topic", "Topic") + "</th><th>" + T("research.papers", "Papers") + "</th></tr></thead><tbody>" +
       topics.map(function (t) { return '<tr><td><a href="research.html?topic=' + encodeURIComponent(t) + '">' + esc(t) + '</a></td><td><span class="tbar" style="--w:' + (tc[t] / tc[topics[0]] * 100).toFixed(0) + '%"></span>' + tc[t] + "</td></tr>"; }).join("") + "</tbody>";
     $("#researchLede").textContent = researchLede(s);
-    $("#volRange").textContent = (s.sc ? "PubMed + Scopus, " : "PubMed, ") + s.y0 + (lang === "th" ? " ถึง " : " to ") + s.y1;
+    $("#volRange").textContent = sources(s) + ", " + s.y0 + (lang === "th" ? " ถึง " : " to ") + s.y1;
     if ($("#scopusTable")) $("#scopusTable").innerHTML = scopusTable(c);
     $("#allPapersLink").textContent = lang === "th" ? "ดูบทความทั้งหมด " + s.n + " เรื่อง" : "All " + s.n + " papers";
     var latest = papers.filter(function (p) { return p.faculty.length && p.topic !== "Other medicine"; }).slice(0, 5);
