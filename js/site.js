@@ -70,7 +70,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json?v=20261116a").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261116b").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -92,7 +92,7 @@
   }
   var papersP = null;
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261116a").then(function (r) { return r.json(); }).then(function (d) {
+    if (!papersP) papersP = fetch("data/publications.json?v=20261116b").then(function (r) { return r.json(); }).then(function (d) {
       // every lecturer tagged on a paper is bolded in the author lists
       d.papers.forEach(function (p) { p.faculty.forEach(function (k) { if (FAC_KEYS.indexOf(k) < 0) FAC_KEYS.push(k); }); });
       return d;
@@ -235,9 +235,9 @@
 
   /* ---------- nav tone + depth gauge ---------- */
   var LAYERS = {
-    surface: ["#7a0b10", "#ffffff", "dark"], epi: ["#fff8e6", "#321c0f", "light"], dermis: ["#fbe40b", "#2a1606", "light"],
-    deep: ["#f67b1e", "#2a1606", "light"], vessel: ["#fde5cf", "#2a1606", "light"], cell: ["#fffcf5", "#2a1606", "light"],
-    gland: ["#fbb27a", "#2a1606", "light"], "fat-pale": ["#fff3e8", "#2a1606", "light"], fat: ["#f67b1e", "#2a1606", "light"]
+    surface: ["#7a0b10", "#ffffff", "dark"], epi: ["#fff8e6", "#321c0f", "light"], dermis: ["#fff09a", "#2a1606", "light"],
+    deep: ["#fba15f", "#2a1606", "light"], vessel: ["#fde5cf", "#2a1606", "light"], cell: ["#fffcf5", "#2a1606", "light"],
+    gland: ["#fbb27a", "#2a1606", "light"], "fat-pale": ["#fff3e8", "#2a1606", "light"], fat: ["#fba15f", "#2a1606", "light"]
   };
   // the CICM wordmark and the orange Apply button vanish on yellow and orange, so the bar turns pale there
   var NAVY_NAV = { dermis: 1, deep: 1, gland: 1, fat: 1 };

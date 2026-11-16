@@ -8,12 +8,12 @@
   --epi-ink: #321c0f;
   --hl: #ffe3b8;
   --epi-soft: #5a4a1c;
-  --dermis: #fbe40b;
-  --dermis-2: #f2d800;
+  --dermis: #fff09a;
+  --dermis-2: #f7e27a;
   --dermis-ink: #2a1606;
   --dermis-soft: #4a3a0a;
-  --deep: #f67b1e;
-  --deep-2: #e96c10;
+  --deep: #fba15f;
+  --deep-2: #f5914a;
   --deep-ink: #2a1606;
   --deep-soft: #3f2208;
   --vessel: #fde5cf;
@@ -29,7 +29,7 @@
   --fat-pale: #fff3e8;
   --fat-pale-ink: #2a1606;
   --fat-pale-soft: #5e4430;
-  --fat: #f67b1e;
+  --fat: #fba15f;
   --fat-ink: #2a1606;
   --orange: #f67b1e;
   --orange-press: #e0650f;
@@ -1047,7 +1047,7 @@ html[data-hero="lens"] #slideHero, html[data-hero="lens"] #typeHero { display: n
 .orbit-key { position: absolute; left: var(--gutter); bottom: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 0.86rem; color: var(--deep-soft); }
 .orbit-key > span { display: inline-flex; align-items: center; gap: 8px; }
 .orbit-key .ok { width: 14px; height: 14px; border-radius: 50%; border: 2px solid #2a1606; }
-.orbit-key .ok-in { background: #fbe40b; }
+.orbit-key .ok-in { background: #fff09a; }
 .orbit-key .ok-out { background: #fff8d9; }
 @media (max-width: 760px) { .orbit { height: clamp(340px, 100vw, 520px); } .orbit-key { font-size: 0.8rem; } }
 
