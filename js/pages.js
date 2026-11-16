@@ -84,7 +84,13 @@
           var n = tabs[(i + k + tabs.length) % tabs.length]; n.focus(); show(n.dataset.p);
         });
       });
-      show("clinical");
+      // admissions.html#clinical, #cosmetic or #phd opens that program's tab (the program cards and the menu link here)
+      function fromHash() {
+        var m = location.hash.match(/^#(clinical|cosmetic|phd)$/); if (!m) return false;
+        show(m[1]); var t = $("#courses"); if (t) t.scrollIntoView(); return true;
+      }
+      if (!fromHash()) show("clinical");
+      window.addEventListener("hashchange", fromHash);
 
       // fees
       $("#fees").innerHTML = '<div class="fee head"><span>' + T("adm.prog", "Program") + "</span><span>" + T("ui.thai", "Thai students") + "</span><span>" + T("ui.foreign", "Foreign students") + "</span></div>" +

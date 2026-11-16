@@ -70,7 +70,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json?v=20261115d").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261116a").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -92,7 +92,7 @@
   }
   var papersP = null;
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261115d").then(function (r) { return r.json(); }).then(function (d) {
+    if (!papersP) papersP = fetch("data/publications.json?v=20261116a").then(function (r) { return r.json(); }).then(function (d) {
       // every lecturer tagged on a paper is bolded in the author lists
       d.papers.forEach(function (p) { p.faculty.forEach(function (k) { if (FAC_KEYS.indexOf(k) < 0) FAC_KEYS.push(k); }); });
       return d;
@@ -307,9 +307,21 @@
     $$("nav a", sheet).forEach(function (a) { a.addEventListener("click", function () { set(false); }); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && sheet.classList.contains("is-open")) set(false); });
   }
+  /* ---------- menu bar dropdowns: disclosure buttons, open on hover too where there is a mouse ---------- */
+  function dropdowns() {
+    var dds = $$(".nav-dd"); if (!dds.length) return;
+    function close(except) { dds.forEach(function (d) { if (d !== except) $(".nav-dd-btn", d).setAttribute("aria-expanded", "false"); }); }
+    dds.forEach(function (d) {
+      var b = $(".nav-dd-btn", d);
+      b.addEventListener("click", function () { var open = b.getAttribute("aria-expanded") !== "true"; close(d); b.setAttribute("aria-expanded", String(open)); });
+      d.addEventListener("focusout", function (e) { if (!d.contains(e.relatedTarget)) b.setAttribute("aria-expanded", "false"); });
+      d.addEventListener("keydown", function (e) { if (e.key === "Escape" && b.getAttribute("aria-expanded") === "true") { b.setAttribute("aria-expanded", "false"); b.focus(); } });
+    });
+    document.addEventListener("click", function (e) { if (!e.target.closest(".nav-dd")) close(null); });
+  }
   function currentNav() {
-    var map = { research: "research", faculty: "faculty", admissions: "admissions" };
-    if (map[page]) $$('.nav-links a[data-nav="' + map[page] + '"]').forEach(function (a) { a.setAttribute("aria-current", "page"); });
+    var map = { home: "home", research: "research", faculty: "faculty", admissions: "admissions" };
+    if (map[page]) $$('.nav-links [data-nav="' + map[page] + '"]').forEach(function (a) { if (a.tagName === "A") a.setAttribute("aria-current", "page"); else a.classList.add("is-current"); });
   }
 
   /* ---------- hero film ---------- */
@@ -379,9 +391,11 @@
   function renderPrograms(c) {
     var box = $("#programList"); if (!box) return;
     box.innerHTML = c.programs.map(function (p, i) {
-      return '<article class="program rise" style="--d:' + (i * 70) + 'ms"><div><h3><small>' + esc(p.code) + "</small>" + esc(P(p.name)) + '</h3><p class="deg">' + esc(P(p.degree)) + "</p></div>" +
-        "<p>" + esc(P(p.focus)) + "</p>" +
-        "<dl><div><dt>" + T("ui.length", "Length") + "</dt><dd>" + esc(P(p.length)) + "</dd></div></dl></article>";
+      return '<article class="pcard rise" style="--d:' + (i * 70) + 'ms"><span class="pcode">' + esc(p.code) + "</span><h3>" + esc(P(p.name)) + '</h3><p class="deg">' + esc(P(p.degree)) + "</p>" +
+        '<p class="focus">' + esc(P(p.focus)) + "</p>" +
+        '<dl class="pfacts"><div>' + icon("cal") + "<dt>" + T("ui.duration", "Duration") + "</dt><dd>" + esc(P(p.years || p.length)) + "</dd></div>" +
+        (p.credits ? "<div>" + icon("layers") + "<dt>" + T("ui.credits", "Credits") + "</dt><dd>" + esc(P(p.credits)) + "</dd></div>" : "") + "</dl>" +
+        '<a class="pbtn" href="admissions.html#' + encodeURIComponent(p.id) + '">' + T("ui.progDetails", "Program details") + icon("next") + "</a></article>";
     }).join("");
     // fees sit in the closing apply section, after the training, faculty and research
     var fees = $("#applyFees");
@@ -600,6 +614,7 @@
   applyLang();
   currentNav();
   menu();
+  dropdowns();
   junctions();
   navAndGauge();
   hero();

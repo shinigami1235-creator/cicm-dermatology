@@ -144,7 +144,9 @@
     /* Thai reads ตจวิทยา as one word, so it stays on one line and the film opens below it */
     var one = lang === "th";
     if (one) { stage.classList.add("one"); el.querySelector(".ty-bot").hidden = true; }
+    var navEl = document.getElementById("nav"), navH = 68;
     function fit() {
+      navH = navEl ? navEl.offsetHeight : 68;
       top.style.letterSpacing = ""; top.style.marginRight = "";
       stage.style.setProperty("--tyfs", "100px");
       var avail = Math.min(window.innerWidth - 2 * Math.max(16, window.innerWidth * 0.04), 1500);
@@ -162,11 +164,11 @@
       var p = progress(el), H = window.innerHeight;
       var lh = lineTop.offsetHeight, o = ease(smooth(0.03, 0.18, p));
       var sMin = window.innerWidth >= 900 ? 0.5 : 0.82, sc = 1 - (1 - sMin) * o;
-      var room = H - 68 - 40 - 2 * lh * sc;
+      var room = H - navH - 40 - 2 * lh * sc;
       var gap = Math.max(0, room) * o + smooth(0.92, 1, p) * H * 0.7;
       if (one) {
         var end = smooth(0.92, 1, p), mid = H / 2;
-        var up = (mid - (68 + 16 + lh * sc / 2)) * o + end * H * 0.7;
+        var up = (mid - (navH + 16 + lh * sc / 2)) * o + end * H * 0.7;
         lineTop.style.transform = "translateY(" + (-up).toFixed(1) + "px) scale(" + sc.toFixed(3) + ")";
         var under = mid - up + lh * sc / 2 + 12;
         var gt = (mid + (under - mid) * o) * (1 - end), gb = (mid - (mid - 40) * o) * (1 - end);

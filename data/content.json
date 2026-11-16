@@ -20,6 +20,14 @@
     "en": "2 years, 42 credits",
     "th": "2 ปี 42 หน่วยกิต"
    },
+   "years": {
+    "en": "2 years",
+    "th": "2 ปี"
+   },
+   "credits": {
+    "en": "42 credits",
+    "th": "42 หน่วยกิต"
+   },
    "fee": {
     "thai": 165000,
     "foreign": 185000
@@ -44,6 +52,14 @@
     "en": "2 years, 38 credits",
     "th": "2 ปี 38 หน่วยกิต"
    },
+   "years": {
+    "en": "2 years",
+    "th": "2 ปี"
+   },
+   "credits": {
+    "en": "38 credits",
+    "th": "38 หน่วยกิต"
+   },
    "fee": {
     "thai": 165000,
     "foreign": 185000
@@ -67,6 +83,14 @@
    "length": {
     "en": "2 to 4 years, 48 to 75 credits by plan",
     "th": "2 ถึง 4 ปี 48 ถึง 75 หน่วยกิต ตามแผนการเรียน"
+   },
+   "years": {
+    "en": "2 to 4 years",
+    "th": "2 ถึง 4 ปี"
+   },
+   "credits": {
+    "en": "48 to 75 credits, by study plan",
+    "th": "48 ถึง 75 หน่วยกิต ตามแผนการเรียน"
    },
    "fee": {
     "thai": 90000,

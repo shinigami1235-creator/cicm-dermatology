@@ -13,11 +13,11 @@
 <link rel="icon" href="assets/cicm-emblem.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="preload" href="fonts/ibm-plex-sans-thai-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=20261115d">
+<link rel="stylesheet" href="css/site.css?v=20261116a">
 <script>document.documentElement.classList.replace('no-js','js');(function(){var q=new URLSearchParams(location.search),h=q.get('hero'),s=q.get('staff');try{if(h)localStorage.setItem('cicm-hero',h);else h=localStorage.getItem('cicm-hero');if(s)localStorage.setItem('cicm-staff',s);else s=localStorage.getItem('cicm-staff')}catch(e){}var d=document.documentElement.dataset;d.hero=['slide','type','lens'].indexOf(h)>-1?h:'type';d.staff=['spotlight','masthead','deck'].indexOf(s)>-1?s:'deck'})()</script>
 <script src="js/config.js" defer></script>
-<script src="js/i18n.js?v=20261115d" defer></script>
-<script src="js/site.js?v=20261115d" defer></script>
+<script src="js/i18n.js?v=20261116a" defer></script>
+<script src="js/site.js?v=20261116a" defer></script>
 
 </head>
 <body data-page="faculty">
@@ -32,6 +32,10 @@
   <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
   <symbol id="i-prev" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-next" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11.5 12 5l8 6.5M6.5 10v9.5h11V10M10 19.5v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9.5l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><path d="M4.5 6.5h15v13h-15zM4.5 10.5h15M8.5 4v4M15.5 4v4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 4 3.5 8.5 12 13l8.5-4.5zM3.5 12.5 12 17l8.5-4.5M3.5 16.5 12 21l8.5-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
   <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6v12M15 6v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
 </svg>
 <a class="skip" href="#main" data-i18n="ui.skip">Skip to content</a>
@@ -42,14 +46,6 @@
       <img class="wm wm-light" src="assets/cicm-dermatology-light.svg?v=2" alt="CICM Dermatology" width="201" height="36">
       <img class="wm wm-dark" src="assets/cicm-dermatology.svg?v=2" alt="CICM Dermatology" width="201" height="36">
     </a>
-    <nav class="nav-links" aria-label="Main">
-      <a href="index.html#programs" data-nav="programs" data-i18n="nav.programs">Programs</a>
-      <a href="research.html" data-nav="research" data-i18n="nav.research">Research</a>
-      <a href="index.html#conference" data-nav="conference" data-i18n="nav.conference">Conference</a>
-      <a href="faculty.html" data-nav="faculty" data-i18n="nav.faculty">Faculty</a>
-      <a href="admissions.html" data-nav="admissions" data-i18n="nav.admissions">Admissions</a>
-      <a href="admissions.html#downloads" data-nav="downloads" data-i18n="nav.downloads">Downloads</a>
-    </nav>
     <div class="nav-tools">
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-lang="en" aria-pressed="true"><span>EN</span></button>
@@ -59,6 +55,36 @@
       <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><svg><use href="#i-menu"/></svg></button>
     </div>
   </div>
+  <div class="nav-bar">
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html" data-nav="home"><svg aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="nav.home">Home</span></a>
+      <div class="nav-dd">
+        <button type="button" class="nav-dd-btn" aria-expanded="false" aria-controls="dd-programs"><span data-i18n="nav.programs">Programs</span><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="nav-dd-panel" id="dd-programs">
+          <li><a href="index.html#programs" data-i18n="nav.allPrograms">All programs</a></li>
+          <li><a href="admissions.html#clinical"><small>M.Sc.</small> <span data-i18n="nav.pClinical">Clinical Dermatology</span></a></li>
+          <li><a href="admissions.html#cosmetic"><small>M.Sc.</small> <span data-i18n="nav.pCosmetic">Cosmetic Dermatology</span></a></li>
+          <li><a href="admissions.html#phd"><small>Ph.D.</small> <span data-i18n="nav.pPhd">Dermatology</span></a></li>
+        </ul>
+      </div>
+      <div class="nav-dd">
+        <button type="button" class="nav-dd-btn" data-nav="admissions" aria-expanded="false" aria-controls="dd-admissions"><span data-i18n="nav.admissions">Admissions</span><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+        <ul class="nav-dd-panel" id="dd-admissions">
+          <li><a href="admissions.html" data-i18n="nav.howApply">How to apply</a></li>
+          <li><a href="admissions.html#courses" data-i18n="adm.courses">Courses</a></li>
+          <li><a href="admissions.html#requirements" data-i18n="adm.req">Entry requirements</a></li>
+          <li><a href="admissions.html#english" data-i18n="adm.eng">English score minimums</a></li>
+          <li><a href="admissions.html#tuition" data-i18n="adm.fees">Tuition</a></li>
+          <li><a href="https://eptumed.com/applyCICM/index.php" target="_blank" rel="noopener" data-i18n="nav.applyOnline">Apply online</a></li>
+        </ul>
+      </div>
+      <a href="faculty.html" data-nav="faculty" data-i18n="nav.faculty">Faculty</a>
+      <a href="research.html" data-nav="research" data-i18n="nav.research">Research</a>
+      <a href="index.html#conference" data-nav="conference" data-i18n="nav.conference">Conference</a>
+      <a href="admissions.html#downloads" data-nav="downloads" data-i18n="nav.downloads">Downloads</a>
+      <a href="#contact" data-nav="contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+  </div>
 </header>
 <div class="sheet" id="sheet" aria-hidden="true">
   <div class="sheet-top">
@@ -66,12 +92,14 @@
     <button class="menu-btn" type="button" data-close aria-label="Close menu"><svg><use href="#i-close"/></svg></button>
   </div>
   <nav aria-label="Menu">
+    <a href="index.html" data-i18n="nav.home">Home</a>
     <a href="index.html#programs" data-i18n="nav.programs">Programs</a>
+    <a href="admissions.html" data-i18n="nav.admissions">Admissions</a>
+    <a href="faculty.html" data-i18n="nav.faculty">Faculty</a>
     <a href="research.html" data-i18n="nav.research">Research</a>
     <a href="index.html#conference" data-i18n="nav.conference">Conference</a>
-    <a href="faculty.html" data-i18n="nav.faculty">Faculty</a>
-    <a href="admissions.html" data-i18n="nav.admissions">Admissions</a>
     <a href="admissions.html#downloads" data-i18n="nav.downloads">Downloads</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
   </nav>
   <a class="btn btn-primary" href="https://eptumed.com/applyCICM/index.php" target="_blank" rel="noopener" data-i18n="ui.apply">Apply now</a>
 </div>
@@ -123,7 +151,7 @@
           <li><a href="admissions.html#downloads" data-i18n="nav.downloads">Downloads</a></li>
         </ul>
       </div>
-      <div>
+      <div id="contact">
         <p class="foot-h" data-i18n="foot.contact">Contact</p>
         <ul>
           <li><a href="mailto:derm.admission@gmail.com">derm.admission@gmail.com</a></li>
@@ -141,6 +169,6 @@
   </div>
 </footer>
 
-<script src="js/pages.js?v=20261115d" defer></script>
+<script src="js/pages.js?v=20261116a" defer></script>
 </body>
 </html>

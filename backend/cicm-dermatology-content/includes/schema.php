@@ -34,6 +34,8 @@ function cicm_schema() {
 				'degree'      => array( 'type' => 'i18n', 'label' => 'Degree' ),
 				'focus'       => array( 'type' => 'i18n_area', 'label' => 'What it covers' ),
 				'length'      => array( 'type' => 'i18n', 'label' => 'Length', 'hint' => '2 years, 42 credits' ),
+				'years'       => array( 'type' => 'i18n', 'label' => 'Duration, on the program card', 'hint' => '2 years' ),
+				'credits'     => array( 'type' => 'i18n', 'label' => 'Credits, on the program card', 'hint' => '42 credits' ),
 				'fee.thai'    => array( 'type' => 'number', 'label' => 'Fee per semester, Thai students (THB)' ),
 				'fee.foreign' => array( 'type' => 'number', 'label' => 'Fee per semester, foreign students (THB)' ),
 			),
