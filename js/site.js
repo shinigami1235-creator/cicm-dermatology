@@ -70,7 +70,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json?v=20261116f").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261121a").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -92,7 +92,7 @@
   }
   var papersP = null, CITES_WHEN = "";
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261116f").then(function (r) { return r.json(); }).then(function (d) {
+    if (!papersP) papersP = fetch("data/publications.json?v=20261121a").then(function (r) { return r.json(); }).then(function (d) {
       // every lecturer tagged on a paper is bolded in the author lists
       d.papers.forEach(function (p) { p.faculty.forEach(function (k) { if (FAC_KEYS.indexOf(k) < 0) FAC_KEYS.push(k); }); });
       CITES_WHEN = d.citesUpdated || "";
@@ -275,7 +275,7 @@
 
   /* ---------- nav tone + depth gauge ---------- */
   var LAYERS = {
-    surface: ["#7a0b10", "#ffffff", "dark"], epi: ["#fff8e6", "#321c0f", "light"], dermis: ["#fff09a", "#2a1606", "light"],
+    surface: ["#fffaf2", "#321c0f", "light"], epi: ["#fff8e6", "#321c0f", "light"], dermis: ["#fff09a", "#2a1606", "light"],
     deep: ["#fba15f", "#2a1606", "light"], vessel: ["#fde5cf", "#2a1606", "light"], cell: ["#fffcf5", "#2a1606", "light"],
     gland: ["#fbb27a", "#2a1606", "light"], "fat-pale": ["#fff3e8", "#2a1606", "light"], fat: ["#fba15f", "#2a1606", "light"]
   };
@@ -291,7 +291,7 @@
     var lastTone = "", lastName = "";
     function frame() {
       var y = window.scrollY, vh = window.innerHeight, navLine = 70;
-      nav.classList.toggle("is-solid", y > 30);
+      nav.classList.add("is-solid");   // the header is a solid cream band everywhere, so the CICM logo reads on the orange opening
       var cur = secs[0], idx = 0;
       for (var i = 0; i < secs.length; i++) { if (secs[i].getBoundingClientRect().top <= navLine) { cur = secs[i]; idx = i; } }
       var L = LAYERS[cur.dataset.layer] || LAYERS.surface;
@@ -299,8 +299,7 @@
       var tone = cur.dataset.layer + (y > 30);
       if (tone !== lastTone) {
         nav.style.setProperty("--nav-bg", L[0]); nav.style.setProperty("--nav-ink", L[1]);
-        nav.dataset.tone = (y > 30 || cur.dataset.layer !== "surface") ? L[2] : "dark";
-        if (cur.dataset.layer === "surface" && y <= 30) nav.style.setProperty("--nav-ink", "#ffffff");
+        nav.dataset.tone = L[2];
         lastTone = tone;
       }
       if (!gauge) return;
