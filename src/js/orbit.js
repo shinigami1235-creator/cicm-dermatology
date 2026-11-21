@@ -128,17 +128,28 @@ function start(people) {
 
   // pointer: hover, click and drag
   const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(-9, -9);
+  const SPIN_MAX = 2.4;   // radians a second, about a third of a turn
   let hot = null, drag = null, spinV = 0, angIn = 0, angOut = 0, pointer = { x: 0, y: 0 };
   const canvas = renderer.domElement;
   canvas.addEventListener("pointermove", (e) => {
     const r = canvas.getBoundingClientRect();
     ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
     pointer = { x: ndc.x, y: ndc.y };
-    if (drag) { const dx = e.clientX - drag.x; drag.moved = drag.moved || Math.abs(dx) > 6; spinV = dx * 0.006; drag.x = e.clientX; }
+    if (drag) {
+      // the rings follow the finger, and a flick keeps them turning at no more than SPIN_MAX
+      const now = performance.now(), dx = e.clientX - drag.x, da = Math.max(-0.25, Math.min(0.25, dx * 0.005));
+      drag.moved = drag.moved || Math.abs(e.clientX - drag.x0) > 6;
+      angIn += da; angOut += da * 0.7;
+      const v = da / Math.max(0.008, (now - drag.t) / 1000);
+      spinV = Math.max(-SPIN_MAX, Math.min(SPIN_MAX, spinV * 0.5 + v * 0.5));
+      drag.x = e.clientX; drag.t = now;
+    }
   });
   canvas.addEventListener("pointerleave", () => { ndc.set(-9, -9); });
-  canvas.addEventListener("pointerdown", (e) => { drag = { x: e.clientX, moved: false }; });
-  window.addEventListener("pointerup", () => { drag = null; });
+  canvas.addEventListener("pointerdown", (e) => { drag = { x: e.clientX, x0: e.clientX, t: performance.now(), moved: false }; spinV = 0; });
+  const release = () => { if (drag && performance.now() - drag.t > 90) spinV = 0; drag = null; };   // a finger that stopped before lifting leaves no spin
+  window.addEventListener("pointerup", release);
+  window.addEventListener("pointercancel", release);
   canvas.addEventListener("pointerdown", (e) => {
     // touch has no hover: a tap shows the name tag
     if (e.pointerType !== "mouse") { const r = canvas.getBoundingClientRect(); ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1); pick(); }
@@ -172,8 +183,9 @@ function start(people) {
 
     if (!drag) pick();
     const slow = hot ? 0 : 1;
-    if (!drag) spinV *= 0.94;
-    angIn += (0.12 * slow) * dt + spinV; angOut += (-0.07 * slow) * dt + spinV * 0.7;
+    const fling = drag ? 0 : spinV;
+    if (!drag) spinV *= Math.exp(-dt / 0.6);   // same slowdown at 60 Hz and 120 Hz
+    angIn += (0.12 * slow + fling) * dt; angOut += (-0.07 * slow + fling * 0.7) * dt;
     spinIn.rotation.y = angIn; spinOut.rotation.y = angOut;
 
     sprites.forEach((s) => {

@@ -1,8 +1,7 @@
-/* The two pinned openings: the microscope slide and DERMA / TOLOGY.
-   Only the opening chosen in <html data-hero> runs. */
+/* The pinned opening on the home page: DERMA / TOLOGY. */
 (function () {
   "use strict";
-  var root = document.documentElement, which = root.dataset.hero;
+  var root = document.documentElement;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var lang = window.CICM_LANG || "en";
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
@@ -46,63 +45,6 @@
     s += '<text class="axis" x="0" y="' + (H + 11) + '">2011</text><text class="axis" x="' + W + '" y="' + (H + 11) + '" text-anchor="end">2026</text>';
     s += '<text class="axis" x="0" y="' + (H + 24) + '">' + (lang === "th" ? "สีเข้ม: การทดลองทางคลินิก" : "Dark: clinical trials") + "</text></svg>";
     return s;
-  }
-
-  /* ---------------- microscope slide ---------------- */
-  function slide() {
-    var el = document.getElementById("slideHero"); if (!el) return;
-    var view = el.querySelector(".sl-view"), world = el.querySelector(".sl-world"), sl = el.querySelector(".sl-slide"),
-        tissue = el.querySelector(".sl-tissue"), field = el.querySelector(".sl-field"),
-        panels = el.querySelectorAll(".sl-panel"), turret = el.querySelectorAll(".sl-turret button"),
-        photo = el.querySelector(".sl-photo"), chart = el.querySelector(".sl-chart");
-    var STEPS = [0, 0.2, 0.48, 0.74], step = -1;
-    // three photos cycle inside the field at 40x
-    var shots = ["photos/fruit-lab-my-batch-2.webp", "photos/workshop-5.webp", "photos/lab-work.webp", "photos/workshop-4.webp"];
-    var photos = [photo];
-    shots.slice(1).forEach(function (src) { var im = photo.cloneNode(); im.src = src; field.insertBefore(im, chart); photos.push(im); });
-    var pi = 0, timer = null;
-    function cycle(on) {
-      clearInterval(timer);
-      photos.forEach(function (im, k) { im.classList.toggle("is-on", on && k === pi); });
-      if (on && !reduce) timer = setInterval(function () { pi = (pi + 1) % photos.length; photos.forEach(function (im, k) { im.classList.toggle("is-on", k === pi); }); }, 2600);
-    }
-    function setStep(s) {
-      if (s === step) return; step = s;
-      panels.forEach(function (p) { p.classList.toggle("is-on", +p.dataset.step === s); });
-      turret.forEach(function (b) { b.setAttribute("aria-current", String(+b.dataset.go === s)); });
-      cycle(s === 2);
-      chart.classList.toggle("is-on", s === 3);
-    }
-    turret.forEach(function (b) {
-      b.addEventListener("click", function () {
-        var top = el.getBoundingClientRect().top + window.scrollY, span = el.offsetHeight - window.innerHeight;
-        var target = [0, 0.3, 0.6, 0.86][+b.dataset.go];
-        window.scrollTo({ top: top + span * target + (b.dataset.go === "0" ? 0 : 2), behavior: reduce ? "auto" : "smooth" });
-      });
-    });
-    function render() {
-      var p = progress(el);
-      var s = p >= STEPS[3] ? 3 : p >= STEPS[2] ? 2 : p >= STEPS[1] ? 1 : 0;
-      setStep(s);
-      var V = view.clientWidth, Vh = view.clientHeight;
-      var b = ease(smooth(0.02, 0.2, p));              // zoom into the tissue
-      var b2 = smooth(0.2, 0.48, p);                   // slow pan across it at 10x
-      var zf = 4.2, z = 1 + (zf - 1) * b + 1.2 * b2;
-      var fx = 0.64 - 0.1 * b2, fy = 0.3 + 0.1 * b2;
-      var u = tissue.offsetLeft + tissue.offsetWidth * fx, v = tissue.offsetTop + tissue.offsetHeight * fy;
-      var x0 = sl.offsetLeft, y0 = sl.offsetTop;
-      var tx = (x0 + u) + (V / 2 - (x0 + u)) * b - x0 - u * z;
-      var ty = (y0 + v) + (Vh / 2 - (y0 + v)) * b - y0 - v * z;
-      var rot = (1 - b) * -4;
-      sl.style.transform = "translate(" + tx.toFixed(1) + "px," + ty.toFixed(1) + "px) scale(" + z.toFixed(3) + ")";
-      world.style.transform = "rotate(" + rot.toFixed(2) + "deg)";
-      var f = smooth(0.06, 0.2, p);
-      view.style.setProperty("--fov", (72 - 22 * f).toFixed(1) + "%");
-      view.style.setProperty("--ret", f.toFixed(3));
-      field.style.opacity = smooth(0.44, 0.5, p).toFixed(3);
-    }
-    onFrame(render);
-    fillCounts();
   }
 
   /* ---------------- DERMA / TOLOGY ---------------- */
@@ -193,6 +135,6 @@
     fillCounts();
   }
 
-  function boot() { if (which === "slide") slide(); else if (which === "type") type(); }
+  function boot() { type(); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
 })();

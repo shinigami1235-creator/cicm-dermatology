@@ -1195,7 +1195,7 @@
      "code": "K1",
      "text": {
       "en": "Demonstrate comprehensive knowledge of dermatological sciences, including clinical dermatology, dermatopathology and aesthetic dermatology, with an understanding of disease mechanisms and therapeutic advances.",
-      "th": "Demonstrate comprehensive knowledge of dermatological sciences, including clinical dermatology, dermatopathology and aesthetic dermatology, with an understanding of disease mechanisms and therapeutic advances."
+      "th": "แสดงความรู้อย่างครอบคลุมด้านวิทยาศาสตร์ทางตจวิทยา ได้แก่ ตจวิทยาคลินิก ตจพยาธิวิทยา และตจวิทยาเพื่อความงาม พร้อมความเข้าใจกลไกการเกิดโรคและความก้าวหน้าในการรักษา"
      }
     },
     {
@@ -1206,7 +1206,7 @@
      "code": "K2",
      "text": {
       "en": "Evaluate current literature and apply evidence-based concepts in clinical decisions and dermatological research.",
-      "th": "Evaluate current literature and apply evidence-based concepts in clinical decisions and dermatological research."
+      "th": "ประเมินวรรณกรรมปัจจุบันและประยุกต์ใช้แนวคิดเชิงประจักษ์ในการตัดสินใจทางคลินิกและการวิจัยทางตจวิทยา"
      }
     },
     {
@@ -1217,7 +1217,7 @@
      "code": "S1",
      "text": {
       "en": "Apply research methods and technologies to design and conduct independent research that advances dermatological science.",
-      "th": "Apply research methods and technologies to design and conduct independent research that advances dermatological science."
+      "th": "ประยุกต์ใช้ระเบียบวิธีวิจัยและเทคโนโลยีในการออกแบบและดำเนินการวิจัยอย่างอิสระเพื่อพัฒนาวิทยาศาสตร์ทางตจวิทยา"
      }
     },
     {
@@ -1228,7 +1228,7 @@
      "code": "S2",
      "text": {
       "en": "Perform specialized dermatological procedures and clinical assessments accurately, with sound reasoning and patient-centered care.",
-      "th": "Perform specialized dermatological procedures and clinical assessments accurately, with sound reasoning and patient-centered care."
+      "th": "ทำหัตถการเฉพาะทางตจวิทยาและการประเมินทางคลินิกได้อย่างถูกต้อง ด้วยเหตุผลที่ดีและยึดผู้ป่วยเป็นศูนย์กลาง"
      }
     },
     {
@@ -1239,7 +1239,7 @@
      "code": "E1",
      "text": {
       "en": "Follow professional ethics and international standards in clinical and research practice, protecting patient confidentiality, academic integrity and regulatory compliance.",
-      "th": "Follow professional ethics and international standards in clinical and research practice, protecting patient confidentiality, academic integrity and regulatory compliance."
+      "th": "ปฏิบัติตามจรรยาบรรณวิชาชีพและมาตรฐานสากลในเวชปฏิบัติและการวิจัย โดยรักษาความลับของผู้ป่วย ความซื่อสัตย์ทางวิชาการ และการปฏิบัติตามกฎระเบียบ"
      }
     },
     {
@@ -1250,7 +1250,7 @@
      "code": "C1",
      "text": {
       "en": "Lead and mentor in academic and clinical dermatology settings.",
-      "th": "Lead and mentor in academic and clinical dermatology settings."
+      "th": "เป็นผู้นำและพี่เลี้ยงในบริบททางวิชาการและเวชปฏิบัติตจวิทยา"
      }
     },
     {
@@ -1261,7 +1261,7 @@
      "code": "C2",
      "text": {
       "en": "Work with multidisciplinary healthcare teams to improve dermatological research and patient outcomes.",
-      "th": "Work with multidisciplinary healthcare teams to improve dermatological research and patient outcomes."
+      "th": "ทำงานร่วมกับทีมสุขภาพสหสาขาวิชาชีพเพื่อพัฒนางานวิจัยทางตจวิทยาและผลการรักษาผู้ป่วย"
      }
     }
    ],
@@ -1457,31 +1457,46 @@
         "code": "CMB 600",
         "name": "Responsible Research and Ethics in Bioclinical Sciences",
         "credits": 2,
-        "desc": "Introduction to responsible research; relevant information for initiating research; critical reading and analysis; guidelines for good practice, ethics and regulations in bioclinical sciences; responsible protocol writing; planning and setting up experiments and research; responsible peer review; good data management practice and quality standards; considerations for reports and publication; ethical issues in publication; and presentation of research results."
+        "desc": {
+         "en": "Introduction to responsible research; relevant information for initiating research; critical reading and analysis; guidelines for good practice, ethics and regulations in bioclinical sciences; responsible protocol writing; planning and setting up experiments and research; responsible peer review; good data management practice and quality standards; considerations for reports and publication; ethical issues in publication; and presentation of research results.",
+         "th": "ความรู้เบื้องต้นเกี่ยวกับการวิจัยอย่างมีความรับผิดชอบ ข้อมูลที่เกี่ยวข้องในการเริ่มต้นการวิจัย การอ่านและวิเคราะห์อย่างมีวิจารณญาณ แนวทางการปฏิบัติที่ดี จริยธรรมและกฎระเบียบในวิทยาศาสตร์ชีวคลินิก การเขียนโครงร่างการวิจัยอย่างมีความรับผิดชอบ การวางแผนและการจัดทำการทดลองและการวิจัย การทบทวนโดยผู้ทรงคุณวุฒิอย่างมีความรับผิดชอบ การจัดการข้อมูลที่ดีและมาตรฐานคุณภาพ ข้อพิจารณาในการรายงานและการตีพิมพ์ ประเด็นจริยธรรมในการตีพิมพ์ และการนำเสนอผลการวิจัย"
+        }
        },
        {
         "code": "CMB 601",
         "name": "Statistical Methods in Bioclinical Sciences",
         "credits": 2,
-        "desc": "Principles and application of biostatistics to bioclinical research; types of variables and data; data presentation and summarization; population and sample; probability distributions; research and statistical hypotheses; estimation and hypothesis testing; parametric and non-parametric statistics; statistical tests for reliability and diagnosis; sample size estimation; and statistical software."
+        "desc": {
+         "en": "Principles and application of biostatistics to bioclinical research; types of variables and data; data presentation and summarization; population and sample; probability distributions; research and statistical hypotheses; estimation and hypothesis testing; parametric and non-parametric statistics; statistical tests for reliability and diagnosis; sample size estimation; and statistical software.",
+         "th": "หลักการและการประยุกต์ใช้ชีวสถิติในการวิจัยทางชีวคลินิก ชนิดของตัวแปรและข้อมูล การนำเสนอและการสรุปข้อมูล ประชากรและกลุ่มตัวอย่าง การแจกแจงความน่าจะเป็น สมมติฐานการวิจัยและสมมติฐานทางสถิติ การประมาณค่าและการทดสอบสมมติฐาน สถิติแบบอิงพารามิเตอร์และไม่อิงพารามิเตอร์ การทดสอบทางสถิติสำหรับความเที่ยงและการวินิจฉัย การประมาณขนาดตัวอย่าง และโปรแกรมคอมพิวเตอร์สำหรับการวิเคราะห์ทางสถิติ"
+        }
        },
        {
         "code": "CMD 601",
         "name": "Clinical Dermatology I",
         "credits": 2,
-        "desc": "Structure of skin lesions and fundamentals of clinical diagnosis; clinical manifestations of common skin diseases and their pathogenesis, etiology, prognosis and management."
+        "desc": {
+         "en": "Structure of skin lesions and fundamentals of clinical diagnosis; clinical manifestations of common skin diseases and their pathogenesis, etiology, prognosis and management.",
+         "th": "โครงสร้างของรอยโรคผิวหนังและหลักพื้นฐานของการวินิจฉัยทางคลินิก อาการแสดงทางคลินิกของโรคผิวหนังที่พบบ่อย พยาธิกำเนิด สาเหตุ การพยากรณ์โรค และการรักษา"
+        }
        },
        {
         "code": "CMD 602",
         "name": "Dermatology Seminar",
         "credits": 1,
-        "desc": "Discussion of problems in patient care, clinical diagnosis, pathological diagnosis, laboratory investigation and treatment of chronic and rare skin diseases."
+        "desc": {
+         "en": "Discussion of problems in patient care, clinical diagnosis, pathological diagnosis, laboratory investigation and treatment of chronic and rare skin diseases.",
+         "th": "การอภิปรายปัญหาในการดูแลผู้ป่วย การวินิจฉัยทางคลินิก การวินิจฉัยทางพยาธิวิทยา การตรวจทางห้องปฏิบัติการ และการรักษาโรคผิวหนังเรื้อรังและโรคผิวหนังที่พบได้ยาก"
+        }
        },
        {
         "code": "CMD 603",
         "name": "Dermatology Journal Club",
         "credits": 1,
-        "desc": "Formal presentation and discussion of current research in dermatological sciences and clinical dermatology by students, supervised by the course committee."
+        "desc": {
+         "en": "Formal presentation and discussion of current research in dermatological sciences and clinical dermatology by students, supervised by the course committee.",
+         "th": "การนำเสนอและอภิปรายงานวิจัยปัจจุบันด้านวิทยาศาสตร์ทางตจวิทยาและตจวิทยาคลินิกอย่างเป็นทางการโดยนักศึกษา ภายใต้การกำกับดูแลของคณะกรรมการรายวิชา"
+        }
        }
       ],
       "major": [
@@ -1489,55 +1504,82 @@
         "code": "CMD 611",
         "name": "Dermatology Clinic I",
         "credits": 2,
-        "desc": "History taking and physical examination of outpatients; common dermatologic conditions and complicated skin diseases; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors."
+        "desc": {
+         "en": "History taking and physical examination of outpatients; common dermatologic conditions and complicated skin diseases; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors.",
+         "th": "การซักประวัติและการตรวจร่างกายผู้ป่วยนอก ภาวะทางตจวิทยาที่พบบ่อยและโรคผิวหนังที่ซับซ้อน อาการและอาการแสดง การตรวจทางห้องปฏิบัติการ การวินิจฉัย การรักษา และการติดตามผล ภายใต้การกำกับดูแลของอาจารย์"
+        }
        },
        {
         "code": "CMD 612",
         "name": "Basic Dermatology",
         "credits": 2,
-        "desc": "Structure and function of the skin; epidermis and keratinization; cell-cell adhesion, the epidermal-dermal junction and related diseases; dermis, fibroblasts and extracellular matrix proteins; eccrine and apocrine glands; melanocytes and pigmentation; subcutaneous fat and related diseases; biology of hair; biology of nails; photobiology and photoimmunology; photoprotection; principles of topical therapy; principles of systemic therapy and immunosuppressive medication; common investigations in dermatological practice."
+        "desc": {
+         "en": "Structure and function of the skin; epidermis and keratinization; cell-cell adhesion, the epidermal-dermal junction and related diseases; dermis, fibroblasts and extracellular matrix proteins; eccrine and apocrine glands; melanocytes and pigmentation; subcutaneous fat and related diseases; biology of hair; biology of nails; photobiology and photoimmunology; photoprotection; principles of topical therapy; principles of systemic therapy and immunosuppressive medication; common investigations in dermatological practice.",
+         "th": "โครงสร้างและหน้าที่ของผิวหนัง หนังกำพร้าและกระบวนการสร้างเคราติน การยึดเกาะระหว่างเซลล์ รอยต่อระหว่างหนังกำพร้าและหนังแท้และโรคที่เกี่ยวข้อง หนังแท้ ไฟโบรบลาสต์และโปรตีนเมทริกซ์นอกเซลล์ ต่อมเหงื่อเอคครินและอะโพครีน เมลาโนไซต์และการสร้างเม็ดสี ไขมันใต้ผิวหนังและโรคที่เกี่ยวข้อง ชีววิทยาของเส้นผม ชีววิทยาของเล็บ ชีววิทยาแสงและภูมิคุ้มกันวิทยาแสง การป้องกันแสง หลักการรักษาด้วยยาทาเฉพาะที่ หลักการรักษาด้วยยาที่ออกฤทธิ์ทั่วร่างกายและยากดภูมิคุ้มกัน การตรวจที่ใช้บ่อยในเวชปฏิบัติตจวิทยา"
+        }
        },
        {
         "code": "CMD 613",
         "name": "Advanced Dermatology",
         "credits": 2,
-        "desc": "Innate and adaptive immunity in the skin; cytokines, chemokines and antigen-antibody reactions; humoral immunity and complement; production and activation of neutrophils and eosinophils; immunopathogenesis of atopic dermatitis and psoriasis; pruritus and neurobiology of the skin; biologic drugs and targeted therapy; stem cells and basic signaling pathways in the skin; in vitro and in vivo models for investigative dermatology."
+        "desc": {
+         "en": "Innate and adaptive immunity in the skin; cytokines, chemokines and antigen-antibody reactions; humoral immunity and complement; production and activation of neutrophils and eosinophils; immunopathogenesis of atopic dermatitis and psoriasis; pruritus and neurobiology of the skin; biologic drugs and targeted therapy; stem cells and basic signaling pathways in the skin; in vitro and in vivo models for investigative dermatology.",
+         "th": "ภูมิคุ้มกันโดยกำเนิดและภูมิคุ้มกันแบบจำเพาะในผิวหนัง ไซโตไคน์ คีโมไคน์ และปฏิกิริยาระหว่างแอนติเจนกับแอนติบอดี ภูมิคุ้มกันชนิดสารน้ำและระบบคอมพลีเมนต์ การสร้างและการกระตุ้นนิวโทรฟิลและอีโอซิโนฟิล กลไกทางภูมิคุ้มกันในการเกิดโรคผื่นภูมิแพ้ผิวหนังและโรคสะเก็ดเงิน อาการคันและประสาทชีววิทยาของผิวหนัง ยาชีววัตถุและการรักษาแบบมุ่งเป้า เซลล์ต้นกำเนิดและวิถีสัญญาณพื้นฐานในผิวหนัง แบบจำลองในหลอดทดลองและในสิ่งมีชีวิตสำหรับการวิจัยทางตจวิทยา"
+        }
        },
        {
         "code": "CMD 614",
         "name": "Dermatopathology",
         "credits": 2,
-        "desc": "Histopathological examination and interpretation of skin diseases."
+        "desc": {
+         "en": "Histopathological examination and interpretation of skin diseases.",
+         "th": "การตรวจและการแปลผลทางจุลพยาธิวิทยาของโรคผิวหนัง"
+        }
        },
        {
         "code": "CMD 615",
         "name": "Investigations and Innovations in Dermatology",
         "credits": 2,
-        "desc": "Principles of molecular biology techniques; dermoscopy of skin conditions and hair; skin and soft tissue imaging; bioinformatics in dermatology; AI in dermatology; bio-based materials in dermatology and cosmetology; cell-based therapy; exosomes; teledermatology; how to generate good research; systematic review and meta-analysis; clinic operating systems; healthcare communication and public speaking."
+        "desc": {
+         "en": "Principles of molecular biology techniques; dermoscopy of skin conditions and hair; skin and soft tissue imaging; bioinformatics in dermatology; AI in dermatology; bio-based materials in dermatology and cosmetology; cell-based therapy; exosomes; teledermatology; how to generate good research; systematic review and meta-analysis; clinic operating systems; healthcare communication and public speaking.",
+         "th": "หลักการของเทคนิคทางอณูชีววิทยา การตรวจผิวหนังและเส้นผมด้วยเดอร์โมสโคป การถ่ายภาพผิวหนังและเนื้อเยื่ออ่อน ชีวสารสนเทศในตจวิทยา ปัญญาประดิษฐ์ในตจวิทยา วัสดุชีวภาพในตจวิทยาและเวชสำอาง การรักษาด้วยเซลล์ เอ็กโซโซม ตจวิทยาทางไกล การสร้างงานวิจัยที่ดี การทบทวนวรรณกรรมอย่างเป็นระบบและการวิเคราะห์อภิมาน ระบบการบริหารคลินิก การสื่อสารด้านสุขภาพและการพูดในที่สาธารณะ"
+        }
        },
        {
         "code": "CMD 616",
         "name": "Clinical Dermatology II",
         "credits": 2,
-        "desc": "Structure of skin lesions and fundamentals of clinical diagnosis; clinical manifestations of complicated skin diseases."
+        "desc": {
+         "en": "Structure of skin lesions and fundamentals of clinical diagnosis; clinical manifestations of complicated skin diseases.",
+         "th": "โครงสร้างของรอยโรคผิวหนังและหลักพื้นฐานของการวินิจฉัยทางคลินิก อาการแสดงทางคลินิกของโรคผิวหนังที่ซับซ้อน"
+        }
        },
        {
         "code": "CMD 617",
         "name": "Dermatology Clinic II",
         "credits": 2,
-        "desc": "History taking and physical examination of outpatients; common dermatologic conditions and complicated skin diseases; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors."
+        "desc": {
+         "en": "History taking and physical examination of outpatients; common dermatologic conditions and complicated skin diseases; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors.",
+         "th": "การซักประวัติและการตรวจร่างกายผู้ป่วยนอก ภาวะทางตจวิทยาที่พบบ่อยและโรคผิวหนังที่ซับซ้อน อาการและอาการแสดง การตรวจทางห้องปฏิบัติการ การวินิจฉัย การรักษา และการติดตามผล ภายใต้การกำกับดูแลของอาจารย์"
+        }
        },
        {
         "code": "CMD 711",
         "name": "Dermatosurgery",
         "credits": 2,
-        "desc": "Treatment of skin diseases, aging skin and skin tumors by surgery and laser; excision and repair; electrosurgery; cryosurgery; ablative laser and chemical peels; non-ablative laser and light therapy; botulinum toxin and soft tissue augmentation; vascular laser and treatment of varicose veins; cosmetic and skin care in dermatology, supervised by professors."
+        "desc": {
+         "en": "Treatment of skin diseases, aging skin and skin tumors by surgery and laser; excision and repair; electrosurgery; cryosurgery; ablative laser and chemical peels; non-ablative laser and light therapy; botulinum toxin and soft tissue augmentation; vascular laser and treatment of varicose veins; cosmetic and skin care in dermatology, supervised by professors.",
+         "th": "การรักษาโรคผิวหนัง ผิวหนังเสื่อมตามวัย และเนื้องอกผิวหนังด้วยการผ่าตัดและเลเซอร์ การตัดและการเย็บซ่อม การจี้ด้วยไฟฟ้า การจี้ด้วยความเย็น เลเซอร์ชนิดลอกผิวและการลอกผิวด้วยสารเคมี เลเซอร์ชนิดไม่ลอกผิวและการรักษาด้วยแสง โบทูลินัมท็อกซินและการเติมเต็มเนื้อเยื่ออ่อน เลเซอร์รักษาหลอดเลือดและการรักษาเส้นเลือดขอด เครื่องสำอางและการดูแลผิวในตจวิทยา ภายใต้การกำกับดูแลของอาจารย์"
+        }
        },
        {
         "code": "CMD 712",
         "name": "Hands-on Experiences in Dermatology",
         "credits": 2,
-        "desc": "Practice in dermatological procedures: fruit lab and biopsy, cadaver workshop, laser and injection. The clinical track grades it on an average score; the cosmetic track grades it P (pass) or N (not pass) with no credits."
+        "desc": {
+         "en": "Practice in dermatological procedures: fruit lab and biopsy, cadaver workshop, laser and injection. The clinical track grades it on an average score; the cosmetic track grades it P (pass) or N (not pass) with no credits.",
+         "th": "การฝึกปฏิบัติหัตถการทางตจวิทยา ได้แก่ การฝึกบนผลไม้และการตัดชิ้นเนื้อ การฝึกในร่างอาจารย์ใหญ่ เลเซอร์ และการฉีด แขนงตจวิทยาคลินิกประเมินผลจากคะแนนเฉลี่ย ส่วนแขนงตจวิทยาเพื่อความงามประเมินผลเป็น P (ผ่าน) หรือ N (ไม่ผ่าน) โดยไม่นับหน่วยกิต"
+        }
        }
       ],
       "elective": [
@@ -1545,19 +1587,28 @@
         "code": "CMD 721",
         "name": "Dermatological Practice I",
         "credits": 2,
-        "desc": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor."
+        "desc": {
+         "en": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor.",
+         "th": "การสังเกตการณ์การตรวจผู้ป่วยนอกในต่างประเทศ การซักประวัติและการตรวจร่างกาย โรคผิวหนังที่พบบ่อย ซับซ้อน พบได้ยาก และโรคประจำถิ่น อาการและอาการแสดง การตรวจทางห้องปฏิบัติการ การแปลผล การวินิจฉัย การรักษา และการติดตามผล ภายใต้การกำกับดูแลของอาจารย์"
+        }
        },
        {
         "code": "CMD 722",
         "name": "Dermatological Practice II",
         "credits": 2,
-        "desc": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor."
+        "desc": {
+         "en": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor.",
+         "th": "การสังเกตการณ์การตรวจผู้ป่วยนอกในต่างประเทศ การซักประวัติและการตรวจร่างกาย โรคผิวหนังที่พบบ่อย ซับซ้อน พบได้ยาก และโรคประจำถิ่น อาการและอาการแสดง การตรวจทางห้องปฏิบัติการ การแปลผล การวินิจฉัย การรักษา และการติดตามผล ภายใต้การกำกับดูแลของอาจารย์"
+        }
        },
        {
         "code": "CMD 723",
         "name": "Laser and Injection",
         "credits": 2,
-        "desc": "Aesthetic treatment with current equipment and technology, from basic principles and clinical use to preventing and treating complications; laser, radiofrequency and other devices for pigmentary disorders, tattoos, hair loss, acne, scars, photoaging, wrinkles and hair removal."
+        "desc": {
+         "en": "Aesthetic treatment with current equipment and technology, from basic principles and clinical use to preventing and treating complications; laser, radiofrequency and other devices for pigmentary disorders, tattoos, hair loss, acne, scars, photoaging, wrinkles and hair removal.",
+         "th": "การรักษาเพื่อความงามด้วยเครื่องมือและเทคโนโลยีปัจจุบัน ตั้งแต่หลักการพื้นฐานและการใช้ทางคลินิก ไปจนถึงการป้องกันและรักษาภาวะแทรกซ้อน เลเซอร์ คลื่นความถี่วิทยุ และเครื่องมืออื่นสำหรับความผิดปกติของเม็ดสี รอยสัก ผมร่วง สิว แผลเป็น ผิวเสื่อมจากแสงแดด ริ้วรอย และการกำจัดขน"
+        }
        }
       ],
       "thesis": [
@@ -1565,7 +1616,10 @@
         "code": "CMD 800",
         "name": "Thesis",
         "credits": 12,
-        "desc": "Literature review, a research outline and systematic research that creates new knowledge in dermatology, with research ethics; writing the thesis; presenting results and preparing articles for publication; ethics in publishing, under the thesis advisory committee."
+        "desc": {
+         "en": "Literature review, a research outline and systematic research that creates new knowledge in dermatology, with research ethics; writing the thesis; presenting results and preparing articles for publication; ethics in publishing, under the thesis advisory committee.",
+         "th": "การทบทวนวรรณกรรม การจัดทำโครงร่างการวิจัย และการวิจัยอย่างเป็นระบบเพื่อสร้างองค์ความรู้ใหม่ทางตจวิทยาโดยคำนึงถึงจริยธรรมการวิจัย การเขียนวิทยานิพนธ์ การนำเสนอผลการวิจัยและการเตรียมบทความเพื่อตีพิมพ์ จริยธรรมในการตีพิมพ์ ภายใต้การกำกับดูแลของคณะกรรมการที่ปรึกษาวิทยานิพนธ์"
+        }
        }
       ]
      },
@@ -1600,31 +1654,46 @@
         "code": "CMB 600",
         "name": "Responsible Research and Ethics in Bioclinical Sciences",
         "credits": 2,
-        "desc": "Introduction to responsible research; relevant information for initiating research; critical reading and analysis; guidelines for good practice, ethics and regulations in bioclinical sciences; responsible protocol writing; planning and setting up experiments and research; responsible peer review; good data management practice and quality standards; considerations for reports and publication; ethical issues in publication; and presentation of research results."
+        "desc": {
+         "en": "Introduction to responsible research; relevant information for initiating research; critical reading and analysis; guidelines for good practice, ethics and regulations in bioclinical sciences; responsible protocol writing; planning and setting up experiments and research; responsible peer review; good data management practice and quality standards; considerations for reports and publication; ethical issues in publication; and presentation of research results.",
+         "th": "ความรู้เบื้องต้นเกี่ยวกับการวิจัยอย่างมีความรับผิดชอบ ข้อมูลที่เกี่ยวข้องในการเริ่มต้นการวิจัย การอ่านและวิเคราะห์อย่างมีวิจารณญาณ แนวทางการปฏิบัติที่ดี จริยธรรมและกฎระเบียบในวิทยาศาสตร์ชีวคลินิก การเขียนโครงร่างการวิจัยอย่างมีความรับผิดชอบ การวางแผนและการจัดทำการทดลองและการวิจัย การทบทวนโดยผู้ทรงคุณวุฒิอย่างมีความรับผิดชอบ การจัดการข้อมูลที่ดีและมาตรฐานคุณภาพ ข้อพิจารณาในการรายงานและการตีพิมพ์ ประเด็นจริยธรรมในการตีพิมพ์ และการนำเสนอผลการวิจัย"
+        }
        },
        {
         "code": "CMB 601",
         "name": "Statistical Methods in Bioclinical Sciences",
         "credits": 2,
-        "desc": "Principles and application of biostatistics to bioclinical research; types of variables and data; data presentation and summarization; population and sample; probability distributions; research and statistical hypotheses; estimation and hypothesis testing; parametric and non-parametric statistics; statistical tests for reliability and diagnosis; sample size estimation; and statistical software."
+        "desc": {
+         "en": "Principles and application of biostatistics to bioclinical research; types of variables and data; data presentation and summarization; population and sample; probability distributions; research and statistical hypotheses; estimation and hypothesis testing; parametric and non-parametric statistics; statistical tests for reliability and diagnosis; sample size estimation; and statistical software.",
+         "th": "หลักการและการประยุกต์ใช้ชีวสถิติในการวิจัยทางชีวคลินิก ชนิดของตัวแปรและข้อมูล การนำเสนอและการสรุปข้อมูล ประชากรและกลุ่มตัวอย่าง การแจกแจงความน่าจะเป็น สมมติฐานการวิจัยและสมมติฐานทางสถิติ การประมาณค่าและการทดสอบสมมติฐาน สถิติแบบอิงพารามิเตอร์และไม่อิงพารามิเตอร์ การทดสอบทางสถิติสำหรับความเที่ยงและการวินิจฉัย การประมาณขนาดตัวอย่าง และโปรแกรมคอมพิวเตอร์สำหรับการวิเคราะห์ทางสถิติ"
+        }
        },
        {
         "code": "CMD 601",
         "name": "Clinical Dermatology I",
         "credits": 2,
-        "desc": "Structure of skin lesions and fundamentals of clinical diagnosis; clinical manifestations of common skin diseases and their pathogenesis, etiology, prognosis and management."
+        "desc": {
+         "en": "Structure of skin lesions and fundamentals of clinical diagnosis; clinical manifestations of common skin diseases and their pathogenesis, etiology, prognosis and management.",
+         "th": "โครงสร้างของรอยโรคผิวหนังและหลักพื้นฐานของการวินิจฉัยทางคลินิก อาการแสดงทางคลินิกของโรคผิวหนังที่พบบ่อย พยาธิกำเนิด สาเหตุ การพยากรณ์โรค และการรักษา"
+        }
        },
        {
         "code": "CMD 602",
         "name": "Dermatology Seminar",
         "credits": 1,
-        "desc": "Discussion of problems in patient care, clinical diagnosis, pathological diagnosis, laboratory investigation and treatment of chronic and rare skin diseases."
+        "desc": {
+         "en": "Discussion of problems in patient care, clinical diagnosis, pathological diagnosis, laboratory investigation and treatment of chronic and rare skin diseases.",
+         "th": "การอภิปรายปัญหาในการดูแลผู้ป่วย การวินิจฉัยทางคลินิก การวินิจฉัยทางพยาธิวิทยา การตรวจทางห้องปฏิบัติการ และการรักษาโรคผิวหนังเรื้อรังและโรคผิวหนังที่พบได้ยาก"
+        }
        },
        {
         "code": "CMD 603",
         "name": "Dermatology Journal Club",
         "credits": 1,
-        "desc": "Formal presentation and discussion of current research in dermatological sciences and clinical dermatology by students, supervised by the course committee."
+        "desc": {
+         "en": "Formal presentation and discussion of current research in dermatological sciences and clinical dermatology by students, supervised by the course committee.",
+         "th": "การนำเสนอและอภิปรายงานวิจัยปัจจุบันด้านวิทยาศาสตร์ทางตจวิทยาและตจวิทยาคลินิกอย่างเป็นทางการโดยนักศึกษา ภายใต้การกำกับดูแลของคณะกรรมการรายวิชา"
+        }
        }
       ],
       "major": [
@@ -1632,49 +1701,73 @@
         "code": "CMD 611",
         "name": "Dermatology Clinic I",
         "credits": 2,
-        "desc": "History taking and physical examination of outpatients; common dermatologic conditions and complicated skin diseases; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors."
+        "desc": {
+         "en": "History taking and physical examination of outpatients; common dermatologic conditions and complicated skin diseases; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors.",
+         "th": "การซักประวัติและการตรวจร่างกายผู้ป่วยนอก ภาวะทางตจวิทยาที่พบบ่อยและโรคผิวหนังที่ซับซ้อน อาการและอาการแสดง การตรวจทางห้องปฏิบัติการ การวินิจฉัย การรักษา และการติดตามผล ภายใต้การกำกับดูแลของอาจารย์"
+        }
        },
        {
         "code": "CMD 612",
         "name": "Basic Dermatology",
         "credits": 2,
-        "desc": "Structure and function of the skin; epidermis and keratinization; cell-cell adhesion, the epidermal-dermal junction and related diseases; dermis, fibroblasts and extracellular matrix proteins; eccrine and apocrine glands; melanocytes and pigmentation; subcutaneous fat and related diseases; biology of hair; biology of nails; photobiology and photoimmunology; photoprotection; principles of topical therapy; principles of systemic therapy and immunosuppressive medication; common investigations in dermatological practice."
+        "desc": {
+         "en": "Structure and function of the skin; epidermis and keratinization; cell-cell adhesion, the epidermal-dermal junction and related diseases; dermis, fibroblasts and extracellular matrix proteins; eccrine and apocrine glands; melanocytes and pigmentation; subcutaneous fat and related diseases; biology of hair; biology of nails; photobiology and photoimmunology; photoprotection; principles of topical therapy; principles of systemic therapy and immunosuppressive medication; common investigations in dermatological practice.",
+         "th": "โครงสร้างและหน้าที่ของผิวหนัง หนังกำพร้าและกระบวนการสร้างเคราติน การยึดเกาะระหว่างเซลล์ รอยต่อระหว่างหนังกำพร้าและหนังแท้และโรคที่เกี่ยวข้อง หนังแท้ ไฟโบรบลาสต์และโปรตีนเมทริกซ์นอกเซลล์ ต่อมเหงื่อเอคครินและอะโพครีน เมลาโนไซต์และการสร้างเม็ดสี ไขมันใต้ผิวหนังและโรคที่เกี่ยวข้อง ชีววิทยาของเส้นผม ชีววิทยาของเล็บ ชีววิทยาแสงและภูมิคุ้มกันวิทยาแสง การป้องกันแสง หลักการรักษาด้วยยาทาเฉพาะที่ หลักการรักษาด้วยยาที่ออกฤทธิ์ทั่วร่างกายและยากดภูมิคุ้มกัน การตรวจที่ใช้บ่อยในเวชปฏิบัติตจวิทยา"
+        }
        },
        {
         "code": "CMD 618",
         "name": "Cosmetic Dermatology Clinic I",
         "credits": 2,
-        "desc": "History taking and physical examination of outpatients; common aesthetic dermatologic conditions; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors."
+        "desc": {
+         "en": "History taking and physical examination of outpatients; common aesthetic dermatologic conditions; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors.",
+         "th": "การซักประวัติและการตรวจร่างกายผู้ป่วยนอก ภาวะทางตจวิทยาเพื่อความงามที่พบบ่อย อาการและอาการแสดง การตรวจทางห้องปฏิบัติการ การวินิจฉัย การรักษา และการติดตามผล ภายใต้การกำกับดูแลของอาจารย์"
+        }
        },
        {
         "code": "CMD 619",
         "name": "Cosmetic Dermatology Clinic II",
         "credits": 2,
-        "desc": "History taking and physical examination of outpatients; complicated aesthetic dermatologic conditions; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors."
+        "desc": {
+         "en": "History taking and physical examination of outpatients; complicated aesthetic dermatologic conditions; symptoms and signs, laboratory investigations, diagnosis, treatment and follow-up, supervised by professors.",
+         "th": "การซักประวัติและการตรวจร่างกายผู้ป่วยนอก ภาวะทางตจวิทยาเพื่อความงามที่ซับซ้อน อาการและอาการแสดง การตรวจทางห้องปฏิบัติการ การวินิจฉัย การรักษา และการติดตามผล ภายใต้การกำกับดูแลของอาจารย์"
+        }
        },
        {
         "code": "CMD 711",
         "name": "Dermatosurgery",
         "credits": 2,
-        "desc": "Treatment of skin diseases, aging skin and skin tumors by surgery and laser; excision and repair; electrosurgery; cryosurgery; ablative laser and chemical peels; non-ablative laser and light therapy; botulinum toxin and soft tissue augmentation; vascular laser and treatment of varicose veins; cosmetic and skin care in dermatology, supervised by professors."
+        "desc": {
+         "en": "Treatment of skin diseases, aging skin and skin tumors by surgery and laser; excision and repair; electrosurgery; cryosurgery; ablative laser and chemical peels; non-ablative laser and light therapy; botulinum toxin and soft tissue augmentation; vascular laser and treatment of varicose veins; cosmetic and skin care in dermatology, supervised by professors.",
+         "th": "การรักษาโรคผิวหนัง ผิวหนังเสื่อมตามวัย และเนื้องอกผิวหนังด้วยการผ่าตัดและเลเซอร์ การตัดและการเย็บซ่อม การจี้ด้วยไฟฟ้า การจี้ด้วยความเย็น เลเซอร์ชนิดลอกผิวและการลอกผิวด้วยสารเคมี เลเซอร์ชนิดไม่ลอกผิวและการรักษาด้วยแสง โบทูลินัมท็อกซินและการเติมเต็มเนื้อเยื่ออ่อน เลเซอร์รักษาหลอดเลือดและการรักษาเส้นเลือดขอด เครื่องสำอางและการดูแลผิวในตจวิทยา ภายใต้การกำกับดูแลของอาจารย์"
+        }
        },
        {
         "code": "CMD 712",
         "name": "Hands-on Experiences in Dermatology",
         "credits": 0,
-        "desc": "Practice in dermatological procedures: fruit lab and biopsy, cadaver workshop, laser and injection. The clinical track grades it on an average score; the cosmetic track grades it P (pass) or N (not pass) with no credits."
+        "desc": {
+         "en": "Practice in dermatological procedures: fruit lab and biopsy, cadaver workshop, laser and injection. The clinical track grades it on an average score; the cosmetic track grades it P (pass) or N (not pass) with no credits.",
+         "th": "การฝึกปฏิบัติหัตถการทางตจวิทยา ได้แก่ การฝึกบนผลไม้และการตัดชิ้นเนื้อ การฝึกในร่างอาจารย์ใหญ่ เลเซอร์ และการฉีด แขนงตจวิทยาคลินิกประเมินผลจากคะแนนเฉลี่ย ส่วนแขนงตจวิทยาเพื่อความงามประเมินผลเป็น P (ผ่าน) หรือ N (ไม่ผ่าน) โดยไม่นับหน่วยกิต"
+        }
        },
        {
         "code": "CMD 751",
         "name": "Cosmetic Dermatology",
         "credits": 2,
-        "desc": "Common conditions such as acne, melasma, freckles and hair problems, their pathogenesis, treatment options and new technology; cosmeceuticals, their types, trends, skin penetration and how to choose them for a patient; anti-aging, including topical and oral treatment, food, vitamins and basic investigations; stem cell therapy in cosmetic practice; marketing and running a cosmetic practice."
+        "desc": {
+         "en": "Common conditions such as acne, melasma, freckles and hair problems, their pathogenesis, treatment options and new technology; cosmeceuticals, their types, trends, skin penetration and how to choose them for a patient; anti-aging, including topical and oral treatment, food, vitamins and basic investigations; stem cell therapy in cosmetic practice; marketing and running a cosmetic practice.",
+         "th": "ภาวะที่พบบ่อย เช่น สิว ฝ้า กระ และปัญหาเส้นผม พยาธิกำเนิด ทางเลือกในการรักษา และเทคโนโลยีใหม่ เวชสำอาง ชนิด แนวโน้ม การซึมผ่านผิวหนัง และการเลือกให้เหมาะกับผู้ป่วย การชะลอวัย ได้แก่ การรักษาด้วยยาทาและยารับประทาน อาหาร วิตามิน และการตรวจพื้นฐาน การรักษาด้วยเซลล์ต้นกำเนิดในเวชปฏิบัติเพื่อความงาม การตลาดและการบริหารคลินิกความงาม"
+        }
        },
        {
         "code": "CMD 752",
         "name": "Facial Design and Injection",
         "credits": 2,
-        "desc": "Facial analysis and choosing the right candidate for each treatment; botulinum toxin, filler and fat transfer, with facial and body anatomy, mechanism and basic pharmacology of each product, indications and contraindications; managing risks and complications; supervised hands-on sessions."
+        "desc": {
+         "en": "Facial analysis and choosing the right candidate for each treatment; botulinum toxin, filler and fat transfer, with facial and body anatomy, mechanism and basic pharmacology of each product, indications and contraindications; managing risks and complications; supervised hands-on sessions.",
+         "th": "การวิเคราะห์ใบหน้าและการคัดเลือกผู้ป่วยที่เหมาะกับการรักษาแต่ละชนิด โบทูลินัมท็อกซิน สารเติมเต็ม และการปลูกถ่ายไขมัน พร้อมกายวิภาคศาสตร์ของใบหน้าและร่างกาย กลไกและเภสัชวิทยาพื้นฐานของผลิตภัณฑ์แต่ละชนิด ข้อบ่งชี้และข้อห้ามใช้ การจัดการความเสี่ยงและภาวะแทรกซ้อน และการฝึกปฏิบัติภายใต้การกำกับดูแล"
+        }
        }
       ],
       "elective": [
@@ -1682,13 +1775,19 @@
         "code": "CMD 722",
         "name": "Dermatological Practice II",
         "credits": 2,
-        "desc": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor."
+        "desc": {
+         "en": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor.",
+         "th": "การสังเกตการณ์การตรวจผู้ป่วยนอกในต่างประเทศ การซักประวัติและการตรวจร่างกาย โรคผิวหนังที่พบบ่อย ซับซ้อน พบได้ยาก และโรคประจำถิ่น อาการและอาการแสดง การตรวจทางห้องปฏิบัติการ การแปลผล การวินิจฉัย การรักษา และการติดตามผล ภายใต้การกำกับดูแลของอาจารย์"
+        }
        },
        {
         "code": "CMD 723",
         "name": "Laser and Injection",
         "credits": 2,
-        "desc": "Aesthetic treatment with current equipment and technology, from basic principles and clinical use to preventing and treating complications; laser, radiofrequency and other devices for pigmentary disorders, tattoos, hair loss, acne, scars, photoaging, wrinkles and hair removal."
+        "desc": {
+         "en": "Aesthetic treatment with current equipment and technology, from basic principles and clinical use to preventing and treating complications; laser, radiofrequency and other devices for pigmentary disorders, tattoos, hair loss, acne, scars, photoaging, wrinkles and hair removal.",
+         "th": "การรักษาเพื่อความงามด้วยเครื่องมือและเทคโนโลยีปัจจุบัน ตั้งแต่หลักการพื้นฐานและการใช้ทางคลินิก ไปจนถึงการป้องกันและรักษาภาวะแทรกซ้อน เลเซอร์ คลื่นความถี่วิทยุ และเครื่องมืออื่นสำหรับความผิดปกติของเม็ดสี รอยสัก ผมร่วง สิว แผลเป็น ผิวเสื่อมจากแสงแดด ริ้วรอย และการกำจัดขน"
+        }
        }
       ],
       "thesis": [
@@ -1696,7 +1795,10 @@
         "code": "CMD 800",
         "name": "Thesis",
         "credits": 12,
-        "desc": "Literature review, a research outline and systematic research that creates new knowledge in dermatology, with research ethics; writing the thesis; presenting results and preparing articles for publication; ethics in publishing, under the thesis advisory committee."
+        "desc": {
+         "en": "Literature review, a research outline and systematic research that creates new knowledge in dermatology, with research ethics; writing the thesis; presenting results and preparing articles for publication; ethics in publishing, under the thesis advisory committee.",
+         "th": "การทบทวนวรรณกรรม การจัดทำโครงร่างการวิจัย และการวิจัยอย่างเป็นระบบเพื่อสร้างองค์ความรู้ใหม่ทางตจวิทยาโดยคำนึงถึงจริยธรรมการวิจัย การเขียนวิทยานิพนธ์ การนำเสนอผลการวิจัยและการเตรียมบทความเพื่อตีพิมพ์ จริยธรรมในการตีพิมพ์ ภายใต้การกำกับดูแลของคณะกรรมการที่ปรึกษาวิทยานิพนธ์"
+        }
        }
       ]
      },
@@ -1747,7 +1849,7 @@
      "code": "K1",
      "text": {
       "en": "Critically evaluate and synthesize advanced knowledge of dermatological sciences, including the molecular and cellular mechanisms of skin disease, emerging therapies and the concepts shaping the field.",
-      "th": "Critically evaluate and synthesize advanced knowledge of dermatological sciences, including the molecular and cellular mechanisms of skin disease, emerging therapies and the concepts shaping the field."
+      "th": "ประเมินและสังเคราะห์ความรู้ขั้นสูงด้านวิทยาศาสตร์ทางตจวิทยาอย่างมีวิจารณญาณ รวมถึงกลไกระดับโมเลกุลและเซลล์ของโรคผิวหนัง การรักษาใหม่ และแนวคิดที่กำหนดทิศทางของสาขา"
      }
     },
     {
@@ -1758,7 +1860,7 @@
      "code": "K2",
      "text": {
       "en": "Develop and lead independent, high-impact research that changes how skin disorders are understood, diagnosed and treated.",
-      "th": "Develop and lead independent, high-impact research that changes how skin disorders are understood, diagnosed and treated."
+      "th": "พัฒนาและนำงานวิจัยอิสระที่มีผลกระทบสูง ซึ่งเปลี่ยนวิธีการทำความเข้าใจ การวินิจฉัย และการรักษาโรคผิวหนัง"
      }
     },
     {
@@ -1769,7 +1871,7 @@
      "code": "S1",
      "text": {
       "en": "Design, conduct and critically analyze dermatological research with current methods, technologies and interdisciplinary approaches.",
-      "th": "Design, conduct and critically analyze dermatological research with current methods, technologies and interdisciplinary approaches."
+      "th": "ออกแบบ ดำเนินการ และวิเคราะห์งานวิจัยทางตจวิทยาอย่างมีวิจารณญาณ ด้วยระเบียบวิธี เทคโนโลยี และแนวทางสหวิทยาการที่ทันสมัย"
      }
     },
     {
@@ -1780,7 +1882,7 @@
      "code": "S2",
      "text": {
       "en": "Master specialized dermatological procedures and new interventions, with advanced assessment and management of complex clinical cases.",
-      "th": "Master specialized dermatological procedures and new interventions, with advanced assessment and management of complex clinical cases."
+      "th": "เชี่ยวชาญหัตถการเฉพาะทางตจวิทยาและวิธีการรักษาใหม่ พร้อมการประเมินและการดูแลผู้ป่วยที่ซับซ้อนในระดับสูง"
      }
     },
     {
@@ -1791,7 +1893,7 @@
      "code": "E1",
      "text": {
       "en": "Keep the highest ethical standards in research and clinical practice, with full compliance with international regulations, research integrity and patient-centered ethics.",
-      "th": "Keep the highest ethical standards in research and clinical practice, with full compliance with international regulations, research integrity and patient-centered ethics."
+      "th": "ยึดมั่นในมาตรฐานจริยธรรมสูงสุดในการวิจัยและเวชปฏิบัติ โดยปฏิบัติตามกฎระเบียบสากล ความซื่อสัตย์ในการวิจัย และจริยธรรมที่ยึดผู้ป่วยเป็นศูนย์กลางอย่างครบถ้วน"
      }
     },
     {
@@ -1802,7 +1904,7 @@
      "code": "C1",
      "text": {
       "en": "Lead and mentor junior researchers, clinicians and healthcare professionals.",
-      "th": "Lead and mentor junior researchers, clinicians and healthcare professionals."
+      "th": "เป็นผู้นำและพี่เลี้ยงแก่นักวิจัย แพทย์ และบุคลากรทางการแพทย์รุ่นใหม่"
      }
     },
     {
@@ -1813,7 +1915,7 @@
      "code": "C2",
      "text": {
       "en": "Work within multidisciplinary and global research networks to advance dermatological science and patient care.",
-      "th": "Work within multidisciplinary and global research networks to advance dermatological science and patient care."
+      "th": "ทำงานในเครือข่ายวิจัยสหสาขาวิชาชีพและเครือข่ายระดับนานาชาติเพื่อพัฒนาวิทยาศาสตร์ทางตจวิทยาและการดูแลผู้ป่วย"
      }
     }
    ],
@@ -2052,79 +2154,118 @@
       "code": "CMB 600",
       "name": "Responsible Research and Ethics in Bioclinical Sciences",
       "credits": null,
-      "desc": "Introduction to responsible research; relevant information for initiating research; critical reading and analysis; guidelines for good practice, ethics and regulations in bioclinical sciences; responsible protocol writing; planning and setting up experiments and research; responsible peer review; good data management practice and quality standards; considerations for reports and publication; ethical issues in publication; and presentation of research results."
+      "desc": {
+       "en": "Introduction to responsible research; relevant information for initiating research; critical reading and analysis; guidelines for good practice, ethics and regulations in bioclinical sciences; responsible protocol writing; planning and setting up experiments and research; responsible peer review; good data management practice and quality standards; considerations for reports and publication; ethical issues in publication; and presentation of research results.",
+       "th": "ความรู้เบื้องต้นเกี่ยวกับการวิจัยอย่างมีความรับผิดชอบ ข้อมูลที่เกี่ยวข้องในการเริ่มต้นการวิจัย การอ่านและวิเคราะห์อย่างมีวิจารณญาณ แนวทางการปฏิบัติที่ดี จริยธรรมและกฎระเบียบในวิทยาศาสตร์ชีวคลินิก การเขียนโครงร่างการวิจัยอย่างมีความรับผิดชอบ การวางแผนและการจัดทำการทดลองและการวิจัย การทบทวนโดยผู้ทรงคุณวุฒิอย่างมีความรับผิดชอบ การจัดการข้อมูลที่ดีและมาตรฐานคุณภาพ ข้อพิจารณาในการรายงานและการตีพิมพ์ ประเด็นจริยธรรมในการตีพิมพ์ และการนำเสนอผลการวิจัย"
+      }
      },
      {
       "code": "CMB 601",
       "name": "Statistical Methods in Bioclinical Sciences",
       "credits": null,
-      "desc": "Principles and application of biostatistics to bioclinical research; types of variables and data; data presentation and summarization; population and sample; probability distributions; research and statistical hypotheses; estimation and hypothesis testing; parametric and non-parametric statistics; statistical tests for reliability and diagnosis; sample size estimation; and statistical software."
+      "desc": {
+       "en": "Principles and application of biostatistics to bioclinical research; types of variables and data; data presentation and summarization; population and sample; probability distributions; research and statistical hypotheses; estimation and hypothesis testing; parametric and non-parametric statistics; statistical tests for reliability and diagnosis; sample size estimation; and statistical software.",
+       "th": "หลักการและการประยุกต์ใช้ชีวสถิติในการวิจัยทางชีวคลินิก ชนิดของตัวแปรและข้อมูล การนำเสนอและการสรุปข้อมูล ประชากรและกลุ่มตัวอย่าง การแจกแจงความน่าจะเป็น สมมติฐานการวิจัยและสมมติฐานทางสถิติ การประมาณค่าและการทดสอบสมมติฐาน สถิติแบบอิงพารามิเตอร์และไม่อิงพารามิเตอร์ การทดสอบทางสถิติสำหรับความเที่ยงและการวินิจฉัย การประมาณขนาดตัวอย่าง และโปรแกรมคอมพิวเตอร์สำหรับการวิเคราะห์ทางสถิติ"
+      }
      },
      {
       "code": "CMD 601",
       "name": "Clinical Dermatology I",
       "credits": null,
-      "desc": "Structure and morphology of skin lesions and principles of clinical diagnosis; clinical manifestations, pathogenesis, etiology, prognosis and management of common skin disorders; principles of clinical dermatology and topical therapy; papulosquamous and vesiculobullous disorders; drug eruptions and dermatological emergencies; eczema and dermatitis; acne, rosacea and adnexal disorders; urticaria and angioedema; hair and nail disorders; pigmentary disorders; cutaneous vasculopathies; benign and malignant skin tumors; bacterial, viral, fungal and tropical dermatoses."
+      "desc": {
+       "en": "Structure and morphology of skin lesions and principles of clinical diagnosis; clinical manifestations, pathogenesis, etiology, prognosis and management of common skin disorders; principles of clinical dermatology and topical therapy; papulosquamous and vesiculobullous disorders; drug eruptions and dermatological emergencies; eczema and dermatitis; acne, rosacea and adnexal disorders; urticaria and angioedema; hair and nail disorders; pigmentary disorders; cutaneous vasculopathies; benign and malignant skin tumors; bacterial, viral, fungal and tropical dermatoses.",
+       "th": "โครงสร้างและลักษณะของรอยโรคผิวหนังและหลักการวินิจฉัยทางคลินิก อาการแสดงทางคลินิก พยาธิกำเนิด สาเหตุ การพยากรณ์โรค และการรักษาโรคผิวหนังที่พบบ่อย หลักการของตจวิทยาคลินิกและการรักษาด้วยยาทาเฉพาะที่ โรคผื่นนูนมีขุยและโรคตุ่มน้ำ ผื่นแพ้ยาและภาวะฉุกเฉินทางตจวิทยา ผื่นแพ้อักเสบและผิวหนังอักเสบ สิว โรซาเซีย และความผิดปกติของรยางค์ผิวหนัง ลมพิษและแองจิโออีดีมา ความผิดปกติของเส้นผมและเล็บ ความผิดปกติของเม็ดสี โรคหลอดเลือดของผิวหนัง เนื้องอกผิวหนังชนิดไม่ร้ายแรงและชนิดร้ายแรง โรคผิวหนังจากแบคทีเรีย ไวรัส เชื้อรา และโรคเขตร้อน"
+      }
      },
      {
       "code": "CMD 602",
       "name": "Dermatology Seminar",
       "credits": null,
-      "desc": "Discussion of clinical problems in patient care, clinical and pathological diagnosis, laboratory investigations and the management of chronic and rare skin disorders."
+      "desc": {
+       "en": "Discussion of clinical problems in patient care, clinical and pathological diagnosis, laboratory investigations and the management of chronic and rare skin disorders.",
+       "th": "การอภิปรายปัญหาทางคลินิกในการดูแลผู้ป่วย การวินิจฉัยทางคลินิกและทางพยาธิวิทยา การตรวจทางห้องปฏิบัติการ และการรักษาโรคผิวหนังเรื้อรังและโรคผิวหนังที่พบได้ยาก"
+      }
      },
      {
       "code": "CMD 603",
       "name": "Dermatology Journal Club",
       "credits": null,
-      "desc": "Formal presentation and discussion of current research in dermatological sciences and clinical dermatology under the course committee, and presentation of research progress."
+      "desc": {
+       "en": "Formal presentation and discussion of current research in dermatological sciences and clinical dermatology under the course committee, and presentation of research progress.",
+       "th": "การนำเสนอและอภิปรายงานวิจัยปัจจุบันด้านวิทยาศาสตร์ทางตจวิทยาและตจวิทยาคลินิกอย่างเป็นทางการ ภายใต้การกำกับดูแลของคณะกรรมการรายวิชา และการนำเสนอความก้าวหน้าของงานวิจัย"
+      }
      },
      {
       "code": "CMD 611",
       "name": "Dermatology Clinic I",
       "credits": null,
-      "desc": "History taking and physical examination of outpatients; clinical evaluation of common and complicated skin conditions; signs and symptoms; laboratory investigations; diagnosis; treatment; and follow-up, supervised by faculty members."
+      "desc": {
+       "en": "History taking and physical examination of outpatients; clinical evaluation of common and complicated skin conditions; signs and symptoms; laboratory investigations; diagnosis; treatment; and follow-up, supervised by faculty members.",
+       "th": "การซักประวัติและการตรวจร่างกายผู้ป่วยนอก การประเมินทางคลินิกของภาวะผิวหนังที่พบบ่อยและซับซ้อน อาการและอาการแสดง การตรวจทางห้องปฏิบัติการ การวินิจฉัย การรักษา และการติดตามผล ภายใต้การกำกับดูแลของอาจารย์"
+      }
      },
      {
       "code": "CMD 612",
       "name": "Basic Dermatology",
       "credits": null,
-      "desc": "Development and structure of the epidermis; keratinocyte kinetics and differentiation; epidermal lipids; DNA repair and carcinogenesis; the dermoepidermal junction and basement membrane zone and blistering disorders; collagen, elastin, ground substance and fibroblasts; wound healing; nutrition and the skin; percutaneous absorption and thermoregulation; the sebaceous unit; apocrine and eccrine sweat glands; hair biology; nail structure and growth; inflammation and inflammatory mediators; hormone receptors in the skin; and cutaneous stem cells."
+      "desc": {
+       "en": "Development and structure of the epidermis; keratinocyte kinetics and differentiation; epidermal lipids; DNA repair and carcinogenesis; the dermoepidermal junction and basement membrane zone and blistering disorders; collagen, elastin, ground substance and fibroblasts; wound healing; nutrition and the skin; percutaneous absorption and thermoregulation; the sebaceous unit; apocrine and eccrine sweat glands; hair biology; nail structure and growth; inflammation and inflammatory mediators; hormone receptors in the skin; and cutaneous stem cells.",
+       "th": "การเจริญและโครงสร้างของหนังกำพร้า จลนศาสตร์และการเปลี่ยนสภาพของเคราติโนไซต์ ไขมันในหนังกำพร้า การซ่อมแซมดีเอ็นเอและการเกิดมะเร็ง รอยต่อระหว่างหนังแท้และหนังกำพร้า บริเวณเยื่อฐาน และโรคตุ่มน้ำ คอลลาเจน อีลาสติน สารพื้นและไฟโบรบลาสต์ การหายของแผล โภชนาการกับผิวหนัง การดูดซึมผ่านผิวหนังและการควบคุมอุณหภูมิ หน่วยต่อมไขมัน ต่อมเหงื่ออะโพครีนและเอคคริน ชีววิทยาของเส้นผม โครงสร้างและการเจริญของเล็บ การอักเสบและสารสื่อการอักเสบ ตัวรับฮอร์โมนในผิวหนัง และเซลล์ต้นกำเนิดของผิวหนัง"
+      }
      },
      {
       "code": "CMD 613",
       "name": "Advanced Dermatology",
       "credits": null,
-      "desc": "Innate and adaptive immunity in the skin; cytokines and chemokines; humoral immunity and complement; neutrophil and eosinophil production and activation; common signaling pathways; carcinogenesis; immunopathogenesis of atopic dermatitis, contact dermatitis, psoriasis, blistering diseases, acne vulgaris, urticaria, graft-versus-host disease, lichen planus and alopecia areata; immunosuppressive and biologic therapy; cutaneous thermoregulation; neurobiology and hormonal regulation of the skin; cosmeceuticals; and innovations in skin technology."
+      "desc": {
+       "en": "Innate and adaptive immunity in the skin; cytokines and chemokines; humoral immunity and complement; neutrophil and eosinophil production and activation; common signaling pathways; carcinogenesis; immunopathogenesis of atopic dermatitis, contact dermatitis, psoriasis, blistering diseases, acne vulgaris, urticaria, graft-versus-host disease, lichen planus and alopecia areata; immunosuppressive and biologic therapy; cutaneous thermoregulation; neurobiology and hormonal regulation of the skin; cosmeceuticals; and innovations in skin technology.",
+       "th": "ภูมิคุ้มกันโดยกำเนิดและภูมิคุ้มกันแบบจำเพาะในผิวหนัง ไซโตไคน์และคีโมไคน์ ภูมิคุ้มกันชนิดสารน้ำและระบบคอมพลีเมนต์ การสร้างและการกระตุ้นนิวโทรฟิลและอีโอซิโนฟิล วิถีสัญญาณที่พบบ่อย การเกิดมะเร็ง กลไกทางภูมิคุ้มกันในการเกิดโรคผื่นภูมิแพ้ผิวหนัง ผื่นแพ้สัมผัส โรคสะเก็ดเงิน โรคตุ่มน้ำ สิว ลมพิษ ภาวะสิ่งปลูกถ่ายต่อต้านผู้รับ ไลเคนแพลนัส และผมร่วงเป็นหย่อม การรักษาด้วยยากดภูมิคุ้มกันและยาชีววัตถุ การควบคุมอุณหภูมิของผิวหนัง ประสาทชีววิทยาและการควบคุมทางฮอร์โมนของผิวหนัง เวชสำอาง และนวัตกรรมเทคโนโลยีผิวหนัง"
+      }
      },
      {
       "code": "CMD 614",
       "name": "Dermatopathology",
       "credits": null,
-      "desc": "Histopathological examination and interpretation of skin diseases."
+      "desc": {
+       "en": "Histopathological examination and interpretation of skin diseases.",
+       "th": "การตรวจและการแปลผลทางจุลพยาธิวิทยาของโรคผิวหนัง"
+      }
      },
      {
       "code": "CMD 615",
       "name": "Investigations and Innovations in Dermatology",
       "credits": null,
-      "desc": "Common laboratory investigations in dermatology; dermoscopy; allergy testing; phototesting; cell culture; protein and RNA extraction and quantification; mRNA quantification and PCR; immunohistochemical staining; immunofluorescence; and principles of drug development in dermatology, supervised by faculty members."
+      "desc": {
+       "en": "Common laboratory investigations in dermatology; dermoscopy; allergy testing; phototesting; cell culture; protein and RNA extraction and quantification; mRNA quantification and PCR; immunohistochemical staining; immunofluorescence; and principles of drug development in dermatology, supervised by faculty members.",
+       "th": "การตรวจทางห้องปฏิบัติการที่ใช้บ่อยในตจวิทยา การตรวจด้วยเดอร์โมสโคป การทดสอบภูมิแพ้ การทดสอบการแพ้แสง การเพาะเลี้ยงเซลล์ การสกัดและหาปริมาณโปรตีนและอาร์เอ็นเอ การหาปริมาณ mRNA และ PCR การย้อมอิมมูโนฮิสโตเคมี อิมมูโนฟลูออเรสเซนซ์ และหลักการพัฒนายาในตจวิทยา ภายใต้การกำกับดูแลของอาจารย์"
+      }
      },
      {
       "code": "CMD 616",
       "name": "Clinical Dermatology II",
       "credits": null,
-      "desc": "Clinical manifestations, pathogenesis, etiology, prognosis and management of common and complex skin disorders: contact dermatitis; photodermatoses; pediatric dermatology; skin disorders of pregnancy and aging; non-infectious inflammatory dermatoses; skin signs of systemic disease; autoimmune connective tissue diseases; leprosy and mycobacterial infections; sexually transmitted diseases and HIV; orogenital disorders; dermal and subcutaneous disorders; genodermatoses; systemic therapy; photoprotection; complementary and alternative therapy. Requires CMD 601."
+      "desc": {
+       "en": "Clinical manifestations, pathogenesis, etiology, prognosis and management of common and complex skin disorders: contact dermatitis; photodermatoses; pediatric dermatology; skin disorders of pregnancy and aging; non-infectious inflammatory dermatoses; skin signs of systemic disease; autoimmune connective tissue diseases; leprosy and mycobacterial infections; sexually transmitted diseases and HIV; orogenital disorders; dermal and subcutaneous disorders; genodermatoses; systemic therapy; photoprotection; complementary and alternative therapy. Requires CMD 601.",
+       "th": "อาการแสดงทางคลินิก พยาธิกำเนิด สาเหตุ การพยากรณ์โรค และการรักษาโรคผิวหนังที่พบบ่อยและซับซ้อน ได้แก่ ผื่นแพ้สัมผัส โรคผิวหนังจากแสง ตจวิทยาเด็ก โรคผิวหนังในหญิงตั้งครรภ์และผู้สูงอายุ โรคผิวหนังอักเสบที่ไม่ได้เกิดจากการติดเชื้อ อาการแสดงทางผิวหนังของโรคทางระบบ โรคเนื้อเยื่อเกี่ยวพันจากภูมิต้านตนเอง โรคเรื้อนและการติดเชื้อมัยโคแบคทีเรีย โรคติดต่อทางเพศสัมพันธ์และเอชไอวี ความผิดปกติของช่องปากและอวัยวะเพศ ความผิดปกติของหนังแท้และชั้นใต้ผิวหนัง โรคผิวหนังทางพันธุกรรม การรักษาด้วยยาที่ออกฤทธิ์ทั่วร่างกาย การป้องกันแสง การแพทย์ทางเลือกและการแพทย์เสริม วิชาบังคับก่อน: CMD 601"
+      }
      },
      {
       "code": "CMD 617",
       "name": "Dermatology Clinic II",
       "credits": null,
-      "desc": "History taking and physical examination of outpatients; clinical evaluation of common and complex skin conditions; signs and symptoms; laboratory investigations; diagnosis; treatment; and follow-up, supervised by faculty members."
+      "desc": {
+       "en": "History taking and physical examination of outpatients; clinical evaluation of common and complex skin conditions; signs and symptoms; laboratory investigations; diagnosis; treatment; and follow-up, supervised by faculty members.",
+       "th": "การซักประวัติและการตรวจร่างกายผู้ป่วยนอก การประเมินทางคลินิกของภาวะผิวหนังที่พบบ่อยและซับซ้อน อาการและอาการแสดง การตรวจทางห้องปฏิบัติการ การวินิจฉัย การรักษา และการติดตามผล ภายใต้การกำกับดูแลของอาจารย์"
+      }
      },
      {
       "code": "CMD 711",
       "name": "Dermatosurgery",
       "credits": null,
-      "desc": "Surgical and laser treatment of skin diseases, skin aging and skin tumors; excision and repair; electrosurgery; cryosurgery; ablative laser and chemical peels; non-ablative laser and light therapy; botulinum toxin and soft tissue augmentation; vascular laser and varicose veins; cosmetic and skin care in dermatology, supervised by faculty members."
+      "desc": {
+       "en": "Surgical and laser treatment of skin diseases, skin aging and skin tumors; excision and repair; electrosurgery; cryosurgery; ablative laser and chemical peels; non-ablative laser and light therapy; botulinum toxin and soft tissue augmentation; vascular laser and varicose veins; cosmetic and skin care in dermatology, supervised by faculty members.",
+       "th": "การรักษาโรคผิวหนัง ผิวหนังเสื่อมตามวัย และเนื้องอกผิวหนังด้วยการผ่าตัดและเลเซอร์ การตัดและการเย็บซ่อม การจี้ด้วยไฟฟ้า การจี้ด้วยความเย็น เลเซอร์ชนิดลอกผิวและการลอกผิวด้วยสารเคมี เลเซอร์ชนิดไม่ลอกผิวและการรักษาด้วยแสง โบทูลินัมท็อกซินและการเติมเต็มเนื้อเยื่ออ่อน เลเซอร์รักษาหลอดเลือดและเส้นเลือดขอด เครื่องสำอางและการดูแลผิวในตจวิทยา ภายใต้การกำกับดูแลของอาจารย์"
+      }
      }
     ],
     "elective": [
@@ -2132,37 +2273,55 @@
       "code": "CMD 721",
       "name": "Dermatological Practice I",
       "credits": null,
-      "desc": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor."
+      "desc": {
+       "en": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor.",
+       "th": "การสังเกตการณ์การตรวจผู้ป่วยนอกในต่างประเทศ การซักประวัติและการตรวจร่างกาย โรคผิวหนังที่พบบ่อย ซับซ้อน พบได้ยาก และโรคประจำถิ่น อาการและอาการแสดง การตรวจทางห้องปฏิบัติการ การแปลผล การวินิจฉัย การรักษา และการติดตามผล ภายใต้การกำกับดูแลของอาจารย์"
+      }
      },
      {
       "code": "CMD 722",
       "name": "Dermatological Practice II",
       "credits": null,
-      "desc": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor."
+      "desc": {
+       "en": "Outpatient observation abroad; history taking and physical examination; common, complicated, rare and endemic skin diseases; symptoms and signs, laboratory investigations, interpretation, diagnosis, treatment and follow-up, supervised by a professor.",
+       "th": "การสังเกตการณ์การตรวจผู้ป่วยนอกในต่างประเทศ การซักประวัติและการตรวจร่างกาย โรคผิวหนังที่พบบ่อย ซับซ้อน พบได้ยาก และโรคประจำถิ่น อาการและอาการแสดง การตรวจทางห้องปฏิบัติการ การแปลผล การวินิจฉัย การรักษา และการติดตามผล ภายใต้การกำกับดูแลของอาจารย์"
+      }
      },
      {
       "code": "CMB 653",
       "name": "Clinical Drug Development",
       "credits": null,
-      "desc": "Key elements of a clinical study: quality standards and regulations such as GMP, GCLP and GCP, audits and inspections; the clinical protocol; case report forms; the investigator brochure; informed consent; ethics committees and institutional review boards; source document verification; monitoring visits; drug accountability; laboratory and clinical supplies; and adverse events."
+      "desc": {
+       "en": "Key elements of a clinical study: quality standards and regulations such as GMP, GCLP and GCP, audits and inspections; the clinical protocol; case report forms; the investigator brochure; informed consent; ethics committees and institutional review boards; source document verification; monitoring visits; drug accountability; laboratory and clinical supplies; and adverse events.",
+       "th": "องค์ประกอบสำคัญของการศึกษาทางคลินิก มาตรฐานคุณภาพและกฎระเบียบ เช่น GMP, GCLP และ GCP การตรวจสอบและการตรวจประเมิน โครงร่างการวิจัยทางคลินิก แบบบันทึกข้อมูลผู้ป่วย (CRF) เอกสารข้อมูลสำหรับผู้วิจัย การขอความยินยอม คณะกรรมการจริยธรรมการวิจัยในคน การทวนสอบเอกสารต้นฉบับ การกำกับดูแลการวิจัย การควบคุมยาวิจัย วัสดุทางห้องปฏิบัติการและทางคลินิก และเหตุการณ์ไม่พึงประสงค์"
+      }
      },
      {
       "code": "CMB 654",
       "name": "Current Concepts in Dermatological Drug Discovery and Development",
       "credits": null,
-      "desc": "How dermatological drugs are discovered and developed: target identification; pre-clinical studies; chemistry, manufacturing and control (CMC); clinical development phases I to IV; pharmacokinetics, toxicokinetics and pharmacogenomics; and regulatory requirements."
+      "desc": {
+       "en": "How dermatological drugs are discovered and developed: target identification; pre-clinical studies; chemistry, manufacturing and control (CMC); clinical development phases I to IV; pharmacokinetics, toxicokinetics and pharmacogenomics; and regulatory requirements.",
+       "th": "กระบวนการค้นพบและพัฒนายาทางตจวิทยา การระบุเป้าหมาย การศึกษาก่อนคลินิก เคมี การผลิต และการควบคุม (CMC) การพัฒนาทางคลินิกระยะที่ 1 ถึง 4 เภสัชจลนศาสตร์ จลนศาสตร์ของพิษ และเภสัชพันธุศาสตร์ และข้อกำหนดด้านกฎระเบียบ"
+      }
      },
      {
       "code": "CMB 655",
       "name": "Techniques in Dermatological Drug Research and Development",
       "credits": null,
-      "desc": "Chemical and physical stability testing; in vitro and in vivo models of skin penetration and absorption; in vitro and in vivo models of dermal toxicity and efficacy; and non-invasive bioengineering techniques."
+      "desc": {
+       "en": "Chemical and physical stability testing; in vitro and in vivo models of skin penetration and absorption; in vitro and in vivo models of dermal toxicity and efficacy; and non-invasive bioengineering techniques.",
+       "th": "การทดสอบความคงตัวทางเคมีและทางกายภาพ แบบจำลองในหลอดทดลองและในสิ่งมีชีวิตของการซึมผ่านและการดูดซึมทางผิวหนัง แบบจำลองในหลอดทดลองและในสิ่งมีชีวิตของความเป็นพิษและประสิทธิผลต่อผิวหนัง และเทคนิควิศวกรรมชีวภาพแบบไม่รุกล้ำ"
+      }
      },
      {
       "code": "CMB 755",
       "name": "Research Protocol Design",
       "credits": null,
-      "desc": "Writing a research protocol: background, literature review, research questions and hypotheses; study design, site, population, sample size, sampling, instruments, procedures and data analysis; ethics; timeline, budget and logistics; and publishing the results."
+      "desc": {
+       "en": "Writing a research protocol: background, literature review, research questions and hypotheses; study design, site, population, sample size, sampling, instruments, procedures and data analysis; ethics; timeline, budget and logistics; and publishing the results.",
+       "th": "การเขียนโครงร่างการวิจัย ได้แก่ ความเป็นมา การทบทวนวรรณกรรม คำถามและสมมติฐานการวิจัย รูปแบบการวิจัย สถานที่ ประชากร ขนาดตัวอย่าง การสุ่มตัวอย่าง เครื่องมือ ขั้นตอน และการวิเคราะห์ข้อมูล จริยธรรม ระยะเวลา งบประมาณและการบริหารจัดการ และการตีพิมพ์ผลการวิจัย"
+      }
      }
     ],
     "dissertation": [
@@ -2170,7 +2329,10 @@
       "code": "CMD 900",
       "name": "Dissertation",
       "credits": null,
-      "desc": "A research proposal in bioclinical sciences; research that creates new knowledge or innovation; writing the dissertation; preparing manuscripts for publication; research and publishing ethics. Registered as CMD 900, CMD 901 or CMD 902 by study plan."
+      "desc": {
+       "en": "A research proposal in bioclinical sciences; research that creates new knowledge or innovation; writing the dissertation; preparing manuscripts for publication; research and publishing ethics. Registered as CMD 900, CMD 901 or CMD 902 by study plan.",
+       "th": "การจัดทำโครงร่างการวิจัยทางชีวคลินิก การวิจัยเพื่อสร้างองค์ความรู้ใหม่หรือนวัตกรรม การเขียนดุษฎีนิพนธ์ การเตรียมต้นฉบับเพื่อตีพิมพ์ จริยธรรมการวิจัยและการตีพิมพ์ ลงทะเบียนเป็น CMD 900, CMD 901 หรือ CMD 902 ตามแผนการศึกษา"
+      }
      }
     ],
     "noncredit": [
@@ -2178,19 +2340,28 @@
       "code": "PDT 603",
       "name": "Dermatology Journal Seminar",
       "credits": null,
-      "desc": "Graded P (pass) or N (not pass), no credits."
+      "desc": {
+       "en": "Graded P (pass) or N (not pass), no credits.",
+       "th": "ประเมินผลเป็น P (ผ่าน) หรือ N (ไม่ผ่าน) ไม่นับหน่วยกิต"
+      }
      },
      {
       "code": "PDT 611",
       "name": "Clinical Dermatology I",
       "credits": null,
-      "desc": "Graded P (pass) or N (not pass), no credits."
+      "desc": {
+       "en": "Graded P (pass) or N (not pass), no credits.",
+       "th": "ประเมินผลเป็น P (ผ่าน) หรือ N (ไม่ผ่าน) ไม่นับหน่วยกิต"
+      }
      },
      {
       "code": "PDT 617",
       "name": "Clinical Dermatology II",
       "credits": null,
-      "desc": "Graded P (pass) or N (not pass), no credits."
+      "desc": {
+       "en": "Graded P (pass) or N (not pass), no credits.",
+       "th": "ประเมินผลเป็น P (ผ่าน) หรือ N (ไม่ผ่าน) ไม่นับหน่วยกิต"
+      }
      }
     ]
    },

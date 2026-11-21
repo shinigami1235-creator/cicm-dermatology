@@ -73,7 +73,7 @@
           var sum = groups[k].reduce(function (a, x) { return a + (x.credits || 0); }, 0);
           return '<div class="pp-cgroup"><h3><span>' + g(k) + "</span>" + (notes && notes[k] ? '<em>' + esc(P(notes[k])) + "</em>" : "") + "</h3>" +
             groups[k].map(function (x) {
-              return '<details class="pp-course"><summary><code>' + esc(x.code) + "</code><span>" + esc(x.name) + '</span><span class="cr">' + credits(x.credits) + "</span></summary><p>" + esc(x.desc) + "</p></details>";
+              return '<details class="pp-course"><summary><code>' + esc(x.code) + "</code><span>" + esc(x.name) + '</span><span class="cr">' + credits(x.credits) + "</span></summary><p>" + esc(P(x.desc)) + "</p></details>";
             }).join("") + "</div>";
         }).join("");
       }
