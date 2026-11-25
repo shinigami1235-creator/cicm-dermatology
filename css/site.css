@@ -633,8 +633,6 @@ html.nav-up { --nav-vis: 0px; }
 .ty-meta { position: absolute; left: 0; right: 0; bottom: clamp(24px, 5vh, 56px); z-index: 3; display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 18px; transition: opacity 300ms ease; }
 .ty-meta h1 { font-size: clamp(1.15rem, 1.4vw + 0.7rem, 1.9rem); line-height: 1.2; max-width: 26ch; font-weight: 500; }
 .ty-meta.is-gone { opacity: 0; pointer-events: none; }
-.ty-hint { position: absolute; left: 50%; top: calc(var(--nav-h) + 18px); transform: translateX(-50%); margin: 0; font-family: var(--font-display); font-size: 0.82rem; color: #5a2d0c; z-index: 3; transition: opacity 300ms ease; }
-.ty-hint.is-gone { opacity: 0; }
 :lang(th) .ty-line { line-height: 1.05; }
 .ty-stage.one .ty-film, .ty-stage.one .ty-gap { clip-path: inset(var(--gt, 50%) 0 var(--gb, 50%) 0); }
 .ty-stage.one .ty-gap { padding-top: max(0px, calc(var(--gt, 50%) - var(--gb, 50%))); }

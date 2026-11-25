@@ -51,7 +51,7 @@
   function type() {
     var el = document.getElementById("typeHero"); if (!el) return;
     var stage = el.querySelector(".ty-stage"), top = el.querySelector(".ty-top span"), bot = el.querySelector(".ty-bot span"),
-        panels = el.querySelectorAll(".ty-panel"), meta = el.querySelector(".ty-meta"), hint = el.querySelector(".ty-hint"),
+        panels = el.querySelectorAll(".ty-panel"), meta = el.querySelector(".ty-meta"),
         video = el.querySelector("video");
     ["webm", "mp4"].forEach(function (k) { var s = document.createElement("source"); s.src = video.dataset["src" + k[0].toUpperCase() + k.slice(1)]; s.type = "video/" + k; video.appendChild(s); });
     var fetched = false;
@@ -130,7 +130,6 @@
       showHD(p >= 0.9);
       film.style.setProperty("--lift", smooth(0.9, 1, p).toFixed(3));
       meta.classList.toggle("is-gone", p > 0.05);
-      hint.classList.toggle("is-gone", p > 0.03);
     }
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { fit(); render(); });
     window.addEventListener("resize", fit);
