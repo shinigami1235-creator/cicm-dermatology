@@ -70,7 +70,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json?v=20261121b").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261125a").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -92,7 +92,7 @@
   }
   var papersP = null, CITES_WHEN = "";
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261121b").then(function (r) { return r.json(); }).then(function (d) {
+    if (!papersP) papersP = fetch("data/publications.json?v=20261125a").then(function (r) { return r.json(); }).then(function (d) {
       // every lecturer tagged on a paper is bolded in the author lists
       d.papers.forEach(function (p) { p.faculty.forEach(function (k) { if (FAC_KEYS.indexOf(k) < 0) FAC_KEYS.push(k); }); });
       CITES_WHEN = d.citesUpdated || "";
@@ -289,9 +289,23 @@
     if (!nav) return;
     var mark = gauge && $(".gauge-mark", gauge), read = gauge && $(".gauge-read", gauge), readB = read && $("b", read), readS = read && $("span", read);
     var lastTone = "", lastName = "";
+    /* The header slides away while reading down and comes back on any scroll up. It stays while a menu is open,
+       while it holds keyboard focus, near the top of the page, and during a menu jump (window.CICM_NAV_HOLD). */
+    var lastY = window.scrollY, travel = 0;
+    function hideOnScroll(y) {
+      var d = y - lastY; lastY = y;
+      if (d === 0) return;
+      travel = (d > 0) === (travel > 0) ? travel + d : d;
+      var kb = false; try { kb = !!nav.querySelector(":focus-visible"); } catch (e) {}
+      var busy = window.CICM_NAV_HOLD || kb || nav.querySelector('[aria-expanded="true"]');
+      if (y < nav.offsetHeight + 20 || busy || travel < -8) nav.classList.remove("is-hidden");
+      else if (travel > 24) nav.classList.add("is-hidden");
+      document.documentElement.classList.toggle("nav-up", nav.classList.contains("is-hidden"));
+    }
     function frame() {
       var y = window.scrollY, vh = window.innerHeight, navLine = 70;
       nav.classList.add("is-solid");   // the header is a solid cream band everywhere, so the CICM logo reads on the orange opening
+      hideOnScroll(y);
       var cur = secs[0], idx = 0;
       for (var i = 0; i < secs.length; i++) { if (secs[i].getBoundingClientRect().top <= navLine) { cur = secs[i]; idx = i; } }
       var L = LAYERS[cur.dataset.layer] || LAYERS.surface;
@@ -392,13 +406,14 @@
       var max = document.documentElement.scrollHeight - window.innerHeight;
       return Math.max(0, Math.min(max, Math.round(el.getBoundingClientRect().top + window.scrollY - off)));
     }
-    var active = null, INPUT = ["wheel", "touchstart", "keydown", "mousedown"];
+    var navEl0 = $("#nav"), active = null, INPUT = ["wheel", "touchstart", "keydown", "mousedown"];
     function jump(el, key, smooth) {
       if (active) active();
       var live = true, t0 = performance.now(), target = aim(el), still = 0, lastY = -1, ro = null, timer = 0;
       var behavior = smooth && !reduce ? "smooth" : "auto";
       function end() {
         if (!live) return; live = false; active = null;
+        window.CICM_NAV_HOLD = false;
         INPUT.forEach(function (t) { window.removeEventListener(t, end); });
         if (ro) ro.disconnect(); clearTimeout(timer);
         lock = null; update();
@@ -406,6 +421,7 @@
       active = end;
       INPUT.forEach(function (t) { window.addEventListener(t, end, { passive: true }); });
       lock = key || null; if (lock) mark(lock);
+      window.CICM_NAV_HOLD = true; if (navEl0) navEl0.classList.remove("is-hidden"); document.documentElement.classList.remove("nav-up");
       window.scrollTo({ top: target, behavior: behavior });
       (function tick() {
         if (!live) return;

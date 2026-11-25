@@ -104,13 +104,15 @@
     var lineTop = el.querySelector(".ty-top"), lineBot = el.querySelector(".ty-bot");
     function render() {
       var p = progress(el), H = window.innerHeight;
+      // the header covers the top of the screen until it slides away; the words and the film open in the space below it
+      var navV = navEl ? Math.max(0, Math.min(navH, navEl.getBoundingClientRect().bottom)) : 0, gc = navV / 2;
       var lh = lineTop.offsetHeight, o = ease(smooth(0.03, 0.18, p));
       var sMin = window.innerWidth >= 900 ? 0.5 : 0.82, sc = 1 - (1 - sMin) * o;
-      var room = H - navH - 40 - 2 * lh * sc;
+      var room = H - navV - 40 - 2 * lh * sc;
       var gap = Math.max(0, room) * o + smooth(0.92, 1, p) * H * 0.7;
       if (one) {
         var end = smooth(0.92, 1, p), mid = H / 2;
-        var up = (mid - (navH + 16 + lh * sc / 2)) * o + end * H * 0.7;
+        var up = (mid - (navV + 16 + lh * sc / 2)) * o + end * H * 0.7;
         lineTop.style.transform = "translateY(" + (-up).toFixed(1) + "px) scale(" + sc.toFixed(3) + ")";
         var under = mid - up + lh * sc / 2 + 12;
         var gt = (mid + (under - mid) * o) * (1 - end), gb = (mid - (mid - 40) * o) * (1 - end);
@@ -118,9 +120,10 @@
         stage.style.setProperty("--gb", Math.max(0, gb).toFixed(1) + "px");
       } else {
       var dy = gap / 2 + lh * sc / 2 - lh / 2;
-      lineTop.style.transform = "translateY(" + (-dy).toFixed(1) + "px) scale(" + sc.toFixed(3) + ")";
-      lineBot.style.transform = "translateY(" + dy.toFixed(1) + "px) scale(" + sc.toFixed(3) + ")";
+      lineTop.style.transform = "translateY(" + (gc - dy).toFixed(1) + "px) scale(" + sc.toFixed(3) + ")";
+      lineBot.style.transform = "translateY(" + (gc + dy).toFixed(1) + "px) scale(" + sc.toFixed(3) + ")";
       stage.style.setProperty("--gap", gap.toFixed(1) + "px");
+      stage.style.setProperty("--gc", gc.toFixed(1) + "px");
       }
       panels.forEach(function (pn) { pn.classList.toggle("is-on", p >= +pn.dataset.from && p < +pn.dataset.to); });
       if (p > 0.3) loadHD();
@@ -132,6 +135,13 @@
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { fit(); render(); });
     window.addEventListener("resize", fit);
     fit(); onFrame(render);
+    // follow the header while it slides in or out, so the words move with it
+    var wasHidden = false;
+    if (navEl && window.MutationObserver) new MutationObserver(function () {
+      var h = navEl.classList.contains("is-hidden"); if (h === wasHidden) return; wasHidden = h;
+      var t0 = performance.now();
+      (function follow() { render(); if (performance.now() - t0 < 360) requestAnimationFrame(follow); })();
+    }).observe(navEl, { attributes: true, attributeFilter: ["class"] });
     fillCounts();
   }
 
