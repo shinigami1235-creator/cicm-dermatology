@@ -285,9 +285,11 @@ html.nav-up { --nav-vis: 0px; }
   .plate.d { grid-column: 7 / span 6; margin-top: 6%; }
   .plate.d img { aspect-ratio: 3 / 2; }
 }
-.js .plate .ph { clip-path: inset(0 0 0 0); }
-.js .plate.pre .ph { clip-path: inset(100% 0 0 0); }
-.plate .ph { transition: clip-path 1100ms var(--ease-io); }
+/* the training photos fade in together once the group comes into view */
+.js .plate { transition: opacity 900ms var(--ease-out); }
+.js .plate.pre { opacity: 0; }
+.js .plate .ph img { transition: transform 1400ms var(--ease-out); }
+.js .plate.pre .ph img { transform: scale(1.04); }
 
 .points { display: grid; gap: 28px; margin-top: clamp(48px, 7vw, 96px); }
 @media (min-width: 860px) { .points { grid-template-columns: repeat(3, 1fr); gap: 40px; } }
@@ -577,7 +579,8 @@ html.nav-up { --nav-vis: 0px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
   .js .rise { opacity: 1; transform: none; }
-  .js .plate.pre .ph { clip-path: inset(0 0 0 0); }
+  .js .plate.pre { opacity: 1; }
+  .js .plate.pre .ph img { transform: none; }
 }
 .program dd.fee2 { display: grid; grid-template-columns: auto auto; gap: 2px 14px; justify-content: start; }
 .program dd.fee2 span { font-weight: 400; font-size: 0.9rem; color: var(--epi-soft); align-self: baseline; }

@@ -70,7 +70,7 @@
   var contentP = null;
   function loadContent() {
     if (contentP) return contentP;
-    contentP = fetch("data/content.json?v=20261125a").then(function (r) { return r.json(); }).then(function (c) {
+    contentP = fetch("data/content.json?v=20261125b").then(function (r) { return r.json(); }).then(function (c) {
       if (!CFG.sheetId) return c;
       var tabs = CFG.tabs || {};
       return Promise.all([
@@ -92,7 +92,7 @@
   }
   var papersP = null, CITES_WHEN = "";
   function loadPapers() {
-    if (!papersP) papersP = fetch("data/publications.json?v=20261125a").then(function (r) { return r.json(); }).then(function (d) {
+    if (!papersP) papersP = fetch("data/publications.json?v=20261125b").then(function (r) { return r.json(); }).then(function (d) {
       // every lecturer tagged on a paper is bolded in the author lists
       d.papers.forEach(function (p) { p.faculty.forEach(function (k) { if (FAC_KEYS.indexOf(k) < 0) FAC_KEYS.push(k); }); });
       CITES_WHEN = d.citesUpdated || "";
@@ -231,7 +231,9 @@
   function checkReveal() {
     var vh = window.innerHeight;
     pending = pending.filter(function (el) {
-      if (el.getBoundingClientRect().top < vh * 0.9) { reveal(el); return false; }
+      // training photos go by their group, so they all appear at once
+      var box = el.classList.contains("plate") && el.parentElement ? el.parentElement : el;
+      if (box.getBoundingClientRect().top < vh * 0.85) { reveal(el); return false; }
       return true;
     });
   }

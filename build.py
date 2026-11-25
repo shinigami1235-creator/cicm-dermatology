@@ -5,7 +5,7 @@ head = (SRC/'head.html').read_text(); header = (SRC/'header.html').read_text(); 
 IMPORTMAP = '''<script>
 /* the 3D emblem (three.js) and the map (d3) are large, so each loads only when its section is near */
 document.addEventListener("DOMContentLoaded", function () {
-  [["js/emblem.js?v=20261125a", "#orbit, #stage"], ["js/map.js?v=20261125a", "#map"]].forEach(function (job) {
+  [["js/emblem.js?v=20261125b", "#orbit, #stage"], ["js/map.js?v=20261125b", "#map"]].forEach(function (job) {
     var els = document.querySelectorAll(job[1]), done = false;
     function go() { if (done) return; done = true; import("./" + job[0]); }
     if (!els.length) return;
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script src="js/heroes.js" defer></script>
-<script src="js/staff.js?v=20261125a" defer></script>'''
+<script src="js/staff.js?v=20261125b" defer></script>'''
 PAGES = {
   'index.html': ('CICM Dermatology | Thammasat University', "Master's and Ph.D. programs in dermatology at Chulabhorn International College of Medicine, Thammasat University.", IMPORTMAP),
   'research.html': ('Research | CICM Dermatology', 'Papers by the CICM Dermatology lecturers, indexed in PubMed.', ''),
